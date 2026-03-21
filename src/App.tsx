@@ -63,7 +63,7 @@ const zeittafelDaten = [
     zeitraum: 'ab 750 v. Chr.',
     farbe: '#2C6E9E',
     ereignisse: [
-      { datum: 'ab 750 v. Chr.', text: 'Griechische Kolonisation: Gründung von Syrakus, Gela, Akragas (Agrigento) und Selinunt' },
+      { datum: '735–580 v. Chr.', text: 'Griechische Stadtgründungen: Naxos (735), Syrakus/Siracusa (734), Zanklé/Messina (730), Katane/Catania (729), Selinunte (628), Akragas/Agrigento (582)' },
       { datum: '480 v. Chr.', text: 'Sieg bei Himera: griechische Städte besiegen die Karthager; Beginn der klassischen Blütezeit' },
       { datum: '415–413 v. Chr.', text: 'Sizilische Expedition Athens scheitert katastrophal vor Syrakus – Thukydides nennt es die „größte Katastrophe der griechischen Geschichte"' },
       { datum: '409 v. Chr.', text: 'Karthager zerstören Selinunt und Himera; blutiger Rachefeldzug des Hannibal Mago' },
@@ -89,6 +89,7 @@ const zeittafelDaten = [
     zeitraum: '468–1061 n. Chr.',
     farbe: '#5B2D8A',
     ereignisse: [
+      { datum: '440', text: 'Die Vandalen unter Geiserich fallen in Sizilien ein – erste germanische Herrschaft über die Insel' },
       { datum: '468–535', text: 'Sizilien unter vandalischer und ostgotischer Herrschaft' },
       { datum: '535', text: 'Belisár, Feldherr Kaiser Justinians, erobert Sizilien zurück; Rückkehr zu byzantinischer Verwaltung' },
       { datum: '827', text: 'Arabische Invasion: 10.000 Mann unter General Euphemius landen in Mazara del Vallo' },
@@ -106,6 +107,7 @@ const zeittafelDaten = [
       { datum: '1130', text: 'Roger II. wird König von Sizilien: das Normannenreich vereint arabische, byzantinische und romanische Kultur einzigartig' },
       { datum: '1140', text: 'Gesetzgebungswerk des Roger II.: eines der fortschrittlichsten Rechtssysteme des Mittelalters' },
       { datum: '1186', text: 'Heirat von Konstanze, Tochter Rogers II., mit dem späteren deutschen Kaiser Heinrich VI.' },
+      { datum: '1194', text: 'Heinrich VI. erhält die Krone des Königreichs Sizilien; Beginn der staufischen Herrschaft' },
     ]
   },
   {
@@ -113,11 +115,14 @@ const zeittafelDaten = [
     zeitraum: '1197–1516',
     farbe: '#8B6914',
     ereignisse: [
+      { datum: '1198', text: 'Friedrich II. wird als Dreijähriger König von Sizilien (1198), später deutscher König (1212) und Kaiser des Heiligen Römischen Reiches (1220)' },
       { datum: '1220', text: 'Friedrich II. Kaiser: Liber Augustalis; zentralisierter Rechtsstaat; Palermo als glanzvolles Kulturzentrum' },
       { datum: '1250', text: 'Tod Friedrichs II.; Verfall und Anarchie; Handel und Bevölkerungszahl sinken dramatisch' },
+      { datum: '1266', text: 'Karl I. von Anjou übernimmt nach der Niederlage Manfreds das Königreich Sizilien; Beginn der Anjou-Herrschaft' },
       { datum: '1282', text: 'Sizilianische Vesper (30. März): Volksaufstand gegen die Anjou-Besatzer; Tausende Franzosen getötet' },
       { datum: '1347', text: 'Pest erreicht Sizilien; Bevölkerung bricht um die Hälfte ein; permanente Kriegszüge erschöpfen die Insel' },
       { datum: '1469', text: 'Heirat Ferdinands II. von Aragon mit Isabella von Kastilien: Grundstein des spanischen Weltreiches' },
+      { datum: '1442', text: 'Alfons V. von Aragón erobert Neapel; er wird vom Papst als Alfons I. mit dem Königreich Neapel-Sizilien belehnt' },
       { datum: '1487', text: 'Einführung der Inquisition in Sizilien durch die katholischen Könige' },
     ]
   },
@@ -127,10 +132,14 @@ const zeittafelDaten = [
     farbe: '#8B3A3A',
     ereignisse: [
       { datum: '1492', text: 'Vertreibung der Juden und Muslime; massiver Verlust an Handwerkern, Gelehrten und Kapital' },
+      { datum: '1500–20', text: 'Katastrophale Dürreperiode und Hungersnot erschüttern die Insel' },
+      { datum: '1504', text: 'Ferdinand II. von Aragón verbindet Neapel-Sizilien mit der spanischen Krone; die spanische Herrschaft dauert bis 1713' },
       { datum: '1516', text: 'Sizilien fällt an Karl V.; Beginn der spanisch-habsburgischen Vizekönigs-Herrschaft' },
       { datum: '1571', text: 'Seeschlacht von Lepanto: Don Giovanni d\'Austria besiegt die osmanische Flotte; Ende der türkischen Seemacht im Mittelmeer' },
       { datum: '1669', text: 'Jahrhundert-Ausbruch des Ätna; Catania wird verwüstet; Lavamassen erreichen das Meer' },
       { datum: '1693', text: 'Verheerendes Erdbeben (ca. M 7,4) vernichtet Städte Südostsiziliens; Noto, Ragusa, Catania entstehen neu im Barockstil' },
+      { datum: '1713', text: 'Nach dem Spanischen Erbfolgekrieg fällt Sizilien an Savoyen; 1735 übernehmen die spanischen Bourbonen die Herrschaft' },
+      { datum: '1735–1860', text: 'Regierungszeit der spanischen Bourbonen in Neapel-Sizilien' },
       { datum: '1806–1815', text: 'Britische Besatzung unter General Bentinck; 1812 schafft Ferdinand III. den Feudalismus ab' },
       { datum: '1837', text: 'Cholera-Epidemie fordert allein in Palermo 70.000 Todesopfer' },
       { datum: '1848', text: 'Revolution: Aufstand gegen die Bourbonen; nach kurzer Unabhängigkeit blutige Niederschlagung' },
@@ -148,6 +157,12 @@ const zeittafelDaten = [
       { datum: '1946', text: 'Sizilien erhält Status einer autonomen Region innerhalb der Italienischen Republik' },
       { datum: '1992', text: 'Staatsanwälte Giovanni Falcone und Paolo Borsellino durch Mafia-Bombenanschläge ermordet; weltweite Erschütterung' },
       { datum: '1997', text: 'Teatro Massimo in Palermo nach 23 Jahren Restaurierung wiedereröffnet; Symbol des Aufbruchs gegen die Mafia' },
+      { datum: '1950–84', text: 'Milliardenbeiträge der Cassa del Mezzogiorno sollen die wirtschaftliche Entwicklung Süditaliens ankurbeln; ein Großteil versickert in Mafia-Kanälen' },
+      { datum: '2011', text: 'US-Museen geben aus Morgantina (Provinz Enna) geraubte antike Kunstwerke zurück – darunter eine Venusstatue' },
+      { datum: '2014–17', text: '550.000 Flüchtlinge, vorwiegend aus Subsahara-Afrika, stranden an Siziliens Küsten; Tausende ertrinken im Mittelmeer' },
+      { datum: '2018', text: 'Das Kulturfestival Manifesta lässt historische Paläste in Palermo restaurieren; Street-Art erblüht in vernachlässigten Vierteln wie der Kalsa' },
+      { datum: '2019', text: 'Ätna-Ausbruch am 24. Dezember 2018 mit Nachbeben; heftige Eruptionen am Stromboli – Insel zeitweise für Besucher gesperrt' },
+      { datum: '2022', text: 'Nach zwei Corona-Jahren erholt sich der Tourismus langsam; Sizilien setzt auf nachhaltigen Kulturtourismus' },
     ]
   },
 ]

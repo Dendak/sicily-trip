@@ -45,6 +45,38 @@ const fadeIn = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 }
 
+interface OrdnungSlide { url: string; label: string; schema?: boolean }
+interface OrdnungData { name: string; color: string; merkmale: string[]; beispiel: string; slides: OrdnungSlide[] }
+
+const OrdnungCard = ({ o }: { o: OrdnungData }) => {
+  const [idx, setIdx] = useState(0)
+  useEffect(() => {
+    const t = setInterval(() => setIdx(i => (i + 1) % o.slides.length), 7000)
+    return () => clearInterval(t)
+  }, [o.slides.length])
+  const s = o.slides[idx]
+  return (
+    <motion.div className="arch-ordnung-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+      <div className={`arch-ordnung-img${s.schema ? ' arch-ordnung-schema' : ''}`}>
+        <img src={s.url} alt={s.label} loading="lazy" className={s.schema ? 'schema-rotated' : ''} />
+        <div className="arch-ordnung-overlay" style={{ borderColor: o.color }}>
+          <h4 style={{ color: o.color }}>{o.name}</h4>
+          <span className="arch-slide-label">{s.label}</span>
+        </div>
+        <div className="arch-ordnung-dots">
+          {o.slides.map((_, i) => (
+            <button key={i} className={`arch-ordnung-dot${i === idx ? ' active' : ''}`} onClick={() => setIdx(i)} />
+          ))}
+        </div>
+      </div>
+      <div className="arch-ordnung-body">
+        <ul>{o.merkmale.map((m, j) => <li key={j}>{m}</li>)}</ul>
+        <div className="arch-beispiel">📍 {o.beispiel}</div>
+      </div>
+    </motion.div>
+  )
+}
+
 // Detailed sight information database
 const sightDetails: Record<string, { summary: string; detail: string; wikipedia?: string; planUrl?: string; facts?: string[] }> = {
   'Segesta': {
@@ -1110,44 +1142,40 @@ function App() {
         {/* Säulenordnungen */}
         <h3 className="arch-subtitle">Die drei Säulenordnungen</h3>
         <div className="arch-ordnungen">
-          {[
+          {([
             {
               name: 'Dorische Ordnung',
               color: '#8B6914',
               merkmale: ['Keine Basis – Säule steht direkt auf dem Stylobat', '16–20 Kanneluren mit scharfen Graten', 'Kapitell: Echinus (runder Wulst) + Abakus (Platte)', 'Fries: abwechselnd Triglyphen und Metopen', 'Wuchtig, schlicht, maskulin'],
               beispiel: 'Tempel in Segesta, Agrigento, Selinunte',
-              bild: images.doricCol,
+              slides: [
+                { url: '/architektur-bilder/seite_02.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://images.unsplash.com/photo-1677967062355-b951f29c66e8?w=800&q=80', label: 'Segesta – Dorischer Tempel (ca. 420 v. Chr.)' },
+                { url: 'https://images.unsplash.com/photo-1555992828-ca4dbe41d294?w=800&q=80', label: 'Agrigento – Concordia-Tempel' },
+              ],
             },
             {
               name: 'Ionische Ordnung',
               color: '#2C5F8A',
               merkmale: ['Basis: Torus + Spira + Plinthe', '24 Kanneluren mit stumpfen Stegen', 'Kapitell: charakteristische Voluten (Schnecken)', 'Architrav in drei Fascien (Streifen) gegliedert', 'Schlank, elegant, weiblich'],
               beispiel: 'Häufig in Kleinasien; in Sizilien selten',
-              bild: images.ionicCol,
+              slides: [
+                { url: '/architektur-bilder/seite_02.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80', label: 'Ionische Säulen – Beispiel' },
+              ],
             },
             {
               name: 'Korinthische Ordnung',
               color: '#4A7A3A',
               merkmale: ['Wie ionisch, aber aufwendigeres Kapitell', 'Kapitell mit Akanthusblättern und Voluten-Bändern', 'Entwickelt ca. 420 v. Chr. in Korinth', 'Besonders prunkvoll und dekorativ', 'In römischer Architektur am beliebtesten'],
               beispiel: 'Spätantike Bauten; Pantheon Rom',
-              bild: images.corinthianCol,
+              slides: [
+                { url: '/architektur-bilder/seite_02.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80', label: 'Pantheon, Rom – Korinthische Portikus' },
+                { url: 'https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=800&q=80', label: 'Korinthische Säulen – Römerzeit' },
+              ],
             },
-          ].map((o, i) => (
-            <motion.div key={i} className="arch-ordnung-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <div className="arch-ordnung-img">
-                <img src={o.bild} alt={o.name} loading="lazy" />
-                <div className="arch-ordnung-overlay" style={{ borderColor: o.color }}>
-                  <h4 style={{ color: o.color }}>{o.name}</h4>
-                </div>
-              </div>
-              <div className="arch-ordnung-body">
-                <ul>
-                  {o.merkmale.map((m, j) => <li key={j}>{m}</li>)}
-                </ul>
-                <div className="arch-beispiel">📍 {o.beispiel}</div>
-              </div>
-            </motion.div>
-          ))}
+          ] as OrdnungData[]).map((o, i) => <OrdnungCard key={i} o={o} />)}
         </div>
 
         {/* Aufbau des Tempels */}
@@ -1177,12 +1205,14 @@ function App() {
         <h3 className="arch-subtitle">Kirchentypen auf Sizilien</h3>
         <div className="arch-grid arch-grid-3">
           {[
-            { name: 'Frühchristliche Basilika', desc: 'Längsgerichteter Bau mit Mittelschiff, zwei Seitenschiffen, Apsis. Vorbild: römische Gerichtsbasilika. Narthex (Vorhalle) und Exonarthex (äußere Vorhalle).', icon: '🏛️' },
-            { name: 'Byzantinische Kreuzkuppelkirche', desc: 'Griechisches Kreuz im Grundriss mit Zentralkuppel. Reiche Mosaikausstattung – typisch für normannisch-byzantinische Kirchen Siziliens.', icon: '⛪' },
-            { name: 'Normannischer Stil', desc: 'Verbindet arabische, byzantinische und romanische Elemente. Charakteristisch: Spitzbögen, Mosaikfußböden, Kuppeln. Hauptwerke: Monreale, Cappella Palatina, Cefalù.', icon: '🕌' },
+            { name: 'Frühchristliche Basilika', desc: 'Längsgerichteter Bau mit Mittelschiff, zwei Seitenschiffen, Apsis. Vorbild: römische Gerichtsbasilika. Narthex (Vorhalle) und Exonarthex (äußere Vorhalle).', img: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80' },
+            { name: 'Byzantinische Kreuzkuppelkirche', desc: 'Griechisches Kreuz im Grundriss mit Zentralkuppel. Reiche Mosaikausstattung – typisch für normannisch-byzantinische Kirchen Siziliens.', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80' },
+            { name: 'Normannischer Stil', desc: 'Verbindet arabische, byzantinische und romanische Elemente. Charakteristisch: Spitzbögen, Mosaikfußböden, Kuppeln. Hauptwerke: Monreale, Cappella Palatina, Cefalù.', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80' },
           ].map((k, i) => (
             <motion.div key={i} className="arch-card arch-card-church" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <div className="arch-card-icon">{k.icon}</div>
+              <div className="arch-card-church-img">
+                <img src={k.img} alt={k.name} loading="lazy" />
+              </div>
               <h4>{k.name}</h4>
               <p>{k.desc}</p>
             </motion.div>

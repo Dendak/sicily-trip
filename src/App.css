@@ -1210,13 +1210,22 @@
   line-height: 1.5;
 }
 
-.arch-card-icon {
-  font-size: 2rem;
-  margin-bottom: 0.6rem;
-}
-
 .arch-card-church {
   border-left-color: #8B6914;
+}
+
+.arch-card-church-img {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.arch-card-church-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .arch-beispiel {
@@ -1245,10 +1254,26 @@
   overflow: hidden;
 }
 
+.arch-ordnung-img.arch-ordnung-schema {
+  height: 260px;
+  background: #f8f7f2;
+}
+
 .arch-ordnung-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.schema-rotated {
+  position: absolute !important;
+  width: auto !important;
+  height: 110% !important;
+  object-fit: unset !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  filter: invert(1) contrast(1.05);
 }
 
 .arch-ordnung-overlay {
@@ -1264,6 +1289,36 @@
 .arch-ordnung-overlay h4 {
   margin: 0;
   font-size: 1rem;
+}
+
+.arch-slide-label {
+  display: block;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 2px;
+}
+
+.arch-ordnung-dots {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 5px;
+}
+
+.arch-ordnung-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.arch-ordnung-dot.active {
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .arch-ordnung-body {

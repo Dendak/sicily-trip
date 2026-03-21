@@ -1694,8 +1694,8 @@ function App() {
           <p className="hero-subtitle">Akademische Kulturreise</p>
           <h1>Sizilien</h1>
           <p className="hero-dates">28. März – 4. April 2026</p>
-          <p style={{ color: '#ccc', maxWidth: 600, margin: '0 auto 2rem', fontFamily: 'var(--font-serif)', fontSize: '1.15rem' }}>
-            Auf den Spuren der Antike, der Normannen und des Barock –
+          <p style={{ color: '#ccc', maxWidth: 600, margin: '0 auto 2rem', fontFamily: 'var(--font-serif)', fontSize: '1.15rem', lineHeight: '1.8' }}>
+            Auf den Spuren der Antike, der Normannen und des Barock –<br />
             eine Reise durch drei Jahrtausende Kulturgeschichte
           </p>
           <a className="hero-cta" href="#route" onClick={(e) => { e.preventDefault(); scrollTo('route') }}>

@@ -15,8 +15,8 @@ const images = {
   noto: 'https://images.unsplash.com/photo-1512119384946-808e3d503064?w=800&q=80',
   siracusa: 'https://images.unsplash.com/photo-1753541723153-377729c7e05c?w=800&q=80',
   catania: 'https://images.unsplash.com/photo-1641286894787-4a2a97a1e34a?w=800&q=80',
-  taormina: 'https://images.unsplash.com/photo-1750145417286-2c2fe29509d6?w=800&q=80',
-  etna: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80',
+  taormina: 'https://images.unsplash.com/photo-1678043007579-8d5d62056d05?w=800&q=80',
+  etna: 'https://images.unsplash.com/photo-1740387223785-6ab827ab4fb1?w=800&q=80',
   cefalu: 'https://images.unsplash.com/photo-1559564484-e48b3e040ff4?w=800&q=80',
   palermo: 'https://images.unsplash.com/photo-1553901753-215db344677a?w=800&q=80',
   monreale: 'https://images.unsplash.com/photo-1561729730-bdbcce4cb15b?w=800&q=80',
@@ -219,19 +219,19 @@ interface StopData {
 const sightImages: Record<string, string> = {
   'Segesta': 'https://images.unsplash.com/photo-1677967062355-b951f29c66e8?w=800&q=80',
   'Monte Érice': 'https://images.unsplash.com/photo-1531050661635-3999fed2312e?w=800&q=80',
-  'Trapani': 'https://images.unsplash.com/photo-1541344999736-83eca272f6fc?w=800&q=80',
+  'Trapani': 'https://images.unsplash.com/photo-1749832147262-76b40c0fc005?w=800&q=80',
   'Marsala': 'https://images.unsplash.com/photo-1513258419489-57f9e66da32b?w=800&q=80',
   'Cave di Cusa': 'https://images.unsplash.com/photo-1585756908524-d7935e897056?w=800&q=80',
   'Selinunte': 'https://images.unsplash.com/photo-1581364899794-1e21c0179a4e?w=800&q=80',
   'Scala dei Turchi': images.scalaDeiTurchi,
   'Agrigento': images.agrigento,
   'Gela': 'https://images.unsplash.com/photo-1727617855734-35b07c4fdfdb?w=800&q=80',
-  'Piazza Armerina': 'https://images.unsplash.com/photo-1625819826041-a119c9c6fca5?w=800&q=80',
-  'Akrai': 'https://images.unsplash.com/photo-1754540290089-81a699ef916b?w=800&q=80',
+  'Piazza Armerina': 'https://images.unsplash.com/photo-1768910924686-2a2bda2d8ac4?w=800&q=80',
+  'Akrai': 'https://images.unsplash.com/photo-1764520684170-afebcdd38506?w=800&q=80',
   'Noto': images.noto,
   'Villa Romana del Tellaro': 'https://images.unsplash.com/photo-1706830342145-7ba06ed51e30?w=800&q=80',
   'Syrakus': images.siracusa,
-  'Castello Eurialo': 'https://images.unsplash.com/photo-1687294087613-3d05148b1270?w=800&q=80',
+  'Castello Eurialo': 'https://images.unsplash.com/photo-1767032330785-033405e26229?w=800&q=80',
   'Catania': images.catania,
   'Ätna': images.etna,
   'Alcantara-Schlucht': 'https://images.unsplash.com/photo-1704737035139-d8cc36aea123?w=800&q=80',
@@ -563,7 +563,7 @@ const texte = [
     title: 'Goethe über Monte Pellegrino',
     source: 'Goethe, Italienische Reise (3. April 1787)',
     original: 'Der Monte Pellegrino, ein großes Vorgebirge am Meerbusen, [...] ist das schönste Vorgebirge der Welt.',
-    translation: 'Der Monte Pellegrino, ein großes Vorgebirge am Meerbusen, [...] ist das schönste Vorgebirge der Welt.',
+    translation: '',
     lang: 'Deutsch (Original)',
   },
 ]
@@ -616,59 +616,49 @@ function HotelCard({ hotel, hotelData }: { hotel: string; hotelData?: HotelData 
 
 // Expandable sight detail component
 function SightDetail({ name }: { name: string }) {
-  const [expanded, setExpanded] = useState(false)
   const info = sightDetails[name]
   if (!info) return null
 
   return (
-    <div className="sight-expandable">
-      <button className="sight-expand-btn" onClick={() => setExpanded(!expanded)}>
-        <Info size={14} />
-        <span>Details zu {name}</span>
-        {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-      </button>
-      <AnimatePresence>
-        {expanded && (
-          <motion.div
-            className="sight-expand-content"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <p className="sight-detail-text">{info.detail}</p>
-            {info.facts && (
-              <div className="sight-facts">
-                {info.facts.map((f, i) => (
-                  <span key={i} className="sight-fact">{f}</span>
-                ))}
-              </div>
-            )}
-            {info.planUrl && (
-              <div className="sight-plan">
-                <div className="sight-plan-label"><Landmark size={14} /> Grundriss / Plan</div>
-                <a href={info.planUrl} target="_blank" rel="noopener noreferrer">
-                  <img src={info.planUrl} alt={`Grundriss ${name}`} loading="lazy" className="sight-plan-img" />
-                </a>
-              </div>
-            )}
-            <div className="sight-links">
-              {info.wikipedia && (
-                <a href={info.wikipedia} target="_blank" rel="noopener noreferrer" className="sight-link">
-                  <ExternalLink size={14} /> Wikipedia
-                </a>
-              )}
-            </div>
-          </motion.div>
+    <motion.div
+      className="sight-detail-panel"
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: 'auto', opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h4 className="sight-detail-title">{name}</h4>
+      <p className="sight-detail-text">{info.detail}</p>
+      {info.facts && (
+        <div className="sight-facts">
+          {info.facts.map((f, i) => (
+            <span key={i} className="sight-fact">{f}</span>
+          ))}
+        </div>
+      )}
+      {info.planUrl && (
+        <div className="sight-plan">
+          <div className="sight-plan-label"><Landmark size={14} /> Grundriss / Plan</div>
+          <a href={info.planUrl} target="_blank" rel="noopener noreferrer">
+            <img src={info.planUrl} alt={`Grundriss ${name}`} loading="lazy" className="sight-plan-img" />
+          </a>
+        </div>
+      )}
+      <div className="sight-links">
+        {info.wikipedia && (
+          <a href={info.wikipedia} target="_blank" rel="noopener noreferrer" className="sight-link">
+            <ExternalLink size={14} /> Wikipedia
+          </a>
         )}
-      </AnimatePresence>
-    </div>
+      </div>
+    </motion.div>
   )
 }
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [currentDay, setCurrentDay] = useState<number | null>(null)
+  const [expandedSight, setExpandedSight] = useState<string | null>(null)
 
   // Track which day card is in view
   useEffect(() => {
@@ -808,20 +798,35 @@ function App() {
               <div className="stops-grid">
                 {d.stops.map((s, i) => {
                   const img = s.image || sightImages[s.name]
+                  const hasSight = !!sightDetails[s.name]
                   return (
-                    <div key={i} className={`stop-card${img ? ' stop-card-has-img' : ''}`}>
+                    <div
+                      key={i}
+                      className={`stop-card${img ? ' stop-card-has-img' : ''}${hasSight ? ' stop-card-clickable' : ''}`}
+                      onClick={() => hasSight && setExpandedSight(expandedSight === `${d.day}-${i}` ? null : `${d.day}-${i}`)}
+                    >
                       {img && (
                         <div className="stop-card-bg" style={{ backgroundImage: `url(${img})` }} />
                       )}
                       <div className="stop-card-content">
                         <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}</div>
                         <div className="stop-desc">{s.desc}</div>
+                        {hasSight && (
+                          <div className="stop-card-hint">
+                            <Info size={12} /> Details {expandedSight === `${d.day}-${i}` ? '▲' : '▼'}
+                          </div>
+                        )}
                       </div>
-                      <SightDetail name={s.name} />
                     </div>
                   )
                 })}
               </div>
+              {/* Full-width sight details below grid */}
+              {d.stops.map((s, i) => (
+                expandedSight === `${d.day}-${i}` && sightDetails[s.name] ? (
+                  <SightDetail key={`detail-${i}`} name={s.name} />
+                ) : null
+              ))}
               <HotelCard hotel={d.hotel} hotelData={d.hotelData} />
 
               {/* Day navigation */}
@@ -945,10 +950,12 @@ function App() {
                 <div className="text-label">{t.lang}</div>
                 <div className="text-original">{t.original}</div>
               </div>
-              <div>
-                <div className="text-label">Deutsche Übersetzung</div>
-                <div className="text-translation">{t.translation}</div>
-              </div>
+              {t.translation && (
+                <div>
+                  <div className="text-label">Deutsche Übersetzung</div>
+                  <div className="text-translation">{t.translation}</div>
+                </div>
+              )}
             </div>
           </motion.div>
         ))}

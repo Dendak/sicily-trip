@@ -22,22 +22,22 @@ const images = {
   monreale: 'https://images.unsplash.com/photo-1561729730-bdbcce4cb15b?w=800&q=80',
   villaRomanaTellaro: 'https://images.unsplash.com/photo-1761495438507-33d43cedd55c?w=800&q=80',
   scalaDeiTurchi: 'https://images.unsplash.com/photo-1544475913-d45a76d9e199?w=800&q=80',
-  arancini: 'https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=800&q=80',
-  cannoli: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80',
-  pasta: 'https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&q=80',
-  granita: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=800&q=80',
-  caponata: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80',
-  cassata: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80',
-  panelle: 'https://images.unsplash.com/photo-1599921841143-819065a55cc6?w=800&q=80',
-  pastaSarde: 'https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=800&q=80',
-  sardeBeccafico: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?w=800&q=80',
-  sfincione: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80',
-  stoccafisso: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80',
-  biancomangiare: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80',
+  arancini: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/Arancini_002.jpg',
+  cannoli: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Cannoli_siciliani.jpg',
+  pasta: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg',
+  granita: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Granita_brioche.JPG',
+  caponata: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Caponata_%2814049113982%29.jpg',
+  cassata: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Cassatasiciliana.jpg',
+  panelle: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Panelle.jpg',
+  pastaSarde: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Pasta_con_le_sarde_%28Palermo%29.jpg',
+  sardeBeccafico: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Sarde_a_beccafico.jpg',
+  sfincione: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Sfincione_palermitano.jpg',
+  stoccafisso: 'https://upload.wikimedia.org/wikipedia/commons/7/71/Stoccafisso_alla_messinese.jpg',
+  biancomangiare: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Bianco_mangiare_limone_e_pistacchio_1.jpg',
   // Säulenordnungen
-  doricCol: 'https://images.unsplash.com/photo-1677967062355-b951f29c66e8?w=800&q=80',
-  ionicCol: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80',
-  corinthianCol: 'https://images.unsplash.com/photo-1612178537253-bccd437b730e?w=800&q=80',
+  doricCol: 'https://images.unsplash.com/photo-1721250150605-6f43bae03fce?w=800&q=80',
+  ionicCol: 'https://images.unsplash.com/photo-1761701826167-9b5f164e2cf8?w=800&q=80',
+  corinthianCol: 'https://images.unsplash.com/photo-1767551427154-bd320d9ba413?w=800&q=80',
 }
 
 const fadeIn = {
@@ -585,7 +585,7 @@ const restaurants: Restaurant[] = [
     location: 'Ätna',
     desc: 'Pionier der Etna-Weinrenaissance seit 1988. Die Weine Pietramarina (Carricante) und Serra della Contessa gehören zu Italiens besten Weißweinen. Führungen mit Blick auf den Vulkan in Viagrande.',
     tags: ['Vinothek', 'Etna DOC', 'Pionier', 'Nerello'],
-    image: 'https://images.unsplash.com/photo-1543328750-7c5e7c51e22b?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1675026922181-b30935570a78?w=800&q=80',
     mapsUrl: 'https://www.google.com/maps/search/Benanti+Winery+Viagrande+Etna+Sicily',
     hours: 'Besuche nach Voranmeldung (vinicolabenanti.it)',
   },
@@ -1205,9 +1205,9 @@ function App() {
         <h3 className="arch-subtitle">Kirchentypen auf Sizilien</h3>
         <div className="arch-grid arch-grid-3">
           {[
-            { name: 'Frühchristliche Basilika', desc: 'Längsgerichteter Bau mit Mittelschiff, zwei Seitenschiffen, Apsis. Vorbild: römische Gerichtsbasilika. Narthex (Vorhalle) und Exonarthex (äußere Vorhalle).', img: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80' },
-            { name: 'Byzantinische Kreuzkuppelkirche', desc: 'Griechisches Kreuz im Grundriss mit Zentralkuppel. Reiche Mosaikausstattung – typisch für normannisch-byzantinische Kirchen Siziliens.', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80' },
-            { name: 'Normannischer Stil', desc: 'Verbindet arabische, byzantinische und romanische Elemente. Charakteristisch: Spitzbögen, Mosaikfußböden, Kuppeln. Hauptwerke: Monreale, Cappella Palatina, Cefalù.', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80' },
+            { name: 'Frühchristliche Basilika', desc: 'Längsgerichteter Bau mit Mittelschiff, zwei Seitenschiffen, Apsis. Vorbild: römische Gerichtsbasilika. Narthex (Vorhalle) und Exonarthex (äußere Vorhalle).', img: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Rom%2C_Basilika_Santa_Sabina%2C_Innenansicht.jpg' },
+            { name: 'Byzantinische Kreuzkuppelkirche', desc: 'Griechisches Kreuz im Grundriss mit Zentralkuppel. Reiche Mosaikausstattung – typisch für normannisch-byzantinische Kirchen Siziliens.', img: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Chiesa_della_Martorana_Palermo_mosaico_Cristo.jpg' },
+            { name: 'Normannischer Stil', desc: 'Verbindet arabische, byzantinische und romanische Elemente. Charakteristisch: Spitzbögen, Mosaikfußböden, Kuppeln. Hauptwerke: Monreale, Cappella Palatina, Cefalù.', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Cefalu_Cathedral_exterior_BW_2012-10-11_12-13-18.jpg' },
           ].map((k, i) => (
             <motion.div key={i} className="arch-card arch-card-church" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
               <div className="arch-card-church-img">

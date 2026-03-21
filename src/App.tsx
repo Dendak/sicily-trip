@@ -1359,6 +1359,94 @@ Volcani domus et Volcania nomine tellus.`,
     translation: 'Die Insel Lipara erhebt sich nahe der sizilischen Küste, hoch aufragend mit rauchenden Felsen. Darunter donnern die Höhlen der Kyklopen, ausgehöhlt von den Schmiedeöfen des Ätna. Man hört das Hallen der Hammerschläge auf den Ambossen; der Stahl zischt in den Grotten, Feuer keucht aus den Öfen: Dies ist Vulcans Haus – das Land trägt seinen Namen.',
     lang: 'Lateinisch',
   },
+  {
+    title: 'Die Schlacht bei Himera – Gelon besiegt die Karthager',
+    source: 'Herodot, Historien 7,165–167',
+    original: `Λέγεται δὲ καὶ ὅδε λόγος ὑπὸ τῶν Σικελιητέων,
+ὡς ἄρα Γέλων, καὶ εἰ ἔμελλε ὑπακούσεσθαι τοῖσι Ἕλλησι,
+ὅμως ἂν ἐβοήθεε, εἰ μή Τήρυλλος ὁ Κρινίππου
+Ἱμεραίων τύραννος … Ἀμίλκαν τὸν Καρχηδόνιον
+ἤγαγε ἐς τὴν Σικελίην … στρατὸν πεντήκοντα μυριάδων.
+ἐν δὲ τῇ αὐτῇ ἡμέρῃ συνέβη νικᾶν τε Γέλωνα
+καὶ Θήρωνα ἐν Σικελίῃ Ἀμίλκαν τὸν Καρχηδόνιον
+καὶ τοὺς Ἕλληνας τὸν Πέρσην ἐν Σαλαμῖνι.`,
+    translation: `Es wird aber auch folgende Geschichte von den Sizilischen Griechen erzählt:
+Gelon hätte den Griechen Hilfe geschickt, selbst wenn er ihnen hätte gehorchen müssen —
+wenn nicht Terillos, der Tyrann der Himeräer, Sohn des Krinippos,
+… den Karthager Hamilkar nach Sizilien geführt hätte …
+mit einem Heer von fünfhunderttausend Mann.
+Am selben Tag aber geschah es, dass Gelon und Theron in Sizilien
+über den Karthager Hamilkar siegten — und die Griechen
+über den Perser bei Salamis.
+(Hdt. 7,165–166; nach Josef Feix, Tusculum-Ausgabe)`,
+    lang: 'Griechisch',
+  },
+  {
+    title: 'Gelon von Gela – Aufstieg zum Tyrannen von Syrakus',
+    source: 'Herodot, Historien 7,153–154',
+    original: `Γέλωνος δὲ τοῦ Δεινομένεος πέρι, τοῦ Συρηκουσίων τυράννου, ὧδε ἔχει·
+τῶν Γελώιων πρότερον ἄρχοντος Ἱπποκράτεος …
+Γέλων ἱππάρχης ὢν ἐδόκεε εἶναι τῶν ἄλλων θεραπόντων πολλῷ πρῶτος.
+μετὰ δὲ Ἱπποκράτεος τελευτήσαντος …
+Γέλων … πρῶτα μὲν Γελώιοισι ἐτυράννευε,
+μετὰ δὲ καὶ Συρηκουσίους … ὑπ᾽ ἑωυτῷ ἐποιήσατο.`,
+    translation: `Was Gelon, den Sohn des Deinomenes, den Tyrannen von Syrakus, betrifft,
+so verhält es sich folgendermaßen:
+Als früher Hippokrates über die Geloer herrschte,
+war Gelon als Reiterführer bei weitem der Angesehenste unter seinen Dienern.
+Nach dem Tod des Hippokrates …
+herrschte Gelon zunächst als Tyrann über die Geloer,
+dann aber machte er auch die Syrakusaner … sich untertan.
+(Hdt. 7,153–154; nach Josef Feix, Tusculum-Ausgabe)`,
+    lang: 'Griechisch',
+  },
+  {
+    title: 'Cicero über Agrigent – Willkür des Verres',
+    source: 'Cicero, Verres 2,2,123–124',
+    original: `Agrigentini de senatu cooptando Scipionis leges antiquas habent,
+in quibus et illa eadem sancta sunt et hoc amplius:
+cum Agrigentinorum duo genera sint,
+unum veterum, alterum colonorum quos T. Manlius praetor
+ex senatus consulto de oppidis Siculorum deduxit Agrigentum,
+cautum est in Scipionis legibus ne plures essent in senatu
+ex colonorum numero quam ex vetere Agrigentinorum.
+Iste, qui omnia iura pretio exaequasset …
+non modo illa quae erant aetatis ordinis quaestusque permiscuit,
+sed etiam in his duobus generibus civium novorum veterumque turbavit.`,
+    translation: `Die Agrigentiner besitzen alte Gesetze des Scipio über die Ergänzungswahl zum Senat,
+in denen dieselben Bestimmungen festgelegt sind und noch folgendes darüber hinaus:
+Da es unter den Agrigentinern zwei Gruppen gibt —
+eine der Alteingesessenen und eine der Kolonisten,
+die der Prätor T. Manlius auf Beschluss des Senats
+aus den sizilischen Städten nach Agrigent geführt hatte —,
+ist in den Gesetzen des Scipio festgelegt, dass die Zahl der Kolonisten im Senat
+nicht größer sein darf als die der alteingesessenen Agrigentiner.
+Dieser [Verres], der alle Rechtsnormen durch Geld gleichgestellt hatte,
+verwarf nicht nur jene Unterschiede nach Alter, Stand und Beruf,
+sondern brachte auch bei diesen zwei Gruppen von Bürgern völlige Verwirrung.
+(Cic. Verr. 2,2,123–124)`,
+    lang: 'Lateinisch',
+  },
+  {
+    title: 'Die Samier und Zankle – Gründung Messinas',
+    source: 'Herodot, Historien 6,22–24',
+    original: `Μίλητος μέν νυν οὕτω κεκένωτο ἀνδρῶν·
+Σαμίων δὲ οἱ χρήματα ἔχοντες …
+ἀπικόμενοι δὲ ἐς Ζάγκλην τῆς Σικελίης …
+ἐβουλεύοντο … περὶ Σικελίης οἰκισμοῦ.
+ἐν τούτῳ δὲ τῷ χρόνῳ Ἀνάξιλος ὁ Ῥηγίου τύραννος …
+ἐπείσε τοὺς Σαμίους … Ζάγκλην … αἱρέειν·
+οἱ δὲ Σάμιοι ἐπείθοντο καὶ τὴν Ζάγκλην ἔσχον.`,
+    translation: `Milet nun war so seiner Männer beraubt worden.
+Von den Samiern aber — diejenigen, die Vermögen besaßen —
+nachdem sie nach Zankle in Sizilien gelangt waren,
+berieten sie über die Gründung einer Siedlung in Sizilien.
+In dieser Zeit überredete Anaxilas, der Tyrann von Rhegion,
+die Samier, Zankle in Besitz zu nehmen;
+die Samier folgten seinem Rat und bemächtigten sich Zankles.
+(Hdt. 6,22–23; nach Josef Feix, Tusculum-Ausgabe)`,
+    lang: 'Griechisch',
+  },
 ]
 
 const texteGruppen = [
@@ -1377,6 +1465,10 @@ const texteGruppen = [
     label: 'Historisches',
     ids: [
       'Cicero über Syrakus',
+      'Cicero über Agrigent – Willkür des Verres',
+      'Die Schlacht bei Himera – Gelon besiegt die Karthager',
+      'Die Samier und Zankle – Gründung Messinas',
+      'Gelon von Gela – Aufstieg zum Tyrannen von Syrakus',
       'Pindar über Ätna und Sizilien',
       'Vergil über Siziliens Küsten',
     ],

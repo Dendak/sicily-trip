@@ -1041,25 +1041,18 @@ const texte = [
     lang: 'Lateinisch',
   },
   {
-    title: 'Pindar über Ätna und Sizilien',
-    source: 'Pindar, Pythische Ode 1, 18–28',
-    original: '\u1f10\u03bd \u03b4\u2019 \u0391\u1f34\u03c4\u03bd\u1fb3 \u03ba\u03b5\u1fd6\u03c4\u03b1\u03b9 \u03c7\u03b1\u03bc\u03b1\u03b9\u03c0\u03b5\u03c4\u1f72\u03c2 \u03c0\u03b1\u03bd\u03b4\u03ce\u03ba\u03b1\u03c2 \u03c3\u03c4\u1f7b\u03bb\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1, \u03bd\u03b9\u03c6\u03cc\u03b5\u03c3\u03c3\u03b1 \u0391\u1f34\u03c4\u03bd\u03b1, \u03c0\u03ac\u03bd\u03b5\u03c4\u03b5\u03c2 \u03c7\u03b9\u03cc\u03bd\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1\u03c2 \u03c4\u03b9\u03b8\u03ae\u03bd\u03b1.',
-    translation: 'Auf dem Ätna aber liegt er, die Säule des Himmels, die alles aufnimmt, der schneebedeckte Ätna, der ganzjährige Nährvater des scharfen Schnees, der himmlischen.',
-    lang: 'Griechisch',
-  },
-  {
-    title: 'Vergil über Siziliens Küsten',
-    source: 'Vergil, Aeneis III, 692–696',
-    original: 'Hinc altas cautes proiectaque saxa Pachyni radimus, et fatis numquam concessa moveri apparet Camerina procul campique Geloi, immanisque Gela fluvii cognomine dicta.',
-    translation: 'Von hier streifen wir die hohen Klippen und vorspringenden Felsen von Pachynum, und aus der Ferne erscheint Camerina, die das Schicksal nie zu bewegen gestattete, und die Gefilde von Gela, und das gewaltige Gela, nach dem Fluss benannt.',
-    lang: 'Lateinisch',
-  },
-  {
     title: 'Goethe über Monte Pellegrino',
     source: 'Goethe, Italienische Reise (3. April 1787)',
     original: 'Der Monte Pellegrino, ein großes Vorgebirge am Meerbusen, [...] ist das schönste Vorgebirge der Welt.',
     translation: '',
     lang: 'Deutsch (Original)',
+  },
+  {
+    title: 'Pindar über Ätna und Sizilien',
+    source: 'Pindar, Pythische Ode 1, 18–28',
+    original: '\u1f10\u03bd \u03b4\u2019 \u0391\u1f34\u03c4\u03bd\u1fb3 \u03ba\u03b5\u1fd6\u03c4\u03b1\u03b9 \u03c7\u03b1\u03bc\u03b1\u03b9\u03c0\u03b5\u03c4\u1f72\u03c2 \u03c0\u03b1\u03bd\u03b4\u03ce\u03ba\u03b1\u03c2 \u03c3\u03c4\u1f7b\u03bb\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1, \u03bd\u03b9\u03c6\u03cc\u03b5\u03c3\u03c3\u03b1 \u0391\u1f34\u03c4\u03bd\u03b1, \u03c0\u03ac\u03bd\u03b5\u03c4\u03b5\u03c2 \u03c7\u03b9\u03cc\u03bd\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1\u03c2 \u03c4\u03b9\u03b8\u03ae\u03bd\u03b1.',
+    translation: 'Auf dem Ätna aber liegt er, die Säule des Himmels, die alles aufnimmt, der schneebedeckte Ätna, der ganzjährige Nährvater des scharfen Schnees, der himmlischen.',
+    lang: 'Griechisch',
   },
   {
     title: 'Die Bürgschaft',
@@ -1226,6 +1219,13 @@ In eurem Bunde der Dritte."`,
     translation: 'Schillers Ballade spielt am Hof des Tyrannen Dionysios I. in Syrakus. Sie besingt die Freundschaft zwischen Damon und Pythias, die stärker ist als Furcht vor dem Tod – und selbst den Tyrannen zur Umkehr bewegt.',
     lang: 'Deutsch',
   },
+  {
+    title: 'Vergil über Siziliens Küsten',
+    source: 'Vergil, Aeneis III, 692–696',
+    original: 'Hinc altas cautes proiectaque saxa Pachyni radimus, et fatis numquam concessa moveri apparet Camerina procul campique Geloi, immanisque Gela fluvii cognomine dicta.',
+    translation: 'Von hier streifen wir die hohen Klippen und vorspringenden Felsen von Pachynum, und aus der Ferne erscheint Camerina, die das Schicksal nie zu bewegen gestattete, und die Gefilde von Gela, und das gewaltige Gela, nach dem Fluss benannt.',
+    lang: 'Lateinisch',
+  },
 ]
 
 // Speisen Karussell – rotiert automatisch alle 10 Sekunden
@@ -1357,6 +1357,7 @@ function App() {
   const [currentDay, setCurrentDay] = useState<number | null>(null)
   const [expandedSight, setExpandedSight] = useState<string | null>(null)
   const [expandedPerson, setExpandedPerson] = useState<number | null>(null)
+  const [expandedText, setExpandedText] = useState<number | null>(null)
   const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
   const [glossarRichtung, setGlossarRichtung] = useState<'it-de' | 'de-it'>('it-de')
 
@@ -1688,26 +1689,43 @@ function App() {
         {texte.map((t, i) => (
           <motion.div
             key={i}
-            className="text-card"
+            className={`text-card${expandedText === i ? ' text-card-open' : ''}`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <h4>{t.title}</h4>
-            <div className="text-source">{t.source}</div>
-            <div className="text-columns">
+            <div className="text-card-header" onClick={() => setExpandedText(expandedText === i ? null : i)}>
               <div>
-                <div className="text-label">{t.lang}</div>
-                <div className="text-original">{t.original}</div>
+                <h4>{t.title}</h4>
+                <div className="text-source">{t.source}</div>
               </div>
-              {t.translation && (
-                <div>
-                  <div className="text-label">Deutsche Übersetzung</div>
-                  <div className="text-translation">{t.translation}</div>
-                </div>
-              )}
+              {expandedText === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
             </div>
+            <AnimatePresence>
+              {expandedText === i && (
+                <motion.div
+                  className="text-card-body"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="text-columns">
+                    <div>
+                      <div className="text-label">{t.lang}</div>
+                      <div className="text-original">{t.original}</div>
+                    </div>
+                    {t.translation && (
+                      <div>
+                        <div className="text-label">Deutsche Übersetzung</div>
+                        <div className="text-translation">{t.translation}</div>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         ))}
       </section>

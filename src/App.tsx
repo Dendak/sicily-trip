@@ -183,6 +183,14 @@ const personenDaten = [
     beschreibung: '1130 zum König von Sizilien gekrönt – als einziger fehlte ihm die Krone. Von Kind auf von arabischen, byzantinischen und hebräischen Gelehrten umgeben. Unter seiner Regierung entwickelte sich Sizilien nicht nur zum bedeutendsten Kulturzentrum, sondern erreichte auch seine größte politische Ausdehnung.',
   },
   {
+    name: 'Rosalia, Santa',
+    lebensdaten: 'ca. 1130–1166',
+    kategorie: 'Heilige & Stadtpatronin',
+    herkunft: 'Palermo',
+    farbe: '#8B3A6B',
+    beschreibung: 'Schutzpatronin Palermos aus normannischem Adelsgeschlecht, vermutlich Verwandte Rogers II. Zog sich als junge Frau als Einsiedlerin in eine Höhle auf dem Monte Pellegrino zurück. 1625 wurden ihre Gebeine entdeckt – kurz darauf endete die verheerende Pest in Palermo. Seitdem wird ihr jährlich am 15. Juli das große Festino di Santa Rosalia gefeiert, eines der spektakulärsten Straßenfeste Italiens.',
+  },
+  {
     name: 'Salvatore Quasimodo',
     lebensdaten: '1901–1968',
     kategorie: 'Dichter',

@@ -505,6 +505,54 @@ const restaurants: Restaurant[] = [
     image: 'https://www.mariagrammatico.it/wp-content/uploads/2023/11/Erice-Pasticceria-Maria-Grammatico-Dolici-Tipici-Siciliani-007.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Pasticceria+Maria+Grammatico+Erice',
   },
+  // ── Vinotheken Marsala ──────────────────────────────────────
+  {
+    name: 'Nenanti – Enoteca & Degustazione',
+    location: 'Marsala',
+    desc: 'Boutique-Vinothek mit Fokus auf sizilianische Urrebsorten – Grillo, Catarratto und Zibibbo aus dem Marsala-DOC-Gebiet. Weinproben mit lokalen Antipasti in entspannter Atmosphäre.',
+    tags: ['Vinothek', 'Marsala-Wein', 'Weinprobe', 'Degustazione'],
+    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80',
+    mapsUrl: 'https://www.google.com/maps/search/Nenanti+Enoteca+Marsala+Sicily',
+    hours: 'Di–Sa 10:00–13:00 / 16:00–20:00',
+    closed: 'Montag & Sonntag',
+  },
+  {
+    name: 'Cantine Pellegrino',
+    location: 'Marsala',
+    desc: 'Seit 1880 einer der renommiertesten Marsala-Produzenten. Historische Gewölbekeller, Fassräume und klassische Marsala-Weinprobe. Führungen auf Deutsch buchbar.',
+    tags: ['Vinothek', 'Marsala-Wein', 'Historisch', 'Führungen'],
+    image: 'https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80',
+    mapsUrl: 'https://www.google.com/maps/search/Cantine+Pellegrino+Marsala',
+    hours: 'Mo–Fr 9:00–17:00, Sa nach Voranmeldung',
+  },
+  {
+    name: 'Cantina Florio',
+    location: 'Marsala',
+    desc: 'Die ikonischste Marsala-Kellerei, gegründet 1833 von Vincenzo Florio. Monumentale Gewölbe mit Fässern aus dem 19. Jh., integriertes Weinmuseum und Verkostung direkt am Hafen.',
+    tags: ['Vinothek', 'Marsala-Wein', 'Museum', 'Ikonisch'],
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    mapsUrl: 'https://www.google.com/maps/search/Cantina+Florio+Marsala',
+    hours: 'Mo–Sa 9:30–18:00',
+  },
+  // ── Vinotheken Ätna ─────────────────────────────────────────
+  {
+    name: 'Tenute Terre Nere',
+    location: 'Ätna',
+    desc: 'Biodynamisches Vorzeige-Weingut am Nordhang des Ätna bei Randazzo. Alte Nerello-Mascalese-Reben (bis 100 Jahre alt) auf Vulkanböden. Etna-DOC-Weinproben mit Vulkanpanorama – Voranmeldung erforderlich.',
+    tags: ['Vinothek', 'Etna DOC', 'Biodynamisch', 'Alte Reben'],
+    image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80',
+    mapsUrl: 'https://www.google.com/maps/search/Tenute+Terre+Nere+Randazzo+Etna+Sicily',
+    hours: 'Weinproben nach Voranmeldung (tenute-terrenere.com)',
+  },
+  {
+    name: 'Benanti Winery',
+    location: 'Ätna',
+    desc: 'Pionier der Etna-Weinrenaissance seit 1988. Die Weine Pietramarina (Carricante) und Serra della Contessa gehören zu Italiens besten Weißweinen. Führungen mit Blick auf den Vulkan in Viagrande.',
+    tags: ['Vinothek', 'Etna DOC', 'Pionier', 'Nerello'],
+    image: 'https://images.unsplash.com/photo-1543328750-7c5e7c51e22b?w=800&q=80',
+    mapsUrl: 'https://www.google.com/maps/search/Benanti+Winery+Viagrande+Etna+Sicily',
+    hours: 'Besuche nach Voranmeldung (vinicolabenanti.it)',
+  },
 ]
 
 const glossary = [
@@ -909,7 +957,7 @@ function App() {
       {/* Restaurants */}
       <section className="section" id="restaurants">
         <div className="section-header">
-          <h2><UtensilsCrossed size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Restaurant-Empfehlungen</h2>
+          <h2><UtensilsCrossed size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Restaurant- & Vinothek-Empfehlungen</h2>
           <div className="section-divider" />
           <p>Echte sizilianische Osterien, Trattorien und Slow-Food-Lokale – von Reiseforen und Guides empfohlen</p>
         </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users } from 'lucide-react'
+import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users, Mountain, Waves, TrendingUp, Sun, Thermometer, Globe } from 'lucide-react'
 import './App.css'
 
 // Verified working Unsplash image URLs
@@ -127,6 +127,14 @@ const personenDaten = [
     beschreibung: '„Stupor Mundi" – Staunen der Welt. König von Sizilien ab 1198, Deutscher König ab 1212, Kaiser des Heiligen Römischen Reiches ab 1220. Von Kind auf von arabischen, byzantinischen und hebräischen Gelehrten umgeben. Palermo war unter ihm Zentrum arabisch-christlich-jüdischer Gelehrsamkeit.',
   },
   {
+    name: 'Giovanni Falcone',
+    lebensdaten: '1939–1992',
+    kategorie: 'Richter & Anti-Mafia-Kämpfer',
+    herkunft: 'Palermo',
+    farbe: '#1A5276',
+    beschreibung: 'Italiens bekanntester Anti-Mafia-Richter. Aufgewachsen im Palermitaner Arbeiterviertel La Kalsa, studierte er Rechtswissenschaften und wurde Staatsanwalt. Als Leiter des „Pool Antimafia" führte er den historischen „Maxi-Prozesso" (1986–87) durch, bei dem 360 Bosse der Cosa Nostra verurteilt wurden. Am 23. Mai 1992 wurde er zusammen mit seiner Frau und drei Leibwächtern auf der Autobahn bei Capaci durch eine Autobombe ermordet.',
+  },
+  {
     name: 'Giovanni Verga',
     lebensdaten: '1840–1922',
     kategorie: 'Schriftsteller',
@@ -159,6 +167,14 @@ const personenDaten = [
     beschreibung: 'Nobelpreisträger für Literatur 1934. Studierte Philologie in Bonn und promovierte 1891. Ein sizilianischer Schriftsteller führte ihn in die römische Theaterwelt ein. Sein literarisches Werk umfasst Dramen, Novellen und Romane, die dem modernen Theater entscheidende Impulse gaben.',
   },
   {
+    name: 'Paolo Borsellino',
+    lebensdaten: '1940–1992',
+    kategorie: 'Richter & Anti-Mafia-Kämpfer',
+    herkunft: 'Palermo',
+    farbe: '#1A5276',
+    beschreibung: 'Enger Freund und Weggefährte Giovanni Falcones im Kampf gegen die Cosa Nostra. Ebenfalls in La Kalsa aufgewachsen, widmete er sein Leben der Strafverfolgung der Mafia. Nach Falcones Ermordung setzte er seine Arbeit unbeirrt fort, obwohl er wusste, dass sein Tod beschlossene Sache war. Am 19. Juli 1992 wurde er vor dem Haus seiner Mutter in der Via d'Amelio in Palermo durch eine Autobombe getötet – zusammen mit fünf seiner Leibwächter. Beide Attentate erschütterten Italien und leiteten eine neue Phase der Anti-Mafia-Gesetzgebung ein.',
+  },
+  {
     name: 'Roger II.',
     lebensdaten: '1097–1154',
     kategorie: 'Normannenkönig',
@@ -174,6 +190,46 @@ const personenDaten = [
     farbe: '#2E6B4F',
     beschreibung: 'Nobelpreisträger für Literatur 1959. Sohn eines Bahnhofswärters aus Modica, studierte unter schwierigen Umständen Physik und Mathematik in Rom. 1930 veröffentlichte die Zeitschrift Solaria drei seiner Gedichte. Seine Übersetzungen der griechischen und römischen Klassiker gelten als Meisterwerke.',
   },
+]
+
+const regionFakten = [
+  { icon: 'globe',       label: 'Fläche',               wert: '25.832 km²',         sub: '= 8,5 % Italiens; größte Insel des Mittelmeers' },
+  { icon: 'users',       label: 'Einwohner',             wert: '4,84 Mio.',           sub: 'ISTAT 2024 – rückläufig seit 2001' },
+  { icon: 'density',     label: 'Bevölkerungsdichte',    wert: '187 Einw./km²',       sub: 'Unter dem italienischen Durchschnitt (198)' },
+  { icon: 'map',         label: 'Hauptstadt',            wert: 'Palermo',             sub: 'ca. 630.000 Einwohner (2024)' },
+  { icon: 'provinces',   label: 'Provinzen',             wert: '9',                   sub: 'PA, AG, CL, CT, EN, ME, RG, SR, TP' },
+  { icon: 'mountain',    label: 'Höchster Punkt',        wert: 'Ätna 3.357 m',        sub: 'Aktivster Vulkan Europas; fast täglich Aktivität' },
+  { icon: 'waves',       label: 'Küstenlänge',           wert: '1.484 km',            sub: 'Tyrrhenisches, Ionisches & Afrikanisches Meer' },
+  { icon: 'africa',      label: 'Entfernung zu Afrika',  wert: '140 km',              sub: 'Cap Bon, Tunesien – nächster afrikan. Punkt' },
+  { icon: 'sun',         label: 'Sonnenstunden',         wert: '2.600 / Jahr',        sub: 'Palermo: eine der sonnigsten Städte Europas' },
+  { icon: 'temp',        label: 'Ø Jahrestemperatur',    wert: '18,5 °C',             sub: 'Palermo; Sommer bis 38 °C, Winter mild 12 °C' },
+  { icon: 'gdp',         label: 'BIP',                   wert: 'ca. 99 Mrd. €',       sub: '2023; ca. 20.500 € pro Kopf' },
+  { icon: 'jobless',     label: 'Arbeitslosigkeit',      wert: '15,8 %',              sub: '2024; Jugendarbeitslosigkeit ca. 38 %' },
+  { icon: 'tourism',     label: 'Tourismus',             wert: '15,2 Mio.',           sub: 'Ankünfte 2023/24 – Rekordentwicklung' },
+  { icon: 'unesco',      label: 'UNESCO-Welterbe',       wert: '7 Stätten',           sub: 'u.a. Agrigento, Syrakus, Ätna, Noto, Monreale' },
+  { icon: 'wine',        label: 'Weinproduktion',        wert: 'ca. 5 Mio. hl',       sub: '2024; Nero d\'Avola, Marsala, Etna DOC' },
+  { icon: 'olives',      label: 'Olivenanbau',           wert: '150.000+ ha',         sub: 'Drittgrößte Olivenöl-Produktion Italiens' },
+  { icon: 'airports',    label: 'Internationale Airports',wert: '3',                  sub: 'Catania-Fontanarossa, Palermo-Falcone, Trapani' },
+  { icon: 'uni',         label: 'Älteste Universität',   wert: 'Catania 1434',        sub: 'Zweite älteste Italiens nach Bologna (1088)' },
+  { icon: 'comuni',      label: 'Gemeinden',             wert: '391',                 sub: 'Kleinste: Assoro (EN) mit ca. 4.600 Ew.' },
+  { icon: 'messina',     label: 'Meerenge von Messina',  wert: '3,2 km',              sub: 'Schmalste Stelle zwischen Sizilien & Kalabrien' },
+  { icon: 'islands',     label: 'Vorgelagerte Inseln',   wert: '3 Inselgruppen',      sub: 'Äolische, Ägadische & Pelagische Inseln' },
+  { icon: 'mafia',       label: 'Sitz der Antimafia',    wert: 'Palermo',             sub: 'Commissione parlamentare antimafia seit 1962' },
+  { icon: 'mosaik',      label: 'Größtes antikes Mosaik',wert: '3.500 m²',            sub: 'Villa Romana del Casale, Piazza Armerina (UNESCO)' },
+  { icon: 'mountain2',   label: 'Naturschutzgebiete',    wert: 'über 80',             sub: 'Inkl. Ätna-Nationalpark, Nebrodi, Zingaro' },
+  { icon: 'pop2',        label: 'Bevölkerungsentwicklung',wert: '−6,3 % seit 2001',   sub: 'Starke Abwanderung v.a. junger Sizilianer nach Norditalien' },
+]
+
+const regionProvinzen = [
+  { kuerzel: 'PA', name: 'Palermo',      flaeche: 4992, einwohner: 1195000, hauptstadt: 'Palermo',      hs_ew: 630000 },
+  { kuerzel: 'CT', name: 'Catania',      flaeche: 3552, einwohner: 1100000, hauptstadt: 'Catania',      hs_ew: 310000 },
+  { kuerzel: 'ME', name: 'Messina',      flaeche: 3247, einwohner:  615000, hauptstadt: 'Messina',      hs_ew: 225000 },
+  { kuerzel: 'AG', name: 'Agrigento',    flaeche: 3042, einwohner:  443000, hauptstadt: 'Agrigento',    hs_ew:  59000 },
+  { kuerzel: 'TP', name: 'Trapani',      flaeche: 2461, einwohner:  432000, hauptstadt: 'Trapani',      hs_ew:  67000 },
+  { kuerzel: 'EN', name: 'Enna',         flaeche: 2562, einwohner:  157000, hauptstadt: 'Enna',         hs_ew:  26000 },
+  { kuerzel: 'SR', name: 'Siracusa',     flaeche: 2180, einwohner:  396000, hauptstadt: 'Siracusa',     hs_ew: 120000 },
+  { kuerzel: 'CL', name: 'Caltanissetta',flaeche: 2128, einwohner:  263000, hauptstadt: 'Caltanissetta',hs_ew:  59000 },
+  { kuerzel: 'RG', name: 'Ragusa',       flaeche: 1614, einwohner:  318000, hauptstadt: 'Ragusa',       hs_ew:  73000 },
 ]
 
 const zeittafelDaten = [
@@ -1190,6 +1246,7 @@ function App() {
           </button>
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
             {[
+              ['region', 'Region'],
               ['route', 'Reiseroute'],
               ['restaurants', 'Restaurants'],
               ['speisen', 'Speisen'],
@@ -1222,6 +1279,47 @@ function App() {
         </motion.div>
         <div className="scroll-indicator">
           <ChevronDown size={32} />
+        </div>
+      </section>
+
+      {/* Region Sizilien */}
+      <section className="section" id="region">
+        <div className="section-header">
+          <h2><Globe size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Die Region Sizilien</h2>
+          <div className="section-divider" />
+          <p>Größte Insel des Mittelmeers – Zahlen, Daten & Fakten 2024/2025</p>
+        </div>
+
+        <div className="region-fakten-grid">
+          {regionFakten.map((f, i) => (
+            <motion.div key={i} className="region-fakt-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="region-fakt-wert">{f.wert}</div>
+              <div className="region-fakt-label">{f.label}</div>
+              <div className="region-fakt-sub">{f.sub}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        <h3 className="region-provinzen-title">Die 9 Provinzen (ISTAT 2024)</h3>
+        <div className="region-provinzen-table">
+          <div className="region-provinzen-header">
+            <span>Kürzel</span>
+            <span>Provinz</span>
+            <span>Fläche (km²)</span>
+            <span>Einwohner</span>
+            <span>Hauptstadt</span>
+            <span>Einw. HS</span>
+          </div>
+          {regionProvinzen.map((p, i) => (
+            <motion.div key={i} className="region-provinzen-row" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <span className="region-kuerzel">{p.kuerzel}</span>
+              <span className="region-pname">{p.name}</span>
+              <span>{p.flaeche.toLocaleString('de-DE')}</span>
+              <span>{p.einwohner.toLocaleString('de-DE')}</span>
+              <span>{p.hauptstadt}</span>
+              <span>{p.hs_ew.toLocaleString('de-DE')}</span>
+            </motion.div>
+          ))}
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info } from 'lucide-react'
 import './App.css'
@@ -39,28 +39,28 @@ const fadeIn = {
 const sightDetails: Record<string, { summary: string; detail: string; wikipedia?: string; planUrl?: string; facts?: string[] }> = {
   'Segesta': {
     summary: 'Bedeutende Stadt der Elymer im Nordwesten Siziliens mit einem der besterhaltenen dorischen Tempel Europas.',
-    detail: 'Segesta wurde im 7. Jh. v. Chr. von den Elymern gegründet, die sich auf trojanische Vorfahren beriefen. Der dorische Tempel (ca. 420 v. Chr.) misst 26 × 61 Meter mit 36 Säulen aus Travertin. Besonderheit: Die Säulen wurden nie kanneliert und die Cella fehlt – der Tempel wurde vermutlich nie vollendet. Das griechische Theater (3. Jh. v. Chr.) wurde unter Hieron II. in den Monte Barbaro gehauen. Mit 63 m Durchmesser bietet es 4.000 Zuschauern Platz und einen spektakulären Blick auf den Golf von Castellammare. Die Akustik ist hervorragend – ein Flüstern im Zentrum ist in den obersten Reihen hörbar.',
+    detail: 'Segesta wurde im 7. Jh. v. Chr. von den Elymern gegründet, die sich auf trojanische Vorfahren beriefen. Der dorische Tempel (ca. 420 v. Chr.) misst 26 × 61 Meter mit 36 Säulen aus Travertin. Die Säulen wurden nie kanneliert und die Cella fehlt – der Tempel wurde vermutlich nie vollendet. Thukydides berichtet (VI, 6), dass die Segestaner 415 v. Chr. Athen um Hilfe gegen das mächtige Selinunt baten und dabei ihren Reichtum demonstrierten – was zur verhängnisvollen Sizilienexpedition Athens führte, die Thukydides als „die größte Katastrophe der griechischen Geschichte" bezeichnete. Der Historiker Diodor (XI, 21) überliefert, dass die Elymer sich auf die Trojaner als Vorfahren beriefen: Aeneas soll hier auf seiner Flucht aus Troja gelandet sein. Das Theater (3. Jh. v. Chr.) wurde unter Hieron II. in den Monte Barbaro gehauen. Mit 63 m Durchmesser bietet es 4.000 Zuschauern Platz und einen spektakulären Blick auf den Golf von Castellammare.',
     wikipedia: 'https://en.wikipedia.org/wiki/Segesta',
-    planUrl: 'https://en.wikipedia.org/wiki/Temple_of_Segesta#/media/File:Segesta_Temple.jpg',
-    facts: ['Ca. 420 v. Chr. (Tempel)', '36 dorische Säulen', 'Nie fertiggestellt', 'Theater: 4.000 Plätze']
+    planUrl: 'https://commons.wikimedia.org/wiki/Category:Plans_of_ancient_Greek_temples_in_Segesta',
+    facts: ['Ca. 420 v. Chr. (Tempel)', '36 dorische Säulen', 'Nie fertiggestellt', 'Theater: 4.000 Plätze', 'Sizilienexpedition Athens 415 v. Chr.']
   },
   'Monte Érice': {
     summary: 'Mittelalterliche Bergstadt auf 750 m Höhe mit phönizisch-griechischen Wurzeln und normannischer Burg.',
-    detail: 'Érice thront auf dem gleichnamigen Berg (751 m) an der Westspitze Siziliens. Bereits die Phönizier errichteten hier ein Heiligtum der Astarte, das die Griechen als Tempel der Aphrodite Erycina übernahmen – eines der bedeutendsten Aphrodite-Heiligtümer der antiken Welt. Die Normannen bauten im 12. Jh. das Castello di Venere (Venusburg) über den Resten des antiken Tempels. Die mittelalterliche Altstadt mit kopfsteingepflasterten Gassen, gotischen Kirchen und dem berühmten Pasticceria Maria Grammatico (legendäre Mandelgebäck-Tradition der Klosterschwestern) ist nahezu vollständig erhalten.',
+    detail: 'Érice thront auf dem gleichnamigen Berg (751 m) an der Westspitze Siziliens. Bereits die Phönizier errichteten hier ein Heiligtum der Astarte, das die Griechen als Tempel der Aphrodite Erycina übernahmen – Diodor (IV, 83) berichtet, dass Daidalos nach seiner Flucht aus Kreta hier für König Eryx einen goldenen Widder als Weihgeschenk schuf. Vergil lässt Aeneas hier seinen Vater Anchises begraben (Aeneis V). Das Heiligtum war so berühmt, dass Rom einen eigenen Tempel der Venus Erycina auf dem Kapitol errichtete (215 v. Chr.). Die Normannen bauten im 12. Jh. das Castello di Venere über den Resten des antiken Tempels. Heute ist Érice auch als Sitz des Ettore Majorana Centre for Scientific Culture bekannt, gegründet 1963 vom Physiker Antonino Zichichi, wo regelmäßig Nobelpreisträger tagen.',
     wikipedia: 'https://en.wikipedia.org/wiki/Erice',
-    facts: ['751 m Höhe', 'Antikes Aphrodite-Heiligtum', 'Normannisches Castello di Venere', 'Ca. 500 Einwohner']
+    facts: ['751 m Höhe', 'Antikes Aphrodite-Heiligtum', 'Daidalos-Sage', 'Castello di Venere (12. Jh.)', 'Majorana-Zentrum (1963)']
   },
   'Trapani': {
     summary: 'Hafenstadt an der Westspitze Siziliens mit barockem Stadtkern und lebhafter Altstadt.',
-    detail: `Trapani (griech. Drepanon, „Sichel") verdankt seinen Namen der sichelförmigen Landzunge. Die Stadt war ein wichtiger punischer Hafen und Schauplatz der Seeschlacht von Drepana (249 v. Chr.) im Ersten Punischen Krieg. Die Altstadt besticht durch barocke Kirchen (Chiesa del Purgatorio, Cattedrale di San Lorenzo), den lebhaften Fischmarkt und die arabisch beeinflusste Architektur. Berühmt sind die Prozessionen der Misteri am Karfreitag – 20 lebensgroße Figurengruppen aus dem 17./18. Jh.`,
+    detail: `Trapani (griech. Drepanon, „Sichel") verdankt seinen Namen der sichelförmigen Landzunge. Die Stadt war ein wichtiger punischer Hafen und Schauplatz der Seeschlacht von Drepana (249 v. Chr.) im Ersten Punischen Krieg, bei der Konsul Publius Claudius Pulcher die heiligen Hühner ins Meer werfen ließ, als sie nicht fressen wollten – mit den Worten „Dann sollen sie eben trinken!" (Valerius Maximus I, 4, 3). Er verlor die Schlacht und fast 100 Schiffe. Die Altstadt besticht durch barocke Kirchen, den Fischmarkt und die arabisch beeinflusste Architektur. Unter den Arabern (827–1072) war Trapani ein bedeutendes Handelszentrum. Berühmt sind die Prozessionen der Misteri am Karfreitag – 20 lebensgroße Figurengruppen aus dem 17./18. Jh., die 24 Stunden durch die Stadt getragen werden.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Trapani',
-    facts: ['Gegründet: 8. Jh. v. Chr.', 'Seeschlacht 249 v. Chr.', 'Misteri-Prozessionen (Karfreitag)', 'Tor zu den Ägadischen Inseln']
+    facts: ['Gegründet: 8. Jh. v. Chr.', 'Seeschlacht 249 v. Chr.', 'Heilige-Hühner-Episode', 'Misteri (Karfreitag)', 'Tor zu den Ägadischen Inseln']
   },
   'Marsala': {
     summary: 'Berühmt für den gleichnamigen Wein und das im Museum ausgestellte punische Kriegsschiff.',
-    detail: `Marsala (arab. Marsa Allah, „Hafen Gottes") ist die westlichste Stadt Siziliens. Im archäologischen Museum Baglio Anselmi befindet sich ein einzigartiges punisches Langschiff (Lilybaeum Ship) aus dem 3. Jh. v. Chr. – eines der wenigen erhaltenen Kriegsschiffe der Antike. 1860 landete Giuseppe Garibaldi hier mit seinen „Tausend" (Spedizione dei Mille). Die Altstadt mit dem Barockdom und den Salzstraßen (Via del Sale) mit ihren Windmühlen und Salzbergen bietet ein einzigartiges Landschaftsbild.`,
+    detail: `Marsala (arab. Marsa Allah, „Hafen Gottes"), das antike Lilybaeum, war die letzte und stärkste punische Festung auf Sizilien. Im archäologischen Museum Baglio Anselmi befindet sich ein einzigartiges punisches Langschiff (Lilybaeum Ship) aus dem 3. Jh. v. Chr. – entdeckt 1971 von der Archäologin Honor Frost, einer Pionierin der Unterwasserarchäologie. Es ist eines der wenigen erhaltenen Kriegsschiffe der Antike. Polybios (I, 42) beschreibt die vergebliche römische Belagerung Lilybaeums 250–241 v. Chr. Am 11. Mai 1860 landete Giuseppe Garibaldi hier mit seinen 1.089 „Rothemden" (I Mille) und begann die Einigung Italiens. Der Marsala-Wein wurde 1773 vom englischen Kaufmann John Woodhouse „entdeckt", der Wein mit Branntwein versetzte, damit er die Seereise nach England überstehe.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Marsala',
-    facts: ['Arab. Gründung: 8. Jh.', 'Punisches Schiff (3. Jh. v. Chr.)', 'Garibaldis Landung 1860', 'Berühmter Marsala-Wein']
+    facts: ['Antik: Lilybaeum', 'Punisches Schiff (3. Jh. v. Chr.)', 'Honor Frost (1971)', 'Garibaldi 1860', 'Marsala-Wein ab 1773']
   },
   'Cave di Cusa': {
     summary: 'Antiker Steinbruch, aus dem die Tempel von Selinunt erbaut wurden – Säulentrommeln liegen noch in situ.',
@@ -70,10 +70,10 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Selinunte': {
     summary: 'Größter archäologischer Park Europas mit einer der bedeutendsten griechischen Tempelanlagen.',
-    detail: 'Selinunt (griech. Selinus) wurde 628 v. Chr. als Kolonie von Megara Hyblaea gegründet und war die westlichste griechische Stadt Siziliens. Der archäologische Park umfasst über 270 Hektar mit acht monumentalen Tempeln (mit Buchstaben A–G und O bezeichnet). Der Tempel E (Hera-Tempel, 5. Jh. v. Chr.) wurde teilweise wiederaufgerichtet und ist der am besten erhaltene. Auf der Akropolis stehen die Reste der Tempel A, C, D und O. Der kolossale Tempel G (Zeus/Apollo) war einer der größten griechischen Tempel überhaupt (113 × 54 m). 409 v. Chr. wurde die Stadt von den Karthagern unter Hannibal Mago zerstört.',
+    detail: 'Selinunt (griech. Selinus, nach dem wilden Sellerie/Eppich benannt) wurde 628 v. Chr. als Kolonie von Megara Hyblaea gegründet und war die westlichste griechische Stadt Siziliens. Der archäologische Park umfasst über 270 Hektar mit acht monumentalen Tempeln. Der Tempel E (Hera-Tempel, 5. Jh. v. Chr.) ist der am besten erhaltene. Der kolossale Tempel G (Zeus/Apollo, 113 × 54 m) war einer der größten griechischen Tempel überhaupt – seine Säulen hatten einen Durchmesser von 3,40 m, er wurde über 100 Jahre gebaut und nie vollendet. Diodor (XIII, 54–59) schildert eindringlich die Zerstörung 409 v. Chr. durch den Karthager Hannibal Mago (Enkel des bei Himera 480 v. Chr. gefallenen Hamilkar): 16.000 Einwohner wurden getötet, 5.000 verschleppt. Der Philosoph Empedokles aus Akragas soll laut Diogenes Laertius die Malaria in Selinunt bekämpft haben, indem er auf eigene Kosten zwei Flüsse umleiten ließ.',
     wikipedia: 'https://en.wikipedia.org/wiki/Selinunte',
-    planUrl: 'https://en.wikipedia.org/wiki/Selinunte#/media/File:Selinunte_map-en.svg',
-    facts: ['Gegründet: 628 v. Chr.', '8 monumentale Tempel', 'Akropolis + Ostterrasse', 'Zerstört: 409 v. Chr.', 'UNESCO-Kandidat']
+    planUrl: 'https://commons.wikimedia.org/wiki/File:Selinunte-TempleC-Plan-bjs.png',
+    facts: ['Gegründet: 628 v. Chr.', '8 monumentale Tempel', 'Tempel G: 113 × 54 m', 'Zerstört: 409 v. Chr.', 'Empedokles und die Malaria']
   },
   'Scala dei Turchi': {
     summary: 'Spektakuläre weiße Kalksteinklippen an der Südküste – ein Naturwunder.',
@@ -83,23 +83,23 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Agrigento': {
     summary: `Das „Tal der Tempel" – eine der bedeutendsten archäologischen Stätten der Welt (UNESCO).`,
-    detail: 'Akragas (griech.) wurde 581 v. Chr. von Kolonisten aus Gela gegründet und entwickelte sich zur zweitgrößten Stadt Siziliens. Das Tal der Tempel (Valle dei Templi) ist seit 1997 UNESCO-Weltkulturerbe und umfasst sieben dorische Tempel aus dem 5. Jh. v. Chr. Der Concordia-Tempel ist einer der besterhaltenen griechischen Tempel weltweit (dank seiner Umwandlung in eine christliche Kirche im 6. Jh.). Der Olympieion (Zeustempel) war mit 113 × 56 m einer der größten dorischen Tempel überhaupt – er trug 38 gewaltige Telamonen (7,5 m hohe Atlanten-Figuren). Das archäologische Museum beherbergt einen rekonstruierten Telamon.',
+    detail: 'Akragas wurde 581 v. Chr. von Kolonisten aus Gela gegründet. Unter dem Tyrannen Theron (488–472 v. Chr.) erlebte die Stadt ihre Blütezeit: Nach dem Sieg über die Karthager bei Himera 480 v. Chr. wurden mit der Beute die monumentalen Tempel errichtet. Der Concordia-Tempel ist einer der besterhaltenen griechischen Tempel weltweit (dank seiner Umwandlung zur Kirche durch Bischof Gregorius im 6. Jh.). Der Olympieion (113 × 56 m) trug 38 gewaltige Telamonen (7,5 m hohe Atlanten-Figuren). Pindar (Olympische Ode II) pries Theron: „Der nach dem Guten strebt mit aller Kraft..." Der Philosoph Empedokles (ca. 490–430 v. Chr.) stammte aus Akragas – er lehrte die vier Elemente und soll sich in den Ätna gestürzt haben. Diodor berichtet, dass die Akragantiner ihre Pferde so luxuriös hielten, dass sie ihnen Grabmäler errichteten.',
     wikipedia: 'https://en.wikipedia.org/wiki/Valle_dei_Templi',
-    planUrl: 'https://en.wikipedia.org/wiki/Valle_dei_Templi#/media/File:Agrigent_BW_2012-10-07_13-09-13.jpg',
-    facts: ['Gegründet: 581 v. Chr.', 'UNESCO seit 1997', '7 dorische Tempel', 'Concordia-Tempel besterhaltener', 'Olympieion: 113 × 56 m']
+    planUrl: 'https://commons.wikimedia.org/wiki/File:Akragas-sitemap-bjs.jpg',
+    facts: ['Gegründet: 581 v. Chr.', 'UNESCO seit 1997', 'Tyrann Theron (488–472)', 'Empedokles (490–430)', 'Olympieion: 113 × 56 m']
   },
   'Gela': {
-    summary: 'Bedeutende griechische Kolonie mit reichem archäologischem Museum.',
-    detail: 'Gela wurde 688 v. Chr. von Kolonisten aus Rhodos und Kreta gegründet und war eine der mächtigsten Städte Siziliens. Von hier aus wurde Akragas (Agrigento) gegründet. Der berühmte Tyrann Gelon verlegte seine Residenz 485 v. Chr. nach Syrakus. Aischylos, der Vater der griechischen Tragödie, starb hier 456 v. Chr. Das archäologische Museum bewahrt Funde aus der Nekropole, darunter bemalte Terrakotta-Sarkophage und die berühmten Münzen von Gela mit dem Flussgott auf einem Stier.',
+    summary: 'Bedeutende griechische Kolonie – Geburtsort des Tyrannen Gelon und Sterbeort des Aischylos.',
+    detail: 'Gela wurde 688 v. Chr. von Kolonisten aus Rhodos und Kreta gegründet. Hier wuchs Gelon auf, der 485 v. Chr. Syrakus eroberte und es zur mächtigsten Stadt der griechischen Welt machte. 480 v. Chr. schlug er die Karthager bei Himera – am selben Tag, so die Überlieferung, als die Griechen bei Salamis die Perser besiegten. Aischylos, der Vater der griechischen Tragödie, starb hier 456 v. Chr. – laut Plinius (X, 7) soll ein Adler eine Schildkröte auf seinen kahlen Kopf fallen gelassen haben, die er für einen Felsen hielt. Der Dichter selbst soll als Grabinschrift nur seine Teilnahme an der Schlacht von Marathon erwähnt haben, nicht seine Dramen. Das Museum zeigt bemalte Terrakotta-Sarkophage und die berühmten Münzen mit dem Flussgott Gelas auf einem Stier.',
     wikipedia: 'https://en.wikipedia.org/wiki/Gela',
-    facts: ['Gegründet: 688 v. Chr.', 'Mutterstadt von Akragas', 'Tod des Aischylos 456 v. Chr.', 'Berühmte Münzprägung']
+    facts: ['Gegründet: 688 v. Chr.', 'Tyrann Gelon', 'Aischylos † 456 v. Chr.', 'Schlacht bei Himera 480', 'Berühmte Münzprägung']
   },
   'Piazza Armerina': {
     summary: 'Die Villa Romana del Casale mit 3.500 m² spätantiken Mosaiken – UNESCO-Weltkulturerbe.',
-    detail: `Die Villa Romana del Casale (3.–4. Jh. n. Chr.) ist eine der bedeutendsten römischen Villen der Welt. Ihre 3.500 m² Bodenmosaiken sind die umfangreichsten und besterhaltenen der gesamten Antike. Berühmt sind die „Bikini-Mädchen" (junge Frauen beim Sport in Bikini-ähnlicher Kleidung), die Große Jagdszene (66 m langer Korridor mit Tierdarstellungen aus dem gesamten Römischen Reich) und die Herkules-Abenteuer. Die Villa gehörte vermutlich einem hohen römischen Beamten oder sogar Kaiser Maximian. Seit 1997 UNESCO-Weltkulturerbe.`,
+    detail: `Die Villa Romana del Casale (3.–4. Jh. n. Chr.) gehörte vermutlich einem Angehörigen der senatorischen Aristokratie, möglicherweise Lucius Aradius Valerius Proculus, der 340 n. Chr. Konsul war – oder sogar Kaiser Maximian (Mitregent Diokletians). Die 3.500 m² Bodenmosaiken sind die umfangreichsten der gesamten Antike, geschaffen von nordafrikanischen Werkstätten. Die „Bikini-Mädchen" zeigen junge Frauen beim Diskuswurf, Laufen und Ballspiel – das früheste Zeugnis weiblicher Sportbekleidung. Die Große Jagdszene (66 m Korridor) zeigt den Fang exotischer Tiere für die Arenen Roms: Löwen, Tiger, Nashörner, Elefanten. Die Mosaiken der kleinen Jagd zeigen eine Opferszene an die Göttin Diana. Nach einer Überschwemmung im 12. Jh. wurde die Villa verschüttet und erst 1929 durch den Archäologen Paolo Orsi wiederentdeckt.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Villa_Romana_del_Casale',
-    planUrl: 'https://en.wikipedia.org/wiki/Villa_Romana_del_Casale#/media/File:Villa_del_Casale_-_plan.png',
-    facts: [`3.–4. Jh. n. Chr.`, `3.500 m² Mosaiken`, `UNESCO seit 1997`, `„Bikini-Mädchen"`, `Große Jagdszene: 66 m`]
+    planUrl: 'https://commons.wikimedia.org/wiki/File:Villa-del-Casale-plan-color-bjs-1.jpg',
+    facts: [`3.–4. Jh. n. Chr.`, `3.500 m² Mosaiken`, `UNESCO seit 1997`, `„Bikini-Mädchen"`, `Große Jagdszene: 66 m`, `Wiederentdeckt 1929`]
   },
   'Akrai': {
     summary: 'Syrakusanische Kolonie mit griechischem Theater und Aphroditetempel in den Ibleischen Bergen.',
@@ -121,29 +121,29 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Syrakus: Ortigia': {
     summary: 'Einst mächtigste Stadt der griechischen Welt – der Dom steht im antiken Athena-Tempel.',
-    detail: `Syrakus (griech. Syrakousai) wurde 734 v. Chr. von korinthischen Siedlern gegründet und entwickelte sich zur mächtigsten griechischen Stadt des westlichen Mittelmeerraums. Auf der Halbinsel Ortigia steht der Dom, der in den antiken Athena-Tempel (5. Jh. v. Chr.) hineingebaut wurde – die dorischen Säulen sind noch heute in den Seitenwänden sichtbar. Die Fonte Aretusa (Arethusa-Quelle) geht auf den Mythos der Nymphe Arethusa zurück, die sich in eine Süßwasserquelle verwandelte. Cicero nannte Syrakus „die größte aller griechischen Städte und die schönste von allen."`,
+    detail: `Syrakus wurde 734 v. Chr. von korinthischen Siedlern unter dem Oikisten Archias gegründet. Unter den Tyrannen Gelon und Hieron I. (5. Jh. v. Chr.) stieg es zur mächtigsten Stadt des westlichen Mittelmeerraums auf. Der Dom wurde in den Athena-Tempel (5. Jh. v. Chr.) hineingebaut – die dorischen Säulen sind noch heute sichtbar. Cicero (In Verrem II, 4.117) pries die Stadt als „die größte aller griechischen Städte, die schönste von allen" – und dokumentierte gleichzeitig die Plünderungen des Statthalters Verres (73–71 v. Chr.), der u.a. die Türen des Athena-Tempels rauben ließ. Am Hof Hierons I. wirkten die Dichter Pindar, Bakchylides und Aischylos. Die Fonte Aretusa geht auf den Mythos der Nymphe zurück, die vor dem Flussgott Alpheios von Olympia unter dem Meer hindurch nach Sizilien floh (Ovid, Metamorphosen V).`,
     wikipedia: 'https://en.wikipedia.org/wiki/Syracuse,_Sicily',
-    facts: ['Gegründet: 734 v. Chr.', 'Dom im Athena-Tempel', 'Arethusa-Quelle', 'UNESCO seit 2005']
+    facts: ['Gegründet: 734 v. Chr.', 'Dom im Athena-Tempel', 'Cicero gegen Verres', 'Pindar, Aischylos am Hof', 'UNESCO seit 2005']
   },
   'Archäologischer Park': {
     summary: `Griechisches Theater, „Ohr des Dionysios" und römisches Amphitheater.`,
-    detail: `Der Parco Archeologico della Neapoli umfasst einige der wichtigsten antiken Monumente Siziliens. Das griechische Theater (5. Jh. v. Chr., erweitert im 3. Jh.) ist eines der größten der antiken Welt (138 m Durchmesser, 15.000 Plätze). Das „Ohr des Dionysios" (Orecchio di Dionisio) ist eine 23 m hohe, ohrförmige Grotte mit erstaunlicher Akustik – der Legende nach ließ Tyrann Dionysios I. hier Gefangene belauschen. Der Altar Hierons II. (200 × 23 m) war der größte Altar der griechischen Welt. Das römische Amphitheater (2. Jh. n. Chr.) gehört zu den größten Siziliens.`,
+    detail: `Der Parco Archeologico della Neapoli umfasst die wichtigsten antiken Monumente Siziliens. Das griechische Theater (5. Jh. v. Chr., erweitert unter Hieron II.) ist eines der größten der antiken Welt (138 m Durchmesser, 15.000 Plätze). Hier wurden Aischylos' Tragödien uraufgeführt – seine „Perser" wurden 472 v. Chr. in Syrakus wiederaufgeführt. Das „Ohr des Dionysios" benannte der Maler Caravaggio 1608 während seines Sizilien-Aufenthalts (er floh vor einer Mordanklage in Malta). Der Tyrann Dionysios I. (405–367 v. Chr.) soll hier die 7.000 athenischen Kriegsgefangenen von 413 v. Chr. eingesperrt haben – Thukydides (VII, 87) beschreibt ihr Elend in den Steinbrüchen als eines der grausamsten Schicksale des Peloponnesischen Krieges. Der Altar Hierons II. (200 × 23 m) diente der Opferung von 450 Stieren gleichzeitig.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Neapolis_(Syracuse)',
-    planUrl: 'https://en.wikipedia.org/wiki/Neapolis_(Syracuse)#/media/File:SiracusaNeapolis.jpg',
-    facts: ['Theater: 15.000 Plätze', 'Ohr des Dionysios: 23 m hoch', 'Altar Hierons: 200 m lang', 'Römisches Amphitheater']
+    planUrl: 'https://commons.wikimedia.org/wiki/File:Top.neapolis-Cavallari.jpg',
+    facts: ['Theater: 15.000 Plätze', 'Aischylos-Uraufführungen', 'Caravaggio 1608', 'Athenische Gefangene 413 v. Chr.', 'Altar: 450 Stiere']
   },
   'Castello Eurialo': {
     summary: 'Bedeutendstes antikes Festungswerk Siziliens – griechische Militärarchitektur.',
-    detail: 'Das Castello Eurialo (griech. Euryalos) wurde unter Dionysios I. ab 402 v. Chr. als Schlüsselfestung der Befestigungsanlage von Syrakus errichtet. Es war das größte und komplexeste griechische Festungswerk der Antike: fünf Turmpaare, drei tiefe Trockengräben, ein unterirdisches Tunnelsystem zur Truppenverlegung und eine zentrale Zitadelle. Die Festung spielte eine entscheidende Rolle bei der römischen Belagerung 214–212 v. Chr., bei der Archimedes seine berühmten Kriegsmaschinen einsetzte.',
+    detail: `Das Castello Eurialo wurde unter Dionysios I. ab 402 v. Chr. als Schlüsselfestung errichtet. Es war das komplexeste griechische Festungswerk der Antike: fünf Turmpaare, drei tiefe Trockengräben und ein unterirdisches Tunnelsystem. Bei der römischen Belagerung 214–212 v. Chr. setzte der Mathematiker Archimedes hier seine legendären Kriegsmaschinen ein: Katapulte, die Felsbrocken schleuderten, „Krallen des Archimedes" (Kräne, die Schiffe aus dem Wasser hoben) und angeblich Brennspiegel. Der römische General Marcellus soll gesagt haben: „Er übertrifft ja die hundertarmigen Riesen der Fabel!" (Plutarch, Marcellus 17). Archimedes wurde 212 v. Chr. bei der Eroberung von einem Soldaten getötet, trotz Marcellus' Befehl, ihn zu verschonen – seine letzten Worte: „Störe meine Kreise nicht!" (Noli turbare circulos meos).`,
     wikipedia: 'https://en.wikipedia.org/wiki/Euryalus_Fortress',
-    planUrl: 'https://en.wikipedia.org/wiki/Euryalus_Fortress#/media/File:Euryalus.svg',
-    facts: ['Ab 402 v. Chr. erbaut', 'Größtes griech. Festungswerk', 'Unterirdisches Tunnelsystem', 'Archimedes-Belagerung 212 v. Chr.']
+    planUrl: 'https://commons.wikimedia.org/wiki/File:Mappa_del_Castello_Eurialo_sull%27Epipoli.jpg',
+    facts: ['Ab 402 v. Chr. erbaut', `Archimedes' Kriegsmaschinen`, '„Störe meine Kreise nicht!"', 'Unterirdisches Tunnelsystem']
   },
   'Catania': {
     summary: 'Barockstadt am Fuße des Ätna – aus Lavagestein nach dem Erdbeben 1693 neu erbaut.',
-    detail: "Catania (griech. Katane, gegr. 729 v. Chr.) wurde im Laufe ihrer Geschichte siebenmal durch Ätna-Ausbrüche und Erdbeben zerstört und immer wieder aufgebaut. Nach dem Erdbeben von 1693 und dem Ätna-Ausbruch von 1669 wurde die Stadt im Barockstil aus schwarzem Lavagestein und weißem Kalkstein neu errichtet – seit 2002 UNESCO-Weltkulturerbe. Der Dom Sant'Agata (11. Jh., barock umgebaut) birgt die Reliquien der Stadtheiligen. Auf der Piazza del Duomo steht der Fontana dell'Elefante (1736) – ein ägyptischer Lava-Elefant mit einem Obelisk. Das Teatro Romano (2. Jh. n. Chr.) liegt mitten im Stadtzentrum.",
+    detail: `Catania (griech. Katane, gegr. 729 v. Chr. von Naxos-Siedlern) wurde siebenmal zerstört und wiederaufgebaut. Der Tyrann Hieron I. vertrieb 476 v. Chr. die gesamte Bevölkerung und benannte die Stadt in Aitna um – Pindar widmete ihm die 1. Pythische Ode zur Neugründung. Nach dem Erdbeben von 1693 (ca. 16.000 Tote allein in Catania) schuf der Architekt Giovanni Battista Vaccarini den barocken Neubau aus schwarzem Lavagestein und weißem Kalkstein. Der Elefantenbrunnen (1736) – ein antiker Lavastein-Elefant mit ägyptischem Obelisk – ist sein Meisterwerk. Catania ist auch die Geburtsstadt des Komponisten Vincenzo Bellini (1801–1835), dessen Oper „Norma" dem Nationalgericht Pasta alla Norma den Namen gab. Im Teatro Romano (2. Jh. n. Chr., 7.000 Plätze) fanden noch bis ins 5. Jh. Aufführungen statt.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Catania',
-    facts: ['Gegründet: 729 v. Chr.', '7× zerstört & wiederaufgebaut', 'UNESCO seit 2002', 'Elefantenbrunnen (1736)', 'Teatro Romano: 2. Jh. n. Chr.']
+    facts: ['Gegründet: 729 v. Chr.', '7× zerstört', 'UNESCO seit 2002', 'Bellini (1801–1835)', 'Vaccarinis Barock']
   },
   'Ätna': {
     summary: 'Europas höchster und aktivster Vulkan (3.357 m) – UNESCO-Weltnaturerbe.',
@@ -159,9 +159,9 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Taormina': {
     summary: 'Legendärer Küstenort mit griechischem Theater und atemberaubendem Ätna-Panorama.',
-    detail: 'Taormina (griech. Tauromenion) wurde 392 v. Chr. von Dionysios I. als Nachfolgesiedlung des zerstörten Naxos gegründet. Das Teatro Greco (3. Jh. v. Chr., von den Römern umgebaut) bietet mit seiner einzigartigen Lage – Blick auf den Ätna und das Ionische Meer – eines der berühmtesten Panoramen der Welt. Goethe beschrieb es begeistert in seiner Italienischen Reise. Der Corso Umberto I. führt durch die mittelalterliche Altstadt mit dem Palazzo Corvaja (15. Jh.), der gotischen Kirche San Giuseppe und dem Uhrturm. Seit dem 19. Jh. ist Taormina ein Sehnsuchtsort für Künstler, Schriftsteller und Reisende.',
+    detail: 'Taormina (griech. Tauromenion) wurde 392 v. Chr. von Andromachos, dem Vater des Historikers Timaios, gegründet. Es nahm die Überlebenden des von Dionysios I. zerstörten Naxos auf. Das Teatro Greco (3. Jh. v. Chr., römisch umgebaut) bietet das berühmteste Panorama der Welt. Goethe schrieb am 7. Mai 1787: „Wenn man auch nur in Gedanken sich an jene Stelle versetzt, so ist es ein ungeheurer Anblick." Im 19. Jh. wurde Taormina zum Sehnsuchtsort: Der deutsche Fotograf Wilhelm von Gloeden schuf hier ab 1878 seine berühmten Fotografien, Oscar Wilde besuchte ihn 1897 nach seiner Haftentlassung. D.H. Lawrence lebte 1920–23 in Taormina und schrieb hier Teile von „Kangaroo". Zuletzt diente die Stadt als Drehort für „The White Lotus" (HBO, 2023) im Hotel San Domenico Palace.',
     wikipedia: 'https://en.wikipedia.org/wiki/Taormina',
-    facts: ['Gegründet: 392 v. Chr.', 'Teatro Greco: 3. Jh. v. Chr.', 'Ätna + Meer-Panorama', 'Goethes Italienische Reise']
+    facts: ['Gegründet: 392 v. Chr.', 'Goethe: 7. Mai 1787', 'Von Gloeden, Oscar Wilde', 'D.H. Lawrence (1920–23)', 'White Lotus (HBO)']
   },
   'Milazzo / Tindari': {
     summary: 'Wahlweise Äolische Inseln oder Tindari mit Theater, Basilika und Wallfahrtskirche.',
@@ -171,9 +171,9 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Cefalù': {
     summary: 'Normannische Kathedrale mit dem berühmten Christus-Pantokrator-Mosaik (1131).',
-    detail: 'Cefalù ist ein malerischer Küstenort, überragt von einem mächtigen Felsmassiv (La Rocca). Die normannische Kathedrale San Salvatore wurde 1131 von Roger II. gegründet – der Legende nach aufgrund eines Gelübdes nach Rettung aus einem Sturm. In der Apsis befindet sich das berühmte byzantinische Mosaik des Christus Pantokrator auf Goldgrund – eines der ältesten und eindrucksvollsten seiner Art in Sizilien (noch vor Monreale und der Cappella Palatina). Der mittelalterliche Waschplatz (Lavatoio Medievale) am Fluss Cefalino ist ein reizvolles arabisch-normannisches Baudenkmal.',
+    detail: 'Cefalù (griech. Kephaloidion, „Kopf") ist nach dem mächtigen Felsmassiv La Rocca benannt. Die normannische Kathedrale wurde 1131 von Roger II. gegründet – der Legende nach nach Rettung aus einem Seesturm. Roger II. (1095–1154) war einer der bemerkenswertesten Herrscher des Mittelalters: Er vereinte normannische, arabische und byzantinische Kultur. Sein Hof in Palermo war das gebildetste Zentrum Europas; der arabische Geograph al-Idrisi schuf für ihn 1154 die genaueste Weltkarte des Mittelalters (Tabula Rogeriana). Der Christus Pantokrator in der Apsis (1148) ist das älteste normannische Mosaik Siziliens – strenger und majestätischer als die späteren in Monreale. Das Buch in seiner linken Hand zeigt den Text in Griechisch und Latein – Symbol der Zweisprachigkeit des normannischen Hofes.',
     wikipedia: 'https://en.wikipedia.org/wiki/Cefal%C3%B9_Cathedral',
-    facts: ['Gegründet: 1131 von Roger II.', 'Christus Pantokrator-Mosaik', 'UNESCO seit 2015', 'Arabisch-normannisch']
+    facts: ['Gegründet: 1131 von Roger II.', 'Christus Pantokrator (1148)', 'al-Idrisi: Tabula Rogeriana', 'UNESCO seit 2015']
   },
   'Solunto': {
     summary: 'Hellenistisch-römische Stadt auf dem Monte Catalfano mit Peristylhäusern und Agora.',
@@ -183,16 +183,15 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Palermo Altstadt': {
     summary: 'Normannenpalast mit Cappella Palatina, La Martorana und das archäologische Museum.',
-    detail: `Palermo vereint wie kaum eine andere Stadt die Spuren von Phöniziern, Griechen, Römern, Arabern, Normannen und Staufern. Der Normannenpalast (Palazzo dei Normanni) steht über den Resten einer arabischen Festung und beherbergt die Cappella Palatina (1140), deren goldgrundige byzantinische Mosaiken und arabische Muqarnas-Decke ein einzigartiges Meisterwerk arabisch-normannischer Kunst darstellen. La Martorana (Santa Maria dell'Ammiraglio, 1143) besitzt die ältesten byzantinischen Mosaiken Siziliens. Das Archäologische Museum Antonino Salinas zeigt die bedeutendsten Metopen von Selinunt und Funde aus ganz Westsizilien.`,
+    detail: `Palermo (phön. Ziz, „Blume"; griech. Panormos, „Allhafen") vereint 3.000 Jahre Kulturgeschichte. Der Normannenpalast steht über arabischen Fundamenten und beherbergt die Cappella Palatina (1140), die Friedrich II. (1194–1250), der „Stupor Mundi" (Staunen der Welt), als Taufkirche diente. Die Muqarnas-Decke (Stalaktitengewölbe) ist das größte fatimidische Holzkunstwerk außerhalb der islamischen Welt. Friedrich II. wuchs hier auf, sprach sechs Sprachen und gründete die erste staatliche Universität Europas (Neapel, 1224). La Martorana (1143) wurde vom Admiral Georg von Antiochien gestiftet – ein griechisch-orthodoxer Christ im Dienste des normannischen Königs, der die größte Flotte des Mittelmeerraums befehligte. Im Salinas-Museum finden sich die Metopen von Selinunt – einzigartige Zeugnisse der griechischen Großplastik (u.a. Europa auf dem Stier, Perseus und Medusa).`,
     wikipedia: 'https://en.wikipedia.org/wiki/Palazzo_dei_Normanni',
-    facts: ['Cappella Palatina: 1140', 'Arabisch-normannische Kunst', 'La Martorana: 1143', 'UNESCO seit 2015', 'Metopen von Selinunt im Museum']
+    facts: ['Cappella Palatina: 1140', 'Friedrich II. „Stupor Mundi"', 'Muqarnas-Decke', 'Georg von Antiochien', 'UNESCO seit 2015']
   },
   'Monreale': {
     summary: 'Normannische Kathedrale mit 6.340 m² byzantinischer Goldmosaiken und romanischem Kreuzgang.',
-    detail: 'Die Kathedrale Santa Maria Nuova von Monreale wurde 1174 von Wilhelm II. gegründet und ist das Meisterwerk arabisch-normannischer Baukunst. Ihre 6.340 m² byzantinischer Goldmosaiken bedecken nahezu alle Innenwände und erzählen in 130 Szenen die gesamte biblische Geschichte von der Schöpfung bis zur Apostelgeschichte. Der Christus Pantokrator in der Hauptapsis ist das Herzstück. Der romanische Kreuzgang (47 × 47 m) besitzt 228 Doppelsäulen, von denen jede ein anderes Kapitell trägt – ein Kompendium mittelalterlicher Bildhauerkunst. Seit 2015 UNESCO-Weltkulturerbe.',
+    detail: 'Die Kathedrale wurde 1174 von Wilhelm II. „dem Guten" gegründet – angeblich nach einer Traumvision, in der die Madonna ihm den Ort eines vergrabenen Schatzes zeigte, den er zum Kirchenbau verwenden solle. In Wahrheit war es ein politisches Projekt: Wilhelm wollte den mächtigen Erzbischof von Palermo, Walter of the Mill (Gualtiero Offamiglio), übertrumpfen, der gerade den Palermitaner Dom umbaute. Die 6.340 m² byzantinischer Goldmosaiken erzählen in 130 Szenen die biblische Geschichte. Besonders bemerkenswert: Die Darstellung der Erschaffung Evas, der Sündenfall und die Arche Noah. Der Kreuzgang (47 × 47 m) mit 228 Doppelsäulen zeigt arabische, normannische und antike Motive – jedes Kapitell ist einzigartig. Maupassant schrieb 1885: „Die schönste Kirche der Welt, das erstaunlichste religiöse Juwel, das die menschliche Vorstellungskraft ersonnen hat."',
     wikipedia: 'https://en.wikipedia.org/wiki/Cathedral_of_Monreale',
-    planUrl: 'https://en.wikipedia.org/wiki/Cathedral_of_Monreale#/media/File:Monreale_Cathedral_plan.svg',
-    facts: ['Gegründet: 1174', '6.340 m² Goldmosaiken', '130 biblische Szenen', '228 Doppelsäulen im Kreuzgang', 'UNESCO seit 2015']
+    facts: ['Gegründet: 1174', '6.340 m² Goldmosaiken', 'Wilhelm II. vs. Walter of the Mill', '228 einzigartige Kapitelle', 'UNESCO seit 2015']
   },
   'Monte Pellegrino': {
     summary: `Von Goethe als „das schönste Vorgebirge der Welt" gepriesen – Wallfahrtsort Santa Rosalia.`,
@@ -304,7 +303,7 @@ const days: DayData[] = [
   {
     day: 7, date: '3. April', weekday: 'Freitag',
     title: 'Palermo – Monreale – Monte Pellegrino',
-    image: images.palermo,
+    image: images.monreale,
     hotel: 'Hotel Posta, Palermo (N/F)',
     stops: [
       { name: 'Palermo Altstadt', desc: 'Normannenpalast mit Cappella Palatina (goldene Mosaiken), Normannendom, Kreuzkuppelkirche La Martorana, archäologisches Museum' },
@@ -315,7 +314,7 @@ const days: DayData[] = [
   {
     day: 8, date: '4. April', weekday: 'Samstag',
     title: 'Palermo – Rückflug',
-    image: images.monreale,
+    image: images.palermo,
     hotel: '',
     stops: [
       { name: 'Palermo Altstadt', desc: 'Altstadtrundgang: Quattro Canti, Fontana Pretoria, Vucciria-Markt' },
@@ -558,8 +557,27 @@ function SightDetail({ name }: { name: string }) {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('route')
   const [currentDay, setCurrentDay] = useState<number | null>(null)
+
+  // Track which day card is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const dayNum = parseInt(entry.target.id.replace('day-', ''))
+            setCurrentDay(dayNum)
+          }
+        })
+      },
+      { threshold: 0.3, rootMargin: '-100px 0px -50% 0px' }
+    )
+    for (let i = 1; i <= 8; i++) {
+      const el = document.getElementById(`day-${i}`)
+      if (el) observer.observe(el)
+    }
+    return () => observer.disconnect()
+  }, [])
 
   const scrollTo = (id: string) => {
     setMenuOpen(false)
@@ -640,35 +658,20 @@ function App() {
           </div>
         </div>
 
-        {/* Tabs for filtering */}
-        <div className="tabs">
-          <button className={`tab-btn ${activeSection === 'route' ? 'active' : ''}`} onClick={() => setActiveSection('route')}>
-            <Landmark size={16} style={{ verticalAlign: 'middle', marginRight: 4 }} /> Alle Tage
-          </button>
-          <button className={`tab-btn ${activeSection === 'west' ? 'active' : ''}`} onClick={() => setActiveSection('west')}>
-            Westsizilien (Tag 1–2)
-          </button>
-          <button className={`tab-btn ${activeSection === 'south' ? 'active' : ''}`} onClick={() => setActiveSection('south')}>
-            Süden (Tag 3–4)
-          </button>
-          <button className={`tab-btn ${activeSection === 'east' ? 'active' : ''}`} onClick={() => setActiveSection('east')}>
-            Osten (Tag 5–6)
-          </button>
-          <button className={`tab-btn ${activeSection === 'north' ? 'active' : ''}`} onClick={() => setActiveSection('north')}>
-            Palermo (Tag 7–8)
-          </button>
+        {/* Sticky day navigation strip */}
+        <div className="day-strip">
+          {days.map(d => (
+            <button
+              key={d.day}
+              className={`day-strip-btn ${currentDay === d.day ? 'active' : ''}`}
+              onClick={() => { setCurrentDay(d.day); scrollTo(`day-${d.day}`) }}
+            >
+              Tag {d.day}: {d.weekday.slice(0, 2)}, {d.date}
+            </button>
+          ))}
         </div>
 
-        {days
-          .filter(d => {
-            if (activeSection === 'route') return true
-            if (activeSection === 'west') return d.day <= 2
-            if (activeSection === 'south') return d.day >= 3 && d.day <= 4
-            if (activeSection === 'east') return d.day >= 5 && d.day <= 6
-            if (activeSection === 'north') return d.day >= 7
-            return true
-          })
-          .map(d => (
+        {days.map(d => (
           <motion.div
             key={d.day}
             id={`day-${d.day}`}

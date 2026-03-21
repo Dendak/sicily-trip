@@ -590,7 +590,7 @@ const texte = [
 function SpeisenKarussel({ gerichte }: { gerichte: { name: string; desc: string; image: string }[] }) {
   const [idx, setIdx] = useState(0)
   useEffect(() => {
-    const timer = setInterval(() => setIdx(i => (i + 1) % gerichte.length), 10000)
+    const timer = setInterval(() => setIdx(i => (i + 1) % gerichte.length), 7000)
     return () => clearInterval(timer)
   }, [gerichte.length])
   const s = gerichte[idx]

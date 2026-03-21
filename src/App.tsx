@@ -22,12 +22,12 @@ const images = {
   monreale: 'https://images.unsplash.com/photo-1561729730-bdbcce4cb15b?w=800&q=80',
   villaRomanaTellaro: 'https://images.unsplash.com/photo-1761495438507-33d43cedd55c?w=800&q=80',
   scalaDeiTurchi: 'https://images.unsplash.com/photo-1627125337399-8938c4d0a0c0?w=800&q=80',
-  arancini: 'https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=400&q=80',
-  cannoli: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&q=80',
-  pasta: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&q=80',
-  granita: 'https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=400&q=80',
-  caponata: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80',
-  cassata: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80',
+  arancini: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/Arancini_002.jpg',
+  cannoli: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Cannoli_siciliani.jpg',
+  pasta: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg',
+  granita: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Granita_brioche.JPG',
+  caponata: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Caponata_%2814049113982%29.jpg',
+  cassata: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Cassatasiciliana.jpg',
 }
 
 const fadeIn = {

@@ -1091,19 +1091,49 @@ CATARELLA: Jawohl, Herr Doktor, Euer Gnaden ist bereits zufriedengestellt!`,
   },
   {
     title: 'Per questo mi chiamo Giovanni – La struttura di Cosa Nostra',
-    source: 'Luigi Garlando, Per questo mi chiamo Giovanni (Rizzoli, 2004)',
-    original: `Il giuramento dell'uomo d'onore:
-„Possano bruciare le mie carni come questo santino, se non manterrò fede al giuramento."
+    source: 'Luigi Garlando, Per questo mi chiamo Giovanni (Rizzoli, 2004), S. 38–41',
+    original: `«Cosca. Ma è una parola che non si usa quasi più, adesso
+ha un altro significato: gruppo di mafiosi. Cosca o anche
+famiglia. Quando Giovanni tornò a lavorare a Palermo, la città
+era come questo carciofo: ogni quartiere, una cosca di mafiosi.»
 
-Durante il rito, due testimoni pungono il dito del nuovo mafioso con una spina di arancia amara. Il sangue cade su un'immagine sacra che viene incendiata e passata tra le mani finché non si spegne. Solo allora il capo svela il nome dell'organizzazione: Cosa Nostra.
+[…] «Gli chiedono se accetta di entrare nella cosa, lui risponde
+di sì, allora l'uomo d'onore chiede ai due testimoni di pungere
+il dito del nuovo mafioso con una spina di arancia amara e di
+versare una goccia di sangue su un'immaginetta sacra. Infine
+bruciano la figurina di carta, il nuovo mafioso deve tenerla in
+mano finché il fuoco si spegne e pronunciare queste parole:
+«Le mie carni debbono bruciare come questo santino
+se non manterrò fede al giuramento.»
 
-La struttura di Cosa Nostra è come un carciofo: le foglie esterne sono i soldati e i picciotti – quelli che contano meno. Più si va verso il centro, più si sale di importanza: capodecina, consiglieri, vicecapo. E al cuore, nascosto e protetto da tutte le foglie, c'è il capo.`,
-    translation: `Der Schwur des Ehrenmenschen:
-„Möge mein Fleisch brennen wie dieses Heiligenbild, wenn ich meinen Schwur nicht halte."
+[…] «Comunque, finito il fuoco, l'uomo d'onore che dirige il
+rito, svela al nuovo mafioso che la cosa ha un nome: Cosa Nostra.»
+[…] «È un mostro dalle mille facce e ha più tentacoli di questo
+polipo che sto mangiando. […] in alto c'è un capo, eletto dagli
+uomini d'onore, affiancato da un vicecapo; sotto di loro ci sono
+due o tre consiglieri e più sotto ancora i capodecina, che comandano
+i soldati o picciotti.»`,
+    translation: `„Cosca. Aber das Wort wird kaum noch benutzt, heute bedeutet es:
+Gruppe von Mafiosi. Cosca oder auch Familie. Als Giovanni nach
+Palermo zurückkam, war die Stadt wie diese Artischocke:
+jedes Viertel eine Cosca von Mafiosi."
 
-Beim Initiationsritus stechen zwei Zeugen dem neuen Mafioso mit einem Dorn der Bitteroranje in den Finger. Das Blut fällt auf ein heiliges Bild, das angezündet und zwischen den Händen weitergereicht wird, bis es erlischt. Erst dann enthüllt der Boss den Namen der Organisation: Cosa Nostra.
+[…] „Sie fragen ihn, ob er bereit ist, der Cosa beizutreten. Er sagt ja.
+Dann bittet der Uomo d'onore die beiden Zeugen, dem neuen Mafioso
+mit einem Dorn der Bitteroranje in den Finger zu stechen und
+einen Blutstropfen auf ein heiliges Bildchen fallen zu lassen.
+Schließlich verbrennen sie die Figur; der neue Mafioso muss sie
+in der Hand halten, bis das Feuer erlischt, und dabei sprechen:
+‚Möge mein Fleisch brennen wie dieses Heiligenbild,
+wenn ich meinem Schwur nicht treu bleibe.'"
 
-Die Struktur von Cosa Nostra ist wie eine Artischocke: Die äußeren Blätter sind die Soldaten und Picciotti – die am wenigsten zählen. Je weiter man zum Kern vordringt, desto höher der Rang: Capodecina, Consiglieri, Vizeboss. Und im Herz, versteckt und geschützt von allen Blättern, sitzt der Boss.`,
+[…] „Als das Feuer erloschen ist, enthüllt der Uomo d'onore,
+der das Ritual leitet, dem neuen Mafioso, dass die Cosa einen Namen hat:
+Cosa Nostra." […] „Es ist ein Ungeheuer mit tausend Gesichtern und mehr
+Tentakeln als dieser Oktopus, den ich gerade esse. […] Oben steht ein Capo,
+gewählt von den Uomini d'onore, an seiner Seite ein Vicecapo; unter ihnen
+zwei oder drei Consiglieri, und darunter die Capodecina,
+die die Soldaten oder Picciotti befehligen."`,
     lang: 'Italienisch',
   },
   {

@@ -1415,7 +1415,7 @@ function App() {
               ['route', 'Reiseroute'],
               ['restaurants', 'Restaurants'],
               ['speisen', 'Speisen'],
-              ['texte', 'Antike Texte'],
+              ['texte', 'Texte'],
               ['architektur', 'Architektur'],
               ['zeittafel', 'Zeittafel'],
               ['personen', 'Persönlichkeiten'],
@@ -1677,12 +1677,12 @@ function App() {
         </div>
       </section>
 
-      {/* Antike Texte */}
+      {/* Texte zu Sizilien */}
       <section className="section" id="texte">
         <div className="section-header">
-          <h2><BookOpen size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Antike Texte zu Sizilien</h2>
+          <h2><BookOpen size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Texte zu Sizilien</h2>
           <div className="section-divider" />
-          <p>Lateinische und griechische Quellen in deutscher Übersetzung</p>
+          <p>Lateinische, griechische und deutsche Quellen zu Sizilien</p>
         </div>
 
         {texte.map((t, i) => (

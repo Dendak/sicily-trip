@@ -1497,6 +1497,7 @@ function App() {
   const [expandedSight, setExpandedSight] = useState<string | null>(null)
   const [expandedPerson, setExpandedPerson] = useState<number | null>(null)
   const [expandedText, setExpandedText] = useState<string | null>(null)
+  const [expandedGruppen, setExpandedGruppen] = useState<string[]>([])
   const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
   const [glossarRichtung, setGlossarRichtung] = useState<'it-de' | 'de-it'>('it-de')
 
@@ -1825,57 +1826,78 @@ function App() {
           <p>Lateinische, griechische und deutsche Quellen zu Sizilien</p>
         </div>
 
-        {texteGruppen.map(gruppe => (
-          <div key={gruppe.label} className="texte-gruppe">
-            <h3 className="texte-gruppe-titel">{gruppe.label}</h3>
-            {gruppe.ids.map(id => {
-              const t = texte.find(x => x.title === id)
-              if (!t) return null
-              return (
-                <motion.div
-                  key={t.title}
-                  className={`text-card${expandedText === t.title ? ' text-card-open' : ''}`}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeIn}
-                >
-                  <div className="text-card-header" onClick={() => setExpandedText(expandedText === t.title ? null : t.title)}>
-                    <div>
-                      <h4>{t.title}</h4>
-                      <div className="text-source">{t.source}</div>
-                    </div>
-                    {expandedText === t.title ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-                  </div>
-                  <AnimatePresence>
-                    {expandedText === t.title && (
-                      <motion.div
-                        className="text-card-body"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <div className="text-columns">
-                          <div>
-                            <div className="text-label">{t.lang}</div>
-                            <div className="text-original">{t.original}</div>
-                          </div>
-                          {t.translation && (
+        {texteGruppen.map(gruppe => {
+          const isOpen = expandedGruppen.includes(gruppe.label)
+          const toggle = () => setExpandedGruppen(prev =>
+            prev.includes(gruppe.label) ? prev.filter(g => g !== gruppe.label) : [...prev, gruppe.label]
+          )
+          return (
+            <div key={gruppe.label} className={`texte-gruppe${isOpen ? ' texte-gruppe-open' : ''}`}>
+              <div className="texte-gruppe-header" onClick={toggle}>
+                <h3 className="texte-gruppe-titel">{gruppe.label}</h3>
+                {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+              </div>
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    style={{ overflow: 'hidden' }}
+                  >
+                    {gruppe.ids.map(id => {
+                      const t = texte.find(x => x.title === id)
+                      if (!t) return null
+                      return (
+                        <motion.div
+                          key={t.title}
+                          className={`text-card${expandedText === t.title ? ' text-card-open' : ''}`}
+                          initial="hidden"
+                          whileInView="visible"
+                          viewport={{ once: true }}
+                          variants={fadeIn}
+                        >
+                          <div className="text-card-header" onClick={() => setExpandedText(expandedText === t.title ? null : t.title)}>
                             <div>
-                              <div className="text-label">Deutsche Übersetzung</div>
-                              <div className="text-translation">{t.translation}</div>
+                              <h4>{t.title}</h4>
+                              <div className="text-source">{t.source}</div>
                             </div>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              )
-            })}
-          </div>
-        ))}
+                            {expandedText === t.title ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                          </div>
+                          <AnimatePresence>
+                            {expandedText === t.title && (
+                              <motion.div
+                                className="text-card-body"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                              >
+                                <div className="text-columns">
+                                  <div>
+                                    <div className="text-label">{t.lang}</div>
+                                    <div className="text-original">{t.original}</div>
+                                  </div>
+                                  {t.translation && (
+                                    <div>
+                                      <div className="text-label">Deutsche Übersetzung</div>
+                                      <div className="text-translation">{t.translation}</div>
+                                    </div>
+                                  )}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </motion.div>
+                      )
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          )
+        })}
       </section>
 
       {/* Glossar */}

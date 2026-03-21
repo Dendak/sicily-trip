@@ -936,18 +936,37 @@
 
 /* ============ TEXTE (Latin/Greek) ============ */
 .texte-gruppe {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(201,169,110,0.2);
+  overflow: hidden;
+}
+
+.texte-gruppe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  cursor: pointer;
+  background: rgba(201,169,110,0.07);
+  user-select: none;
+}
+
+.texte-gruppe-header:hover {
+  background: rgba(201,169,110,0.13);
+}
+
+.texte-gruppe-open .texte-gruppe-header {
+  border-bottom: 1px solid rgba(201,169,110,0.2);
 }
 
 .texte-gruppe-titel {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-gold);
-  margin-bottom: 1rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(201,169,110,0.3);
+  margin: 0;
 }
 .text-card {
   background: var(--color-card);

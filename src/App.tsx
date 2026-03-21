@@ -1623,16 +1623,48 @@ function App() {
           <p>Größte Insel des Mittelmeers – Zahlen, Daten &amp; Fakten 2024/2025</p>
         </div>
 
-        {/* Karte */}
-        <div className="region-map-wrap">
-          <iframe
-            className="region-map-iframe"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=11.9%2C36.4%2C15.7%2C38.3&layer=mapnik"
-            title="Karte Sizilien"
-            loading="lazy"
-          />
-          <div className="region-map-caption">
-            🗺️ Sizilien mit allen 9 Provinzhauptstädten · Quelle: OpenStreetMap
+        {/* Karte – Provinzen */}
+        <div className="region-maps-row">
+          <div className="region-map-wrap region-map-svg-wrap">
+            <svg viewBox="0 0 820 460" xmlns="http://www.w3.org/2000/svg" className="region-map-svg">
+              {/* Sicily coastline */}
+              <polygon
+                points="176,50 289,59 444,84 596,54 703,42 790,31 768,110 712,129 687,182 672,213 699,274 714,310 687,402 632,378 558,378 495,310 432,303 354,257 249,208 163,194 113,140 111,89 176,50"
+                fill="#1e3a5f" stroke="#c9a96e" strokeWidth="2.5"
+              />
+              {/* Province bubbles: cx, cy = center of province */}
+              {[
+                { id:'ME', cx:730, cy: 80, fill:'#d35400', name:'Messina' },
+                { id:'PA', cx:315, cy:115, fill:'#2980b9', name:'Palermo' },
+                { id:'TP', cx:148, cy:145, fill:'#e67e22', name:'Trapani' },
+                { id:'AG', cx:345, cy:280, fill:'#27ae60', name:'Agrigento' },
+                { id:'CL', cx:463, cy:255, fill:'#8e44ad', name:'Caltanissetta' },
+                { id:'EN', cx:510, cy:205, fill:'#c0392b', name:'Enna' },
+                { id:'CT', cx:658, cy:235, fill:'#16a085', name:'Catania' },
+                { id:'RG', cx:585, cy:362, fill:'#f39c12', name:'Ragusa' },
+                { id:'SR', cx:700, cy:340, fill:'#1abc9c', name:'Siracusa' },
+              ].map(p => (
+                <g key={p.id}>
+                  <circle cx={p.cx} cy={p.cy} r={28} fill={p.fill} opacity={0.9} stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
+                  <text x={p.cx} y={p.cy - 4} textAnchor="middle" fontSize="13" fontWeight="bold" fill="white">{p.id}</text>
+                  <text x={p.cx} y={p.cy + 11} textAnchor="middle" fontSize="8.5" fill="rgba(255,255,255,0.85)">{p.name}</text>
+                </g>
+              ))}
+            </svg>
+            <div className="region-map-caption">
+              🎨 Alle 9 Provinzen mit Hauptstädten
+            </div>
+          </div>
+          <div className="region-map-wrap region-map-osm-wrap">
+            <iframe
+              className="region-map-iframe"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=11.9%2C36.4%2C15.7%2C38.3&layer=mapnik"
+              title="Satellitenkarte Sizilien"
+              loading="lazy"
+            />
+            <div className="region-map-caption">
+              🗺️ Topographische Karte · Quelle: OpenStreetMap
+            </div>
           </div>
         </div>
 

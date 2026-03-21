@@ -666,7 +666,7 @@ function App() {
               className={`day-strip-btn ${currentDay === d.day ? 'active' : ''}`}
               onClick={() => { setCurrentDay(d.day); scrollTo(`day-${d.day}`) }}
             >
-              Tag {d.day}: {d.weekday.slice(0, 2)}, {d.date}
+              {d.day} {d.weekday.slice(0, 2)}
             </button>
           ))}
         </div>

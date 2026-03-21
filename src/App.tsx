@@ -5,7 +5,7 @@ import './App.css'
 
 // Verified working Unsplash image URLs
 const images = {
-  hero: 'https://images.unsplash.com/photo-1523365280197-f1783db9fe62?w=1920&q=80',
+  hero: 'https://images.unsplash.com/photo-1559564484-e48b3e040ff4?w=1920&q=80',
   segesta: 'https://images.unsplash.com/photo-1605896801461-267e172a3759?w=800&q=80',
   erice: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
   marsala: 'https://images.unsplash.com/photo-1686149501751-23d7698bd862?w=800&q=80',
@@ -153,7 +153,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Alcantara-Schlucht': {
     summary: 'Spektakuläre Basaltschlucht mit bizarren prismatischen Lavagesteinsformationen.',
-    detail: "Die Gole dell\u2019Alcantara ist eine bis zu 25 m tiefe und nur 2\u20135 m breite Schlucht, die der Fluss Alcantara in einen prähistorischen Lavastrom gegraben hat. Einzigartig sind die prismatischen Basaltsäulen, die durch langsame Abkühlung der Lava entstanden – sie ähneln dem Giant\u2019s Causeway in Irland. Der Name Alcantara stammt vom arabischen al-Qantarah (\u201Edie Brücke\u201C). Im Sommer kann man durch das kalte Flusswasser in die Schlucht waten.",
+    detail: `Die Gole dell'Alcantara ist eine bis zu 25 m tiefe und nur 2–5 m breite Schlucht, die der Fluss Alcantara in einen prähistorischen Lavastrom gegraben hat. Einzigartig sind die prismatischen Basaltsäulen, die durch langsame Abkühlung der Lava entstanden – sie ähneln dem Giant's Causeway in Irland. Der Name Alcantara stammt vom arabischen al-Qantarah („die Brücke"). Im Sommer kann man durch das kalte Flusswasser in die Schlucht waten.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Alcantara_(river)',
     facts: [`Bis 25 m tief`, `2–5 m breit`, `Prismatische Basaltsäulen`, `Arab. „die Brücke"`]
   },
@@ -183,7 +183,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Palermo Altstadt': {
     summary: 'Normannenpalast mit Cappella Palatina, La Martorana und das archäologische Museum.',
-    detail: "Palermo vereint wie kaum eine andere Stadt die Spuren von Phöniziern, Griechen, Römern, Arabern, Normannen und Staufern. Der Normannenpalast (Palazzo dei Normanni) steht über den Resten einer arabischen Festung und beherbergt die Cappella Palatina (1140), deren goldgrundige byzantinische Mosaiken und arabische Muqarnas-Decke ein einzigartiges Meisterwerk arabisch-normannischer Kunst darstellen. La Martorana (Santa Maria dell\u2019Ammiraglio, 1143) besitzt die ältesten byzantinischen Mosaiken Siziliens. Das Archäologische Museum Antonino Salinas zeigt die bedeutendsten Metopen von Selinunt und Funde aus ganz Westsizilien.",
+    detail: `Palermo vereint wie kaum eine andere Stadt die Spuren von Phöniziern, Griechen, Römern, Arabern, Normannen und Staufern. Der Normannenpalast (Palazzo dei Normanni) steht über den Resten einer arabischen Festung und beherbergt die Cappella Palatina (1140), deren goldgrundige byzantinische Mosaiken und arabische Muqarnas-Decke ein einzigartiges Meisterwerk arabisch-normannischer Kunst darstellen. La Martorana (Santa Maria dell'Ammiraglio, 1143) besitzt die ältesten byzantinischen Mosaiken Siziliens. Das Archäologische Museum Antonino Salinas zeigt die bedeutendsten Metopen von Selinunt und Funde aus ganz Westsizilien.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Palazzo_dei_Normanni',
     facts: ['Cappella Palatina: 1140', 'Arabisch-normannische Kunst', 'La Martorana: 1143', 'UNESCO seit 2015', 'Metopen von Selinunt im Museum']
   },
@@ -196,7 +196,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
   'Monte Pellegrino': {
     summary: `Von Goethe als „das schönste Vorgebirge der Welt" gepriesen – Wallfahrtsort Santa Rosalia.`,
-    detail: "Der Monte Pellegrino (606 m) erhebt sich als markantes Kalkstein-Vorgebirge über dem Golf von Palermo. Goethe nannte ihn 1787 in seiner Italienischen Reise \u201Edas schönste Vorgebirge der Welt\u201C. In einer Höhle nahe dem Gipfel befindet sich das Santuario di Santa Rosalia, der Schutzpatronin Palermos. Die Legende besagt, dass die Entdeckung ihrer Gebeine 1624 Palermo von der Pest befreite. Die Panoramastraße bietet spektakuläre Ausblicke über Palermo, den Hafen und die Conca d\u2019Oro. Prähistorische Höhlenmalereien (Grotta dell\u2019Addaura, ca. 8.000 v. Chr.) bezeugen die jahrtausendealte Bedeutung des Berges.",
+    detail: `Der Monte Pellegrino (606 m) erhebt sich als markantes Kalkstein-Vorgebirge über dem Golf von Palermo. Goethe nannte ihn 1787 in seiner Italienischen Reise „das schönste Vorgebirge der Welt". In einer Höhle nahe dem Gipfel befindet sich das Santuario di Santa Rosalia, der Schutzpatronin Palermos. Die Legende besagt, dass die Entdeckung ihrer Gebeine 1624 Palermo von der Pest befreite. Die Panoramastraße bietet spektakuläre Ausblicke über Palermo, den Hafen und die Conca d'Oro. Prähistorische Höhlenmalereien (Grotta dell'Addaura, ca. 8.000 v. Chr.) bezeugen die jahrtausendealte Bedeutung des Berges.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Monte_Pellegrino',
     facts: [`606 m Höhe`, `Goethe: „schönstes Vorgebirge"`, `Santa Rosalia: Pest 1624`, `Höhlenmalereien ca. 8.000 v. Chr.`]
   },
@@ -274,7 +274,7 @@ const days: DayData[] = [
       { name: `Archäologischer Park`, desc: `„Ohr des Dionysios", griechisches Theater, römisches Amphitheater, Altar Hierons II.` },
       { name: 'Grab des Archimedes', desc: 'Nekropole Grotticelli und archäologisches Museum Paolo Orsi' },
       { name: 'Castello Eurialo', desc: 'Griechisches Festungswerk des Dionysios I. – bedeutendstes antikes Kastell Siziliens', km: '10 km' },
-      { name: 'Catania', desc: `Dom Sant\u2019Agata, Elefantenbrunnen, Teatro Romano im Stadtzentrum`, km: '60 km' },
+      { name: 'Catania', desc: `Dom Sant'Agata, Elefantenbrunnen, Teatro Romano im Stadtzentrum`, km: '60 km' },
       { name: 'Taormina', desc: 'Ankunft im legendären Küstenort', km: '50 km' },
     ]
   },
@@ -315,7 +315,7 @@ const days: DayData[] = [
   {
     day: 8, date: '4. April', weekday: 'Samstag',
     title: 'Palermo – Rückflug',
-    image: images.palermo,
+    image: images.monreale,
     hotel: '',
     stops: [
       { name: 'Palermo Altstadt', desc: 'Altstadtrundgang: Quattro Canti, Fontana Pretoria, Vucciria-Markt' },
@@ -339,7 +339,7 @@ const restaurants: Restaurant[] = [
     location: 'Marsala',
     desc: 'Slow-Food-empfohlene Osteria. Bekannt für Busiate-Pasta, frischen Fisch und hausgemachte sizilianische Küche. Künstlerisches Ambiente mit Holzbalkendecke. Montags geschlossen.',
     tags: ['Slow Food', 'Osteria', 'Fisch'],
-    image: images.pasta,
+    image: 'https://itin-dev.wanderlogstatic.com/freeImage/XFmojE5rxts3BbMSB3y1btvFbYMGyWg5',
     mapsUrl: 'https://www.google.com/maps/place/Osteria+Il+Gallo+e+L\'innamorata/@37.7974975,12.4325306,17z/',
   },
   {
@@ -347,7 +347,7 @@ const restaurants: Restaurant[] = [
     location: 'Agrigento',
     desc: 'Michelin Bib Gourmand. In einer historischen Nachkriegsbäckerei. Berühmt für Busiate al Pesto Siciliano, Sarde a Beccafico und Pasta n\'caciata.',
     tags: ['Bib Gourmand', 'Osteria', 'Historisch'],
-    image: images.caponata,
+    image: 'https://www.osteriaexpanificio.it/wp-content/uploads/2023/10/EXPANIFICIO-FOTO-TAVOLO-CON-LOGO-1.webp',
     mapsUrl: 'https://www.google.com/maps/search/Osteria+Expanificio+Agrigento+Sicily',
   },
   {
@@ -355,7 +355,7 @@ const restaurants: Restaurant[] = [
     location: 'Noto',
     desc: 'Die Mutter des Besitzers kocht nach Familienrezepten. Hausgemachte Tintenfisch-Pasta und Thunfisch in Pistazienkruste. Große Portionen, familiäre Atmosphäre.',
     tags: ['Familienbetrieb', 'Fisch', 'Tradizionale'],
-    image: images.cannoli,
+    image: 'https://www.ristorantedammuso.it/img/home1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Ristorante+Dammuso+Noto+Sicily',
   },
   {
@@ -363,7 +363,7 @@ const restaurants: Restaurant[] = [
     location: 'Siracusa (Ortigia)',
     desc: 'Authentisch und bodenständig. Berühmt für Caponata, Spaghettoni alla Norma und Pistazien-Tiramisu. Einer der Favoriten der Reiseforen.',
     tags: ['Ortigia', 'Tradizionale', 'Pasta'],
-    image: images.arancini,
+    image: 'https://www.siciliaintavola.eu/wp-content/uploads/2019/03/sicilia-in-tavola-1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Sicilia+in+Tavola+Ortigia+Siracusa',
   },
   {
@@ -371,7 +371,7 @@ const restaurants: Restaurant[] = [
     location: 'Taormina',
     desc: 'Wirt Turi Siligato zeigt den frischen Tagesfang. Fisch wird am Tisch filetiert, Desserts mit Zedratzitronen. Benannt nach dem berühmten Rotwein. Unbedingt reservieren!',
     tags: ['Erlebnis', 'Fisch', 'Interaktiv'],
-    image: images.granita,
+    image: 'https://www.eatoutsicily.com/storage/public/restaurants/4633-osteria-nero-d-avola/profile/111341578_3467576736684308_6726006130993120833_n.jpg',
     mapsUrl: 'https://www.google.com/maps?cid=5249353599400390537',
   },
   {
@@ -379,7 +379,7 @@ const restaurants: Restaurant[] = [
     location: 'Taormina',
     desc: 'Seit über 50 Jahren in Familienbesitz (drei Generationen). Echte sizilianische Hausmannskost. Panoramaterrasse mit Blick auf die Nordostküste Siziliens.',
     tags: ['Familienbetrieb', 'Panorama', '50+ Jahre'],
-    image: images.pasta,
+    image: 'https://trattoriadaninotaormina.com/images/slideshow/slideshow1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Via+Luigi+Pirandello,+37a,+98039+Taormina+ME,+Italy',
   },
   {
@@ -387,7 +387,7 @@ const restaurants: Restaurant[] = [
     location: 'Cefalù',
     desc: 'Seit Jahrzehnten eine Institution unter Küchenchef Giuseppe Fiduccia. Kreative Gerichte wie Couscous in Tintenfischtinte. Nahe dem normannischen Dom.',
     tags: ['Institution', 'Kreativ', 'Budget'],
-    image: images.caponata,
+    image: 'https://www.cefalu.website/media/images/items/187/la-botte-large-b174.jpg',
     mapsUrl: 'https://www.google.com/maps/search/La+Botte+Ristorante+Cefalu+Sicily',
   },
   {
@@ -395,7 +395,7 @@ const restaurants: Restaurant[] = [
     location: 'Castelbuono (bei Cefalù)',
     desc: 'Preisgekrönte Slow-Food-Osteria in den Madonie-Bergen. Pilze, Wildschwein, Manna-Produkte. Gambero Rosso und Michelin empfohlen.',
     tags: ['Slow Food', 'Berge', 'Wild'],
-    image: images.cassata,
+    image: 'https://www.hostarianangalarruni.it/wp-content/uploads/2017/07/DSF0005.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Nangalarruni+Castelbuono+Sicily',
   },
   {
@@ -403,7 +403,7 @@ const restaurants: Restaurant[] = [
     location: 'Palermo',
     desc: 'In ehemaligen Stallungen aus dem 17. Jh. mit freiliegendem Mauerwerk. Berühmt für Pasta con le Sarde mit Safran und wildem Fenchel – arabisch-sizilianische Wurzeln.',
     tags: ['Historisch', 'Arabisch-Sizilianisch', 'Osteria'],
-    image: images.arancini,
+    image: 'https://osteriaballaro.it/wp-content/uploads/2024/01/365219667_326584539692689_4016882391528918212_n-768x630.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Osteria+Ballaro+Palermo+Sicily',
   },
   {
@@ -411,7 +411,7 @@ const restaurants: Restaurant[] = [
     location: 'Palermo',
     desc: 'Historische Taverne, geliebt von Einheimischen. Panelle, Arancini, Pasta con le Sarde – echtes palermitanisches Essen zu günstigen Preisen.',
     tags: ['Locals Only', 'Street Food', 'Budget'],
-    image: images.arancini,
+    image: 'https://ferrodicavallopalermo.it/deposito/2025/08/ferro-di-cavallo-header-01.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Trattoria+Ferro+di+Cavallo+Palermo',
   },
   {
@@ -419,7 +419,7 @@ const restaurants: Restaurant[] = [
     location: 'Palermo',
     desc: 'Piazza Bologni. Gehobene sizilianische Küche von einem jungen Chef. Laut Reiseforen weltklasse Cannoli und kreative Degustationsmenüs.',
     tags: ['Fine Dining', 'Kreativ', 'Cannoli'],
-    image: images.cannoli,
+    image: 'https://www.icuccibistrorante.it/wp-content/uploads/2022/07/ristorante-i-cucci-palermo.jpg',
     mapsUrl: 'https://www.google.com/maps/search/I+Cucci+Palermo+Piazza+Bologni',
   },
   {
@@ -427,7 +427,7 @@ const restaurants: Restaurant[] = [
     location: 'Noto',
     desc: 'Berühmteste Pasticceria Siziliens, geführt von Meisterkonditor Corrado Assenza (Netflix Chef\'s Table). Legendäre Granita und Brioche.',
     tags: ['Pasticceria', 'Netflix', 'Granita'],
-    image: images.granita,
+    image: 'https://www.identitagolose.it/public/images/xmedium/img-1175-1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Caffe+Sicilia+Noto',
   },
   {
@@ -435,7 +435,7 @@ const restaurants: Restaurant[] = [
     location: 'Érice',
     desc: 'Weit über Sizilien hinaus berühmt für Mandelgebäck, Cannoli und Süßigkeiten nach Klosterschwestern-Tradition. Ein Muss bei jedem Érice-Besuch.',
     tags: ['Pasticceria', 'Mandelgebäck', 'Tradition'],
-    image: images.cassata,
+    image: 'https://www.mariagrammatico.it/wp-content/uploads/2023/11/Erice-Pasticceria-Maria-Grammatico-Dolici-Tipici-Siciliani-007.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Pasticceria+Maria+Grammatico+Erice',
   },
 ]

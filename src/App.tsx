@@ -1257,7 +1257,7 @@ function App() {
               merkmale: ['Keine Basis – Säule steht direkt auf dem Stylobat', '16–20 Kanneluren mit scharfen Graten', 'Kapitell: Echinus (runder Wulst) + Abakus (Platte)', 'Fries: abwechselnd Triglyphen und Metopen', 'Wuchtig, schlicht, maskulin'],
               beispiel: 'Tempel in Segesta, Agrigento, Selinunte',
               slides: [
-                { url: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Order_%28PSF%29.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Doric_capital_-_Temple_of_Heracles_-_Agrigento_-_Italy_2015.JPG', label: 'Dorisches Kapitell – Heraklestempel, Agrigento' },
                 { url: images.doricCol, label: 'Parthenon, Athen – Dorische Säulen' },
               ],
             },
@@ -1267,7 +1267,7 @@ function App() {
               merkmale: ['Basis: Torus + Spira + Plinthe', '24 Kanneluren mit stumpfen Stegen', 'Kapitell: charakteristische Voluten (Schnecken)', 'Architrav in drei Fascien (Streifen) gegliedert', 'Schlank, elegant, weiblich'],
               beispiel: 'Häufig in Kleinasien; in Sizilien selten',
               slides: [
-                { url: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Order_%28PSF%29.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Ionic_capital_from_the_Erechtheum_at_the_British_Museum.jpg', label: 'Ionisches Kapitell – Erechtheion, Athen (British Museum)' },
                 { url: images.ionicCol, label: 'Ionisches Volutenkapitell – Nahaufnahme' },
               ],
             },
@@ -1277,7 +1277,7 @@ function App() {
               merkmale: ['Wie ionisch, aber aufwendigeres Kapitell', 'Kapitell mit Akanthusblättern und Voluten-Bändern', 'Entwickelt ca. 420 v. Chr. in Korinth', 'Besonders prunkvoll und dekorativ', 'In römischer Architektur am beliebtesten'],
               beispiel: 'Spätantike Bauten; Pantheon Rom',
               slides: [
-                { url: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Order_%28PSF%29.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Corinthian_capital%2C_AM_of_Epidauros%2C_202545.jpg', label: 'Korinthisches Kapitell – Archäologisches Museum Epidauros' },
                 { url: images.corinthianCol, label: 'Korinthische Säulen mit Akanthuskapitell' },
               ],
             },

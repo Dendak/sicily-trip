@@ -28,12 +28,12 @@ const images = {
   granita: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Granita_brioche.JPG',
   caponata: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Caponata_%2814049113982%29.jpg',
   cassata: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Cassatasiciliana.jpg',
-  panelle: 'https://upload.wikimedia.org/wikipedia/commons/8/83/Panelle.jpg',
-  pastaSarde: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Pasta_con_le_sarde.jpg',
-  sardeBeccafico: 'https://upload.wikimedia.org/wikipedia/commons/3/38/Sarde_a_beccafico.jpg',
-  sfincione: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Sfincione_palermitano.jpg',
-  stoccafisso: 'https://upload.wikimedia.org/wikipedia/commons/1/12/Baccal%C3%A0_alla_siciliana.jpg',
-  biancomangiare: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Biancomangiare.jpg',
+  panelle: 'https://commons.wikimedia.org/wiki/Special:FilePath/Panelle.jpg',
+  pastaSarde: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pasta_con_le_sarde.jpg',
+  sardeBeccafico: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarde_a_beccafico.jpg',
+  sfincione: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sfincione_palermitano.jpg',
+  stoccafisso: 'https://commons.wikimedia.org/wiki/Special:FilePath/Stoccafisso_alla_messinese.jpg',
+  biancomangiare: 'https://commons.wikimedia.org/wiki/Special:FilePath/Biancomangiare.jpg',
 }
 
 const fadeIn = {

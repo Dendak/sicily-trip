@@ -1180,6 +1180,28 @@
   border-bottom: 2px solid var(--color-gold);
 }
 
+.arch-schema-detail {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.arch-schema-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  cursor: zoom-in;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.arch-schema-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
 .arch-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

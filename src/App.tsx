@@ -1149,7 +1149,7 @@ function App() {
               merkmale: ['Keine Basis – Säule steht direkt auf dem Stylobat', '16–20 Kanneluren mit scharfen Graten', 'Kapitell: Echinus (runder Wulst) + Abakus (Platte)', 'Fries: abwechselnd Triglyphen und Metopen', 'Wuchtig, schlicht, maskulin'],
               beispiel: 'Tempel in Segesta, Agrigento, Selinunte',
               slides: [
-                { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Classical_orders_from_the_Encyclopedie.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Order_%28PSF%29.png', label: 'Schema: Drei Säulenordnungen', schema: true },
                 { url: images.doricCol, label: 'Parthenon, Athen – Dorische Säulen' },
               ],
             },
@@ -1159,7 +1159,7 @@ function App() {
               merkmale: ['Basis: Torus + Spira + Plinthe', '24 Kanneluren mit stumpfen Stegen', 'Kapitell: charakteristische Voluten (Schnecken)', 'Architrav in drei Fascien (Streifen) gegliedert', 'Schlank, elegant, weiblich'],
               beispiel: 'Häufig in Kleinasien; in Sizilien selten',
               slides: [
-                { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Classical_orders_from_the_Encyclopedie.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Order_%28PSF%29.png', label: 'Schema: Drei Säulenordnungen', schema: true },
                 { url: images.ionicCol, label: 'Ionisches Volutenkapitell – Nahaufnahme' },
               ],
             },
@@ -1169,11 +1169,25 @@ function App() {
               merkmale: ['Wie ionisch, aber aufwendigeres Kapitell', 'Kapitell mit Akanthusblättern und Voluten-Bändern', 'Entwickelt ca. 420 v. Chr. in Korinth', 'Besonders prunkvoll und dekorativ', 'In römischer Architektur am beliebtesten'],
               beispiel: 'Spätantike Bauten; Pantheon Rom',
               slides: [
-                { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Classical_orders_from_the_Encyclopedie.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Order_%28PSF%29.png', label: 'Schema: Drei Säulenordnungen', schema: true },
                 { url: images.corinthianCol, label: 'Korinthische Säulen mit Akanthuskapitell' },
               ],
             },
           ] as OrdnungData[]).map((o, i) => <OrdnungCard key={i} o={o} />)}
+        </div>
+
+        {/* Detailschema */}
+        <div className="arch-schema-detail">
+          <h3 className="arch-subtitle">Detailschema der Säulenordnungen</h3>
+          <p style={{ fontSize: '0.9rem', color: 'var(--color-text-light)', marginBottom: '0.75rem' }}>Klicken zum Vergrößern – deutsches Übersichtsschema (1892)</p>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/5/53/Schema_Saeulenordnungen.jpg" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Schema_Saeulenordnungen.jpg"
+              alt="Schema der Säulenordnungen – Dorisch, Ionisch, Korinthisch"
+              loading="lazy"
+              className="arch-schema-img"
+            />
+          </a>
         </div>
 
         {/* Aufbau des Tempels */}

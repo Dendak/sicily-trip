@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users, Mountain, Waves, TrendingUp, Sun, Thermometer, Globe } from 'lucide-react'
+import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users, Globe } from 'lucide-react'
 import './App.css'
 
 // Verified working Unsplash image URLs

@@ -5,7 +5,7 @@ import './App.css'
 
 // Verified working Unsplash image URLs
 const images = {
-  hero: 'https://images.unsplash.com/photo-1559564484-e48b3e040ff4?w=1920&q=80',
+  hero: 'https://images.unsplash.com/photo-1678043007579-8d5d62056d05?w=1920&q=80',
   segesta: 'https://images.unsplash.com/photo-1605896801461-267e172a3759?w=800&q=80',
   erice: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
   marsala: 'https://images.unsplash.com/photo-1686149501751-23d7698bd862?w=800&q=80',
@@ -534,18 +534,24 @@ const glossary = [
   { it: 'A destra / A sinistra', de: 'Rechts / Links' },
 ]
 
-const speisen = [
+const vorspeisen = [
   { name: 'Arancini', desc: 'Frittierte Reisbällchen mit Ragù, Mozzarella oder Pistazien – das sizilianische Street Food schlechthin.', image: images.arancini },
-  { name: 'Pasta alla Norma', desc: 'Pasta mit Auberginen, Tomatensugo, gesalzenem Ricotta und Basilikum – Catanias Nationalgericht, benannt nach Bellinis Oper.', image: images.pasta },
-  { name: 'Cannoli Siciliani', desc: 'Knusprige Teigrollen gefüllt mit süßer Ricotta-Creme, Pistazien und kandierten Früchten.', image: images.cannoli },
-  { name: 'Granita con Brioche', desc: 'Halbgefrorenes Eis aus Mandeln, Pistazien oder Zitrone, serviert mit warmem Brioche zum Frühstück.', image: images.granita },
   { name: 'Caponata', desc: 'Süß-saures Auberginen-Gemüse mit Kapern, Oliven, Sellerie und Tomaten – arabischer Einfluss.', image: images.caponata },
-  { name: 'Cassata Siciliana', desc: 'Festliche Torte mit Ricotta, Marzipan, Orangeat und Zuckerglasur – arabisch-normannisches Erbe.', image: images.cassata },
   { name: 'Pane e Panelle', desc: 'Kichererbsenmehl-Fladen, frittiert und in Sesambrot gefüllt – das älteste Streetfood Palermos mit arabischen Wurzeln.', image: images.panelle },
-  { name: 'Pasta con le Sarde', desc: 'Pasta mit frischen Sardinen, wildem Fenchel, Rosinen, Safran und Pinienkernen – arabisch-sizilianisches Meisterwerk.', image: images.pastaSarde },
   { name: 'Sarde a Beccafico', desc: 'Gefüllte Sardinenröllchen mit Semmelbröseln, Rosinen und Pinienkernen – typisch für Palermo, benannt nach dem Singvogel Beccafico.', image: images.sardeBeccafico },
   { name: 'Sfincione Palermitano', desc: 'Sizilianische Focaccia mit Tomaten, Zwiebeln, Anchovis und Caciocavallo-Käse – das „dicke" Street Food vom Ballarò-Markt.', image: images.sfincione },
+]
+
+const hauptspeisen = [
+  { name: 'Pasta alla Norma', desc: 'Pasta mit Auberginen, Tomatensugo, gesalzenem Ricotta und Basilikum – Catanias Nationalgericht, benannt nach Bellinis Oper.', image: images.pasta },
+  { name: 'Pasta con le Sarde', desc: 'Pasta mit frischen Sardinen, wildem Fenchel, Rosinen, Safran und Pinienkernen – arabisch-sizilianisches Meisterwerk.', image: images.pastaSarde },
   { name: 'Stoccafisso alla Ghiotta', desc: 'Geschmorter Stockfisch mit Kartoffeln, Oliven, Kapern und Tomaten – typisch für die westliche Provinz Siziliens.', image: images.stoccafisso },
+]
+
+const nachspeisen = [
+  { name: 'Cannoli Siciliani', desc: 'Knusprige Teigrollen gefüllt mit süßer Ricotta-Creme, Pistazien und kandierten Früchten.', image: images.cannoli },
+  { name: 'Granita con Brioche', desc: 'Halbgefrorenes Eis aus Mandeln, Pistazien oder Zitrone, serviert mit warmem Brioche zum Frühstück.', image: images.granita },
+  { name: 'Cassata Siciliana', desc: 'Festliche Torte mit Ricotta, Marzipan, Orangeat und Zuckerglasur – arabisch-normannisches Erbe.', image: images.cassata },
   { name: 'Biancomangiare alle Mandorle', desc: 'Cremiger Pudding aus Mandelmilch mit Orangenblütenwasser – ein Erbe der arabischen Küche Siziliens.', image: images.biancomangiare },
 ]
 
@@ -579,6 +585,43 @@ const texte = [
     lang: 'Deutsch (Original)',
   },
 ]
+
+// Speisen Karussell – rotiert automatisch alle 10 Sekunden
+function SpeisenKarussel({ gerichte }: { gerichte: { name: string; desc: string; image: string }[] }) {
+  const [idx, setIdx] = useState(0)
+  useEffect(() => {
+    const timer = setInterval(() => setIdx(i => (i + 1) % gerichte.length), 10000)
+    return () => clearInterval(timer)
+  }, [gerichte.length])
+  const s = gerichte[idx]
+  return (
+    <div className="speisen-karussel">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={idx}
+          className="speise-card-featured"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -40 }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className="speise-img-featured">
+            <img src={s.image} alt={s.name} loading="lazy" />
+          </div>
+          <div className="speise-body">
+            <h4>{s.name}</h4>
+            <p>{s.desc}</p>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+      <div className="speisen-dots">
+        {gerichte.map((_, i) => (
+          <button key={i} className={`speisen-dot${i === idx ? ' active' : ''}`} onClick={() => setIdx(i)} aria-label={gerichte[i].name} />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 // Hotel card with expandable Google Maps
 function HotelCard({ hotel, hotelData }: { hotel: string; hotelData?: HotelData }) {
@@ -931,25 +974,19 @@ function App() {
           <p>Kulinarische Höhepunkte der Insel</p>
         </div>
 
-        <div className="speisen-grid">
-          {speisen.map((s, i) => (
-            <motion.div
-              key={i}
-              className="speise-card"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-            >
-              <div className="speise-img">
-                <img src={s.image} alt={s.name} loading="lazy" />
-              </div>
-              <div className="speise-body">
-                <h4>{s.name}</h4>
-                <p>{s.desc}</p>
-              </div>
-            </motion.div>
-          ))}
+        <div className="speisen-sections">
+          <div className="speisen-kategorie">
+            <h3 className="speisen-kat-titel">🥗 Vorspeisen</h3>
+            <SpeisenKarussel gerichte={vorspeisen} />
+          </div>
+          <div className="speisen-kategorie">
+            <h3 className="speisen-kat-titel">🍝 Hauptspeisen</h3>
+            <SpeisenKarussel gerichte={hauptspeisen} />
+          </div>
+          <div className="speisen-kategorie">
+            <h3 className="speisen-kat-titel">🍮 Nachspeisen</h3>
+            <SpeisenKarussel gerichte={nachspeisen} />
+          </div>
         </div>
       </section>
 

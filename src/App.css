@@ -1388,6 +1388,80 @@
   color: var(--color-text-light);
 }
 
+/* Zeittafel */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timeline-epoche {
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.timeline-epoche-header {
+  padding: 1rem 1.5rem;
+  border-left: 5px solid;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.timeline-epoche-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.timeline-epoche-zeitraum {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.timeline-ereignisse {
+  padding: 1rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-datum {
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.timeline-text {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
 /* Glossar Toggle */
 .glossary-toggle {
   display: flex;

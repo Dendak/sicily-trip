@@ -41,7 +41,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: 'Bedeutende Stadt der Elymer im Nordwesten Siziliens mit einem der besterhaltenen dorischen Tempel Europas.',
     detail: 'Segesta wurde im 7. Jh. v. Chr. von den Elymern gegründet, die sich auf trojanische Vorfahren beriefen. Der dorische Tempel (ca. 420 v. Chr.) misst 26 × 61 Meter mit 36 Säulen aus Travertin. Die Säulen wurden nie kanneliert und die Cella fehlt – der Tempel wurde vermutlich nie vollendet. Thukydides berichtet (VI, 6), dass die Segestaner 415 v. Chr. Athen um Hilfe gegen das mächtige Selinunt baten und dabei ihren Reichtum demonstrierten – was zur verhängnisvollen Sizilienexpedition Athens führte, die Thukydides als „die größte Katastrophe der griechischen Geschichte" bezeichnete. Der Historiker Diodor (XI, 21) überliefert, dass die Elymer sich auf die Trojaner als Vorfahren beriefen: Aeneas soll hier auf seiner Flucht aus Troja gelandet sein. Das Theater (3. Jh. v. Chr.) wurde unter Hieron II. in den Monte Barbaro gehauen. Mit 63 m Durchmesser bietet es 4.000 Zuschauern Platz und einen spektakulären Blick auf den Golf von Castellammare.',
     wikipedia: 'https://en.wikipedia.org/wiki/Segesta',
-    planUrl: 'https://commons.wikimedia.org/wiki/Category:Plans_of_ancient_Greek_temples_in_Segesta',
+    planUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Segesta-Temple-Plan-bjs.png',
     facts: ['Ca. 420 v. Chr. (Tempel)', '36 dorische Säulen', 'Nie fertiggestellt', 'Theater: 4.000 Plätze', 'Sizilienexpedition Athens 415 v. Chr.']
   },
   'Monte Érice': {
@@ -72,7 +72,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: 'Größter archäologischer Park Europas mit einer der bedeutendsten griechischen Tempelanlagen.',
     detail: 'Selinunt (griech. Selinus, nach dem wilden Sellerie/Eppich benannt) wurde 628 v. Chr. als Kolonie von Megara Hyblaea gegründet und war die westlichste griechische Stadt Siziliens. Der archäologische Park umfasst über 270 Hektar mit acht monumentalen Tempeln. Der Tempel E (Hera-Tempel, 5. Jh. v. Chr.) ist der am besten erhaltene. Der kolossale Tempel G (Zeus/Apollo, 113 × 54 m) war einer der größten griechischen Tempel überhaupt – seine Säulen hatten einen Durchmesser von 3,40 m, er wurde über 100 Jahre gebaut und nie vollendet. Diodor (XIII, 54–59) schildert eindringlich die Zerstörung 409 v. Chr. durch den Karthager Hannibal Mago (Enkel des bei Himera 480 v. Chr. gefallenen Hamilkar): 16.000 Einwohner wurden getötet, 5.000 verschleppt. Der Philosoph Empedokles aus Akragas soll laut Diogenes Laertius die Malaria in Selinunt bekämpft haben, indem er auf eigene Kosten zwei Flüsse umleiten ließ.',
     wikipedia: 'https://en.wikipedia.org/wiki/Selinunte',
-    planUrl: 'https://commons.wikimedia.org/wiki/File:Selinunte-TempleC-Plan-bjs.png',
+    planUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/34/Selinunte-TempleC-Plan-bjs.png',
     facts: ['Gegründet: 628 v. Chr.', '8 monumentale Tempel', 'Tempel G: 113 × 54 m', 'Zerstört: 409 v. Chr.', 'Empedokles und die Malaria']
   },
   'Scala dei Turchi': {
@@ -85,7 +85,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: `Das „Tal der Tempel" – eine der bedeutendsten archäologischen Stätten der Welt (UNESCO).`,
     detail: 'Akragas wurde 581 v. Chr. von Kolonisten aus Gela gegründet. Unter dem Tyrannen Theron (488–472 v. Chr.) erlebte die Stadt ihre Blütezeit: Nach dem Sieg über die Karthager bei Himera 480 v. Chr. wurden mit der Beute die monumentalen Tempel errichtet. Der Concordia-Tempel ist einer der besterhaltenen griechischen Tempel weltweit (dank seiner Umwandlung zur Kirche durch Bischof Gregorius im 6. Jh.). Der Olympieion (113 × 56 m) trug 38 gewaltige Telamonen (7,5 m hohe Atlanten-Figuren). Pindar (Olympische Ode II) pries Theron: „Der nach dem Guten strebt mit aller Kraft..." Der Philosoph Empedokles (ca. 490–430 v. Chr.) stammte aus Akragas – er lehrte die vier Elemente und soll sich in den Ätna gestürzt haben. Diodor berichtet, dass die Akragantiner ihre Pferde so luxuriös hielten, dass sie ihnen Grabmäler errichteten.',
     wikipedia: 'https://en.wikipedia.org/wiki/Valle_dei_Templi',
-    planUrl: 'https://commons.wikimedia.org/wiki/File:Akragas-sitemap-bjs.jpg',
+    planUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Akragas-sitemap-bjs.jpg',
     facts: ['Gegründet: 581 v. Chr.', 'UNESCO seit 1997', 'Tyrann Theron (488–472)', 'Empedokles (490–430)', 'Olympieion: 113 × 56 m']
   },
   'Gela': {
@@ -98,7 +98,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: 'Die Villa Romana del Casale mit 3.500 m² spätantiken Mosaiken – UNESCO-Weltkulturerbe.',
     detail: `Die Villa Romana del Casale (3.–4. Jh. n. Chr.) gehörte vermutlich einem Angehörigen der senatorischen Aristokratie, möglicherweise Lucius Aradius Valerius Proculus, der 340 n. Chr. Konsul war – oder sogar Kaiser Maximian (Mitregent Diokletians). Die 3.500 m² Bodenmosaiken sind die umfangreichsten der gesamten Antike, geschaffen von nordafrikanischen Werkstätten. Die „Bikini-Mädchen" zeigen junge Frauen beim Diskuswurf, Laufen und Ballspiel – das früheste Zeugnis weiblicher Sportbekleidung. Die Große Jagdszene (66 m Korridor) zeigt den Fang exotischer Tiere für die Arenen Roms: Löwen, Tiger, Nashörner, Elefanten. Die Mosaiken der kleinen Jagd zeigen eine Opferszene an die Göttin Diana. Nach einer Überschwemmung im 12. Jh. wurde die Villa verschüttet und erst 1929 durch den Archäologen Paolo Orsi wiederentdeckt.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Villa_Romana_del_Casale',
-    planUrl: 'https://commons.wikimedia.org/wiki/File:Villa-del-Casale-plan-color-bjs-1.jpg',
+    planUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Villa-del-Casale-plan-color-bjs-1.jpg',
     facts: [`3.–4. Jh. n. Chr.`, `3.500 m² Mosaiken`, `UNESCO seit 1997`, `„Bikini-Mädchen"`, `Große Jagdszene: 66 m`, `Wiederentdeckt 1929`]
   },
   'Akrai': {
@@ -129,14 +129,14 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: `Griechisches Theater, „Ohr des Dionysios" und römisches Amphitheater.`,
     detail: `Der Parco Archeologico della Neapoli umfasst die wichtigsten antiken Monumente Siziliens. Das griechische Theater (5. Jh. v. Chr., erweitert unter Hieron II.) ist eines der größten der antiken Welt (138 m Durchmesser, 15.000 Plätze). Hier wurden Aischylos' Tragödien uraufgeführt – seine „Perser" wurden 472 v. Chr. in Syrakus wiederaufgeführt. Das „Ohr des Dionysios" benannte der Maler Caravaggio 1608 während seines Sizilien-Aufenthalts (er floh vor einer Mordanklage in Malta). Der Tyrann Dionysios I. (405–367 v. Chr.) soll hier die 7.000 athenischen Kriegsgefangenen von 413 v. Chr. eingesperrt haben – Thukydides (VII, 87) beschreibt ihr Elend in den Steinbrüchen als eines der grausamsten Schicksale des Peloponnesischen Krieges. Der Altar Hierons II. (200 × 23 m) diente der Opferung von 450 Stieren gleichzeitig.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Neapolis_(Syracuse)',
-    planUrl: 'https://commons.wikimedia.org/wiki/File:Top.neapolis-Cavallari.jpg',
+    planUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Top.neapolis-Cavallari.jpg',
     facts: ['Theater: 15.000 Plätze', 'Aischylos-Uraufführungen', 'Caravaggio 1608', 'Athenische Gefangene 413 v. Chr.', 'Altar: 450 Stiere']
   },
   'Castello Eurialo': {
     summary: 'Bedeutendstes antikes Festungswerk Siziliens – griechische Militärarchitektur.',
     detail: `Das Castello Eurialo wurde unter Dionysios I. ab 402 v. Chr. als Schlüsselfestung errichtet. Es war das komplexeste griechische Festungswerk der Antike: fünf Turmpaare, drei tiefe Trockengräben und ein unterirdisches Tunnelsystem. Bei der römischen Belagerung 214–212 v. Chr. setzte der Mathematiker Archimedes hier seine legendären Kriegsmaschinen ein: Katapulte, die Felsbrocken schleuderten, „Krallen des Archimedes" (Kräne, die Schiffe aus dem Wasser hoben) und angeblich Brennspiegel. Der römische General Marcellus soll gesagt haben: „Er übertrifft ja die hundertarmigen Riesen der Fabel!" (Plutarch, Marcellus 17). Archimedes wurde 212 v. Chr. bei der Eroberung von einem Soldaten getötet, trotz Marcellus' Befehl, ihn zu verschonen – seine letzten Worte: „Störe meine Kreise nicht!" (Noli turbare circulos meos).`,
     wikipedia: 'https://en.wikipedia.org/wiki/Euryalus_Fortress',
-    planUrl: 'https://commons.wikimedia.org/wiki/File:Mappa_del_Castello_Eurialo_sull%27Epipoli.jpg',
+    planUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1f/Mappa_del_Castello_Eurialo_sull%27Epipoli.jpg',
     facts: ['Ab 402 v. Chr. erbaut', `Archimedes' Kriegsmaschinen`, '„Störe meine Kreise nicht!"', 'Unterirdisches Tunnelsystem']
   },
   'Catania': {
@@ -191,6 +191,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: 'Normannische Kathedrale mit 6.340 m² byzantinischer Goldmosaiken und romanischem Kreuzgang.',
     detail: 'Die Kathedrale wurde 1174 von Wilhelm II. „dem Guten" gegründet – angeblich nach einer Traumvision, in der die Madonna ihm den Ort eines vergrabenen Schatzes zeigte, den er zum Kirchenbau verwenden solle. In Wahrheit war es ein politisches Projekt: Wilhelm wollte den mächtigen Erzbischof von Palermo, Walter of the Mill (Gualtiero Offamiglio), übertrumpfen, der gerade den Palermitaner Dom umbaute. Die 6.340 m² byzantinischer Goldmosaiken erzählen in 130 Szenen die biblische Geschichte. Besonders bemerkenswert: Die Darstellung der Erschaffung Evas, der Sündenfall und die Arche Noah. Der Kreuzgang (47 × 47 m) mit 228 Doppelsäulen zeigt arabische, normannische und antike Motive – jedes Kapitell ist einzigartig. Maupassant schrieb 1885: „Die schönste Kirche der Welt, das erstaunlichste religiöse Juwel, das die menschliche Vorstellungskraft ersonnen hat."',
     wikipedia: 'https://en.wikipedia.org/wiki/Cathedral_of_Monreale',
+    planUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/35/A_history_of_architecture_in_Italy_from_the_time_of_Constantine_to_the_dawn_of_the_renaissance_(1901)_(14784471905).jpg',
     facts: ['Gegründet: 1174', '6.340 m² Goldmosaiken', 'Wilhelm II. vs. Walter of the Mill', '228 einzigartige Kapitelle', 'UNESCO seit 2015']
   },
   'Monte Pellegrino': {
@@ -213,6 +214,12 @@ interface StopData {
   km?: string
 }
 
+interface HotelData {
+  name: string
+  mapsQuery: string
+  mapsEmbed: string
+}
+
 interface DayData {
   day: number
   date: string
@@ -220,6 +227,7 @@ interface DayData {
   title: string
   image: string
   hotel: string
+  hotelData?: HotelData
   stops: StopData[]
 }
 
@@ -229,6 +237,7 @@ const days: DayData[] = [
     title: 'Salzburg – Palermo – Segesta – Trapani – Marsala',
     image: images.segesta,
     hotel: 'Hotel Carmine, Marsala (N/F)',
+    hotelData: { name: 'Hotel Carmine', mapsQuery: 'Hotel+Carmine+Marsala+Sicily', mapsEmbed: 'Hotel+Carmine,+Marsala,+TP,+Italy' },
     stops: [
       { name: 'Salzburg – München', desc: 'Flug mit Lufthansa nach Palermo' },
       { name: 'Segesta', desc: 'Dorischer Tempel (ca. 420 v. Chr.) und Teatro Greco mit Blick auf den Golf von Castellammare', km: '55 km' },
@@ -242,6 +251,7 @@ const days: DayData[] = [
     title: 'Marsala – Selinunte – Agrigento',
     image: images.agrigento,
     hotel: 'Hotel Oneira Rooms, Agrigento (N/F)',
+    hotelData: { name: 'Oneira Rooms', mapsQuery: 'Oneira+Rooms+Agrigento+Sicily', mapsEmbed: 'Oneira+Rooms,+Agrigento,+AG,+Italy' },
     stops: [
       { name: 'Cave di Cusa', desc: 'Antiker Steinbruch für die Tempel von Selinunt – faszinierende Säulentrommeln in situ', km: '40 km' },
       { name: 'Selinunte', desc: 'Griechischer Tempelbezirk und Akropolis, eine der größten antiken Städte Siziliens', km: '15 km' },
@@ -254,6 +264,7 @@ const days: DayData[] = [
     title: 'Agrigento – Gela – Piazza Armerina – Noto – Siracusa',
     image: images.noto,
     hotel: 'Hotel I Santi Coronati, Siracusa (N/F)',
+    hotelData: { name: 'I Santi Coronati', mapsQuery: 'Hotel+I+Santi+Coronati+Siracusa', mapsEmbed: 'I+Santi+Coronati,+Siracusa,+SR,+Italy' },
     stops: [
       { name: 'Gela', desc: 'Archäologisches Museum mit Funden der griechischen Kolonie (688 v. Chr.)', km: '80 km' },
       { name: 'Piazza Armerina', desc: 'Villa Romana del Casale: spätrömische Mosaiken von Weltrang (UNESCO)', km: '45 km' },
@@ -268,6 +279,7 @@ const days: DayData[] = [
     title: 'Siracusa – Catania – Taormina',
     image: images.siracusa,
     hotel: 'Hotel Ariston, Taormina (N/F)',
+    hotelData: { name: 'Hotel Ariston', mapsQuery: 'Hotel+Ariston+Taormina+Sicily', mapsEmbed: 'Hotel+Ariston,+Taormina,+ME,+Italy' },
     stops: [
       { name: 'Syrakus: Ortigia', desc: 'Altstadt mit Dom (im antiken Athena-Tempel), Arethusa-Quelle, Halbinsel Ortigia' },
       { name: `Archäologischer Park`, desc: `„Ohr des Dionysios", griechisches Theater, römisches Amphitheater, Altar Hierons II.` },
@@ -282,6 +294,7 @@ const days: DayData[] = [
     title: 'Taormina – Ätna – Alcantara-Schlucht',
     image: images.etna,
     hotel: 'Hotel Ariston, Taormina (N/F)',
+    hotelData: { name: 'Hotel Ariston', mapsQuery: 'Hotel+Ariston+Taormina+Sicily', mapsEmbed: 'Hotel+Ariston,+Taormina,+ME,+Italy' },
     stops: [
       { name: 'Ätna', desc: 'Auffahrt bis 1900m Höhe auf Europas höchsten aktiven Vulkan (3357m), ev. Umrundung', km: '55 km' },
       { name: 'Alcantara-Schlucht', desc: 'Spektakuläre Basaltschlucht mit bizarren Lavagesteinsformationen', km: '100 km' },
@@ -293,6 +306,7 @@ const days: DayData[] = [
     title: 'Taormina – Cefalù – Palermo',
     image: images.cefalu,
     hotel: 'Hotel Posta, Palermo (N/F)',
+    hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [
       { name: 'Milazzo / Tindari', desc: 'Option: Äolische Inseln ODER Tindari mit Teatro Greco, Basilika, Casa Romana, Wallfahrtskirche', km: '90 km' },
       { name: 'Cefalù', desc: 'Normannische Kathedrale San Salvatore (1131) mit byzantinischen Christus-Pantokrator-Mosaiken', km: '115 km' },
@@ -305,6 +319,7 @@ const days: DayData[] = [
     title: 'Palermo – Monreale – Monte Pellegrino',
     image: images.monreale,
     hotel: 'Hotel Posta, Palermo (N/F)',
+    hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [
       { name: 'Palermo Altstadt', desc: 'Normannenpalast mit Cappella Palatina (goldene Mosaiken), Normannendom, Kreuzkuppelkirche La Martorana, archäologisches Museum' },
       { name: 'Monreale', desc: 'Normannische Kathedrale (1174) mit 6.340 m² byzantinischer Goldmosaiken und romanischem Kreuzgang', km: '15 km' },
@@ -506,6 +521,52 @@ const texte = [
   },
 ]
 
+// Hotel card with expandable Google Maps
+function HotelCard({ hotel, hotelData }: { hotel: string; hotelData?: HotelData }) {
+  const [expanded, setExpanded] = useState(false)
+  if (!hotel) return null
+
+  return (
+    <div className="hotel-section">
+      <div className="hotel-info" onClick={() => hotelData && setExpanded(!expanded)} style={{ cursor: hotelData ? 'pointer' : 'default' }}>
+        <Hotel size={18} />
+        <span>{hotel}</span>
+        {hotelData && (expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />)}
+      </div>
+      <AnimatePresence>
+        {expanded && hotelData && (
+          <motion.div
+            className="hotel-map-card"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="hotel-map-inner">
+              <iframe
+                className="hotel-map-iframe"
+                src={`https://www.google.com/maps?q=${hotelData.mapsEmbed}&output=embed`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+                title={hotelData.name}
+              />
+              <a
+                href={`https://www.google.com/maps/search/${hotelData.mapsQuery}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hotel-maps-link"
+              >
+                <MapPin size={14} /> Auf Google Maps öffnen (Bewertungen, Fotos, Route)
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
 // Expandable sight detail component
 function SightDetail({ name }: { name: string }) {
   const [expanded, setExpanded] = useState(false)
@@ -536,15 +597,18 @@ function SightDetail({ name }: { name: string }) {
                 ))}
               </div>
             )}
+            {info.planUrl && (
+              <div className="sight-plan">
+                <div className="sight-plan-label"><Landmark size={14} /> Grundriss / Plan</div>
+                <a href={info.planUrl} target="_blank" rel="noopener noreferrer">
+                  <img src={info.planUrl} alt={`Grundriss ${name}`} loading="lazy" className="sight-plan-img" />
+                </a>
+              </div>
+            )}
             <div className="sight-links">
               {info.wikipedia && (
                 <a href={info.wikipedia} target="_blank" rel="noopener noreferrer" className="sight-link">
                   <ExternalLink size={14} /> Wikipedia
-                </a>
-              )}
-              {info.planUrl && (
-                <a href={info.planUrl} target="_blank" rel="noopener noreferrer" className="sight-link">
-                  <Landmark size={14} /> Grundriss / Plan
                 </a>
               )}
             </div>
@@ -703,12 +767,7 @@ function App() {
                   </div>
                 ))}
               </div>
-              {d.hotel && (
-                <div className="hotel-info">
-                  <Hotel size={18} />
-                  <span>{d.hotel}</span>
-                </div>
-              )}
+              <HotelCard hotel={d.hotel} hotelData={d.hotelData} />
 
               {/* Day navigation */}
               <div className="day-nav">

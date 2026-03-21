@@ -975,6 +975,7 @@
   color: var(--color-text-light);
   line-height: 1.9;
   font-size: 1.05rem;
+  white-space: pre-wrap;
 }
 
 .text-translation {

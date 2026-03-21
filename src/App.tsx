@@ -1061,6 +1061,41 @@ const texte = [
     translation: '',
     lang: 'Deutsch (Original)',
   },
+  {
+    title: 'Die Bürgschaft',
+    source: 'Friedrich Schiller, Die Bürgschaft (1798) – Ballade, spielt in Syrakus',
+    original: `Zu Dionys, dem Tyrannen, schlich
+Damon, den Dolch im Gewande;
+Ihn schlugen die Häscher in Bande.
+„Was wolltest du mit dem Dolche, sprich!"
+Entgegnet ihm finster der Wüterich.
+„Die Stadt vom Tyrannen befreien!"
+„Das sollst du am Kreuze bereuen."
+
+„Ich bin", spricht jener, „zu sterben bereit
+Und bitte nicht um mein Leben;
+Doch willst du Gnade mir geben,
+Ich flehe dich um drei Tage Zeit,
+Bis ich die Schwester dem Gatten gefreit;
+Dann bin ich des Todes; hier steh als Unterpfand
+Mein Freund, bis ich kehre, zu dir in die Hand."
+
+Und der Tyrann entzücket sich's,
+Er gibt ihm die Frist und die Bürgen.
+Und käme er nicht zum dritten Morgen,
+So müsse der Freund statt seiner erblassen,
+Doch werde er dann ihn laufen lassen.
+
+Und treulich bewacht er die heilige Pfand
+Und kehret mit dem letzten Hauche zurück –
+Zu Diensten, hier bin ich! – Und alles war Glück.
+
+Und der Tyrann betrachtet sie mit Staunen:
+„Es siegte die Treue! Ich sei, gewährt mir die Bitte,
+In eurem Bunde der dritte!"`,
+    translation: 'Schillers Ballade spielt am Hof des Tyrannen Dionysios I. in Syrakus. Sie besingt die Freundschaft zwischen Damon und Pythias, die stärker ist als Furcht vor dem Tod – und selbst den Tyrannen zur Umkehr bewegt.',
+    lang: 'Deutsch',
+  },
 ]
 
 // Speisen Karussell – rotiert automatisch alle 10 Sekunden

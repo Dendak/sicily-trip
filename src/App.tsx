@@ -1149,9 +1149,9 @@ function App() {
               merkmale: ['Keine Basis – Säule steht direkt auf dem Stylobat', '16–20 Kanneluren mit scharfen Graten', 'Kapitell: Echinus (runder Wulst) + Abakus (Platte)', 'Fries: abwechselnd Triglyphen und Metopen', 'Wuchtig, schlicht, maskulin'],
               beispiel: 'Tempel in Segesta, Agrigento, Selinunte',
               slides: [
-                { url: '/architektur-bilder/seite_02.png', label: 'Schema: Drei Säulenordnungen', schema: true },
-                { url: 'https://images.unsplash.com/photo-1677967062355-b951f29c66e8?w=800&q=80', label: 'Segesta – Dorischer Tempel (ca. 420 v. Chr.)' },
-                { url: 'https://images.unsplash.com/photo-1555992828-ca4dbe41d294?w=800&q=80', label: 'Agrigento – Concordia-Tempel' },
+                { url: `${import.meta.env.BASE_URL}architektur-bilder/seite_02.png`, label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Segesta_AncientGreekTemple_0932.jpg?width=800', label: 'Segesta – Dorischer Tempel (ca. 420 v. Chr.)' },
+                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Agrigent_BW_2012-10-07_12-52-27.JPG?width=800', label: 'Agrigento – Concordia-Tempel' },
               ],
             },
             {
@@ -1160,8 +1160,8 @@ function App() {
               merkmale: ['Basis: Torus + Spira + Plinthe', '24 Kanneluren mit stumpfen Stegen', 'Kapitell: charakteristische Voluten (Schnecken)', 'Architrav in drei Fascien (Streifen) gegliedert', 'Schlank, elegant, weiblich'],
               beispiel: 'Häufig in Kleinasien; in Sizilien selten',
               slides: [
-                { url: '/architektur-bilder/seite_02.png', label: 'Schema: Drei Säulenordnungen', schema: true },
-                { url: 'https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80', label: 'Ionische Säulen – Beispiel' },
+                { url: `${import.meta.env.BASE_URL}architektur-bilder/seite_02.png`, label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Erechtheum_Acropolis_Athens.jpg?width=800', label: 'Erechtheion, Athen – Ionische Ordnung' },
               ],
             },
             {
@@ -1170,9 +1170,9 @@ function App() {
               merkmale: ['Wie ionisch, aber aufwendigeres Kapitell', 'Kapitell mit Akanthusblättern und Voluten-Bändern', 'Entwickelt ca. 420 v. Chr. in Korinth', 'Besonders prunkvoll und dekorativ', 'In römischer Architektur am beliebtesten'],
               beispiel: 'Spätantike Bauten; Pantheon Rom',
               slides: [
-                { url: '/architektur-bilder/seite_02.png', label: 'Schema: Drei Säulenordnungen', schema: true },
-                { url: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80', label: 'Pantheon, Rom – Korinthische Portikus' },
-                { url: 'https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=800&q=80', label: 'Korinthische Säulen – Römerzeit' },
+                { url: `${import.meta.env.BASE_URL}architektur-bilder/seite_02.png`, label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/L%27Olympieion_%28Ath%C3%A8nes%29_%2830776483926%29.jpg?width=800', label: 'Olympieion, Athen – Korinthische Säulen' },
+                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Bacchus_at_Baalbek.jpg?width=800', label: 'Bacchustempel, Baalbek – Korinthische Ordnung' },
               ],
             },
           ] as OrdnungData[]).map((o, i) => <OrdnungCard key={i} o={o} />)}

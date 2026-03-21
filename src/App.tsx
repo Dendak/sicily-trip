@@ -1073,6 +1073,23 @@ CATARELLA: Jawohl, Herr Doktor, Euer Gnaden ist bereits zufriedengestellt!`,
     lang: 'Deutsch (nach Diodoros Sikeliotes, griechisches Original)',
   },
   {
+    title: 'Per questo mi chiamo Giovanni – La struttura di Cosa Nostra',
+    source: 'Luigi Garlando, Per questo mi chiamo Giovanni (Rizzoli, 2004)',
+    original: `Il giuramento dell'uomo d'onore:
+„Possano bruciare le mie carni come questo santino, se non manterrò fede al giuramento."
+
+Durante il rito, due testimoni pungono il dito del nuovo mafioso con una spina di arancia amara. Il sangue cade su un'immagine sacra che viene incendiata e passata tra le mani finché non si spegne. Solo allora il capo svela il nome dell'organizzazione: Cosa Nostra.
+
+La struttura di Cosa Nostra è come un carciofo: le foglie esterne sono i soldati e i picciotti – quelli che contano meno. Più si va verso il centro, più si sale di importanza: capodecina, consiglieri, vicecapo. E al cuore, nascosto e protetto da tutte le foglie, c'è il capo.`,
+    translation: `Der Schwur des Ehrenmenschen:
+„Möge mein Fleisch brennen wie dieses Heiligenbild, wenn ich meinen Schwur nicht halte."
+
+Beim Initiationsritus stechen zwei Zeugen dem neuen Mafioso mit einem Dorn der Bitteroranje in den Finger. Das Blut fällt auf ein heiliges Bild, das angezündet und zwischen den Händen weitergereicht wird, bis es erlischt. Erst dann enthüllt der Boss den Namen der Organisation: Cosa Nostra.
+
+Die Struktur von Cosa Nostra ist wie eine Artischocke: Die äußeren Blätter sind die Soldaten und Picciotti – die am wenigsten zählen. Je weiter man zum Kern vordringt, desto höher der Rang: Capodecina, Consiglieri, Vizeboss. Und im Herz, versteckt und geschützt von allen Blättern, sitzt der Boss.`,
+    lang: 'Italienisch',
+  },
+  {
     title: 'Goethe über Monte Pellegrino',
     source: 'Goethe, Italienische Reise (3. April 1787)',
     original: 'Der Monte Pellegrino, ein großes Vorgebirge am Meerbusen, [...] ist das schönste Vorgebirge der Welt.',
@@ -1360,6 +1377,7 @@ const texteGruppen = [
     ids: [
       'Il ladro di merendine – Montalbano e François',
       'Il commissario Montalbano – Catarella al telefono',
+      'Per questo mi chiamo Giovanni – La struttura di Cosa Nostra',
       'Goethe über Monte Pellegrino',
       'Così è (se vi pare) – Schlussszene',
       'Die Bürgschaft',

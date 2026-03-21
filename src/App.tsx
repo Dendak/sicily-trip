@@ -28,8 +28,8 @@ const images = {
   granita: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Granita_brioche.JPG',
   caponata: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Caponata_%2814049113982%29.jpg',
   cassata: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Cassatasiciliana.jpg',
-  panelle: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Panelle.jpg',
-  pastaSarde: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Pasta_con_le_sarde_%28Palermo%29.jpg',
+  panelle: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/Pane_e_panelle.jpg',
+  pastaSarde: 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Pasta_con_le_sarde_-_19960039311.jpg',
   sardeBeccafico: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Sarde_a_beccafico.jpg',
   sfincione: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Sfincione_palermitano.jpg',
   stoccafisso: 'https://upload.wikimedia.org/wikipedia/commons/7/71/Stoccafisso_alla_messinese.jpg',
@@ -1149,9 +1149,8 @@ function App() {
               merkmale: ['Keine Basis – Säule steht direkt auf dem Stylobat', '16–20 Kanneluren mit scharfen Graten', 'Kapitell: Echinus (runder Wulst) + Abakus (Platte)', 'Fries: abwechselnd Triglyphen und Metopen', 'Wuchtig, schlicht, maskulin'],
               beispiel: 'Tempel in Segesta, Agrigento, Selinunte',
               slides: [
-                { url: `${import.meta.env.BASE_URL}architektur-bilder/seite_02.png`, label: 'Schema: Drei Säulenordnungen', schema: true },
-                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Segesta_AncientGreekTemple_0932.jpg?width=800', label: 'Segesta – Dorischer Tempel (ca. 420 v. Chr.)' },
-                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Agrigent_BW_2012-10-07_12-52-27.JPG?width=800', label: 'Agrigento – Concordia-Tempel' },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Classical_orders_from_the_Encyclopedie.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: images.doricCol, label: 'Parthenon, Athen – Dorische Säulen' },
               ],
             },
             {
@@ -1160,8 +1159,8 @@ function App() {
               merkmale: ['Basis: Torus + Spira + Plinthe', '24 Kanneluren mit stumpfen Stegen', 'Kapitell: charakteristische Voluten (Schnecken)', 'Architrav in drei Fascien (Streifen) gegliedert', 'Schlank, elegant, weiblich'],
               beispiel: 'Häufig in Kleinasien; in Sizilien selten',
               slides: [
-                { url: `${import.meta.env.BASE_URL}architektur-bilder/seite_02.png`, label: 'Schema: Drei Säulenordnungen', schema: true },
-                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Erechtheum_Acropolis_Athens.jpg?width=800', label: 'Erechtheion, Athen – Ionische Ordnung' },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Classical_orders_from_the_Encyclopedie.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: images.ionicCol, label: 'Ionisches Volutenkapitell – Nahaufnahme' },
               ],
             },
             {
@@ -1170,9 +1169,8 @@ function App() {
               merkmale: ['Wie ionisch, aber aufwendigeres Kapitell', 'Kapitell mit Akanthusblättern und Voluten-Bändern', 'Entwickelt ca. 420 v. Chr. in Korinth', 'Besonders prunkvoll und dekorativ', 'In römischer Architektur am beliebtesten'],
               beispiel: 'Spätantike Bauten; Pantheon Rom',
               slides: [
-                { url: `${import.meta.env.BASE_URL}architektur-bilder/seite_02.png`, label: 'Schema: Drei Säulenordnungen', schema: true },
-                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/L%27Olympieion_%28Ath%C3%A8nes%29_%2830776483926%29.jpg?width=800', label: 'Olympieion, Athen – Korinthische Säulen' },
-                { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Bacchus_at_Baalbek.jpg?width=800', label: 'Bacchustempel, Baalbek – Korinthische Ordnung' },
+                { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Classical_orders_from_the_Encyclopedie.png', label: 'Schema: Drei Säulenordnungen', schema: true },
+                { url: images.corinthianCol, label: 'Korinthische Säulen mit Akanthuskapitell' },
               ],
             },
           ] as OrdnungData[]).map((o, i) => <OrdnungCard key={i} o={o} />)}

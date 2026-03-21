@@ -47,28 +47,12 @@ const fadeIn = {
 
 const personenDaten = [
   {
-    name: 'Archimedes',
-    lebensdaten: '287–212 v. Chr.',
-    kategorie: 'Mathematiker & Physiker',
-    herkunft: 'Syrakus',
-    farbe: '#2C6E9E',
-    beschreibung: 'Größter Mathematiker der Antike: entdeckte das Hebelgesetz, den hydrostatischen Auftrieb und erfand die archimedische Schraube. Als Sohn des Hofastronomen Phaidias in Syrakus geboren, starb er bei der Verteidigung seiner Stadt gegen die Römer 212 v. Chr.',
-  },
-  {
-    name: 'Empedokles',
-    lebensdaten: 'ca. 495–435 v. Chr.',
-    kategorie: 'Philosoph & Arzt',
-    herkunft: 'Akragas (Agrigento)',
-    farbe: '#7B6B52',
-    beschreibung: 'Schöpfer der Lehre von den vier Elementen (Feuer, Wasser, Erde, Luft). Philosoph, Arzt und Religionsgründer, zu Lebzeiten wie ein Gott verehrt. Faszinierte später Goethe, Hölderlin und Brecht.',
-  },
-  {
-    name: 'Dionysios I.',
-    lebensdaten: 'ca. 430–367 v. Chr.',
-    kategorie: 'Tyrann von Syrakus',
-    herkunft: 'Syrakus',
-    farbe: '#8B1A1A',
-    beschreibung: 'Ab 405 v. Chr. Alleinherrscher von Syrakus – machte die Stadt zur mächtigsten Kraft des westlichen Mittelmeers. Drängte die Karthager zurück, führte Kriege in Süditalien und schrieb selbst literarische Werke.',
+    name: 'Agatha, Heilige',
+    lebensdaten: 'gest. 251',
+    kategorie: 'Märtyrerin & Heilige',
+    herkunft: 'Palermo oder Catania',
+    farbe: '#8B3A3A',
+    beschreibung: 'Wegen ihrer Treue zum christlichen Glauben unter Kaiser Decius zum Tode verurteilt und hingerichtet. Der Legende nach wurden ihr die Brüste mit Zangen abgeschnitten. Noch zu Lebzeiten das „Idol" vieler Zeitgenossen – Schutzpatronin von Catania.',
   },
   {
     name: 'Agathokles',
@@ -76,71 +60,7 @@ const personenDaten = [
     kategorie: 'König von Sizilien',
     herkunft: 'Rhegion (heute Reggio)',
     farbe: '#8B1A1A',
-    beschreibung: 'Erster „König von Sizilien". Heerführer, der 311/310 v. Chr. die Karthager sogar in Nordafrika angriff. Polybios nannte ihn und Dionysios I. „die größten Staatsmänner aller Zeiten".',
-  },
-  {
-    name: 'Charondas',
-    lebensdaten: 'ca. Ende 6. Jh. v. Chr.',
-    kategorie: 'Gesetzgeber',
-    herkunft: 'Katane (Catania)',
-    farbe: '#2D6B4A',
-    beschreibung: 'Neben Drakon und Solon einer der drei bedeutendsten Gesetzgeber der griechischen Antike. Seine Gesetze galten in den chalkidischen Kolonien Siziliens und Süditaliens, besonders in Katane und Rhegion.',
-  },
-  {
-    name: 'Gorgias',
-    lebensdaten: 'ca. 485–380 v. Chr.',
-    kategorie: 'Sophist & Rhetoriker',
-    herkunft: 'Leontinoi (Lentini)',
-    farbe: '#5B2D8A',
-    beschreibung: 'Vater der rhetorischen Kunstprosa und Hauptvertreter der griechischen Sophistik. Reiste 427 v. Chr. als Gesandter nach Athen, wo er als Redner gefeiert wurde. Soll 110 Jahre alt geworden sein.',
-  },
-  {
-    name: 'Epicharmos',
-    lebensdaten: '550–460 v. Chr.',
-    kategorie: 'Dichter & Komödienvater',
-    herkunft: 'Syrakus',
-    farbe: '#2D6B4A',
-    beschreibung: 'Erfinder der Komödie: hob die altdorische Volksposse zur Kunstform. Berühmt für seine Parodien der Götter und Helden. Sein Sentenzenreichtum brachte ihm den Ruf eines Philosophen ein.',
-  },
-  {
-    name: 'Agatha, Heilige',
-    lebensdaten: 'gest. 251',
-    kategorie: 'Märtyrerin & Heilige',
-    herkunft: 'Palermo oder Catania',
-    farbe: '#8B3A3A',
-    beschreibung: 'Wegen ihrer Treue zum christlichen Glauben unter Kaiser Decius hingerichtet. Schutzpatronin von Catania – noch zu Lebzeiten das „Idol" vieler Zeitgenossen.',
-  },
-  {
-    name: 'Lucia, Heilige',
-    lebensdaten: 'ca. 283–304',
-    kategorie: 'Märtyrerin & Heilige',
-    herkunft: 'Syrakus',
-    farbe: '#8B3A3A',
-    beschreibung: 'In Syrakus geboren, erlitt sie den Märtyrertod während der letzten Christenverfolgung unter Diokletian. Ihr Vorbild war die hl. Agatha. Schutzpatronin des Lichts und der Sehenden.',
-  },
-  {
-    name: 'Roger II.',
-    lebensdaten: '1097–1154',
-    kategorie: 'Normannenkönig',
-    herkunft: 'Mileto (Kalabrien)',
-    farbe: '#2D6B4A',
-    beschreibung: '1130 zum König von Sizilien gekrönt. Wuchs von Kind auf von arabischen, byzantinischen und hebräischen Gelehrten umgeben. Machte Sizilien zum bedeutendsten Kulturzentrum des Mittelmeerraums.',
-  },
-  {
-    name: 'Friedrich II. von Hohenstaufen',
-    lebensdaten: '1194–1250',
-    kategorie: 'Kaiser & König',
-    herkunft: 'Jesi (Marken)',
-    farbe: '#8B6914',
-    beschreibung: 'König von Sizilien (ab 1198), deutschem König und ab 1220 Kaiser des Heiligen Römischen Reiches. „Stupor Mundi" – Staunen der Welt. Palermo unter ihm Zentrum arabisch-christlich-jüdischer Gelehrsamkeit.',
-  },
-  {
-    name: 'Friedrich II. von Aragon',
-    lebensdaten: '1272–1337',
-    kategorie: 'König von Sizilien',
-    herkunft: 'Valencia',
-    farbe: '#8B6914',
-    beschreibung: '1297 vom sizilianischen Parlament zum König gewählt. Kämpfte gegen Barcelona, die Anjou und das Papsttum und sicherte die Unabhängigkeit Siziliens. Durfte sich „König von Trinakria" nennen.',
+    beschreibung: 'Erster „König von Sizilien". Alleinherrscher von Syrakus seit 316 v. Chr., gründete 313 v. Chr. den Sizilischen Städtebund. Griff 311/310 v. Chr. die Karthager sogar in Nordafrika an. Polybios nannte ihn und Dionysios I. „die größten Staatsmänner aller Zeiten".',
   },
   {
     name: 'Antonello da Messina',
@@ -148,23 +68,63 @@ const personenDaten = [
     kategorie: 'Maler',
     herkunft: 'Messina',
     farbe: '#2C6E9E',
-    beschreibung: 'Einziger sizilianischer Maler von europäischem Rang. Studierte in Neapel die altniederländische Malerei van Eycks und verband deren Detailtreue mit italienischer Perspektive. Wirkte auch auf die venezianische Malerei.',
+    beschreibung: 'Einziger sizilianischer Maler von europäischem Rang. Studierte in Neapel die altniederländische Malerei van Eycks und verband deren naturalistische Detailtreue mit dem italienischen Sinn für Perspektive. Wirkte in Venedig und beeinflusste die venezianische Malerei nachhaltig.',
   },
   {
-    name: 'Luigi Pirandello',
-    lebensdaten: '1867–1936',
-    kategorie: 'Schriftsteller',
-    herkunft: 'Agrigento',
-    farbe: '#2E6B4F',
-    beschreibung: 'Nobelpreisträger für Literatur 1934. Revolutionierte das moderne Theater mit Dramen wie „Sechs Personen suchen einen Autor". Studierte Philologie in Bonn, starb 1936 in Rom.',
+    name: 'Archimedes',
+    lebensdaten: '287–212 v. Chr.',
+    kategorie: 'Mathematiker & Physiker',
+    herkunft: 'Syrakus',
+    farbe: '#2C6E9E',
+    beschreibung: 'Größter Mathematiker und Physiker der Antike. Entdeckte das Hebelgesetz und den hydrostatischen Auftrieb, erfand die archimedische Schraube zur Wasserförderung. Als Sohn des Hofastronomen Phaidias in Syrakus geboren, kehrte er nach seiner Studienzeit in Alexandria heim und fiel 212 v. Chr. bei der Verteidigung seiner Stadt gegen die Römer.',
   },
   {
-    name: 'Salvatore Quasimodo',
-    lebensdaten: '1901–1968',
-    kategorie: 'Dichter',
-    herkunft: 'Modica',
-    farbe: '#2E6B4F',
-    beschreibung: 'Nobelpreisträger für Literatur 1959. Veröffentlichte erste Gedichte 1930 in der Zeitschrift Solaria. Bekannt für seine Übersetzungen griechischer und römischer Klassiker.',
+    name: 'Charondas',
+    lebensdaten: 'ca. Ende 6. Jh. v. Chr.',
+    kategorie: 'Gesetzgeber',
+    herkunft: 'Katane (Catania)',
+    farbe: '#2D6B4A',
+    beschreibung: 'Neben Drakon und Solon einer der drei bedeutendsten Gesetzgeber der griechischen Antike. Sein Ruhm stand dem ihrigen in nichts nach. Seine Gesetze galten in den chalkidischen Gründungen Siziliens und Süditaliens und erlangten besonders in Katane und Rhegion Gesetzeskraft.',
+  },
+  {
+    name: 'Dionysios I.',
+    lebensdaten: 'ca. 430–367 v. Chr.',
+    kategorie: 'Tyrann von Syrakus',
+    herkunft: 'Syrakus',
+    farbe: '#8B1A1A',
+    beschreibung: 'Ab 405 v. Chr. Alleinherrscher von Syrakus. In 38 Regierungsjahren unterwarf oder zerstörte er Städte, drängte die Karthager aus Westsizilien zurück und dehnte seinen Einfluss über ganz Süditalien aus. Verfasste selbst literarische Werke. Polybios nannte ihn „größten Staatsmann aller Zeiten".',
+  },
+  {
+    name: 'Empedokles',
+    lebensdaten: 'ca. 495–435 v. Chr.',
+    kategorie: 'Philosoph & Arzt',
+    herkunft: 'Akragas (Agrigento)',
+    farbe: '#7B6B52',
+    beschreibung: 'Schöpfer der Lehre von den vier Elementen (Feuer, Wasser, Erde, Luft) und Religionsgründer. Befasste sich mit Astronomie, Kosmologie, Mathematik und Zoologie. Zu Lebzeiten wie ein Gott verehrt; seine Gestalt faszinierte Goethe, Hölderlin und Brecht. Soll freiwillig in den Ätna gesprungen sein.',
+  },
+  {
+    name: 'Epicharmos',
+    lebensdaten: '550–460 v. Chr.',
+    kategorie: 'Dichter & Komödienvater',
+    herkunft: 'Syrakus',
+    farbe: '#2D6B4A',
+    beschreibung: 'Indem er die altdorische Volksposse zur Kunstform erhob, gilt der Syrakusaner Epicharmos als Erfinder der Komödie. Berühmt waren seine Parodien der Götter und Helden. Sein Sentenzenreichtum brachte ihm den Ruf eines Philosophen ein.',
+  },
+  {
+    name: 'Friedrich II. von Aragon',
+    lebensdaten: '1272–1337',
+    kategorie: 'König von Sizilien',
+    herkunft: 'Valencia',
+    farbe: '#8B6914',
+    beschreibung: '1297 vom sizilianischen Parlament zum König gewählt. Kämpfte gegen Barcelona, die Anjou und das Papsttum. Schloss 1302 den Friedensvertrag von Caltabellotta, der festlegte, dass das Königreich nach seinem Tod an die Anjou fallen sollte – durfte sich fortan „König von Trinakria" nennen.',
+  },
+  {
+    name: 'Friedrich II. von Hohenstaufen',
+    lebensdaten: '1194–1250',
+    kategorie: 'Kaiser & König',
+    herkunft: 'Jesi (Marken)',
+    farbe: '#8B6914',
+    beschreibung: '„Stupor Mundi" – Staunen der Welt. König von Sizilien ab 1198, Deutscher König ab 1212, Kaiser des Heiligen Römischen Reiches ab 1220. Von Kind auf von arabischen, byzantinischen und hebräischen Gelehrten umgeben. Palermo war unter ihm Zentrum arabisch-christlich-jüdischer Gelehrsamkeit.',
   },
   {
     name: 'Giovanni Verga',
@@ -172,7 +132,47 @@ const personenDaten = [
     kategorie: 'Schriftsteller',
     herkunft: 'Catania',
     farbe: '#2E6B4F',
-    beschreibung: 'Begründer des italienischen Verismus. Bekannt für „Cavalleria Rusticana" und „I Malavoglia". Als Zwanzigjähriger kämpfte er mit Garibaldis Truppen; später romantisierte er das sizilianische Landleben.',
+    beschreibung: 'Begründer des italienischen Verismus. Als Zwanzigjähriger kämpfte er begeistert mit Garibaldis Truppen – bald enttäuscht über die Repressalien. Seine bekanntesten Werke sind „Mastro Don Gesualdo", „Die Malavoglia" und „Cavalleria Rusticana", die Pietro Mascagni 1890 vertonte.',
+  },
+  {
+    name: 'Gorgias',
+    lebensdaten: 'ca. 485–380 v. Chr.',
+    kategorie: 'Sophist & Rhetoriker',
+    herkunft: 'Leontinoi (Lentini)',
+    farbe: '#5B2D8A',
+    beschreibung: 'Hauptvertreter der griechischen Sophistik und Vater der rhetorischen Kunstprosa. Reiste 427 v. Chr. als Gesandter nach Athen, wo er als Redner gefeiert und unbezahlbar wurde. Soll mit 110 Jahren entschlossen Speise und Trank verweigert haben, um seinem Leben ein Ende zu setzen.',
+  },
+  {
+    name: 'Lucia, Heilige',
+    lebensdaten: 'ca. 283–304',
+    kategorie: 'Märtyrerin & Heilige',
+    herkunft: 'Syrakus',
+    farbe: '#8B3A3A',
+    beschreibung: 'In Syrakus geboren, war die hl. Agatha ihr Vorbild. Von ihrem eigenen Verlobten angezeigt, erlitt sie den Märtyrertod während der letzten Christenverfolgung unter Diokletian. Schutzpatronin des Lichts und der Sehenden – ihr Festtag (13. Dezember) wird in Skandinavien besonders gefeiert.',
+  },
+  {
+    name: 'Luigi Pirandello',
+    lebensdaten: '1867–1936',
+    kategorie: 'Schriftsteller',
+    herkunft: 'Agrigento',
+    farbe: '#2E6B4F',
+    beschreibung: 'Nobelpreisträger für Literatur 1934. Studierte Philologie in Bonn und promovierte 1891. Ein sizilianischer Schriftsteller führte ihn in die römische Theaterwelt ein. Sein literarisches Werk umfasst Dramen, Novellen und Romane, die dem modernen Theater entscheidende Impulse gaben.',
+  },
+  {
+    name: 'Roger II.',
+    lebensdaten: '1097–1154',
+    kategorie: 'Normannenkönig',
+    herkunft: 'Mileto (Kalabrien)',
+    farbe: '#2D6B4A',
+    beschreibung: '1130 zum König von Sizilien gekrönt – als einziger fehlte ihm die Krone. Von Kind auf von arabischen, byzantinischen und hebräischen Gelehrten umgeben. Unter seiner Regierung entwickelte sich Sizilien nicht nur zum bedeutendsten Kulturzentrum, sondern erreichte auch seine größte politische Ausdehnung.',
+  },
+  {
+    name: 'Salvatore Quasimodo',
+    lebensdaten: '1901–1968',
+    kategorie: 'Dichter',
+    herkunft: 'Modica',
+    farbe: '#2E6B4F',
+    beschreibung: 'Nobelpreisträger für Literatur 1959. Sohn eines Bahnhofswärters aus Modica, studierte unter schwierigen Umständen Physik und Mathematik in Rom. 1930 veröffentlichte die Zeitschrift Solaria drei seiner Gedichte. Seine Übersetzungen der griechischen und römischen Klassiker gelten als Meisterwerke.',
   },
 ]
 
@@ -1135,6 +1135,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [currentDay, setCurrentDay] = useState<number | null>(null)
   const [expandedSight, setExpandedSight] = useState<string | null>(null)
+  const [expandedPerson, setExpandedPerson] = useState<number | null>(null)
   const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
   const [glossarRichtung, setGlossarRichtung] = useState<'it-de' | 'de-it'>('it-de')
 
@@ -1610,18 +1611,25 @@ function App() {
         </div>
         <div className="personen-grid">
           {personenDaten.map((p, i) => (
-            <motion.div key={i} className="person-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <div className="person-card-header" style={{ borderColor: p.farbe }}>
+            <motion.div key={i} className={`person-card${expandedPerson === i ? ' person-card-open' : ''}`} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="person-card-header person-card-clickable" style={{ borderColor: p.farbe }} onClick={() => setExpandedPerson(expandedPerson === i ? null : i)}>
                 <div className="person-name-block">
                   <h3 className="person-name">{p.name}</h3>
                   <span className="person-lebensdaten" style={{ color: p.farbe }}>{p.lebensdaten}</span>
                 </div>
-                <span className="person-kategorie" style={{ background: p.farbe }}>{p.kategorie}</span>
+                <div className="person-header-right">
+                  <span className="person-kategorie" style={{ background: p.farbe }}>{p.kategorie}</span>
+                  {expandedPerson === i ? <ChevronUp size={16} style={{ color: p.farbe, flexShrink: 0 }} /> : <ChevronDown size={16} style={{ color: p.farbe, flexShrink: 0 }} />}
+                </div>
               </div>
-              <div className="person-card-body">
-                <p className="person-beschreibung">{p.beschreibung}</p>
-                <div className="person-herkunft"><MapPin size={13} /> {p.herkunft}</div>
-              </div>
+              <AnimatePresence>
+                {expandedPerson === i && (
+                  <motion.div className="person-card-body" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}>
+                    <p className="person-beschreibung">{p.beschreibung}</p>
+                    <div className="person-herkunft"><MapPin size={13} /> {p.herkunft}</div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>

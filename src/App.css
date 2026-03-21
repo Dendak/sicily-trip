@@ -1414,6 +1414,28 @@
   background: rgba(255,255,255,0.04);
 }
 
+.person-card-clickable {
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.person-card-clickable:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.person-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.person-card-open .person-card-header {
+  background: rgba(255,255,255,0.07);
+}
+
 .person-name-block {
   display: flex;
   flex-direction: column;

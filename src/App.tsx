@@ -21,7 +21,7 @@ const images = {
   palermo: 'https://images.unsplash.com/photo-1553901753-215db344677a?w=800&q=80',
   monreale: 'https://images.unsplash.com/photo-1561729730-bdbcce4cb15b?w=800&q=80',
   villaRomanaTellaro: 'https://images.unsplash.com/photo-1761495438507-33d43cedd55c?w=800&q=80',
-  scalaDeiTurchi: 'https://images.unsplash.com/photo-1627125337399-8938c4d0a0c0?w=800&q=80',
+  scalaDeiTurchi: 'https://images.unsplash.com/photo-1544475913-d45a76d9e199?w=800&q=80',
   arancini: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/Arancini_002.jpg',
   cannoli: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Cannoli_siciliani.jpg',
   pasta: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg',
@@ -217,31 +217,36 @@ interface StopData {
 
 // Sight images from Wikimedia Commons and Unsplash
 const sightImages: Record<string, string> = {
-  'Segesta': 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Segesta_-_Il_Tempio_greco_-_foto_di_Ferruccio_Zanone.jpg',
-  'Monte Érice': 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Erice_-_vista_panoramica_01.jpg',
-  'Trapani': 'https://upload.wikimedia.org/wikipedia/commons/4/44/Trapani_BW_2012-10-11_13-25-05.jpg',
-  'Marsala': 'https://upload.wikimedia.org/wikipedia/commons/6/65/Marsala_BW_2012-10-11_11-44-18.jpg',
-  'Cave di Cusa': 'https://upload.wikimedia.org/wikipedia/commons/6/63/Cave_di_Cusa_0577.JPG',
-  'Selinunte': 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Selinunte_-_Temple_E_%28Hera%29.jpg',
+  'Segesta': 'https://images.unsplash.com/photo-1677967062355-b951f29c66e8?w=800&q=80',
+  'Monte Érice': 'https://images.unsplash.com/photo-1531050661635-3999fed2312e?w=800&q=80',
+  'Trapani': 'https://images.unsplash.com/photo-1541344999736-83eca272f6fc?w=800&q=80',
+  'Marsala': 'https://images.unsplash.com/photo-1513258419489-57f9e66da32b?w=800&q=80',
+  'Cave di Cusa': 'https://images.unsplash.com/photo-1585756908524-d7935e897056?w=800&q=80',
+  'Selinunte': 'https://images.unsplash.com/photo-1581364899794-1e21c0179a4e?w=800&q=80',
   'Scala dei Turchi': images.scalaDeiTurchi,
   'Agrigento': images.agrigento,
-  'Gela': 'https://upload.wikimedia.org/wikipedia/commons/1/14/Gela_panorama.jpg',
-  'Piazza Armerina': 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Mosaic_in_Villa_Romana_del_Casale%2C_by_Jerzy_Strzelecki%2C_06.jpg',
-  'Akrai': 'https://upload.wikimedia.org/wikipedia/commons/4/47/PalazzoloAcreide-TeatroGreco.jpg',
+  'Gela': 'https://images.unsplash.com/photo-1727617855734-35b07c4fdfdb?w=800&q=80',
+  'Piazza Armerina': 'https://images.unsplash.com/photo-1625819826041-a119c9c6fca5?w=800&q=80',
+  'Akrai': 'https://images.unsplash.com/photo-1754540290089-81a699ef916b?w=800&q=80',
   'Noto': images.noto,
-  'Villa Romana del Tellaro': 'https://upload.wikimedia.org/wikipedia/commons/3/34/Villa_Romana_del_Tellaro.jpg',
+  'Villa Romana del Tellaro': 'https://images.unsplash.com/photo-1706830342145-7ba06ed51e30?w=800&q=80',
   'Syrakus': images.siracusa,
-  'Castello Eurialo': 'https://upload.wikimedia.org/wikipedia/commons/7/74/Euryalus_fortress.jpg',
+  'Castello Eurialo': 'https://images.unsplash.com/photo-1687294087613-3d05148b1270?w=800&q=80',
   'Catania': images.catania,
   'Ätna': images.etna,
-  'Alcantara-Schlucht': 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Gole_dell%27Alcantara_3.jpg',
+  'Alcantara-Schlucht': 'https://images.unsplash.com/photo-1704737035139-d8cc36aea123?w=800&q=80',
   'Taormina': images.taormina,
-  'Tindari': 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Tindari_-_Ancient_theatre.jpg',
+  'Tindari': 'https://images.unsplash.com/photo-1710092880781-3cbee5b05d85?w=800&q=80',
   'Cefalù': images.cefalu,
-  'Solunto': 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Solunto_bjs2007_02.jpg',
+  'Solunto': 'https://images.unsplash.com/photo-1668212145518-b9a2a614bbd9?w=800&q=80',
   'Palermo Altstadt': images.palermo,
   'Monreale': images.monreale,
-  'Monte Pellegrino': 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Monte_Pellegrino_BW_2012-10-09_15-39-00.jpg',
+  'Monte Pellegrino': 'https://images.unsplash.com/photo-1516986078574-f2f732941c4a?w=800&q=80',
+  'Syrakus: Ortigia': 'https://images.unsplash.com/photo-1593290904368-e993b56accc9?w=800&q=80',
+  'Archäologischer Park': 'https://images.unsplash.com/photo-1670694106275-20601b741a63?w=800&q=80',
+  'Grab des Archimedes': 'https://images.unsplash.com/photo-1725255922252-4b4ab90c9477?w=800&q=80',
+  'Milazzo / Tindari': 'https://images.unsplash.com/photo-1710092880781-3cbee5b05d85?w=800&q=80',
+  'Siracusa': images.siracusa,
 }
 
 interface HotelData {
@@ -377,7 +382,6 @@ interface Restaurant {
   mapsUrl: string
   hours?: string
   closed?: string
-  phone?: string
   warning?: string
 }
 
@@ -391,7 +395,6 @@ const restaurants: Restaurant[] = [
     mapsUrl: 'https://www.google.com/maps/place/Osteria+Il+Gallo+e+L\'innamorata/@37.7974975,12.4325306,17z/',
     hours: 'Di–Sa 12:30–14:30 / 19:30–22:30, So nur Mittag',
     closed: 'Montag',
-    phone: '329 291 8503',
   },
   {
     name: 'Osteria Expanificio',
@@ -401,7 +404,6 @@ const restaurants: Restaurant[] = [
     image: 'https://www.osteriaexpanificio.it/wp-content/uploads/2023/10/EXPANIFICIO-FOTO-TAVOLO-CON-LOGO-1.webp',
     mapsUrl: 'https://www.google.com/maps/search/Osteria+Expanificio+Agrigento+Sicily',
     hours: 'Täglich 12:30–14:30 / 19:30–23:00',
-    phone: '+39 0922 595399',
   },
   {
     name: 'Ristorante Dammuso',
@@ -412,7 +414,6 @@ const restaurants: Restaurant[] = [
     mapsUrl: 'https://www.google.com/maps/search/Ristorante+Dammuso+Noto+Sicily',
     hours: 'Nur Abendessen, ca. 19:00–24:00',
     closed: 'Dienstag',
-    phone: '0931 835786',
   },
   {
     name: 'Sicilia in Tavola',
@@ -423,19 +424,7 @@ const restaurants: Restaurant[] = [
     mapsUrl: 'https://www.google.com/maps/search/Sicilia+in+Tavola+Ortigia+Siracusa',
     hours: 'Di–So 12:30–14:30 / 19:30–22:30',
     closed: 'Montag',
-    phone: '392 461 0889',
     warning: 'Montag 30.3. geschlossen! Erst Di 31.3. geöffnet.',
-  },
-  {
-    name: 'Osteria Nero d\'Avola',
-    location: 'Taormina',
-    desc: 'Wirt Turi Siligato zeigt den frischen Tagesfang. Fisch wird am Tisch filetiert, Desserts mit Zedratzitronen. Benannt nach dem berühmten Rotwein. Unbedingt reservieren!',
-    tags: ['Erlebnis', 'Fisch', 'Interaktiv'],
-    image: 'https://www.eatoutsicily.com/storage/public/restaurants/4633-osteria-nero-d-avola/profile/111341578_3467576736684308_6726006130993120833_n.jpg',
-    mapsUrl: 'https://www.google.com/maps?cid=5249353599400390537',
-    closed: 'Montag',
-    phone: '0942 628874',
-    warning: 'Eventuell dauerhaft geschlossen – vor Besuch anrufen!',
   },
   {
     name: 'Trattoria Da Nino',
@@ -445,7 +434,6 @@ const restaurants: Restaurant[] = [
     image: 'https://trattoriadaninotaormina.com/images/slideshow/slideshow1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Via+Luigi+Pirandello,+37a,+98039+Taormina+ME,+Italy',
     hours: 'Täglich 12:00–14:30 / 19:00–22:30',
-    phone: '+39 0942 21265',
     warning: 'War bis März 2026 in Renovierung – vorher anrufen!',
   },
   {
@@ -474,7 +462,6 @@ const restaurants: Restaurant[] = [
     image: 'https://osteriaballaro.it/wp-content/uploads/2024/01/365219667_326584539692689_4016882391528918212_n-768x630.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Osteria+Ballaro+Palermo+Sicily',
     hours: 'Täglich 12:00–15:00 / 19:00–23:00',
-    phone: '091 326488',
   },
   {
     name: 'Trattoria Al Ferro di Cavallo',
@@ -484,7 +471,6 @@ const restaurants: Restaurant[] = [
     image: 'https://ferrodicavallopalermo.it/deposito/2025/08/ferro-di-cavallo-header-01.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Trattoria+Ferro+di+Cavallo+Palermo',
     hours: 'ca. 12:00–15:30 / 18:30–23:00',
-    phone: '091 331835',
   },
   {
     name: 'I Cucci',
@@ -503,7 +489,6 @@ const restaurants: Restaurant[] = [
     mapsUrl: 'https://www.google.com/maps/search/Caffe+Sicilia+Noto',
     hours: 'Di–So 8:00–22:00',
     closed: 'Montag',
-    phone: '0931 835013',
     warning: 'Am Mo 30.3. geschlossen (regulärer Ruhetag)!',
   },
   {
@@ -888,11 +873,10 @@ function App() {
                   <div className="restaurant-warning">⚠️ {r.warning}</div>
                 )}
                 <p>{r.desc}</p>
-                {(r.hours || r.closed || r.phone) && (
+                {(r.hours || r.closed) && (
                   <div className="restaurant-info-grid">
                     {r.hours && <div className="restaurant-info-item"><Clock size={13} /> {r.hours}</div>}
                     {r.closed && <div className="restaurant-info-item restaurant-closed">Ruhetag: {r.closed}</div>}
-                    {r.phone && <div className="restaurant-info-item"><a href={`tel:${r.phone.replace(/\s/g, '')}`}>📞 {r.phone}</a></div>}
                   </div>
                 )}
                 <div className="restaurant-tags">

@@ -232,6 +232,15 @@ const regionProvinzen = [
   { kuerzel: 'RG', name: 'Ragusa',       flaeche: 1614, einwohner:  318000, hauptstadt: 'Ragusa',       hs_ew:  73000 },
 ]
 
+const regionIconMap: Record<string, string> = {
+  globe: '🌍', users: '👥', density: '📊', map: '🏛️', provinces: '🗺️',
+  mountain: '🌋', waves: '🌊', africa: '🌍', sun: '☀️', temp: '🌡️',
+  gdp: '💶', jobless: '📉', tourism: '✈️', unesco: '🏛️', wine: '🍷',
+  olives: '🫒', airports: '🛫', uni: '🎓', comuni: '🏘️', messina: '⚓',
+  islands: '🏝️', mafia: '⚖️', mosaik: '🎨', mountain2: '🌿', pop2: '📉',
+}
+const regionIcon = (key: string) => regionIconMap[key] ?? '📌'
+
 const zeittafelDaten = [
   {
     epoche: 'Vor- und Frühgeschichte',
@@ -1611,37 +1620,47 @@ function App() {
         <div className="section-header">
           <h2><Globe size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Die Region Sizilien</h2>
           <div className="section-divider" />
-          <p>Größte Insel des Mittelmeers – Zahlen, Daten & Fakten 2024/2025</p>
+          <p>Größte Insel des Mittelmeers – Zahlen, Daten &amp; Fakten 2024/2025</p>
         </div>
 
-        <div className="region-fakten-grid">
-          {regionFakten.map((f, i) => (
-            <motion.div key={i} className="region-fakt-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <div className="region-fakt-wert">{f.wert}</div>
-              <div className="region-fakt-label">{f.label}</div>
-              <div className="region-fakt-sub">{f.sub}</div>
+        {/* Karte */}
+        <div className="region-map-wrap">
+          <iframe
+            className="region-map-iframe"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=11.9%2C36.4%2C15.7%2C38.3&layer=mapnik"
+            title="Karte Sizilien"
+            loading="lazy"
+          />
+          <div className="region-map-caption">
+            🗺️ Sizilien mit allen 9 Provinzhauptstädten · Quelle: OpenStreetMap
+          </div>
+        </div>
+
+        {/* Provinzen */}
+        <h3 className="region-section-title">Die 9 Provinzen</h3>
+        <div className="region-provinzen-grid">
+          {regionProvinzen.map((p, i) => (
+            <motion.div key={i} className="region-provinz-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="region-provinz-kuerzel">{p.kuerzel}</div>
+              <div className="region-provinz-name">{p.name}</div>
+              <div className="region-provinz-details">
+                <span>🏙️ {p.hauptstadt}</span>
+                <span>📐 {p.flaeche.toLocaleString('de-DE')} km²</span>
+                <span>👥 {(p.einwohner / 1000).toFixed(0)}.000 Einw.</span>
+              </div>
             </motion.div>
           ))}
         </div>
 
-        <h3 className="region-provinzen-title">Die 9 Provinzen (ISTAT 2024)</h3>
-        <div className="region-provinzen-table">
-          <div className="region-provinzen-header">
-            <span>Kürzel</span>
-            <span>Provinz</span>
-            <span>Fläche (km²)</span>
-            <span>Einwohner</span>
-            <span>Hauptstadt</span>
-            <span>Einw. HS</span>
-          </div>
-          {regionProvinzen.map((p, i) => (
-            <motion.div key={i} className="region-provinzen-row" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <span className="region-kuerzel">{p.kuerzel}</span>
-              <span className="region-pname">{p.name}</span>
-              <span>{p.flaeche.toLocaleString('de-DE')}</span>
-              <span>{p.einwohner.toLocaleString('de-DE')}</span>
-              <span>{p.hauptstadt}</span>
-              <span>{p.hs_ew.toLocaleString('de-DE')}</span>
+        {/* Fakten */}
+        <h3 className="region-section-title">Fakten &amp; Zahlen</h3>
+        <div className="region-fakten-grid">
+          {regionFakten.map((f, i) => (
+            <motion.div key={i} className="region-fakt-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="region-fakt-icon">{regionIcon(f.icon)}</div>
+              <div className="region-fakt-wert">{f.wert}</div>
+              <div className="region-fakt-label">{f.label}</div>
+              <div className="region-fakt-sub">{f.sub}</div>
             </motion.div>
           ))}
         </div>

@@ -651,6 +651,31 @@
   gap: 1.5rem;
 }
 
+.restaurant-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.restaurant-filter-btn {
+  padding: 0.4rem 1rem;
+  border: 2px solid #c9a96e;
+  border-radius: 999px;
+  background: transparent;
+  color: #c9a96e;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.restaurant-filter-btn:hover,
+.restaurant-filter-btn.active {
+  background: #c9a96e;
+  color: #1a1f3a;
+  font-weight: 600;
+}
+
 .restaurant-card {
   background: var(--color-card);
   border-radius: 12px;

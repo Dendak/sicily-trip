@@ -659,6 +659,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [currentDay, setCurrentDay] = useState<number | null>(null)
   const [expandedSight, setExpandedSight] = useState<string | null>(null)
+  const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
 
   // Track which day card is in view
   useEffect(() => {
@@ -856,8 +857,20 @@ function App() {
           <p>Echte sizilianische Osterien, Trattorien und Slow-Food-Lokale – von Reiseforen und Guides empfohlen</p>
         </div>
 
+        <div className="restaurant-filter">
+          {['Alle', ...Array.from(new Set(restaurants.map(r => r.location)))].map(loc => (
+            <button
+              key={loc}
+              className={`restaurant-filter-btn${restaurantFilter === loc ? ' active' : ''}`}
+              onClick={() => setRestaurantFilter(loc)}
+            >
+              {loc}
+            </button>
+          ))}
+        </div>
+
         <div className="restaurants-grid">
-          {restaurants.map((r, i) => (
+          {restaurants.filter(r => restaurantFilter === 'Alle' || r.location === restaurantFilter).map((r, i) => (
             <motion.div
               key={i}
               className="restaurant-card"

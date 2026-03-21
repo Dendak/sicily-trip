@@ -1066,11 +1066,65 @@ CATARELLA: Jawohl, Herr Doktor, Euer Gnaden ist bereits zufriedengestellt!`,
     lang: 'Lateinisch',
   },
   {
+    title: 'Daidalos und König Kokalos',
+    source: 'Diodoros Sikeliotes, Bibliotheke historike IV, 79 (ca. 60 v. Chr.)',
+    original: 'Minos, Herr der Meere, rüstete eine Flotte aus und landete an der sizilischen Küste, wo er von König Kokalos die Auslieferung des Daidalos forderte. Kokalos lud ihn als Gast ein – und ließ ihn in einem heißen Bad töten. So fand der mächtige kretische König auf sizilianischem Boden den Tod, und Daidalos blieb frei.',
+    translation: '',
+    lang: 'Deutsch (nach Diodoros Sikeliotes, griechisches Original)',
+  },
+  {
     title: 'Goethe über Monte Pellegrino',
     source: 'Goethe, Italienische Reise (3. April 1787)',
     original: 'Der Monte Pellegrino, ein großes Vorgebirge am Meerbusen, [...] ist das schönste Vorgebirge der Welt.',
     translation: '',
     lang: 'Deutsch (Original)',
+  },
+  {
+    title: 'Polyphem – Der Zyklop und Odysseus',
+    source: 'Homer, Odyssee IX, 366–367 (Altgriechisch)',
+    original: `„Οὖτίς μοι ὄνομά ἐστι· Οὖτιν δέ με κικλήσκουσι
+μήτηρ ἠδὲ πατὴρ ἠδ᾽ ἄλλοι πάντες ἑταῖροι."`,
+    translation: '„Niemand ist mein Name; Niemand nennen mich Mutter und Vater und alle anderen Gefährten." – Mit diesem Trick entkommt Odysseus dem geblendeten Zyklopen Polyphem auf Sizilien. Die schwarzen Faraglioni-Felsen bei Aci Trezza (Catania) gelten als die Felsbrocken, die Polyphem nach dem fliehenden Schiff warf.',
+    lang: 'Altgriechisch',
+  },
+  {
+    title: 'Skylla und Charybdis – Die Meerenge von Messina',
+    source: 'Homer, Odyssee XII, 73 (Altgriechisch)',
+    original: '„δύο σκόπελοι, ὁ μὲν οὐρανὸν εὐρὺν ἱκάνει / ὀξείῃ κορυφῇ..."',
+    translation: '„Zwei Felsen ragen auf – der eine reicht mit spitzer Kuppe bis zum weiten Himmel..." – Die Meerenge von Messina zwischen Sizilien und dem Festland galt in der Antike als Sitz der beiden Ungeheuer: Charybdis, die das Meer dreimal täglich verschlingt, und Skylla mit ihren sechs Köpfen.',
+    lang: 'Altgriechisch',
+  },
+  {
+    title: 'Arethusa – Die Nymphe unter dem Meer',
+    source: 'Ovid, Metamorphosen V, 487–490 & 572–576 (Lateinisch)',
+    original: `pars ego nympharum, quae sunt in Achaide, una fui,
+nec me studiosius altera saltus
+legit nec posuit studiosius altera casses.
+[...]
+ergo dum Stygio sub terris gurgite labor,
+visa tua est oculis illic Proserpina nostris:
+illa quidem tristis neque adhuc interrita vultu,
+sed regina tamen, sed opaci maxima mundi,
+sed tamen inferni pollens matrona tyranni.`,
+    translation: 'Ich war eine unter den Nymphen Achaias... Während ich unter der Erde durch den stygischen Strudel mühsam zog, sah ich dort mit meinen Augen deine Proserpina: sie war zwar traurig und noch verängstigt im Gesicht, aber dennoch schon Königin – Herrin der dunklen Welt, mächtige Herrin des Unterwelt-Tyrannen. Die Quelle der Arethusa auf der Insel Ortygia in Syrakus existiert noch heute.',
+    lang: 'Lateinisch',
+  },
+  {
+    title: 'Persephone – Der Raub bei Enna',
+    source: 'Ovid, Metamorphosen V, 385–396 (Lateinisch)',
+    original: `Haud procul Hennaeis lacus est a moenibus altae,
+nomine Pergus, aquae: non illo plura Caystros
+carmina cycnorum labentibus audit in undis.
+silva coronat aquas cingens latus omne suisque
+frondibus ut velo Phoebeos submovet ictus;
+frigora dant rami, Tyrios humus umida flores:
+perpetuum ver est.
+quo dum Proserpina luco
+ludit et aut violas aut candida lilia carpit,
+paene simul visa est dilectaque raptaque Diti:
+usque adeo est properatus amor.`,
+    translation: 'Nicht weit von Hennas hohen Mauern liegt ein See namens Pergus; kein See hört mehr Schwäne auf seinen gleitenden Wellen. Wald umkrönt das Wasser und wehrt mit seinen Zweigen Phöbus\' Strahlen ab; die Äste schenken Kühle, der feuchte Boden trägt tyrische Blumen: ewiger Frühling herrscht hier. In diesem Hain spielte Proserpina und pflückte Veilchen oder weiße Lilien – kaum war sie gesehen, da liebte und entführte sie Dis: so eilig war seine Liebe.',
+    lang: 'Lateinisch',
   },
   {
     title: 'Pindar über Ätna und Sizilien',
@@ -1261,9 +1315,22 @@ In eurem Bunde der Dritte."`,
   },
   {
     title: 'Vergil über Siziliens Küsten',
-    source: 'Vergil, Aeneis III, 692–696',
+    source: 'Vergil, Aeneis III, 692–696 (Lateinisch)',
     original: 'Hinc altas cautes proiectaque saxa Pachyni radimus, et fatis numquam concessa moveri apparet Camerina procul campique Geloi, immanisque Gela fluvii cognomine dicta.',
     translation: 'Von hier streifen wir die hohen Klippen und vorspringenden Felsen von Pachynum, und aus der Ferne erscheint Camerina, die das Schicksal nie zu bewegen gestattete, und die Gefilde von Gela, und das gewaltige Gela, nach dem Fluss benannt.',
+    lang: 'Lateinisch',
+  },
+  {
+    title: 'Hephaistos am Ätna – Die Schmiede der Götter',
+    source: 'Vergil, Aeneis VIII, 415–422 (Lateinisch)',
+    original: `insula Sicanium iuxta latus Aeoliamque
+erigitur Liparen fumantibus ardua saxis,
+quam subter specus et Cyclopum exesa caminis
+antra Aetnaea tonant, validique incudibus ictus
+auditi referunt gemitus, striduntque cavernis
+stricturae Chalybum et fornacibus ignis anhelat,
+Volcani domus et Volcania nomine tellus.`,
+    translation: 'Die Insel Lipara erhebt sich nahe der sizilischen Küste, hoch aufragend mit rauchenden Felsen. Darunter donnern die Höhlen der Kyklopen, ausgehöhlt von den Schmiedeöfen des Ätna. Man hört das Hallen der Hammerschläge auf den Ambossen; der Stahl zischt in den Grotten, Feuer keucht aus den Öfen: Dies ist Vulcans Haus – das Land trägt seinen Namen.',
     lang: 'Lateinisch',
   },
 ]

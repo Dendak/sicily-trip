@@ -172,7 +172,7 @@ const personenDaten = [
     kategorie: 'Richter & Anti-Mafia-Kämpfer',
     herkunft: 'Palermo',
     farbe: '#1A5276',
-    beschreibung: 'Enger Freund und Weggefährte Giovanni Falcones im Kampf gegen die Cosa Nostra. Ebenfalls in La Kalsa aufgewachsen, widmete er sein Leben der Strafverfolgung der Mafia. Nach Falcones Ermordung setzte er seine Arbeit unbeirrt fort, obwohl er wusste, dass sein Tod beschlossene Sache war. Am 19. Juli 1992 wurde er vor dem Haus seiner Mutter in der Via d'Amelio in Palermo durch eine Autobombe getötet – zusammen mit fünf seiner Leibwächter. Beide Attentate erschütterten Italien und leiteten eine neue Phase der Anti-Mafia-Gesetzgebung ein.',
+    beschreibung: 'Enger Freund und Weggefährte Giovanni Falcones im Kampf gegen die Cosa Nostra. Ebenfalls in La Kalsa aufgewachsen, widmete er sein Leben der Strafverfolgung der Mafia. Nach Falcones Ermordung setzte er seine Arbeit unbeirrt fort, obwohl er wusste, dass sein Tod beschlossene Sache war. Am 19. Juli 1992 wurde er vor dem Haus seiner Mutter in der Via d\'Amelio in Palermo durch eine Autobombe getötet – zusammen mit fünf seiner Leibwächter. Beide Attentate erschütterten Italien und leiteten eine neue Phase der Anti-Mafia-Gesetzgebung ein.',
   },
   {
     name: 'Roger II.',

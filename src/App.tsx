@@ -28,6 +28,12 @@ const images = {
   granita: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Granita_brioche.JPG',
   caponata: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Caponata_%2814049113982%29.jpg',
   cassata: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Cassatasiciliana.jpg',
+  panelle: 'https://upload.wikimedia.org/wikipedia/commons/8/83/Panelle.jpg',
+  pastaSarde: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Pasta_con_le_sarde.jpg',
+  sardeBeccafico: 'https://upload.wikimedia.org/wikipedia/commons/3/38/Sarde_a_beccafico.jpg',
+  sfincione: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Sfincione_palermitano.jpg',
+  stoccafisso: 'https://upload.wikimedia.org/wikipedia/commons/1/12/Baccal%C3%A0_alla_siciliana.jpg',
+  biancomangiare: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Biancomangiare.jpg',
 }
 
 const fadeIn = {
@@ -535,6 +541,12 @@ const speisen = [
   { name: 'Granita con Brioche', desc: 'Halbgefrorenes Eis aus Mandeln, Pistazien oder Zitrone, serviert mit warmem Brioche zum Frühstück.', image: images.granita },
   { name: 'Caponata', desc: 'Süß-saures Auberginen-Gemüse mit Kapern, Oliven, Sellerie und Tomaten – arabischer Einfluss.', image: images.caponata },
   { name: 'Cassata Siciliana', desc: 'Festliche Torte mit Ricotta, Marzipan, Orangeat und Zuckerglasur – arabisch-normannisches Erbe.', image: images.cassata },
+  { name: 'Pane e Panelle', desc: 'Kichererbsenmehl-Fladen, frittiert und in Sesambrot gefüllt – das älteste Streetfood Palermos mit arabischen Wurzeln.', image: images.panelle },
+  { name: 'Pasta con le Sarde', desc: 'Pasta mit frischen Sardinen, wildem Fenchel, Rosinen, Safran und Pinienkernen – arabisch-sizilianisches Meisterwerk.', image: images.pastaSarde },
+  { name: 'Sarde a Beccafico', desc: 'Gefüllte Sardinenröllchen mit Semmelbröseln, Rosinen und Pinienkernen – typisch für Palermo, benannt nach dem Singvogel Beccafico.', image: images.sardeBeccafico },
+  { name: 'Sfincione Palermitano', desc: 'Sizilianische Focaccia mit Tomaten, Zwiebeln, Anchovis und Caciocavallo-Käse – das „dicke" Street Food vom Ballarò-Markt.', image: images.sfincione },
+  { name: 'Stoccafisso alla Ghiotta', desc: 'Geschmorter Stockfisch mit Kartoffeln, Oliven, Kapern und Tomaten – typisch für die westliche Provinz Siziliens.', image: images.stoccafisso },
+  { name: 'Biancomangiare alle Mandorle', desc: 'Cremiger Pudding aus Mandelmilch mit Orangenblütenwasser – ein Erbe der arabischen Küche Siziliens.', image: images.biancomangiare },
 ]
 
 const texte = [

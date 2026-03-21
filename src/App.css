@@ -935,6 +935,20 @@
 }
 
 /* ============ TEXTE (Latin/Greek) ============ */
+.texte-gruppe {
+  margin-bottom: 2.5rem;
+}
+
+.texte-gruppe-titel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(201,169,110,0.3);
+}
 .text-card {
   background: var(--color-card);
   border-radius: 12px;

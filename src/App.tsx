@@ -1335,6 +1335,38 @@ Volcani domus et Volcania nomine tellus.`,
   },
 ]
 
+const texteGruppen = [
+  {
+    label: 'Mythologisches',
+    ids: [
+      'Arethusa – Die Nymphe unter dem Meer',
+      'Daidalos und König Kokalos',
+      'Hephaistos am Ätna – Die Schmiede der Götter',
+      'Persephone – Der Raub bei Enna',
+      'Polyphem – Der Zyklop und Odysseus',
+      'Skylla und Charybdis – Die Meerenge von Messina',
+    ],
+  },
+  {
+    label: 'Historisches',
+    ids: [
+      'Cicero über Syrakus',
+      'Pindar über Ätna und Sizilien',
+      'Vergil über Siziliens Küsten',
+    ],
+  },
+  {
+    label: 'Zeitgenössisches',
+    ids: [
+      'Il ladro di merendine – Montalbano e François',
+      'Il commissario Montalbano – Catarella al telefono',
+      'Goethe über Monte Pellegrino',
+      'Così è (se vi pare) – Schlussszene',
+      'Die Bürgschaft',
+    ],
+  },
+]
+
 // Speisen Karussell – rotiert automatisch alle 10 Sekunden
 function SpeisenKarussel({ gerichte }: { gerichte: { name: string; desc: string; image: string }[] }) {
   const [idx, setIdx] = useState(0)
@@ -1464,7 +1496,7 @@ function App() {
   const [currentDay, setCurrentDay] = useState<number | null>(null)
   const [expandedSight, setExpandedSight] = useState<string | null>(null)
   const [expandedPerson, setExpandedPerson] = useState<number | null>(null)
-  const [expandedText, setExpandedText] = useState<number | null>(null)
+  const [expandedText, setExpandedText] = useState<string | null>(null)
   const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
   const [glossarRichtung, setGlossarRichtung] = useState<'it-de' | 'de-it'>('it-de')
 
@@ -1793,47 +1825,56 @@ function App() {
           <p>Lateinische, griechische und deutsche Quellen zu Sizilien</p>
         </div>
 
-        {texte.map((t, i) => (
-          <motion.div
-            key={i}
-            className={`text-card${expandedText === i ? ' text-card-open' : ''}`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <div className="text-card-header" onClick={() => setExpandedText(expandedText === i ? null : i)}>
-              <div>
-                <h4>{t.title}</h4>
-                <div className="text-source">{t.source}</div>
-              </div>
-              {expandedText === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-            </div>
-            <AnimatePresence>
-              {expandedText === i && (
+        {texteGruppen.map(gruppe => (
+          <div key={gruppe.label} className="texte-gruppe">
+            <h3 className="texte-gruppe-titel">{gruppe.label}</h3>
+            {gruppe.ids.map(id => {
+              const t = texte.find(x => x.title === id)
+              if (!t) return null
+              return (
                 <motion.div
-                  className="text-card-body"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  key={t.title}
+                  className={`text-card${expandedText === t.title ? ' text-card-open' : ''}`}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeIn}
                 >
-                  <div className="text-columns">
+                  <div className="text-card-header" onClick={() => setExpandedText(expandedText === t.title ? null : t.title)}>
                     <div>
-                      <div className="text-label">{t.lang}</div>
-                      <div className="text-original">{t.original}</div>
+                      <h4>{t.title}</h4>
+                      <div className="text-source">{t.source}</div>
                     </div>
-                    {t.translation && (
-                      <div>
-                        <div className="text-label">Deutsche Übersetzung</div>
-                        <div className="text-translation">{t.translation}</div>
-                      </div>
-                    )}
+                    {expandedText === t.title ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                   </div>
+                  <AnimatePresence>
+                    {expandedText === t.title && (
+                      <motion.div
+                        className="text-card-body"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <div className="text-columns">
+                          <div>
+                            <div className="text-label">{t.lang}</div>
+                            <div className="text-original">{t.original}</div>
+                          </div>
+                          {t.translation && (
+                            <div>
+                              <div className="text-label">Deutsche Übersetzung</div>
+                              <div className="text-translation">{t.translation}</div>
+                            </div>
+                          )}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
+              )
+            })}
+          </div>
         ))}
       </section>
 

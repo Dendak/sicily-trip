@@ -563,20 +563,25 @@ function App() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const dayNum = parseInt(entry.target.id.replace('day-', ''))
-            setCurrentDay(dayNum)
-          }
-        })
+        // Find the most visible entry that is intersecting
+        const visible = entries.filter(e => e.isIntersecting)
+        if (visible.length > 0) {
+          // Pick the one with highest intersection ratio
+          const best = visible.reduce((a, b) => a.intersectionRatio > b.intersectionRatio ? a : b)
+          const dayNum = parseInt(best.target.id.replace('day-', ''))
+          if (!isNaN(dayNum)) setCurrentDay(dayNum)
+        }
       },
-      { threshold: 0.3, rootMargin: '-100px 0px -50% 0px' }
+      { threshold: [0, 0.1, 0.2, 0.3, 0.5], rootMargin: '-120px 0px -30% 0px' }
     )
-    for (let i = 1; i <= 8; i++) {
-      const el = document.getElementById(`day-${i}`)
-      if (el) observer.observe(el)
-    }
-    return () => observer.disconnect()
+    // Delay to ensure elements are rendered
+    const timer = setTimeout(() => {
+      for (let i = 1; i <= 8; i++) {
+        const el = document.getElementById(`day-${i}`)
+        if (el) observer.observe(el)
+      }
+    }, 500)
+    return () => { clearTimeout(timer); observer.disconnect() }
   }, [])
 
   const scrollTo = (id: string) => {

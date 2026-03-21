@@ -672,6 +672,7 @@ function App() {
   const [currentDay, setCurrentDay] = useState<number | null>(null)
   const [expandedSight, setExpandedSight] = useState<string | null>(null)
   const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
+  const [glossarRichtung, setGlossarRichtung] = useState<'it-de' | 'de-it'>('it-de')
 
   // Track which day card is in view
   useEffect(() => {
@@ -728,6 +729,7 @@ function App() {
               ['restaurants', 'Restaurants'],
               ['speisen', 'Speisen'],
               ['texte', 'Antike Texte'],
+              ['architektur', 'Architektur'],
               ['glossar', 'Glossar'],
             ].map(([id, label]) => (
               <li key={id}><a href={`#${id}`} onClick={(e) => { e.preventDefault(); scrollTo(id) }}>{label}</a></li>
@@ -987,6 +989,118 @@ function App() {
       </section>
 
       {/* Glossar */}
+      {/* Architektur */}
+      <section className="section" id="architektur">
+        <div className="section-header">
+          <h2><Landmark size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Architektur auf Sizilien</h2>
+          <div className="section-divider" />
+          <p>Tempelformen, Säulenordnungen und Kirchentypen – von der Antike bis zur Normannenzeit</p>
+        </div>
+
+        {/* Tempelformen */}
+        <h3 className="arch-subtitle">Griechische Tempelformen</h3>
+        <div className="arch-grid">
+          {[
+            { name: 'Antentempel', desc: 'Einfachste Form: Kultraum (Naos/Cella) + Vorraum (Pronaos) mit zwei Säulen zwischen den Mauerenden (Anten).', beispiel: '' },
+            { name: 'Prostylos', desc: 'Säulenhalle nur an der Vorderseite. Die Säulen stehen vor dem Pronaos.', beispiel: '' },
+            { name: 'Amphiprostylos', desc: 'Säulenhallen an Vorder- und Rückseite des Tempels.', beispiel: '' },
+            { name: 'Peripteros', desc: 'Vollständiger Säulenkranz (Peristasis) umgibt die Cella. Die Ringhalle heißt Pteron. Häufigste Form in Sizilien.', beispiel: 'Segesta, Agrigento (Concordia-Tempel)' },
+            { name: 'Dipteros', desc: 'Doppelter Säulenkranz. Sehr aufwendig – nur für die bedeutendsten Heiligtümer.', beispiel: 'Artemision von Ephesus' },
+            { name: 'Pseudodipteros', desc: 'Wirkt wie Dipteros, aber die innere Säulenreihe fehlt – mehr Raum in der Ringhalle.', beispiel: '' },
+            { name: 'Tholos', desc: 'Runder Tempel mit kreisförmigem Säulenkranz und runder Cella.', beispiel: '' },
+            { name: 'Monopteros', desc: 'Runder Säulenkranz ohne Cella – offener Pavillon-Typ.', beispiel: '' },
+          ].map((t, i) => (
+            <motion.div key={i} className="arch-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <h4>{t.name}</h4>
+              <p>{t.desc}</p>
+              {t.beispiel && <div className="arch-beispiel">📍 {t.beispiel}</div>}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Säulenordnungen */}
+        <h3 className="arch-subtitle">Die drei Säulenordnungen</h3>
+        <div className="arch-ordnungen">
+          {[
+            {
+              name: 'Dorische Ordnung',
+              color: '#8B6914',
+              merkmale: ['Keine Basis – Säule steht direkt auf dem Stylobat', '16–20 Kanneluren mit scharfen Graten', 'Kapitell: Echinus (runder Wulst) + Abakus (Platte)', 'Fries: abwechselnd Triglyphen und Metopen', 'Wuchtig, schlicht, maskulin'],
+              beispiel: 'Tempel in Segesta, Agrigento, Selinunte',
+              bild: images.agrigento,
+            },
+            {
+              name: 'Ionische Ordnung',
+              color: '#2C5F8A',
+              merkmale: ['Basis: Torus + Spira + Plinthe', '24 Kanneluren mit stumpfen Stegen', 'Kapitell: charakteristische Voluten (Schnecken)', 'Architrav in drei Fascien (Streifen) gegliedert', 'Schlank, elegant, weiblich'],
+              beispiel: 'Häufig in Kleinasien; in Sizilien selten',
+              bild: images.siracusa,
+            },
+            {
+              name: 'Korinthische Ordnung',
+              color: '#4A7A3A',
+              merkmale: ['Wie ionisch, aber aufwendigeres Kapitell', 'Kapitell mit Akanthusblättern und Voluten-Bändern', 'Entwickelt ca. 420 v. Chr. in Korinth', 'Besonders prunkvoll und dekorativ', 'In römischer Architektur am beliebtesten'],
+              beispiel: 'Spätantike Bauten; Pantheon Rom',
+              bild: images.monreale,
+            },
+          ].map((o, i) => (
+            <motion.div key={i} className="arch-ordnung-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="arch-ordnung-img">
+                <img src={o.bild} alt={o.name} loading="lazy" />
+                <div className="arch-ordnung-overlay" style={{ borderColor: o.color }}>
+                  <h4 style={{ color: o.color }}>{o.name}</h4>
+                </div>
+              </div>
+              <div className="arch-ordnung-body">
+                <ul>
+                  {o.merkmale.map((m, j) => <li key={j}>{m}</li>)}
+                </ul>
+                <div className="arch-beispiel">📍 {o.beispiel}</div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Aufbau des Tempels */}
+        <h3 className="arch-subtitle">Aufbau eines dorischen Tempels</h3>
+        <div className="arch-aufbau">
+          {[
+            { teil: 'Stereobat', desc: 'Unterer Stufenunterbau aus drei Stufen' },
+            { teil: 'Krepis', desc: 'Stufenunterbau (= Stereobat)' },
+            { teil: 'Stylobat', desc: 'Oberste Stufe – Standfläche der Säulen' },
+            { teil: 'Säule', desc: 'Mit Kanneluren; dorisch ohne Basis, ionisch mit Basis' },
+            { teil: 'Kapitell', desc: 'Echinus (runder Wulst) und Abakus (Deckplatte)' },
+            { teil: 'Architrav', desc: 'Waagrechter Träger über den Säulen' },
+            { teil: 'Fries', desc: 'Dorisch: Triglyphen + Metopen; ionisch: Bilderfries' },
+            { teil: 'Geison', desc: 'Vorspringendes Kranzgesims' },
+            { teil: 'Tympanon', desc: 'Dreieckiges Giebelfeld, oft mit Skulpturen' },
+            { teil: 'Sima', desc: 'Dachrinne mit Wasserspeiern (Löwenköpfe)' },
+            { teil: 'Akroter', desc: 'Schmuckelemente an den Giebelecken und -spitzen' },
+          ].map((t, i) => (
+            <div key={i} className="arch-aufbau-item">
+              <span className="arch-aufbau-term">{t.teil}</span>
+              <span className="arch-aufbau-desc">{t.desc}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Kirchentypen */}
+        <h3 className="arch-subtitle">Kirchentypen auf Sizilien</h3>
+        <div className="arch-grid arch-grid-3">
+          {[
+            { name: 'Frühchristliche Basilika', desc: 'Längsgerichteter Bau mit Mittelschiff, zwei Seitenschiffen, Apsis. Vorbild: römische Gerichtsbasilika. Narthex (Vorhalle) und Exonarthex (äußere Vorhalle).', icon: '🏛️' },
+            { name: 'Byzantinische Kreuzkuppelkirche', desc: 'Griechisches Kreuz im Grundriss mit Zentralkuppel. Reiche Mosaikausstattung – typisch für normannisch-byzantinische Kirchen Siziliens.', icon: '⛪' },
+            { name: 'Normannischer Stil', desc: 'Verbindet arabische, byzantinische und romanische Elemente. Charakteristisch: Spitzbögen, Mosaikfußböden, Kuppeln. Hauptwerke: Monreale, Cappella Palatina, Cefalù.', icon: '🕌' },
+          ].map((k, i) => (
+            <motion.div key={i} className="arch-card arch-card-church" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="arch-card-icon">{k.icon}</div>
+              <h4>{k.name}</h4>
+              <p>{k.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       <section className="section" id="glossar">
         <div className="section-header">
           <h2><Languages size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Italienisches Glossar</h2>
@@ -994,11 +1108,30 @@ function App() {
           <p>Die wichtigsten Wörter und Redewendungen für unterwegs</p>
         </div>
 
+        <div className="glossary-toggle">
+          <button
+            className={`glossary-toggle-btn${glossarRichtung === 'it-de' ? ' active' : ''}`}
+            onClick={() => setGlossarRichtung('it-de')}
+          >🇮🇹 Italienisch → Deutsch</button>
+          <button
+            className={`glossary-toggle-btn${glossarRichtung === 'de-it' ? ' active' : ''}`}
+            onClick={() => setGlossarRichtung('de-it')}
+          >🇩🇪 Deutsch → Italienisch</button>
+        </div>
+
         <div className="glossary-grid">
-          {glossary.map((g, i) => (
+          {[...glossary].sort((a, b) =>
+            glossarRichtung === 'it-de'
+              ? a.it.localeCompare(b.it, 'it')
+              : a.de.localeCompare(b.de, 'de')
+          ).map((g, i) => (
             <div key={i} className="glossary-item">
-              <span className="glossary-italian">{g.it}</span>
-              <span className="glossary-german">{g.de}</span>
+              <span className="glossary-italian">
+                {glossarRichtung === 'it-de' ? g.it : g.de}
+              </span>
+              <span className="glossary-german">
+                {glossarRichtung === 'it-de' ? g.de : g.it}
+              </span>
             </div>
           ))}
         </div>

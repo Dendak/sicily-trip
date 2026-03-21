@@ -1034,6 +1034,31 @@ const nachspeisen = [
 
 const texte = [
   {
+    title: 'Il ladro di merendine – Montalbano e François',
+    source: 'Andrea Camilleri, Il ladro di merendine (1996)',
+    original: '«Gli confidò cose che mai aveva detto a nessuno, manco a Livia. Il pianto sconsolato di certe notti, con la testa sotto il cuscino perché suo padre non lo sentisse; la disperazione mattutina quando sapeva che non c\'era sua madre in cucina a preparargli la colazione o, qualche anno dopo, la merendina per la scuola. Ed è una mancanza che non viene mai più colmata, te la porti appresso fino in punto di morte.»',
+    translation: '„Er vertraute ihm Dinge an, die er nie jemandem gesagt hatte, nicht einmal Livia. Das trostlose Weinen mancher Nächte, den Kopf unter dem Kissen, damit sein Vater es nicht hörte; die Verzweiflung morgens, wenn er wusste, dass die Mutter nicht in der Küche war, um ihm das Frühstück zu machen oder, ein paar Jahre später, die Merendine für die Schule. Und das ist ein Fehlen, das nie wieder ausgefüllt wird – du trägst es bis zum letzten Atemzug mit dir."',
+    lang: 'Italienisch',
+  },
+  {
+    title: 'Il commissario Montalbano – Catarella al telefono',
+    source: 'Andrea Camilleri, Montalbano-Reihe – typischer Dialog im Stil Camilleris',
+    original: `CATARELLA: Dottori! Dottori! C'è una pirsona che s'apprisenta con il nomi di... aspittassi... di Trantino, no, Tantino...
+MONTALBANO: Catarè, mandamelo.
+CATARELLA: Sissì, Dottori! Ma prima m'ha ditto che la facennia è d'urgentissima urgenza!
+MONTALBANO: E allura mannalo immediatamenti!
+CATARELLA: Sissì, Dottori, vossignoria è già accontintata!
+
+──────────────────────────
+Catarella spricht immer „Dottori" statt „Dottore", verdreht Namen und mischt sizilianischen Dialekt mit gebrochenem Hochitalienisch. Sein Sprachcaos ist Camilleris komischstes Stilmittel.`,
+    translation: `CATARELLA: Herr Doktor! Herr Doktor! Da ist eine Person, die sich mit dem Namen... warten Sie... Trantino, nein, Tantino... vorstellt.
+MONTALBANO: Catarè, schick ihn rein.
+CATARELLA: Jawohl, Herr Doktor! Aber vorher hat er mir gesagt, die Sache sei von dringendster Dringlichkeit!
+MONTALBANO: Dann schick ihn sofort rein!
+CATARELLA: Jawohl, Herr Doktor, Euer Gnaden ist bereits zufriedengestellt!`,
+    lang: 'Italienisch (sizilianischer Dialekt)',
+  },
+  {
     title: 'Cicero über Syrakus',
     source: 'Cicero, In Verrem II, 4.117',
     original: 'Urbem Syracusas maximam esse Graecarum, pulcherrimam omnium saepe audistis. Est, iudices, ita ut dicitur. Nam et situ est cum munito tum ex omni aditu vel terra vel mari praeclaro ad aspectum.',
@@ -1053,6 +1078,21 @@ const texte = [
     original: '\u1f10\u03bd \u03b4\u2019 \u0391\u1f34\u03c4\u03bd\u1fb3 \u03ba\u03b5\u1fd6\u03c4\u03b1\u03b9 \u03c7\u03b1\u03bc\u03b1\u03b9\u03c0\u03b5\u03c4\u1f72\u03c2 \u03c0\u03b1\u03bd\u03b4\u03ce\u03ba\u03b1\u03c2 \u03c3\u03c4\u1f7b\u03bb\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1, \u03bd\u03b9\u03c6\u03cc\u03b5\u03c3\u03c3\u03b1 \u0391\u1f34\u03c4\u03bd\u03b1, \u03c0\u03ac\u03bd\u03b5\u03c4\u03b5\u03c2 \u03c7\u03b9\u03cc\u03bd\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1\u03c2 \u03c4\u03b9\u03b8\u03ae\u03bd\u03b1.',
     translation: 'Auf dem Ätna aber liegt er, die Säule des Himmels, die alles aufnimmt, der schneebedeckte Ätna, der ganzjährige Nährvater des scharfen Schnees, der himmlischen.',
     lang: 'Griechisch',
+  },
+  {
+    title: 'Così è (se vi pare) – Schlussszene',
+    source: 'Luigi Pirandello, Così è (se vi pare) (1917), III. Akt',
+    original: `IL PREFETTO: Siete la figlia della signora Frola?
+SIGNORA PONZA: E la seconda moglie del signor Ponza, sì.
+IL PREFETTO: No, no – per voi stessa, come siete voi?
+SIGNORA PONZA: (con voce ferma) Io sono… colei che mi si crede.
+LAUDISI: (ridendo) Ed ecco, signori, come parla la verità!`,
+    translation: `DER PRÄFEKT: Sind Sie die Tochter der Signora Frola?
+SIGNORA PONZA: Und die zweite Frau des Herrn Ponza, ja.
+DER PRÄFEKT: Nein, nein – für Sie selbst, wer sind Sie?
+SIGNORA PONZA: (mit fester Stimme) Ich bin… diejenige, für die man mich hält.
+LAUDISI: (lachend) Und so, meine Herrschaften, spricht die Wahrheit!`,
+    lang: 'Italienisch',
   },
   {
     title: 'Die Bürgschaft',

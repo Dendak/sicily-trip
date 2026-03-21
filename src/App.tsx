@@ -1719,27 +1719,59 @@ function App() {
         <div className="region-maps-row">
           <div className="region-map-wrap region-map-svg-wrap">
             <svg viewBox="0 0 820 460" xmlns="http://www.w3.org/2000/svg" className="region-map-svg">
-              {/* Sicily coastline */}
+              {/* Sicily coastline – improved with NE Messina peninsula */}
               <polygon
-                points="176,50 289,59 444,84 596,54 703,42 790,31 768,110 712,129 687,182 672,213 699,274 714,310 687,402 632,378 558,378 495,310 432,303 354,257 249,208 163,194 113,140 111,89 176,50"
+                points="
+                  114,89  175,49  205,84
+                  306,65  346,68  447,84
+                  575,52  640,60  690,42  730,35  760,28  790,31
+                  775,48  760,55  748,72  738,95  720,115
+                  713,129  700,148  686,186  667,211
+                  699,274  713,311  720,327  681,402
+                  620,393  595,386  555,379  530,362
+                  496,311  430,302  344,259
+                  249,208  162,194  114,140  114,89
+                "
                 fill="#1e3a5f" stroke="#c9a96e" strokeWidth="2.5"
               />
-              {/* Province bubbles: cx, cy = center of province */}
+              {/* Province boundary lines (approximate, dashed) */}
+              {/* TP / PA */}
+              <polyline points="238,84 200,128 162,194" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* PA / ME (N coast → interior) */}
+              <polyline points="575,52 568,98 572,145 590,178" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* ME / CT (Taormina inland) */}
+              <polyline points="720,115 690,145 660,175 590,178" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* PA / EN (N coast → EN center) */}
+              <polyline points="447,84 452,120 458,170 468,200" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* EN / CT (E border) */}
+              <polyline points="590,178 575,210 565,238" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* EN / CL (S border) */}
+              <polyline points="468,200 490,218 530,228 565,238" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* CL / AG (W border) */}
+              <polyline points="344,259 380,250 420,243 468,200" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* CL / CT (E) and CL / RG (SE) */}
+              <polyline points="565,238 578,268 575,310 555,362 530,362" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* CT / SR */}
+              <polyline points="699,274 672,295 658,325 645,350" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+              {/* SR / RG */}
+              <polyline points="645,350 628,365 615,390" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="5,4"/>
+
+              {/* Province bubbles */}
               {[
-                { id:'ME', cx:730, cy: 80, fill:'#d35400', name:'Messina' },
-                { id:'PA', cx:315, cy:115, fill:'#2980b9', name:'Palermo' },
-                { id:'TP', cx:148, cy:145, fill:'#e67e22', name:'Trapani' },
-                { id:'AG', cx:345, cy:280, fill:'#27ae60', name:'Agrigento' },
-                { id:'CL', cx:463, cy:255, fill:'#8e44ad', name:'Caltanissetta' },
-                { id:'EN', cx:510, cy:205, fill:'#c0392b', name:'Enna' },
-                { id:'CT', cx:658, cy:235, fill:'#16a085', name:'Catania' },
-                { id:'RG', cx:585, cy:362, fill:'#f39c12', name:'Ragusa' },
-                { id:'SR', cx:700, cy:340, fill:'#1abc9c', name:'Siracusa' },
+                { id:'ME', cx:728, cy: 72, fill:'#d35400', name:'Messina' },
+                { id:'PA', cx:308, cy: 98, fill:'#2980b9', name:'Palermo' },
+                { id:'TP', cx:145, cy:138, fill:'#e67e22', name:'Trapani' },
+                { id:'AG', cx:340, cy:278, fill:'#27ae60', name:'Agrigento' },
+                { id:'CL', cx:465, cy:258, fill:'#8e44ad', name:'Caltanissetta' },
+                { id:'EN', cx:505, cy:197, fill:'#c0392b', name:'Enna' },
+                { id:'CT', cx:652, cy:230, fill:'#16a085', name:'Catania' },
+                { id:'RG', cx:582, cy:358, fill:'#f39c12', name:'Ragusa' },
+                { id:'SR', cx:695, cy:335, fill:'#1abc9c', name:'Siracusa' },
               ].map(p => (
                 <g key={p.id}>
-                  <circle cx={p.cx} cy={p.cy} r={28} fill={p.fill} opacity={0.9} stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
-                  <text x={p.cx} y={p.cy - 4} textAnchor="middle" fontSize="13" fontWeight="bold" fill="white">{p.id}</text>
-                  <text x={p.cx} y={p.cy + 11} textAnchor="middle" fontSize="8.5" fill="rgba(255,255,255,0.85)">{p.name}</text>
+                  <circle cx={p.cx} cy={p.cy} r={26} fill={p.fill} opacity={0.92} stroke="rgba(255,255,255,0.45)" strokeWidth="1.5"/>
+                  <text x={p.cx} y={p.cy - 3} textAnchor="middle" fontSize="12" fontWeight="bold" fill="white">{p.id}</text>
+                  <text x={p.cx} y={p.cy + 11} textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.88)">{p.name}</text>
                 </g>
               ))}
             </svg>

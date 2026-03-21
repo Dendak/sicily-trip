@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info } from 'lucide-react'
+import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock } from 'lucide-react'
 import './App.css'
 
 // Verified working Unsplash image URLs
@@ -212,6 +212,36 @@ interface StopData {
   name: string
   desc: string
   km?: string
+  image?: string
+}
+
+// Sight images from Wikimedia Commons and Unsplash
+const sightImages: Record<string, string> = {
+  'Segesta': 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Segesta_-_Il_Tempio_greco_-_foto_di_Ferruccio_Zanone.jpg',
+  'Monte Érice': 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Erice_-_vista_panoramica_01.jpg',
+  'Trapani': 'https://upload.wikimedia.org/wikipedia/commons/4/44/Trapani_BW_2012-10-11_13-25-05.jpg',
+  'Marsala': 'https://upload.wikimedia.org/wikipedia/commons/6/65/Marsala_BW_2012-10-11_11-44-18.jpg',
+  'Cave di Cusa': 'https://upload.wikimedia.org/wikipedia/commons/6/63/Cave_di_Cusa_0577.JPG',
+  'Selinunte': 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Selinunte_-_Temple_E_%28Hera%29.jpg',
+  'Scala dei Turchi': images.scalaDeiTurchi,
+  'Agrigento': images.agrigento,
+  'Gela': 'https://upload.wikimedia.org/wikipedia/commons/1/14/Gela_panorama.jpg',
+  'Piazza Armerina': 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Mosaic_in_Villa_Romana_del_Casale%2C_by_Jerzy_Strzelecki%2C_06.jpg',
+  'Akrai': 'https://upload.wikimedia.org/wikipedia/commons/4/47/PalazzoloAcreide-TeatroGreco.jpg',
+  'Noto': images.noto,
+  'Villa Romana del Tellaro': 'https://upload.wikimedia.org/wikipedia/commons/3/34/Villa_Romana_del_Tellaro.jpg',
+  'Syrakus': images.siracusa,
+  'Castello Eurialo': 'https://upload.wikimedia.org/wikipedia/commons/7/74/Euryalus_fortress.jpg',
+  'Catania': images.catania,
+  'Ätna': images.etna,
+  'Alcantara-Schlucht': 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Gole_dell%27Alcantara_3.jpg',
+  'Taormina': images.taormina,
+  'Tindari': 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Tindari_-_Ancient_theatre.jpg',
+  'Cefalù': images.cefalu,
+  'Solunto': 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Solunto_bjs2007_02.jpg',
+  'Palermo Altstadt': images.palermo,
+  'Monreale': images.monreale,
+  'Monte Pellegrino': 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Monte_Pellegrino_BW_2012-10-09_15-39-00.jpg',
 }
 
 interface HotelData {
@@ -345,16 +375,23 @@ interface Restaurant {
   tags: string[]
   image: string
   mapsUrl: string
+  hours?: string
+  closed?: string
+  phone?: string
+  warning?: string
 }
 
 const restaurants: Restaurant[] = [
   {
     name: 'Osteria Il Gallo e l\'Innamorata',
     location: 'Marsala',
-    desc: 'Slow-Food-empfohlene Osteria. Bekannt für Busiate-Pasta, frischen Fisch und hausgemachte sizilianische Küche. Künstlerisches Ambiente mit Holzbalkendecke. Montags geschlossen.',
+    desc: 'Slow-Food-empfohlene Osteria. Bekannt für Busiate-Pasta, frischen Fisch und hausgemachte sizilianische Küche. Künstlerisches Ambiente mit Holzbalkendecke.',
     tags: ['Slow Food', 'Osteria', 'Fisch'],
     image: 'https://itin-dev.wanderlogstatic.com/freeImage/XFmojE5rxts3BbMSB3y1btvFbYMGyWg5',
     mapsUrl: 'https://www.google.com/maps/place/Osteria+Il+Gallo+e+L\'innamorata/@37.7974975,12.4325306,17z/',
+    hours: 'Di–Sa 12:30–14:30 / 19:30–22:30, So nur Mittag',
+    closed: 'Montag',
+    phone: '329 291 8503',
   },
   {
     name: 'Osteria Expanificio',
@@ -363,6 +400,8 @@ const restaurants: Restaurant[] = [
     tags: ['Bib Gourmand', 'Osteria', 'Historisch'],
     image: 'https://www.osteriaexpanificio.it/wp-content/uploads/2023/10/EXPANIFICIO-FOTO-TAVOLO-CON-LOGO-1.webp',
     mapsUrl: 'https://www.google.com/maps/search/Osteria+Expanificio+Agrigento+Sicily',
+    hours: 'Täglich 12:30–14:30 / 19:30–23:00',
+    phone: '+39 0922 595399',
   },
   {
     name: 'Ristorante Dammuso',
@@ -371,6 +410,9 @@ const restaurants: Restaurant[] = [
     tags: ['Familienbetrieb', 'Fisch', 'Tradizionale'],
     image: 'https://www.ristorantedammuso.it/img/home1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Ristorante+Dammuso+Noto+Sicily',
+    hours: 'Nur Abendessen, ca. 19:00–24:00',
+    closed: 'Dienstag',
+    phone: '0931 835786',
   },
   {
     name: 'Sicilia in Tavola',
@@ -379,6 +421,10 @@ const restaurants: Restaurant[] = [
     tags: ['Ortigia', 'Tradizionale', 'Pasta'],
     image: 'https://www.siciliaintavola.eu/wp-content/uploads/2019/03/sicilia-in-tavola-1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Sicilia+in+Tavola+Ortigia+Siracusa',
+    hours: 'Di–So 12:30–14:30 / 19:30–22:30',
+    closed: 'Montag',
+    phone: '392 461 0889',
+    warning: 'Montag 30.3. geschlossen! Erst Di 31.3. geöffnet.',
   },
   {
     name: 'Osteria Nero d\'Avola',
@@ -387,6 +433,9 @@ const restaurants: Restaurant[] = [
     tags: ['Erlebnis', 'Fisch', 'Interaktiv'],
     image: 'https://www.eatoutsicily.com/storage/public/restaurants/4633-osteria-nero-d-avola/profile/111341578_3467576736684308_6726006130993120833_n.jpg',
     mapsUrl: 'https://www.google.com/maps?cid=5249353599400390537',
+    closed: 'Montag',
+    phone: '0942 628874',
+    warning: 'Eventuell dauerhaft geschlossen – vor Besuch anrufen!',
   },
   {
     name: 'Trattoria Da Nino',
@@ -395,6 +444,9 @@ const restaurants: Restaurant[] = [
     tags: ['Familienbetrieb', 'Panorama', '50+ Jahre'],
     image: 'https://trattoriadaninotaormina.com/images/slideshow/slideshow1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Via+Luigi+Pirandello,+37a,+98039+Taormina+ME,+Italy',
+    hours: 'Täglich 12:00–14:30 / 19:00–22:30',
+    phone: '+39 0942 21265',
+    warning: 'War bis März 2026 in Renovierung – vorher anrufen!',
   },
   {
     name: 'La Botte',
@@ -403,6 +455,8 @@ const restaurants: Restaurant[] = [
     tags: ['Institution', 'Kreativ', 'Budget'],
     image: 'https://www.cefalu.website/media/images/items/187/la-botte-large-b174.jpg',
     mapsUrl: 'https://www.google.com/maps/search/La+Botte+Ristorante+Cefalu+Sicily',
+    hours: 'Di–So 12:30–14:30 / 19:30–23:00',
+    closed: 'Montag',
   },
   {
     name: 'Nangalarruni',
@@ -419,14 +473,18 @@ const restaurants: Restaurant[] = [
     tags: ['Historisch', 'Arabisch-Sizilianisch', 'Osteria'],
     image: 'https://osteriaballaro.it/wp-content/uploads/2024/01/365219667_326584539692689_4016882391528918212_n-768x630.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Osteria+Ballaro+Palermo+Sicily',
+    hours: 'Täglich 12:00–15:00 / 19:00–23:00',
+    phone: '091 326488',
   },
   {
     name: 'Trattoria Al Ferro di Cavallo',
     location: 'Palermo',
-    desc: 'Historische Taverne, geliebt von Einheimischen. Panelle, Arancini, Pasta con le Sarde – echtes palermitanisches Essen zu günstigen Preisen.',
+    desc: 'Historische Taverne, geliebt von Einheimischen. Panelle, Arancini, Pasta con le Sarde – echtes palermitanisches Essen zu günstigen Preisen. Keine Reservierung – first come, first served!',
     tags: ['Locals Only', 'Street Food', 'Budget'],
     image: 'https://ferrodicavallopalermo.it/deposito/2025/08/ferro-di-cavallo-header-01.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Trattoria+Ferro+di+Cavallo+Palermo',
+    hours: 'ca. 12:00–15:30 / 18:30–23:00',
+    phone: '091 331835',
   },
   {
     name: 'I Cucci',
@@ -443,6 +501,10 @@ const restaurants: Restaurant[] = [
     tags: ['Pasticceria', 'Netflix', 'Granita'],
     image: 'https://www.identitagolose.it/public/images/xmedium/img-1175-1.jpg',
     mapsUrl: 'https://www.google.com/maps/search/Caffe+Sicilia+Noto',
+    hours: 'Di–So 8:00–22:00',
+    closed: 'Montag',
+    phone: '0931 835013',
+    warning: 'Am Mo 30.3. geschlossen (regulärer Ruhetag)!',
   },
   {
     name: 'Pasticceria Maria Grammatico',
@@ -758,14 +820,22 @@ function App() {
               </div>
             </div>
             <div className="day-card-body">
-              <div className="stops-timeline">
-                {d.stops.map((s, i) => (
-                  <div key={i} className="stop-item">
-                    <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}</div>
-                    <div className="stop-desc">{s.desc}</div>
-                    <SightDetail name={s.name} />
-                  </div>
-                ))}
+              <div className="stops-grid">
+                {d.stops.map((s, i) => {
+                  const img = s.image || sightImages[s.name]
+                  return (
+                    <div key={i} className={`stop-card${img ? ' stop-card-has-img' : ''}`}>
+                      {img && (
+                        <div className="stop-card-bg" style={{ backgroundImage: `url(${img})` }} />
+                      )}
+                      <div className="stop-card-content">
+                        <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}</div>
+                        <div className="stop-desc">{s.desc}</div>
+                      </div>
+                      <SightDetail name={s.name} />
+                    </div>
+                  )
+                })}
               </div>
               <HotelCard hotel={d.hotel} hotelData={d.hotelData} />
 
@@ -814,7 +884,17 @@ function App() {
                 <div className="restaurant-location">
                   <MapPin size={14} /> {r.location}
                 </div>
+                {r.warning && (
+                  <div className="restaurant-warning">⚠️ {r.warning}</div>
+                )}
                 <p>{r.desc}</p>
+                {(r.hours || r.closed || r.phone) && (
+                  <div className="restaurant-info-grid">
+                    {r.hours && <div className="restaurant-info-item"><Clock size={13} /> {r.hours}</div>}
+                    {r.closed && <div className="restaurant-info-item restaurant-closed">Ruhetag: {r.closed}</div>}
+                    {r.phone && <div className="restaurant-info-item"><a href={`tel:${r.phone.replace(/\s/g, '')}`}>📞 {r.phone}</a></div>}
+                  </div>
+                )}
                 <div className="restaurant-tags">
                   {r.tags.map(t => <span key={t} className="restaurant-tag">{t}</span>)}
                 </div>

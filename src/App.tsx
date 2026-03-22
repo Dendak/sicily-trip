@@ -591,7 +591,7 @@ const sightImages: Record<string, string> = {
   'Marsala': 'https://images.unsplash.com/photo-1513258419489-57f9e66da32b?w=800&q=80',
   'Cave di Cusa': '/sicily-trip/2-SO-Cave-di-Cusa.png',
   'Selinunte': '/sicily-trip/2-SO-Selinunte.jpg',
-  'Scala dei Turchi': images.scalaDeiTurchi,
+  'Scala dei Turchi': '/sicily-trip/2-SO-Scala-dei-Turchi.jpg',
   'Agrigento': images.agrigento,
   'Gela': 'https://images.unsplash.com/photo-1727617855734-35b07c4fdfdb?w=800&q=80',
   'Piazza Armerina': 'https://images.unsplash.com/photo-1768910924686-2a2bda2d8ac4?w=800&q=80',

@@ -1933,13 +1933,26 @@
 }
 
 .person-card-header {
-  padding: 1.1rem 1.2rem 0.9rem;
+  padding: 0.8rem 1rem;
   border-left: 5px solid;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.8rem;
+  align-items: center;
+  gap: 0.7rem;
   background: rgba(255,255,255,0.04);
+}
+
+.person-thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.15);
+}
+
+.person-header-right {
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .person-card-clickable {

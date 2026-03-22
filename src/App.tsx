@@ -45,6 +45,28 @@ const fadeIn = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 }
 
+const personenBilder: Record<string, string> = {
+  'Agatha, Heilige': 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Sant%27agata%2C_VII-inizio_VIII_secolo_ca.%2C_forse_da_s.m._antiqua_%28roma%2C_coll._priv.%29.jpg',
+  'Agathokles': 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Agathokles_Musei_Vaticani.jpg',
+  'Antonello da Messina': 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Antonello_da_Messina_-_Portrait_of_a_Man_-_National_Gallery_London.jpg',
+  'Archimedes': 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Domenico-Fetti_Archimedes_1620.jpg',
+  'Charondas': 'https://upload.wikimedia.org/wikipedia/commons/d/db/Illustration_of_the_death_of_Charondas_from_1787.jpg',
+  'Dionysios I.': 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Dionysius_I_of_Syracuse.jpg',
+  'Empedokles': 'https://upload.wikimedia.org/wikipedia/commons/7/79/Empedokles.jpeg',
+  'Epicharmos': 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Pictorial_history_of_Epicarmo%2Cpoet_and_writer.jpg',
+  'Friedrich II. von Aragon': 'https://upload.wikimedia.org/wikipedia/commons/2/27/Federico_III.jpg',
+  'Friedrich II. von Hohenstaufen': 'https://upload.wikimedia.org/wikipedia/commons/d/db/Frederick_II_and_eagle.jpg',
+  'Giovanni Falcone': 'https://upload.wikimedia.org/wikipedia/commons/3/36/Giovanni_Falcone%2C_1984.jpg',
+  'Giovanni Verga': 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Portrait_of_Giovanni_Verga.jpg',
+  'Gorgias': 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Gorgia_di_Leontini.png',
+  'Lucia, Heilige': 'https://upload.wikimedia.org/wikipedia/commons/b/be/Niccol%C3%B2_di_Segna_-_Saint_Lucy_-_Walters_37756.jpg',
+  'Luigi Pirandello': 'https://upload.wikimedia.org/wikipedia/commons/1/17/Luigi_Pirandello_1932.jpg',
+  'Paolo Borsellino': 'https://upload.wikimedia.org/wikipedia/commons/5/56/PaoloBorsellino.jpg',
+  'Roger II.': 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Martorana_Palermo_msu2017-0166.jpg',
+  'Rosalia, Santa': 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Anthonis_van_Dyck_084.jpg',
+  'Salvatore Quasimodo': 'https://upload.wikimedia.org/wikipedia/commons/7/74/Salvatore_Quasimodo_1959.jpg',
+}
+
 const personenDaten = [
   {
     name: 'Agatha, Heilige',
@@ -3314,12 +3336,13 @@ function App() {
           {personenDaten.map((p, i) => (
             <motion.div key={i} className={`person-card${expandedPerson === i ? ' person-card-open' : ''}`} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
               <div className="person-card-header person-card-clickable" style={{ borderColor: p.farbe }} onClick={() => setExpandedPerson(expandedPerson === i ? null : i)}>
+                {personenBilder[p.name] && <img src={personenBilder[p.name]} alt={p.name} className="person-thumb" loading="lazy" />}
                 <div className="person-name-block">
                   <h3 className="person-name">{p.name}</h3>
                   <span className="person-lebensdaten" style={{ color: p.farbe }}>{p.lebensdaten}</span>
+                  <span className="person-kategorie" style={{ background: p.farbe }}>{p.kategorie}</span>
                 </div>
                 <div className="person-header-right">
-                  <span className="person-kategorie" style={{ background: p.farbe }}>{p.kategorie}</span>
                   {expandedPerson === i ? <ChevronUp size={16} style={{ color: p.farbe, flexShrink: 0 }} /> : <ChevronDown size={16} style={{ color: p.farbe, flexShrink: 0 }} />}
                 </div>
               </div>

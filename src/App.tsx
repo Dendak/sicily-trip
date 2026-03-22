@@ -2509,7 +2509,7 @@ function App() {
                 <div className="day-accordion-info">
                   <span className="day-accordion-weekday">{d.weekday}, {d.date}</span>
                   <span className="day-accordion-title">{d.title}</span>
-                  <span className="day-accordion-hotel"><Hotel size={13} /> {d.hotel}</span>
+                  {d.hotel && <span className="day-accordion-hotel"><Hotel size={13} /> {d.hotel}</span>}
                 </div>
               </div>
               <div className="day-accordion-chevron">

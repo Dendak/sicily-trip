@@ -442,6 +442,73 @@
   outline-offset: -2px;
 }
 
+/* V2 card layout: image on top, text below */
+.stop-card-v2 {
+  display: flex;
+  flex-direction: column;
+  min-height: auto !important;
+}
+
+.stop-card-v2 .stop-card-image {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.stop-card-v2 .stop-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.stop-card-v2:hover .stop-card-image img {
+  transform: scale(1.05);
+}
+
+.stop-card-v2 .stop-card-bg {
+  display: none;
+}
+
+.stop-card-v2 .stop-card-content {
+  position: static;
+  padding: 0.6rem 0.8rem;
+  color: var(--color-text) !important;
+  margin-top: 0;
+  background: var(--color-bg);
+}
+
+.stop-card-v2.stop-card-has-img .stop-card-content {
+  color: var(--color-text) !important;
+}
+
+.stop-card-v2 .stop-name,
+.stop-card-v2.stop-card-has-img .stop-name {
+  color: var(--color-primary) !important;
+  text-shadow: none !important;
+}
+
+.stop-card-v2 .stop-desc,
+.stop-card-v2.stop-card-has-img .stop-desc {
+  color: var(--color-text-light) !important;
+}
+
+.stop-card-v2 .stop-km {
+  color: var(--color-gold) !important;
+}
+
+.stop-card-v2 .stop-card-hint,
+.stop-card-v2.stop-card-has-img .stop-card-hint {
+  color: var(--color-accent) !important;
+}
+
+@media (max-width: 600px) {
+  .stop-card-v2 .stop-card-image {
+    height: 100px;
+  }
+}
+
 .stop-card {
   position: relative;
   border-radius: 10px;

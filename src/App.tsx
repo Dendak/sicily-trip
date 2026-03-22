@@ -2546,7 +2546,7 @@ function App() {
                         return (
                           <div key={i} className="stop-item">
                             <div
-                              className={`stop-card${img ? ' stop-card-has-img' : ''}${hasSight ? ' stop-card-clickable' : ''}${isExpanded ? ' stop-card-active' : ''}`}
+                              className={`stop-card stop-card-v2${img ? ' stop-card-has-img' : ''}${hasSight ? ' stop-card-clickable' : ''}${isExpanded ? ' stop-card-active' : ''}`}
                               onClick={() => {
                                 if (!hasSight) return
                                 const isOpening = !isExpanded
@@ -2560,7 +2560,9 @@ function App() {
                               }}
                             >
                               {img && (
-                                <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
+                                <div className="stop-card-image">
+                                  <img src={img} alt={s.name} loading="lazy" style={{ objectPosition: (s as any).bgPosition || 'center' }} />
+                                </div>
                               )}
                               <div className="stop-card-content">
                                 <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>

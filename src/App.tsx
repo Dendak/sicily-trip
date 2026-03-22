@@ -1709,7 +1709,7 @@ function App() {
   const [expandedGruppen, setExpandedGruppen] = useState<string[]>([])
   const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
   const [glossarRichtung, setGlossarRichtung] = useState<'it-de' | 'de-it'>('it-de')
-  const [glossarOpenCats, setGlossarOpenCats] = useState<string[]>(glossaryByCategory.map(c => c.category))
+  const [glossarOpenCats, setGlossarOpenCats] = useState<string[]>([])
 
   // Track which day card is in view
   useEffect(() => {

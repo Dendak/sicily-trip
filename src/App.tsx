@@ -726,6 +726,9 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
   },
 }
 
+// Tag 3: Siracusa-Stop teilt die gleichen Infos wie Tag 4: Syrakus: Ortigia
+sightDetails['Siracusa'] = sightDetails['Syrakus: Ortigia']
+
 interface StopData {
   name: string
   desc: string

@@ -661,7 +661,7 @@ const days: DayData[] = [
       { name: 'Selinunte', desc: 'Griechischer Tempelbezirk und Akropolis, eine der größten antiken Städte Siziliens', km: '15 km' },
       { name: 'Scala dei Turchi', desc: 'Spektakuläres weißes Kalkstein-Naturmonument an der Küste', km: '85 km' },
       { name: 'Porto Empedocle', desc: 'Heimatstadt Camilleris und Schauplatz von Commissario Montalbano – Statue des berühmten Ermittlers am Hafen', km: '5 km' },
-      { name: 'Agrigento', desc: 'Tal der Tempel: Demetertempel, Zeusheiligtum (Olympieion), archäologisches Museum, Altstadt', km: '15 km' },
+      { name: 'Agrigento', desc: 'Tal der Tempel: Demetertempel, Zeusheiligtum (Olympieion), archäologisches Museum, Altstadt', km: '10 km' },
     ]
   },
   {

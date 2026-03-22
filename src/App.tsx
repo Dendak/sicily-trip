@@ -672,6 +672,7 @@ const days: DayData[] = [
     day: 3, date: '30. März', weekday: 'Montag',
     title: 'Agrigento – Gela – Piazza Armerina – Noto – Siracusa',
     image: '/sicily-trip/3-MO-Titel-PiazzaArmerina.jpg',
+    imagePosition: 'center 30%',
     hotel: 'Hotel I Santi Coronati, Siracusa (N/F)',
     hotelData: { name: 'I Santi Coronati', mapsQuery: 'Hotel+I+Santi+Coronati+Siracusa', mapsEmbed: 'I+Santi+Coronati,+Siracusa,+SR,+Italy' },
     stops: [
@@ -1958,7 +1959,7 @@ function App() {
             variants={fadeIn}
           >
             <div className="day-card-hero">
-              <img src={d.image} alt={d.title} loading="lazy" />
+              <img src={d.image} alt={d.title} loading="lazy" style={{ objectPosition: (d as any).imagePosition || 'center' }} />
               <div className="day-card-overlay">
                 <span className="day-badge">Tag {d.day} – {d.weekday}</span>
                 <h3>{d.date}</h3>

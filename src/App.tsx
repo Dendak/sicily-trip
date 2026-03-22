@@ -201,31 +201,31 @@ const personenDaten = [
 ]
 
 const regionFakten = [
-  { icon: 'globe',       label: 'Fläche',               wert: '25.832 km²',         sub: '= 8,5 % Italiens; größte Insel des Mittelmeers' },
-  { icon: 'users',       label: 'Einwohner',             wert: '4,84 Mio.',           sub: 'ISTAT 2024 – rückläufig seit 2001' },
-  { icon: 'density',     label: 'Bevölkerungsdichte',    wert: '187 Einw./km²',       sub: 'Unter dem italienischen Durchschnitt (198)' },
-  { icon: 'map',         label: 'Hauptstadt',            wert: 'Palermo',             sub: 'ca. 630.000 Einwohner (2024)' },
-  { icon: 'provinces',   label: 'Provinzen',             wert: '9',                   sub: 'PA, AG, CL, CT, EN, ME, RG, SR, TP' },
-  { icon: 'mountain',    label: 'Höchster Punkt',        wert: 'Ätna 3.357 m',        sub: 'Aktivster Vulkan Europas; fast täglich Aktivität' },
-  { icon: 'waves',       label: 'Küstenlänge',           wert: '1.484 km',            sub: 'Tyrrhenisches, Ionisches & Afrikanisches Meer' },
-  { icon: 'africa',      label: 'Entfernung zu Afrika',  wert: '140 km',              sub: 'Cap Bon, Tunesien – nächster afrikan. Punkt' },
-  { icon: 'sun',         label: 'Sonnenstunden',         wert: '2.600 / Jahr',        sub: 'Palermo: eine der sonnigsten Städte Europas' },
-  { icon: 'temp',        label: 'Ø Jahrestemperatur',    wert: '18,5 °C',             sub: 'Palermo; Sommer bis 38 °C, Winter mild 12 °C' },
-  { icon: 'gdp',         label: 'BIP',                   wert: 'ca. 99 Mrd. €',       sub: '2023; ca. 20.500 € pro Kopf' },
-  { icon: 'jobless',     label: 'Arbeitslosigkeit',      wert: '15,8 %',              sub: '2024; Jugendarbeitslosigkeit ca. 38 %' },
-  { icon: 'tourism',     label: 'Tourismus',             wert: '15,2 Mio.',           sub: 'Ankünfte 2023/24 – Rekordentwicklung' },
-  { icon: 'unesco',      label: 'UNESCO-Welterbe',       wert: '7 Stätten',           sub: 'u.a. Agrigento, Syrakus, Ätna, Noto, Monreale' },
-  { icon: 'wine',        label: 'Weinproduktion',        wert: 'ca. 5 Mio. hl',       sub: '2024; Nero d\'Avola, Marsala, Etna DOC' },
-  { icon: 'olives',      label: 'Olivenanbau',           wert: '150.000+ ha',         sub: 'Drittgrößte Olivenöl-Produktion Italiens' },
-  { icon: 'airports',    label: 'Internationale Airports',wert: '3',                  sub: 'Catania-Fontanarossa, Palermo-Falcone, Trapani' },
-  { icon: 'uni',         label: 'Älteste Universität',   wert: 'Catania 1434',        sub: 'Zweite älteste Italiens nach Bologna (1088)' },
-  { icon: 'comuni',      label: 'Gemeinden',             wert: '391',                 sub: 'Kleinste: Assoro (EN) mit ca. 4.600 Ew.' },
-  { icon: 'messina',     label: 'Meerenge von Messina',  wert: '3,2 km',              sub: 'Schmalste Stelle zwischen Sizilien & Kalabrien' },
-  { icon: 'islands',     label: 'Vorgelagerte Inseln',   wert: '3 Inselgruppen',      sub: 'Äolische, Ägadische & Pelagische Inseln' },
-  { icon: 'mafia',       label: 'Sitz der Antimafia',    wert: 'Palermo',             sub: 'Commissione parlamentare antimafia seit 1962' },
-  { icon: 'mosaik',      label: 'Größtes antikes Mosaik',wert: '3.500 m²',            sub: 'Villa Romana del Casale, Piazza Armerina (UNESCO)' },
-  { icon: 'mountain2',   label: 'Naturschutzgebiete',    wert: 'über 80',             sub: 'Inkl. Ätna-Nationalpark, Nebrodi, Zingaro' },
-  { icon: 'pop2',        label: 'Bevölkerungsentwicklung',wert: '−6,3 % seit 2001',   sub: 'Starke Abwanderung v.a. junger Sizilianer nach Norditalien' },
+  { label: 'Fläche',               wert: '25.832 km²',         sub: '= 8,5 % Italiens; größte Insel des Mittelmeers', bg: '/sicily-trip/detail-Sizilienkarte.jpg' },
+  { label: 'Einwohner',             wert: '4,84 Mio.',           sub: 'ISTAT 2024 – rückläufig seit 2001', bg: '/sicily-trip/7-FR-Palermo-Altstadt.jpg' },
+  { label: 'Bevölkerungsdichte',    wert: '187 Einw./km²',       sub: 'Unter dem italienischen Durchschnitt (198)', bg: '/sicily-trip/3-MO-Noto.jpg' },
+  { label: 'Hauptstadt',            wert: 'Palermo',             sub: 'ca. 630.000 Einwohner (2024)', bg: '/sicily-trip/8-SA-Palermo-Altstadt.jpg' },
+  { label: 'Provinzen',             wert: '9',                   sub: 'PA, AG, CL, CT, EN, ME, RG, SR, TP', bg: '/sicily-trip/detail-Sizilien-Antike.jpg' },
+  { label: 'Höchster Punkt',        wert: 'Ätna 3.357 m',        sub: 'Aktivster Vulkan Europas; fast täglich Aktivität', bg: '/sicily-trip/5-MI-Etna-Krater.jpg' },
+  { label: 'Küstenlänge',           wert: '1.484 km',            sub: 'Tyrrhenisches, Ionisches & Afrikanisches Meer', bg: '/sicily-trip/2-SO-Scala-dei-Turchi.jpg' },
+  { label: 'Entfernung zu Afrika',  wert: '140 km',              sub: 'Cap Bon, Tunesien – nächster afrikan. Punkt', bg: '/sicily-trip/6-DO-Milazzo.jpg' },
+  { label: 'Sonnenstunden',         wert: '2.600 / Jahr',        sub: 'Palermo: eine der sonnigsten Städte Europas', bg: '/sicily-trip/5-MI-Taormina.jpg' },
+  { label: 'Ø Jahrestemperatur',    wert: '18,5 °C',             sub: 'Palermo; Sommer bis 38 °C, Winter mild 12 °C', bg: '/sicily-trip/1-SA-Segesta.jpg' },
+  { label: 'BIP',                   wert: 'ca. 99 Mrd. €',       sub: '2023; ca. 20.500 € pro Kopf', bg: '/sicily-trip/4-DI-Catania.jpg' },
+  { label: 'Arbeitslosigkeit',      wert: '15,8 %',              sub: '2024; Jugendarbeitslosigkeit ca. 38 %', bg: '/sicily-trip/detail-Trapani-Postamt.jpg' },
+  { label: 'Tourismus',             wert: '15,2 Mio.',           sub: 'Ankünfte 2023/24 – Rekordentwicklung', bg: '/sicily-trip/5-MI-Taormina.jpg' },
+  { label: 'UNESCO-Welterbe',       wert: '7 Stätten',           sub: 'u.a. Agrigento, Syrakus, Ätna, Noto, Monreale', bg: '/sicily-trip/2-SO-Agrigento.jpg' },
+  { label: 'Weinproduktion',        wert: 'ca. 5 Mio. hl',       sub: '2024; Nero d\'Avola, Marsala, Etna DOC', bg: '/sicily-trip/1-SA-Marsala.jpg' },
+  { label: 'Olivenanbau',           wert: '150.000+ ha',         sub: 'Drittgrößte Olivenöl-Produktion Italiens', bg: '/sicily-trip/1-SA-Erice.jpg' },
+  { label: 'Internationale Airports',wert: '3',                  sub: 'Catania-Fontanarossa, Palermo-Falcone, Trapani', bg: '/sicily-trip/4-DI-Catania.jpg' },
+  { label: 'Älteste Universität',   wert: 'Catania 1434',        sub: 'Zweite älteste Italiens nach Bologna (1088)', bg: '/sicily-trip/4-DI-Catania.jpg' },
+  { label: 'Gemeinden',             wert: '391',                 sub: 'Kleinste: Assoro (EN) mit ca. 4.600 Ew.', bg: '/sicily-trip/3-MO-Siracusa-Duomo.jpg' },
+  { label: 'Meerenge von Messina',  wert: '3,2 km',              sub: 'Schmalste Stelle zwischen Sizilien & Kalabrien', bg: '/sicily-trip/6-DO-Messina.jpg' },
+  { label: 'Vorgelagerte Inseln',   wert: '3 Inselgruppen',      sub: 'Äolische, Ägadische & Pelagische Inseln', bg: '/sicily-trip/6-DO-Lipari-Vulcano.jpg' },
+  { label: 'Sitz der Antimafia',    wert: 'Palermo',             sub: 'Commissione parlamentare antimafia seit 1962', bg: '/sicily-trip/text-Falcone.jpg' },
+  { label: 'Größtes antikes Mosaik',wert: '3.500 m²',            sub: 'Villa Romana del Casale, Piazza Armerina (UNESCO)', bg: '/sicily-trip/3-MO-Piazza-Armerina.jpg' },
+  { label: 'Naturschutzgebiete',    wert: 'über 80',             sub: 'Inkl. Ätna-Nationalpark, Nebrodi, Zingaro', bg: '/sicily-trip/5-MI-Etna2.jpg' },
+  { label: 'Bevölkerungsentwicklung',wert: '−6,3 % seit 2001',   sub: 'Starke Abwanderung v.a. junger Sizilianer nach Norditalien', bg: '/sicily-trip/3-MO-Noto.jpg' },
 ]
 
 const regionProvinzen = [
@@ -240,14 +240,7 @@ const regionProvinzen = [
   { kuerzel: 'RG', name: 'Ragusa',       flaeche: 1614, einwohner:  318000, hauptstadt: 'Ragusa',       hs_ew:  73000 },
 ]
 
-const regionIconMap: Record<string, string> = {
-  globe: '🌍', users: '👥', density: '📊', map: '🏛️', provinces: '🗺️',
-  mountain: '🌋', waves: '🌊', africa: '🌍', sun: '☀️', temp: '🌡️',
-  gdp: '💶', jobless: '📉', tourism: '✈️', unesco: '🏛️', wine: '🍷',
-  olives: '🫒', airports: '🛫', uni: '🎓', comuni: '🏘️', messina: '⚓',
-  islands: '🏝️', mafia: '⚖️', mosaik: '🎨', mountain2: '🌿', pop2: '📉',
-}
-const regionIcon = (key: string) => regionIconMap[key] ?? '📌'
+// Emoji icons removed – using background images instead
 
 const zeittafelDaten = [
   {
@@ -2484,11 +2477,12 @@ function App() {
         <h3 className="region-section-title">Fakten &amp; Zahlen</h3>
         <div className="region-fakten-grid">
           {regionFakten.map((f, i) => (
-            <motion.div key={i} className="region-fakt-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <div className="region-fakt-icon">{regionIcon(f.icon)}</div>
-              <div className="region-fakt-wert">{f.wert}</div>
-              <div className="region-fakt-label">{f.label}</div>
-              <div className="region-fakt-sub">{f.sub}</div>
+            <motion.div key={i} className="region-fakt-card region-fakt-bg" style={{ backgroundImage: `url(${f.bg})` }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="region-fakt-overlay">
+                <div className="region-fakt-wert">{f.wert}</div>
+                <div className="region-fakt-label">{f.label}</div>
+                <div className="region-fakt-sub">{f.sub}</div>
+              </div>
             </motion.div>
           ))}
         </div>

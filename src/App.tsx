@@ -744,7 +744,7 @@ const days: DayData[] = [
     image: '/sicily-trip/8-SA-Titel-Palermo2.jpg',
     hotel: '',
     stops: [
-      { name: 'Palermo Altstadt', desc: 'Altstadtrundgang: Quattro Canti, Fontana Pretoria, Vucciria-Markt' },
+      { name: 'Palermo Altstadt', desc: 'Altstadtrundgang: Quattro Canti, Fontana Pretoria, Vucciria-Markt', image: '/sicily-trip/8-SA-Palermo-Altstadt.jpg' },
       { name: 'Flughafen Palermo', desc: 'Transfer zum Flughafen, Rückflug über München nach Salzburg', km: '40 km' },
     ]
   },

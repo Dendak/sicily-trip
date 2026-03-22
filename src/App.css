@@ -1460,6 +1460,20 @@
   object-fit: cover;
 }
 
+.arch-card-vessel-img {
+  height: 200px !important;
+}
+
+.arch-gefaesse-zweck {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 20px;
+  background: var(--color-gold);
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .arch-beispiel {
   margin-top: 0.6rem;
   font-size: 0.8rem;

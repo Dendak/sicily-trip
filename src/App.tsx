@@ -2766,6 +2766,14 @@ function App() {
           ))}
         </div>
 
+        {/* Tempel-Aufbau Foto */}
+        <div className="arch-schema-detail" style={{ marginTop: '1rem' }}>
+          <p style={{ fontSize: '0.9rem', color: 'var(--color-text-light)', marginBottom: '0.75rem' }}>Klicken zum Vergrößern – Poseidon-Tempel in Paestum (Süditalien, 5. Jh. v. Chr.) – alle Bauelemente sichtbar</p>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Doric_order_-_Temple_of_Poseidon_-_Paestum_-_Italy.JPG" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Doric_order_-_Temple_of_Poseidon_-_Paestum_-_Italy.JPG" alt="Dorischer Tempel – Poseidon-Tempel Paestum mit allen Bauelementen" loading="lazy" className="arch-schema-img" />
+          </a>
+        </div>
+
         {/* Dorischer Eckkonflikt */}
         <div className="arch-eckkonflikt">
           <div className="arch-eckkonflikt-img-wrap">
@@ -2798,6 +2806,57 @@ function App() {
               </div>
               <h4>{k.name}</h4>
               <p>{k.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Gefäßformen */}
+        <h3 className="arch-subtitle">Griechische Gefäßformen</h3>
+        <p style={{ fontSize: '0.9rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+          Die griechische Keramik gliedert sich nach Verwendungszweck in Vorrats-, Misch-, Schöpf-, Trink- und Salbgefäße. In den Museen Siziliens – vor allem im Museo Orsi (Siracusa) und im Archäologischen Museum Agrigento – zeugen prächtige Exemplare von hoher Töpferkunst der Kolonisten.
+        </p>
+        <div className="arch-grid arch-grid-3">
+          {([
+            { name: 'Amphore', greek: 'ἀμφορεύς · amphoreús', zweck: 'Vorratsgefäß', desc: 'Zweihenkelig, eiförmiger Bauch, enger Hals. Für Wein, Öl und Honig. Die Panathenäische Preisamphore wurde als Wettkampfpreis überreicht. Häufigste Keramikform in sizilianischen Museen.', museum: 'Museo Orsi Siracusa · Museo Agrigento', img: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Amphorae_retouched.jpg' },
+            { name: 'Hydria', greek: 'ὑδρία · hydrίa', zweck: 'Wassergefäß', desc: 'Dreihenkelig: zwei waagrechte Traghenkel, ein senkrechter Ausgusshenkel. Zum Wassertransport vom Brunnen; Frauen beim Füllen der Hydria ist häufiges Bildthema.', museum: '', img: 'https://upload.wikimedia.org/wikipedia/commons/1/19/Hydria_Hermonax_Rhodes.jpg' },
+            { name: 'Krater', greek: 'κρατήρ · kratḗr', zweck: 'Mischgefäß', desc: 'Großes offenes Gefäß für das Mischen von Wein und Wasser beim Symposion. Typen: Volutenkrater (Voluten am Hals), Glockenkrater, Kolonettenkrater, Kelchkrater. In Magna Graecia besonders beliebt.', museum: 'Museo Orsi Siracusa · Museo Agrigento', img: 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Bell-krater_rider_Louvre_G493.jpg' },
+            { name: 'Kylix', greek: 'κύλιξ · kýlix', zweck: 'Trinkschale', desc: 'Flache Trinkschale mit zwei waagrechten Henkeln und langem Stiel. Das Innenmedaillon (Tondo) trägt mythologische Bilder. Beim Symposion auch für das Kottabos-Wurfspiel verwendet.', museum: '', img: 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Kylix_61.7_with_Helen_and_Hermes%2C_ca._420_BC%2C_part_of_the_Vassil_Bojkov_collection%2C_Sofia%2C_Bulgaria.png' },
+            { name: 'Lekythos', greek: 'λήκυθος · lḗkythos', zweck: 'Öl- / Grabgefäß', desc: 'Schlanke Ölflasche mit engem Hals. Weißgrundige Lekythen mit polychromer Bemalung wurden ausschließlich als Grabbeigaben verwendet; häufig in Nekropolen Siziliens gefunden.', museum: 'Museo Orsi Siracusa', img: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Apollonia_Painter_-_Red-Figure_%22Kerch%22-Style_Lekythos_-_Walters_4884_-_Right.jpg' },
+            { name: 'Oinochoe', greek: 'οἰνοχόη · oinochóē', zweck: 'Weinkanne', desc: 'Weinkrug mit einem Henkel, oft Kleeblatt-Mündung (trilobos). Diente zum Einschenken beim Symposion. Varianten: Olpe (schlank), Chus (bauchig, für das Choen-Fest der Kinder).', museum: '', img: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Oinoche_Camiros_fantastic_Louvre_A318.jpg' },
+            { name: 'Skyphos', greek: 'σκύφος · skýphos', zweck: 'Trinkbecher', desc: 'Tiefer Trinkbecher mit zwei waagrechten Henkeln. Alltägliches Trinkgefäß; mit Herakles assoziiert. Variante Kotyle: mit hohem Fuß.', museum: '', img: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Skyphos_Boscoreale_Louvre_Bj2367.jpg' },
+            { name: 'Stamnos', greek: 'σταμνός · stamnós', zweck: 'Vorratsgefäß', desc: 'Breites Vorratsgefäß mit kurzem Hals und zwei waagrechten Henkeln. Für Wein; seltener als Amphore. Beim Kottabos-Spiel beliebt.', museum: '', img: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Stamnos_tripod_Louvre_G180.jpg' },
+            { name: 'Pelike', greek: 'πελίκη · pelíkē', zweck: 'Vorratsgefäß', desc: 'Variante der Amphore mit tieferem Schwerpunkt – bauchiger nach unten. Zwei senkrechte Henkel. Häufig für rotfigurige Darstellungen gewählt.', museum: '', img: 'https://upload.wikimedia.org/wikipedia/commons/3/32/Pelike_woman_youth_BM_F316.jpg' },
+          ] as { name: string; greek: string; zweck: string; desc: string; museum: string; img: string }[]).map((v, i) => (
+            <motion.div key={i} className="arch-card arch-card-church" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="arch-card-church-img arch-card-vessel-img">
+                <img src={v.img} alt={v.name} loading="lazy" />
+              </div>
+              <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline', marginBottom: '0.3rem', flexWrap: 'wrap' }}>
+                <h4 style={{ margin: 0 }}>{v.name}</h4>
+                <span className="arch-gefaesse-zweck">{v.zweck}</span>
+              </div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--color-gold)', fontStyle: 'italic', marginBottom: '0.4rem' }}>{v.greek}</div>
+              <p>{v.desc}</p>
+              {v.museum && <div className="arch-beispiel">📍 {v.museum}</div>}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Dekorstile */}
+        <h3 className="arch-subtitle">Dekorstile der griechischen Vasenmalerei</h3>
+        <div className="arch-grid arch-grid-3">
+          {([
+            { name: 'Schwarzfigurig', zeit: 'ca. 700–480 v. Chr.', desc: 'Figuren in schwarzem Firnis auf rotem Tongrund. Details durch Einritzen (Sgraffito) gearbeitet; weißer Schlicker für Frauenhaut. Entstanden in Korinth und Athen. In Sizilien häufig als Grabbeigabe.', img: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Herakles_Geryon_Staatliche_Antikensammlungen_1379.jpg' },
+            { name: 'Rotfigurig', zeit: 'ab ca. 530 v. Chr.', desc: 'Figuren bleiben im Tonrot, Hintergrund schwarz gefirnisst. Körperdetails mit dem Pinsel frei gemalt – ermöglicht naturalistischere Zeichnung. Technik erfunden in Athen, schnell die führende Bildsprache.', img: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Cup_Apatouria_Louvre_G138.jpg' },
+            { name: 'Weißgrundig', zeit: 'ab ca. 500 v. Chr.', desc: 'Weißer Kalkschlicker als Grundierung, darüber polychrome Bemalung. Sehr fragil – fast ausschließlich für Lekythen als Grabbeigaben. Erlaubt feine Farbpalette; Totenklage und Abschiedsszenen sind typische Themen.', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Loutrophoros_Louvre_CA1960.jpg' },
+          ] as { name: string; zeit: string; desc: string; img: string }[]).map((d, i) => (
+            <motion.div key={i} className="arch-card arch-card-church" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="arch-card-church-img">
+                <img src={d.img} alt={d.name} loading="lazy" />
+              </div>
+              <h4>{d.name}</h4>
+              <div style={{ fontSize: '0.78rem', color: 'var(--color-gold)', marginBottom: '0.4rem' }}>{d.zeit}</div>
+              <p>{d.desc}</p>
             </motion.div>
           ))}
         </div>

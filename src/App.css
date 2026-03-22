@@ -1851,3 +1851,60 @@
   .region-provinzen-grid { grid-template-columns: 1fr; }
   .region-fakten-grid { grid-template-columns: 1fr; }
 }
+
+/* Karten & Pläne */
+.karten-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.karten-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.4rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.karten-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  border-color: var(--color-gold);
+}
+
+.karten-card-icon {
+  color: var(--color-gold);
+}
+
+.karten-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.karten-card-desc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.karten-card-open {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  font-weight: 600;
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  .karten-grid { grid-template-columns: 1fr; }
+}

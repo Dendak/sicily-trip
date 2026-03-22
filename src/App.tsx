@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users, Globe } from 'lucide-react'
+import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users, Globe, Map, FileText } from 'lucide-react'
 import './App.css'
 
 // Verified working Unsplash image URLs
@@ -1770,6 +1770,7 @@ function App() {
               ['zeittafel', 'Zeittafel'],
               ['personen', 'Persönlichkeiten'],
               ['glossar', 'Glossar'],
+              ['karten', 'Karten & Pläne'],
             ].map(([id, label]) => (
               <li key={id}><a href={`#${id}`} onClick={(e) => { e.preventDefault(); scrollTo(id) }}>{label}</a></li>
             ))}
@@ -2422,6 +2423,30 @@ function App() {
               </div>
             )
           })}
+        </div>
+      </section>
+
+      {/* Karten & Pläne */}
+      <section className="section" id="karten">
+        <div className="container">
+          <h2><Map size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Karten &amp; Pläne</h2>
+          <div className="karten-grid">
+            {[
+              { title: 'Sizilien – Übersichtskarte', desc: 'DuMont Reisekarte Sizilien mit allen wichtigen Reisezielen und Straßen', icon: 'sizilien', url: '/sicily-trip/Karte-Sizilien-DuMont.pdf' },
+              { title: 'Antike Städte Siziliens', desc: 'Karte der wichtigsten antiken Stätten und griechisch-römischen Siedlungen', icon: 'antike', url: '/sicily-trip/Karte-antike-Staedte.pdf' },
+              { title: 'Palermo – Stadtplan', desc: 'Detaillierter Stadtplan von Palermo mit Sehenswürdigkeiten', icon: 'palermo', url: '/sicily-trip/Karte-Palermo.pdf' },
+              { title: 'Palermo – DuMont Stadtplan', desc: 'DuMont Stadtplan Palermo mit Altstadtvierteln und Hauptattraktionen', icon: 'palermoDumont', url: '/sicily-trip/Karte-Palermo-DuMont.pdf' },
+            ].map(k => (
+              <a key={k.url} href={k.url} target="_blank" rel="noopener noreferrer" className="karten-card">
+                <div className="karten-card-icon"><FileText size={40} /></div>
+                <div className="karten-card-body">
+                  <div className="karten-card-title">{k.title}</div>
+                  <div className="karten-card-desc">{k.desc}</div>
+                </div>
+                <div className="karten-card-open"><ExternalLink size={16} /> Öffnen</div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

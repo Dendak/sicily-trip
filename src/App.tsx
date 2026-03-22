@@ -1294,10 +1294,14 @@ CATARELLA: Jawohl, Herr Doktor, Euer Gnaden ist bereits zufriedengestellt!`,
   },
   {
     title: 'Daidalos und König Kokalos',
-    source: 'Diodoros Sikeliotes (ca. 90–30 v. Chr.), Bibliotheke historike IV, 79',
-    original: 'Minos, Herr der Meere, rüstete eine Flotte aus und landete an der sizilischen Küste, wo er von König Kokalos die Auslieferung des Daidalos forderte. Kokalos lud ihn als Gast ein – und ließ ihn in einem heißen Bad töten. So fand der mächtige kretische König auf sizilianischem Boden den Tod, und Daidalos blieb frei.',
+    source: 'Diodoros Sikeliotes (ca. 90–30 v. Chr.), Bibliotheke historike IV, 77–79',
+    original: `Daidalos, der kunstfertigste Handwerker seiner Zeit, lebte am Hof des König Minos auf Kreta. Als er dem Ungeheuer Minotauros durch den Bau des Labyrinths diente, geriet er in Ungnade: Minos sperrte ihn samt seinem Sohn Ikaros ein. Doch Daidalos fertigte sich und seinem Sohn Flügel aus Federn und Wachs. Ikaros flog zu hoch, das Wachs schmolz in der Sonne – er stürzte ins Meer, das seitdem „Ikarisches Meer" heißt.
+
+Daidalos selbst entkam nach Sizilien zum König Kokalos, wo er in dessen Dienst herrliche Werke schuf: eine uneinnehmbare Burg auf dem Felsplateau von Kamikos, einen Schwitzbad-Palast, einen Tempel der Aphrodite auf dem Gipfel von Érice – und goldene Waben als Weihgeschenk für die Göttin.
+
+Minos, der mächtigste Herr der Meere, rüstete eine gewaltige Flotte aus und segelte nach Sizilien, um Daidalos zurückzufordern. Kokalos empfing ihn scheinbar freundlich als Gast und versprach, den Flüchtling auszuliefern. Doch seine Töchter, die Daidalos liebgewonnen hatten, leiteten siedendes Wasser durch Röhren in das Bad des Königs. So fand Minos, Herr der Meere und Richter der Toten, auf sizilischem Boden seinen Tod – und Daidalos blieb für immer frei.`,
     translation: '',
-    lang: 'Deutsch (nach Diodoros Sikeliotes, griechisches Original)',
+    lang: 'Deutsch (nach Diodoros Sikeliotes IV, 77–79)',
   },
   {
     title: 'Per questo mi chiamo Giovanni – La struttura di Cosa Nostra',
@@ -1348,8 +1352,14 @@ die die Soldaten oder Picciotti befehligen."`,
   },
   {
     title: 'Goethe über Monte Pellegrino',
-    source: 'Johann Wolfgang von Goethe (1749–1832), Italienische Reise (3. April 1787)',
-    original: 'Der Monte Pellegrino, ein großes Vorgebirge am Meerbusen, [...] ist das schönste Vorgebirge der Welt.',
+    source: 'Johann Wolfgang von Goethe (1749–1832), Italienische Reise (Palermo, 3. April 1787)',
+    original: `Palermo, den 3. April 1787.
+
+Der Monte Pellegrino liegt gerade gegenüber meiner Wohnung, ein großes Vorgebirge am Meerbusen. Im ersten Augenblick war es mir wie ein Idol, das mich anschaut; immer sah ich ihn wie einen Freund an. Er hat eine gar sonderliche Gestalt und eine eigene Physiognomie: Kalksteinfels, fast senkrecht aus dem Meere tretend, kein Baum, kein Strauch daran zu sehen – und doch von einer großen, ehrwürdigen Gestalt.
+
+Was den Charakter dieser Gegend im allgemeinen betrifft, so kann ich sagen: Es ist alles hier in einem gewissen höheren Sinne schön. Nicht allein das Meer, die Küste, der Hafen – sondern auch die Stadt selbst ist ein Anblick. Niemand, der Sizilien gesehen hat, trägt ein unvollständiges Bild von Italien in seiner Seele.
+
+Das schönste Vorgebirge der Welt.`,
     translation: '',
     lang: 'Deutsch (Original)',
   },
@@ -1410,9 +1420,25 @@ usque adeo est properatus amor.`,
   },
   {
     title: 'Pindar über Ätna und Sizilien',
-    source: 'Pindar (ca. 522–443 v. Chr.), Pythische Ode 1, 18–28',
-    original: '\u1f10\u03bd \u03b4\u2019 \u0391\u1f34\u03c4\u03bd\u1fb3 \u03ba\u03b5\u1fd6\u03c4\u03b1\u03b9 \u03c7\u03b1\u03bc\u03b1\u03b9\u03c0\u03b5\u03c4\u1f72\u03c2 \u03c0\u03b1\u03bd\u03b4\u03ce\u03ba\u03b1\u03c2 \u03c3\u03c4\u1f7b\u03bb\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1, \u03bd\u03b9\u03c6\u03cc\u03b5\u03c3\u03c3\u03b1 \u0391\u1f34\u03c4\u03bd\u03b1, \u03c0\u03ac\u03bd\u03b5\u03c4\u03b5\u03c2 \u03c7\u03b9\u03cc\u03bd\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1\u03c2 \u03c4\u03b9\u03b8\u03ae\u03bd\u03b1.',
-    translation: 'Auf dem Ätna aber liegt er, die Säule des Himmels, die alles aufnimmt, der schneebedeckte Ätna, der ganzjährige Nährvater des scharfen Schnees, der himmlischen.',
+    source: 'Pindar (ca. 522–443 v. Chr.), Pythische Ode 1, 13–28',
+    original: `ἐν δ᾽ Αἴτνᾳ κεῖται χαμαιπετὲς πανδόκας
+στῦλος οὐρανία, νιφόεσσα Αἴτνα,
+πάνετες χιόνος οὐρανίας τιθήνα·
+τᾶς ἐρεύγονται μὲν ἀπλάτου πυρὸς ἁγνόταται
+ἐκ μυχῶν παγαί·
+ποταμοὶ δ᾽ ἁμέραισιν μὲν
+προχέοντι ῥόον καπνοῦ αἴθων᾽·
+ἀλλ᾽ ἐν ὄρφναισιν πέτρας
+φοίνισσα κυλινδομένα φλὸξ
+ἐς βαθεῖαν φέρει πόντου πλάκα σὺν πατάγῳ.`,
+    translation: `Und in Aitna liegt er unten, die Säule des Himmels, die alles aufnimmt –
+der schneebedeckte Aitna, ganzjähriger Nährvater des beißenden Schnees.
+Aus seinen Tiefen schießen unzugängliche Quellen reinen Feuers.
+Bei Tage strömen die Flüsse glühenden Rauchs;
+doch in den Nächten schleppt die rote, rollende Flamme
+die Felsen mit Getöse hinab auf die tiefe Fläche des Meeres.
+
+(Pindar schrieb diese Ode 470 v. Chr. zu Ehren Hierons I. von Syrakus, der beim Wagenrennen in Delphi siegte. Hieron hatte kurz zuvor die Stadt Aitna am Fuß des Vulkans neu gegründet. Der darunter gefangene Riese Typhon, den Zeus mit dem Blitz besiegt hatte, gilt als Ursache der vulkanischen Ausbrüche.)`,
     lang: 'Griechisch',
   },
   {

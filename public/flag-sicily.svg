@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+
+  <!-- Red upper-left triangle -->
+  <polygon points="0,0 600,0 0,400" fill="#cc0000"/>
+  <!-- Yellow lower-right triangle -->
+  <polygon points="600,0 600,400 0,400" fill="#f5c000"/>
+
+  <!-- Trinacria centred at 300,200 -->
+  <g transform="translate(300,200)">
+
+    <!-- === Three running legs (triskelion), rotated 0°/120°/240° === -->
+    <!-- Each leg: hip→thigh→knee→shin→foot, running clockwise         -->
+
+    <g transform="rotate(0)">
+      <!-- upper thigh -->
+      <path d="M 0,-2 C 4,-18 10,-30 14,-42" stroke="black" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <!-- shin from knee -->
+      <path d="M 14,-42 C 24,-40 36,-30 42,-18" stroke="black" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <!-- foot -->
+      <path d="M 42,-18 C 46,-10 44,-2 36,4" stroke="black" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <g transform="rotate(120)">
+      <path d="M 0,-2 C 4,-18 10,-30 14,-42" stroke="black" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M 14,-42 C 24,-40 36,-30 42,-18" stroke="black" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M 42,-18 C 46,-10 44,-2 36,4" stroke="black" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <g transform="rotate(240)">
+      <path d="M 0,-2 C 4,-18 10,-30 14,-42" stroke="black" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M 14,-42 C 24,-40 36,-30 42,-18" stroke="black" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M 42,-18 C 46,-10 44,-2 36,4" stroke="black" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- === Wheat ears between legs (at 60°, 180°, 300°) === -->
+    <g transform="rotate(60)">
+      <line x1="0" y1="-32" x2="0" y2="-52" stroke="black" stroke-width="1.5"/>
+      <ellipse cx="-5" cy="-55" rx="3.5" ry="7" fill="#f5c000" stroke="black" stroke-width="1" transform="rotate(-20,−5,-55)"/>
+      <ellipse cx="5" cy="-55" rx="3.5" ry="7" fill="#f5c000" stroke="black" stroke-width="1" transform="rotate(20,5,-55)"/>
+      <ellipse cx="0" cy="-58" rx="3" ry="6" fill="#f5c000" stroke="black" stroke-width="1"/>
+    </g>
+    <g transform="rotate(180)">
+      <line x1="0" y1="-32" x2="0" y2="-52" stroke="black" stroke-width="1.5"/>
+      <ellipse cx="-5" cy="-55" rx="3.5" ry="7" fill="#f5c000" stroke="black" stroke-width="1" transform="rotate(-20,-5,-55)"/>
+      <ellipse cx="5" cy="-55" rx="3.5" ry="7" fill="#f5c000" stroke="black" stroke-width="1" transform="rotate(20,5,-55)"/>
+      <ellipse cx="0" cy="-58" rx="3" ry="6" fill="#f5c000" stroke="black" stroke-width="1"/>
+    </g>
+    <g transform="rotate(300)">
+      <line x1="0" y1="-32" x2="0" y2="-52" stroke="black" stroke-width="1.5"/>
+      <ellipse cx="-5" cy="-55" rx="3.5" ry="7" fill="#f5c000" stroke="black" stroke-width="1" transform="rotate(-20,-5,-55)"/>
+      <ellipse cx="5" cy="-55" rx="3.5" ry="7" fill="#f5c000" stroke="black" stroke-width="1" transform="rotate(20,5,-55)"/>
+      <ellipse cx="0" cy="-58" rx="3" ry="6" fill="#f5c000" stroke="black" stroke-width="1"/>
+    </g>
+
+    <!-- === Medusa / Gorgon head === -->
+    <!-- Face background -->
+    <circle r="23" fill="#e8c87a" stroke="black" stroke-width="2"/>
+
+    <!-- Snake / wheat hair (radiating outward) -->
+    <path d="M -18,-12 C -26,-18 -24,-28 -18,-32" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M  18,-12 C  26,-18  24,-28  18,-32" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M -10,-22 C -12,-30  -8,-36  -4,-38" stroke="black" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M  10,-22 C  12,-30   8,-36   4,-38" stroke="black" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M   0,-23 C   0,-30   2,-36   0,-40" stroke="black" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Eyes -->
+    <ellipse cx="-8" cy="-6" rx="5" ry="4.5" fill="white" stroke="black" stroke-width="1"/>
+    <ellipse cx=" 8" cy="-6" rx="5" ry="4.5" fill="white" stroke="black" stroke-width="1"/>
+    <circle cx="-8" cy="-5" r="2.5" fill="#333"/>
+    <circle cx=" 8" cy="-5" r="2.5" fill="#333"/>
+    <!-- pupils -->
+    <circle cx="-7.5" cy="-5" r="1" fill="black"/>
+    <circle cx=" 8.5" cy="-5" r="1" fill="black"/>
+
+    <!-- Nose -->
+    <path d="M -2,1 L 0,6 L 2,1" stroke="black" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+
+    <!-- Mouth / slight grimace -->
+    <path d="M -7,11 Q -3,14 0,13 Q 3,14 7,11" stroke="black" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Eyebrows (stern) -->
+    <path d="M -13,-11 Q -8,-14 -3,-11" stroke="black" stroke-width="1.5" fill="none"/>
+    <path d="M  13,-11 Q  8,-14  3,-11" stroke="black" stroke-width="1.5" fill="none"/>
+
+  </g>
+</svg>

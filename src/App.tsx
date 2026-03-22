@@ -2356,7 +2356,7 @@ function App() {
         <div className="trinacria-block">
           <div className="trinacria-flag">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flag_of_Sicily.svg/800px-Flag_of_Sicily.svg.png"
+              src="/sicily-trip/flag-sicily.svg"
               alt="Flagge Siziliens mit Trinacria"
               className="trinacria-flag-img"
             />

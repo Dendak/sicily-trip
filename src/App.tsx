@@ -719,7 +719,7 @@ const days: DayData[] = [
     stops: [
       { name: 'Messina', desc: 'Fährhafen und Tor zur Insel – Meerenge von Messina, Dom mit astronomischer Uhr', km: '50 km' },
       { name: 'Milazzo', desc: 'Ausgangspunkt für die Äolischen Inseln – Kastell, Altstadt, Hafen', km: '20 km' },
-      { name: 'Lipari / Vulcano', desc: 'Äolische Inseln (UNESCO): Lipari mit Castello und Archäologischem Museum, Vulcano mit aktiven Fumarolen', km: '0 km [Option 1]' },
+      { name: 'Lipari / Vulcano', desc: 'Äolische Inseln (UNESCO): Lipari mit Castello und Archäologischem Museum, Vulcano mit aktiven Fumarolen', km: '0km', option: 'Option 1' } as any,
       { name: 'Cefalù', desc: 'Normannische Kathedrale San Salvatore (1131) mit byzantinischen Christus-Pantokrator-Mosaiken', km: '115 km' },
       { name: 'Solunto', desc: 'Hellenistisch-römische Stadt mit Peristylhäusern und Agora auf dem Monte Catalfano', km: '55 km' },
       { name: 'Palermo', desc: 'Ankunft in der sizilianischen Hauptstadt', km: '20 km' },
@@ -1934,7 +1934,7 @@ function App() {
                         <div className="stop-card-bg" style={{ backgroundImage: `url(${img})` }} />
                       )}
                       <div className="stop-card-content">
-                        <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}</div>
+                        <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
                         <div className="stop-desc">{s.desc}</div>
                         {hasSight && (
                           <div className="stop-card-hint">

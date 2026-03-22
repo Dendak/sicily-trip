@@ -598,7 +598,7 @@ const sightImages: Record<string, string> = {
   'Piazza Armerina': '/sicily-trip/3-MO-Piazza-Armerina.jpg',
   'Akrai': '/sicily-trip/3-MO-Akrai.jpg',
   'Noto': images.noto,
-  'Villa Romana del Tellaro': '/sicily-trip/3-MO-Tellaro.jpg',
+  'Villa Romana del Tellaro': 'https://images.unsplash.com/photo-1760384339539-22071b2978b3?w=800&q=80',
   'Syrakus': images.siracusa,
   'Castello Eurialo': 'https://images.unsplash.com/photo-1767032330785-033405e26229?w=800&q=80',
   'Catania': images.catania,
@@ -674,8 +674,8 @@ const days: DayData[] = [
       { name: 'Gela', desc: 'Archäologisches Museum mit Funden der griechischen Kolonie (688 v. Chr.)', km: '80 km' },
       { name: 'Piazza Armerina', desc: 'Villa Romana del Casale: spätrömische Mosaiken von Weltrang (UNESCO)', km: '50 km' },
       { name: 'Akrai', desc: 'Griechisches Theater und Aphroditetempel der syrakusanischen Kolonie', km: '110 km' },
-      { name: 'Noto', desc: 'Perle des sizilianischen Barocks (UNESCO), nach dem Erdbeben 1693 wiederaufgebaut', km: '30 km' },
       { name: 'Villa Romana del Tellaro', desc: 'Spätrömische Villa mit bedeutenden Mosaiken (4. Jh. n. Chr.)', km: '40 km' },
+      { name: 'Noto', desc: 'Perle des sizilianischen Barocks (UNESCO), nach dem Erdbeben 1693 wiederaufgebaut', km: '30 km' },
       { name: 'Siracusa', desc: 'Ankunft im Hotel, einst mächtigste Stadt der griechischen Welt', km: '40 km' },
     ]
   },

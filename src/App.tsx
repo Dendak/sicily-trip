@@ -1801,6 +1801,151 @@ die Samier folgten seinem Rat und bemächtigten sich Zankles.
 (Hdt. 6,22–23; nach Josef Feix, Tusculum-Ausgabe)`,
     lang: 'Griechisch',
   },
+  {
+    title: 'Thukydides – Die Athener in den Latomien',
+    source: 'Thukydides (ca. 460–400 v. Chr.), Historien VII, 87',
+    original: `οἱ δ᾽ ἐν ταῖς λιθοτομίαις χαλεπῶς τοὺς πρώτους χρόνους
+διετέθησαν. πολλοὶ γὰρ ὄντες ἐν ὀλίγῳ, ὑπαίθρῳ τε
+καὶ στεγνῷ χωρίῳ, αἵ τε τοῦ ἡλίου προσβολαὶ καὶ τὸ πνῖγος
+ἔτι ἐλύπει· αἵ τε νύκτες ἐπιγιγνόμεναι τοὐναντίον
+μετοπωριναὶ καὶ ψυχραὶ τῇ μεταβολῇ ἐς ἀσθένειαν ἐνεδίδοσαν·
+πάντα τε ἐποίουν ἐν τῷ αὐτῷ διὰ στενοχωρίαν,
+καὶ οἱ νεκροὶ ὁμοῦ ἐπ᾽ ἀλλήλοις ᾔκειντο,
+οἱ ἀπό τε τῶν τραυμάτων καὶ διὰ τὴν μεταβολὴν
+καὶ τὸ τοιοῦτον ἀποθανόντες, καὶ ὀσμαὶ ἦσαν οὐκ ἀνεκταί.`,
+    translation: `Die aber in den Steinbrüchen wurden in den ersten Zeiten aufs härteste behandelt. Denn da ihrer viele waren auf engem Raum, unter freiem Himmel und ohne Dach, trafen sie noch die Strahlen der Sonne und die Schwüle; die Nächte aber, die herbstlich und kalt einfielen, brachten durch den Wechsel Krankheiten; alles mussten sie an derselben Stelle verrichten aus Platzmangel, und die Toten lagen beieinander aufeinander – von Wunden Gestorbene und durch den Wechsel Dahingerafften –, und die Gerüche waren unerträglich.
+
+(Thuk. VII, 87; nach Georg Peter Landmann, dtv-Ausgabe)`,
+    lang: 'Griechisch',
+    note: 'Im Jahr 413 v. Chr. scheiterte die größte Expedition, die Athen je ausgerüstet hatte: 40.000 Soldaten, 200 Schiffe – vernichtet vor Syrakus. Die Überlebenden wurden in die Latomien (Steinbrüche) getrieben, die noch heute in Syrakus zu besichtigen sind. Thukydides nennt es „das verhängnisvollste Ereignis in diesem Krieg und, wie mir scheint, in der griechischen Geschichte überhaupt." General Nikias und Demosthenes wurden hingerichtet.',
+  },
+  {
+    title: 'Platon – Erfahrungen in Syrakus (7. Brief)',
+    source: 'Platon (428–348 v. Chr.), Epistula VII, 326b–327a',
+    original: `Ἐλθὼν δ᾽ εἰς Συρακούσας νέος ὢν τότε – τί χρὴ λέγειν;
+πρεσβύτης γὰρ ὢν νῦν γράφω –
+ἦλθον δὴ τότε παρὰ Διονύσιον.
+Δίων δὲ ἦν Διονυσίου μὲν κηδεστής,
+ἐμοῖς δὲ λόγοις ἐρασθεὶς εἰς ἀεί,
+καὶ ζηλωτὴς γενόμενος τοῦ τρόπου τούτου τοῦ βίου·
+ἤλπισε δ᾽ αὐτὸν καὶ Διονύσιον οὕτω θήσεσθαι.
+ὁ δ᾽ οὐκ ἤθελε – καὶ ὁ βίος ὁ τῆς πόλεως
+τῶν Συρακουσίων ἐτάραττέ με,
+βίος εὐδαιμονίας Ἰταλιώτου τε καὶ Συρακουσίου,
+πλήρης τραπεζῶν Ἰταλικῶν καὶ Συρακουσίων.`,
+    translation: `Als ich nach Syrakus kam, damals jung – was soll ich sagen? Als alter Mann schreibe ich dies jetzt –, da kam ich zu Dionysios. Dion nun war der Schwager des Dionysios, von meinen Gesprächen für immer eingenommen und Bewunderer dieser Lebensweise; er hoffte, auch Dionysios werde so eingestellt werden. Dieser aber wollte nicht – und das Leben der Stadt der Syrakusaner beunruhigte mich: das Leben eines italiotischen und syrakusanischen Glücks, voll italischer und syrakusanischer Tafeln.
+
+Platon besuchte Syrakus dreimal: 388, 367 und 361 v. Chr. Bei seinem ersten Besuch ließ ihn Dionysios I. als Sklaven verkaufen; ein Freund erkaufte seine Freiheit. Beim zweiten Besuch sollte er den jungen Dionysios II. zum Philosophenkönig erziehen – das Experiment scheiterte grandios. Platons Akademie und seine Idee des „Philosophenkönigs" wurden durch diese Syrakus-Erfahrungen geprägt.
+
+(Plat. Ep. VII, 326b–327a; nach Klaus Schöpsdau, Tusculum-Ausgabe)`,
+    lang: 'Griechisch',
+    note: 'Platons 7. Brief gilt als das einzige authentische Selbstzeugnis des Philosophen. Er beschreibt, wie ihn das üppige Tafelleben Syrakus\' abstieß – „zweimal täglich satt sein und nie allein schlafen" sei nicht der Weg zur Tugend. Der Brief ist auch ein Dokument des politischen Scheiterns: der Versuch, einen Tyrannen durch Philosophie zu zähmen, endete in Gefangenschaft.',
+  },
+  {
+    title: 'Empedokles – Ich bin ein unsterblicher Gott',
+    source: 'Empedokles (ca. 490–430 v. Chr.), Fragment B112 (nach Diels-Kranz)',
+    original: `ὦ φίλοι, οἳ μέγα ἄστυ κατὰ ξανθοῦ Ἀκράγαντος
+ναίετ᾽ ἀν᾽ ἄκρα πόλεος, ἀγαθῶν μελεδήμονες ἔργων,
+ξείνων αἰδοῖοι λιμένες, κακότητος ἄπειροι –
+χαίρετ᾽· ἐγὼ δ᾽ ὑμῖν θεὸς ἄμβροτος, οὐκέτι θνητός,
+πωλεῦμαι μετὰ πᾶσι τετιμένος, ὥσπερ ἔοικα,
+ταινίαις τε περίστεπτος στέφεσίν τε θαλείοις.
+τοῖσίν τε προσίκω κατ᾽ ἄστεα τηλεθάοντα,
+ἀνδράσιν ἠδὲ γυναιξί· σέβονται δέ με μυρίοι,
+οἵτε μαντοσύνας ζητοῦσιν, οἱ δ᾽ ἐπ᾽ ἰήσει
+ἔπεσθαι ζήτεον, δηρὸν δὴ χαλεπῇσι πεπαρμένοι.`,
+    translation: `Freunde, ihr die ihr am Ufer des gelben Akragas wohnt,
+auf der Höhe der Stadt, sorgsam um gute Werke,
+ehrwürdige Häfen für Fremde, unkundig des Bösen –
+seid gegrüßt! Ich aber wandle unter euch als unsterblicher Gott, kein Sterblicher mehr,
+von allen geehrt, wie es sich ziemt,
+bekränzt mit Bändern und blühenden Kränzen.
+Wenn ich in die blühenden Städte komme,
+werde ich von Männern und Frauen verehrt; Zehntausende folgen mir –
+die einen, die nach Weissagung fragen,
+die anderen, die Heilung suchen für lange, schwere Leiden.
+
+(Empedokles, Fragment B112; nach Hermann Diels / Walther Kranz)`,
+    lang: 'Griechisch',
+    note: 'Dieses Fragment des Empedokles ist eines der kühnsten Selbstzeugnisse der Antike: Ein Mensch erklärt sich selbst zum Gott. Empedokles aus Akragas (Agrigento) war Philosoph, Arzt, Politiker und religiöser Wundertäter. Er lehrte die vier Elemente (Feuer, Wasser, Luft, Erde) und die Urkräfte Liebe und Hass. Die Legende, er sei in den Ätna gesprungen um seine Göttlichkeit zu beweisen, ist wohl ein Mythos – aber ein bezeichnender.',
+  },
+  {
+    title: 'Theokrit – Der verliebte Kyklop (Polyphem an Galateia)',
+    source: 'Theokrit (ca. 300–260 v. Chr.), Idyll XI, 19–34',
+    original: `ὦ Γαλάτεια, τί τὸν φιλέοντ᾽ ἀποβάλλῃ,
+λευκοτέρα πακτᾶς ποτιδεῖν, ἁπαλωτέρα ἀρνός,
+μόσχω γαυροτέρα, φιαρωτέρα ὄμφακος ὠμᾶς;
+φοιτῇς δ᾽ αὖθ᾽ οὕτως, ὅκκα γλυκὺς ὕπνος ἔχῃ με,
+οἴχῃ δ᾽ εὐθὺς ἰοῖσ᾽, ὅκκα γλυκὺς ὕπνος ἀνῇ με,
+φεύγεις δ᾽ ὥσπερ ὄις πολιὸν λύκον ἀθρήσασα.
+ἠράσθην μὲν ἔγωγε τεοῦς, κόρα, ἁνίκα πρᾶτον
+ἦνθες ἐμᾷ σὺν ματρὶ θέλοισ᾽ ὑακίνθινα φύλλα
+ἐξ ὄρεος δρέψασθαι, ἐγὼ δ᾽ ὁδὸν ἁγεμόνευον·
+παύσασθαι δ᾽ ἐσιδών τυ καὶ ὕστερον οὐδ᾽ ἔτι πω νῦν
+ἐκ τήνω δύναμαι· τὶν δ᾽ οὐ μέλει, οὐ μὰ Δί᾽, οὐδέν.`,
+    translation: `O Galateia, warum weist du zurück, der dich liebt –
+du, weißer als Quark anzuschauen, zarter als ein Lamm,
+lebhafter als ein junges Rind, reifer als eine unreife Traube?
+Du kommst, wenn der süße Schlaf mich hält,
+und gehst sofort fort, wenn der süße Schlaf mich loslässt;
+du fliehst wie ein Schaf, das den grauen Wolf erblickt hat.
+Ich verliebte mich in dich, Mädchen, als du das erste Mal
+mit deiner Mutter kamst, Hyazinthblätter zu pflücken
+vom Berg, und ich den Weg zeigte;
+und seitdem ich dich gesehen habe, kann ich nicht mehr aufhören –
+bis auf den heutigen Tag. Dir aber, bei Zeus, liegt nichts daran.
+
+(Theokrit, Idyll XI, 19–34; nach Bernd Effe, Tusculum-Ausgabe)`,
+    lang: 'Griechisch (dorischer Dialekt)',
+    note: 'Theokrit aus Syrakus gilt als Begründer der Bukolik (Hirtendichtung) und damit als Vorbild für Vergils Eklogen und die gesamte abendländische Pastoraldichtung. Das 11. Idyll ist eine komische Umkehrung des Polyphem-Mythos: Der gefürchtete Kyklop ist ein plumper Liebhaber, der mit seiner Musik die Meerespnymphe Galateia zu gewinnen versucht – vergeblich. Theokrit macht den Ungeheuer menschlich – und damit tragisch-komisch.',
+  },
+  {
+    title: 'Lukrez – Der Ätna und seine Feuer',
+    source: 'Lukrez (ca. 97–55 v. Chr.), De Rerum Natura VI, 639–646 & 680–686',
+    original: `Nunc age, Aetnaeae quae sint incendia causas
+percipe. primum omnino formidolus hic est
+montis, totus enim vasto consurgit in altum
+vertice, nec facile est aditu tentare propinquo.
+Principio venti vis magnus et impetus urget
+in cavernis terrae magnos quassare tumultus
+atque replere cavas saxis ardentibus oras
+quae subter specus et Cyclopum exesa caminis
+antra tonant validoque incudibus ictus.`,
+    translation: `Wohlan, vernimm nun, was die Feuer des Ätna verursacht.
+Zunächst ist dieser Berg überhaupt schauenerregend –
+er erhebt sich ganz mit gewaltigem Gipfel in die Höhe,
+und es ist nicht leicht, ihm nahe zu treten.
+Vor allem treibt die mächtige Kraft und der Ansturm des Windes
+die großen Erschütterungen in den Höhlen der Erde,
+und füllt die hohlen Räume mit brennenden Felsen –
+darunter donnern die Höhlen, die von den Öfen der Kyklopen ausgehöhlt sind,
+mit den wuchtigen Hammerschlägen auf den Ambossen.
+
+(Lukr. VI, 639–646 & 680–686; nach Karl Büchner)`,
+    lang: 'Lateinisch',
+    note: 'Lukrez erklärt den Ätna nicht durch Götter, sondern durch Naturkräfte: Wind in unterirdischen Hohlräumen. Sein Lehrgedicht „De Rerum Natura" ist das große atomistische Weltbild der Antike – alles erklärt sich durch Atome im leeren Raum. Die Kyklopen-Referenz übernimmt er aus Vergil, aber als poetisches Bild, nicht als Glaubenssatz. Lukrez gilt als Vorgänger der modernen Naturwissenschaft.',
+  },
+  {
+    title: 'Strabon – Geographische Beschreibung Siziliens',
+    source: 'Strabon (ca. 64 v. Chr.–24 n. Chr.), Geographika VI, 2, 1 & 2, 3',
+    original: `Ἡ Σικελία τρίγωνός ἐστι τὸ σχῆμα·
+ὅθεν Τρινακρία μὲν πρότερον, ὕστερον δὲ Θρινακία ἐκλήθη,
+εἶτα Σικελία μετωνομάσθη.
+αἱ δὲ πλευραὶ τρεῖς εἰσιν οὐκ ἴσαι·
+Πελωριὰς μὲν εἰς τὴν Ἰταλίαν νεύουσα τὸ ἄκρον ἔχει
+ἐγγύτατα τῆς Ἰταλίας ...
+πλησίον δ᾽ ἐστὶν ἡ Αἴτνη,
+μέγιστον ὄρος τῆς Σικελίας,
+τῆς κορυφῆς ψιλῆς οὔσης καὶ χιόνος ἀεὶ τὸν χειμῶνα.`,
+    translation: `Sizilien ist von dreieckiger Gestalt; daher wurde es früher Trinakria, dann Thrinakia genannt, schließlich erhielt es den Namen Sikelia. Die drei Seiten sind nicht gleich lang; das Kap Peloria, das nach Italien weist, liegt dem Festland am nächsten ...
+In der Nähe liegt der Ätna, der höchste Berg Siziliens, dessen Gipfel kahl ist und im Winter stets Schnee trägt.
+
+[Über Syrakus:] Syrakus wurde von Archias aus Korinth gegründet, ungefähr zur gleichen Zeit wie Karthago. Thukydides berichtet, dass die Phönizier vor den Griechen an den Vorgebirgen und Inseln um Sizilien siedelten. Als die Griechen in Menge hereinkamen, gaben die Phönizier die meisten Orte auf und hielten sich nur noch bei Motye, Solus und Panormus. Syrakus aber ist die berühmteste Stadt und war immer der Führung am würdigsten.
+
+(Strab. VI, 2, 1 & 2, 4; nach Stefan Radt, Vandenhoeck & Ruprecht)`,
+    lang: 'Griechisch',
+    note: 'Strabon verfasste im augusteischen Zeitalter die erste große Geographie der antiken Welt. Sein Bericht über Sizilien (Geographika VI, 2) ist ein einzigartiges Dokument: Er beschreibt nicht nur Landschaft und Städte, sondern auch Geschichte, Kultur und Wirtschaft. Als gebildeter Grieche schreibt er über eine Insel, die schon lange römisch ist – und bewahrt damit Erinnerungen an eine verschwundene griechische Welt.',
+  },
 ]
 
 const texteGruppen = [
@@ -1813,6 +1958,8 @@ const texteGruppen = [
       'Persephone – Der Raub bei Enna',
       'Polyphem – Der Zyklop und Odysseus',
       'Skylla und Charybdis – Die Meerenge von Messina',
+      'Empedokles – Ich bin ein unsterblicher Gott',
+      'Theokrit – Der verliebte Kyklop (Polyphem an Galateia)',
     ],
   },
   {
@@ -1828,6 +1975,10 @@ const texteGruppen = [
       'Gelon von Gela – Aufstieg zum Tyrannen von Syrakus',
       'Pindar über Ätna und Sizilien',
       'Vergil über Siziliens Küsten',
+      'Thukydides – Die Athener in den Latomien',
+      'Platon – Erfahrungen in Syrakus (7. Brief)',
+      'Lukrez – Der Ätna und seine Feuer',
+      'Strabon – Geographische Beschreibung Siziliens',
     ],
   },
   {

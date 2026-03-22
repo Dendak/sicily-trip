@@ -610,7 +610,7 @@ const sightImages: Record<string, string> = {
   'Cefalù': '/sicily-trip/6-DO-Cefalu.jpg',
   'Solunto': '/sicily-trip/6-DO-Solunto.jpg',
   'Palermo Altstadt': '/sicily-trip/7-FR-Palermo-Altstadt.jpg',
-  'Monreale': images.monreale,
+  'Monreale': '/sicily-trip/7-FR-Monreale.jpg',
   'Monte Pellegrino': 'https://images.unsplash.com/photo-1516986078574-f2f732941c4a?w=800&q=80',
   'Syrakus: Ortigia': '/sicily-trip/4-DI-Siracusa-Arethusa.jpg',
   'Archäologischer Park': 'https://images.unsplash.com/photo-1670694106275-20601b741a63?w=800&q=80',

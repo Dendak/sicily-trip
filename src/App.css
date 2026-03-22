@@ -1955,7 +1955,7 @@
 .region-provinz-name {
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-primary);
   margin-bottom: 0.6rem;
 }
 

@@ -1870,6 +1870,75 @@ der sprudelnden Quelle Arethusa.
     note: 'Die Arethusa-Quelle auf der Halbinsel Ortygia in Syrakus ist noch heute zu sehen – ein kleiner Teich mit Papyrus und Enten direkt am Meer. Der Mythos erklärt, warum das Süßwasser der Quelle trotz Meeresnähe nicht salzig ist: Der Fluß Alpheios aus Olympia fließe unterirdisch durch das Meer, um sich mit seiner Geliebten zu vereinigen. Pausanias, der im 2. Jh. n. Chr. Griechenland bereiste und beschrieb, zitiert dazu das Delphische Orakel als Zeugen.',
   },
   {
+    title: 'Pausanias – Exaenetos aus Agrigento und die 300 Viergespanne',
+    source: 'Pausanias (ca. 115–180 n. Chr.), Periegesis VI, 4, 5–6',
+    original: `Ἐξαίνετος δὲ ὁ Ἀκραγαντῖνος δύο ὀλυμπιάδας τοῖς ἐφεξῆς
+νικήσας σταδίῳ, κατῆλθεν ἐς Ἀκράγαντα
+σὺν ἅρμασιν ἑκατόν τε καὶ τριακοσίοις,
+τῶν ἁρμάτων λευκοὶ πάντων ὄντων τῶν ἵππων.
+ἐπράχθη δὲ καὶ ἄλλο ἐς τιμὴν αὐτοῦ τοιόνδε·
+αἱ γυναῖκες αἱ ἐπιφανέσταται τῆς πόλεως
+ὑπήντησαν ἐξελθοῦσαι, καὶ ἄλλα δῶρα ἐδίδοσαν
+καὶ κοσμήματα τῶν ἑαυτῶν.`,
+    translation: `Exaenetos aus Agrigento, der in zwei aufeinanderfolgenden Olympiaden den Stadionlauf gewann, kehrte nach Agrigento zurück, begleitet von dreihundert Viergespannen, wobei alle Pferde der Gespanne weiß waren. Zu seiner Ehrung geschah auch folgendes: Die angesehensten Frauen der Stadt kamen heraus, um ihn zu empfangen, und überreichten ihm Geschenke und Schmuck aus ihrem eigenen Besitz.
+
+(Pausanias VI, 4, 5–6; nach Ernst Meyer, Artemis-Ausgabe)`,
+    lang: 'Griechisch',
+    note: 'Exaenetos gewann den Stadionlauf in Olympia 412 und 408 v. Chr. – in der Blütezeit Agrigents unter dem Tyrannen Theron. Der Triumphzug mit 300 weißen Viergespannen gibt eine Vorstellung vom Reichtum und Selbstbewusstsein der Stadt, die Pindar als „schönste Sterblichenstadt" pries. Der Einzug mit weißen Pferden erinnert an den Triumphator-Brauch – in Agrigento aber als Bürgerfest, nicht als Herrschaftsgestus.',
+  },
+  {
+    title: 'Pausanias – Gelon und die Weihgaben nach Himera',
+    source: 'Pausanias (ca. 115–180 n. Chr.), Periegesis VI, 9, 4',
+    original: `Γέλων δὲ ὁ Συρακόσιος, νικήσας δὲ τῇ μάχῃ τῇ πρὸς
+Καρχηδονίους τῇ ἐν Ἱμέρᾳ, ἀνέθηκεν εἰς Δελφοὺς
+θυμιατήριον χρυσοῦν.
+ἀνέθηκε δὲ καὶ ἐς Ὀλυμπίαν τρίποδα χρυσοῦν·
+τὰ δὲ ἐς τὴν νίκην ἐκείνην λέγουσι Συρακόσιοί τε
+καὶ Ἀκραγαντῖνοι, ὡς ἐν τῇ αὐτῇ ἡμέρᾳ
+Γέλων μὲν ἐν Σικελίᾳ Καρχηδονίους,
+Θεμιστοκλῆς δὲ ναυμαχῶν ἐνίκα Πέρσας.`,
+    translation: `Gelon aus Syrakus, der in der Schlacht gegen die Karthager bei Himera gesiegt hatte, weihte nach Delphi ein goldenes Räuchergefäß. Er weihte auch nach Olympia einen goldenen Dreifuß. Über jenen Sieg erzählen Syrakusaner und Agrigentiner, dass am selben Tag Gelon in Sizilien die Karthager, Themistokles aber in der Seeschlacht die Perser besiegte.
+
+(Pausanias VI, 9, 4; nach Ernst Meyer, Artemis-Ausgabe)`,
+    lang: 'Griechisch',
+    note: 'Die Parallelität von Himera (480 v. Chr.) und Salamis (480 v. Chr.) war in der Antike ein vielzitierter Topos: Am selben Tag sollten die Griechen im Westen die Karthager und im Osten die Perser besiegt haben – als wäre die Rettung der griechischen Welt ein einziges, koordiniertes Ereignis. Die Weihgaben in Delphi und Olympia zeigen, wie die westgriechischen Tyrannen ihre Siege in panhellenischen Heiligtümern zur Schau stellten und damit Weltruhm beanspruchten.',
+  },
+  {
+    title: 'Pausanias – Demeter und der Raub der Persephone bei Enna',
+    source: 'Pausanias (ca. 115–180 n. Chr.), Periegesis VIII, 46, 2',
+    original: `Δήμητρι δὲ ἐν τῇ Σικελίᾳ μάλιστα τιμαὶ νενέμηνται·
+λέγεται δὲ ὡς ἡ μὲν Κόρη ἡρπάσθη τε αὐτόθι
+καὶ Δήμητρι δὴ ἡ νῆσος αὕτη ἱερά ἐστιν.
+ἔστι δὲ καὶ Ἕνναν πόλιν ἐν μέσῃ μάλιστα τῇ νήσῳ
+ἐφ᾽ ὑψηλοῦ λόφου κειμένην,
+ἐν ᾗ Δήμητρος ἱερόν ἐστιν ἀρχαῖον.`,
+    translation: `Demeter wird auf Sizilien vor allem anderen verehrt. Die Sage lautet, dass die Kore (Persephone) dort entführt wurde und dass diese Insel der Demeter heilig ist. Es gibt auch die Stadt Enna, die auf einem hohen Hügel inmitten der Insel liegt, in der sich ein altes Heiligtum der Demeter befindet.
+
+(Pausanias VIII, 46, 2; nach Ernst Meyer, Artemis-Ausgabe)`,
+    lang: 'Griechisch',
+    note: 'Enna (heute noch Enna) liegt tatsächlich fast genau im geographischen Mittelpunkt Siziliens, auf einem markanten Plateau. Das Demeter-Heiligtum war eines der bedeutendsten Kultzentren der Insel. Pausanias bestätigt hier, was Cicero, Ovid und andere berichten: Sizilien galt in der Antike als das Land der Demeter schlechthin – die mythische Raub-Szene wurde im fruchtbaren Hochland bei Enna verortet, in der Nähe des Lago di Pergusa.',
+  },
+  {
+    title: 'Pausanias – Das athenische Ehrengrab für die Gefallenen in Sizilien',
+    source: 'Pausanias (ca. 115–180 n. Chr.), Periegesis I, 29, 12',
+    original: `ἔστι δὲ καὶ τάφος Εὐριπίδου, κενὸς μέν,
+μνήματι δὲ εἰκὼς ἐπιφανεῖ.
+ἐτελεύτησε δὲ ἐν Μακεδονίᾳ.
+ἐχομένη δέ ἐστι στήλη λίθου λευκοῦ
+ἐφ᾽ ἧς ἐπιγέγραπται·
+„Σικελίας οὓς εἷλεν ἀπεχθομένη τύχα
+ὧδ᾽ ἔχουσι νεκροί·
+τοῖς δ᾽ ἐπιγιγνομένοις
+τοῦτο λέγει τὸ μνῆμα·"
+τοὺς δὲ ἐν Σικελίᾳ ἀποθανόντας τῶν Ἀθηναίων
+ἐνταῦθα φασιν ἐντεθάφθαι.`,
+    translation: `Es gibt auch ein Grab des Euripides, das zwar leer ist, aber einem ansehnlichen Denkmal gleicht. Er starb nämlich in Makedonien. Daneben steht eine Stele aus weißem Stein, auf der geschrieben steht: „Die Toten, welche das feindliche Schicksal in Sizilien gefangen hat, liegen hier; dieses Denkmal sagt es den Nachgeborenen." Die in Sizilien gefallenen Athener, sagt man, seien hier begraben.
+
+(Pausanias I, 29, 12; nach Ernst Meyer, Artemis-Ausgabe)`,
+    lang: 'Griechisch',
+    note: 'Das Keramikeion, der athenische Staatsfriedhof, bewahrte das Andenken an die Katastrophe von 413 v. Chr.: Die sizilische Expedition endete mit der Vernichtung zweier athenischer Heere und Flotten. Die meisten Gefallenen blieben in Sizilien – in den Latomien von Syrakus oder verscharrt auf dem Schlachtfeld. Das Ehrengrab in Athen war ein Kenotaph, ein leeres Grab, das das kollektive Trauma der Stadt bezeugte. Thukydides (VII, 87) nennt es „das bedeutendste Ereignis in diesem Krieg – ja, soweit wir wissen, das bedeutendste in griechischer Geschichte".',
+  },
+  {
     title: 'Empedokles – Ich bin ein unsterblicher Gott',
     source: 'Empedokles (ca. 490–430 v. Chr.), Fragment B112 (nach Diels-Kranz)',
     original: `ὦ φίλοι, οἳ μέγα ἄστυ κατὰ ξανθοῦ Ἀκράγαντος
@@ -1987,6 +2056,7 @@ const texteGruppen = [
       'Polyphem – Der Zyklop und Odysseus',
       'Skylla und Charybdis – Die Meerenge von Messina',
       'Pausanias – Alpheios und Arethusa',
+      'Pausanias – Demeter und der Raub der Persephone bei Enna',
       'Empedokles – Ich bin ein unsterblicher Gott',
       'Theokrit – Der verliebte Kyklop (Polyphem an Galateia)',
     ],
@@ -2002,9 +2072,12 @@ const texteGruppen = [
       'Die Schlacht bei Himera – Gelon besiegt die Karthager',
       'Die Samier und Zankle – Gründung Messinas',
       'Gelon von Gela – Aufstieg zum Tyrannen von Syrakus',
+      'Pausanias – Exaenetos aus Agrigento und die 300 Viergespanne',
+      'Pausanias – Gelon und die Weihgaben nach Himera',
       'Pindar über Ätna und Sizilien',
       'Vergil über Siziliens Küsten',
       'Thukydides – Die Athener in den Latomien',
+      'Pausanias – Das athenische Ehrengrab für die Gefallenen in Sizilien',
       'Platon – Erfahrungen in Syrakus (7. Brief)',
       'Lukrez – Der Ätna und seine Feuer',
       'Strabon – Geographische Beschreibung Siziliens',

@@ -1,0 +1,332 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 530" width="700" height="530">
+  <rect width="700" height="530" fill="white"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- THOLOS – round temple with circular colonnade       -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(100,100)">
+    <!-- outer enclosure suggestion -->
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#ccc" stroke-width="1"/>
+    <!-- 18 columns in ring -->
+    <circle cx="60" cy="0" r="4" fill="black"/>
+    <circle cx="55.4" cy="18.5" r="4" fill="black"/>
+    <circle cx="41.6" cy="34.3" r="4" fill="black"/>
+    <circle cx="22.1" cy="56.5" r="4" fill="black"/>
+    <circle cx="-0.0" cy="60" r="4" fill="black"/>
+    <circle cx="-22.1" cy="56.5" r="4" fill="black"/>
+    <circle cx="-41.6" cy="46.6" r="4" fill="black"/>
+    <circle cx="-55.4" cy="30" r="4" fill="black"/>
+    <circle cx="-60" cy="0" r="4" fill="black"/>
+    <circle cx="-55.4" cy="-18.5" r="4" fill="black"/>
+    <circle cx="-41.6" cy="-34.3" r="4" fill="black"/>
+    <circle cx="-22.1" cy="-56.5" r="4" fill="black"/>
+    <circle cx="0" cy="-60" r="4" fill="black"/>
+    <circle cx="22.1" cy="-56.5" r="4" fill="black"/>
+    <circle cx="41.6" cy="-46.6" r="4" fill="black"/>
+    <circle cx="55.4" cy="-30" r="4" fill="black"/>
+    <circle cx="41.6" cy="46.6" r="4" fill="black"/>
+    <circle cx="-41.6" cy="-46.6" r="4" fill="black"/>
+    <!-- cella (thick circle wall) -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="black" stroke-width="6"/>
+    <!-- number -->
+    <text x="-45" y="-50" font-size="10" font-family="serif" fill="black">54</text>
+    <!-- label -->
+    <text x="0" y="87" font-size="11" font-family="serif" font-style="italic" text-anchor="middle" fill="black">THOLOS</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- ANTENTEMPEL – naos + pronaos, 2 front columns      -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(40,270)">
+    <!-- outer boundary -->
+    <rect x="-40" y="-60" width="80" height="120" fill="none" stroke="#ccc" stroke-width="1"/>
+    <!-- walls: naos + pronaos -->
+    <rect x="-28" y="-55" width="56" height="110" fill="none" stroke="black" stroke-width="5"/>
+    <!-- inner partition (naos front wall) -->
+    <line x1="-28" y1="5" x2="28" y2="5" stroke="black" stroke-width="4"/>
+    <!-- door gap in front -->
+    <line x1="-8" y1="-55" x2="8" y2="-55" stroke="white" stroke-width="6"/>
+    <!-- 2 front columns -->
+    <circle cx="-14" cy="-42" r="4" fill="black"/>
+    <circle cx="14" cy="-42" r="4" fill="black"/>
+    <!-- number -->
+    <text x="-38" y="-65" font-size="10" font-family="serif" fill="black">55</text>
+    <!-- label -->
+    <text x="0" y="80" font-size="10" font-family="serif" font-style="italic" text-anchor="middle" fill="black">ANTENTEMPEL</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- DOPPEL-ANTENTEMPEL – antae on both ends            -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(165,270)">
+    <rect x="-40" y="-60" width="80" height="120" fill="none" stroke="#ccc" stroke-width="1"/>
+    <rect x="-28" y="-55" width="56" height="110" fill="none" stroke="black" stroke-width="5"/>
+    <!-- inner partition front -->
+    <line x1="-28" y1="-15" x2="28" y2="-15" stroke="black" stroke-width="4"/>
+    <!-- inner partition back -->
+    <line x1="-28" y1="15" x2="28" y2="15" stroke="black" stroke-width="4"/>
+    <!-- door gaps -->
+    <line x1="-8" y1="-55" x2="8" y2="-55" stroke="white" stroke-width="6"/>
+    <line x1="-8" y1="55" x2="8" y2="55" stroke="white" stroke-width="6"/>
+    <!-- front 2 columns -->
+    <circle cx="-14" cy="-42" r="4" fill="black"/>
+    <circle cx="14" cy="-42" r="4" fill="black"/>
+    <!-- back 2 columns -->
+    <circle cx="-14" cy="42" r="4" fill="black"/>
+    <circle cx="14" cy="42" r="4" fill="black"/>
+    <text x="-38" y="-65" font-size="10" font-family="serif" fill="black">56</text>
+    <text x="0" y="80" font-size="9.5" font-family="serif" font-style="italic" text-anchor="middle" fill="black">DOPPEL-</text>
+    <text x="0" y="91" font-size="9.5" font-family="serif" font-style="italic" text-anchor="middle" fill="black">ANTENTEMPEL</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PROSTYLOS – front porch with 4 columns            -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(40,430)">
+    <rect x="-40" y="-55" width="80" height="110" fill="none" stroke="#ccc" stroke-width="1"/>
+    <rect x="-28" y="-50" width="56" height="100" fill="none" stroke="black" stroke-width="5"/>
+    <line x1="-28" y1="10" x2="28" y2="10" stroke="black" stroke-width="4"/>
+    <!-- door -->
+    <line x1="-8" y1="-50" x2="8" y2="-50" stroke="white" stroke-width="6"/>
+    <!-- 4 front columns -->
+    <circle cx="-21" cy="-38" r="4" fill="black"/>
+    <circle cx="-7" cy="-38" r="4" fill="black"/>
+    <circle cx="7" cy="-38" r="4" fill="black"/>
+    <circle cx="21" cy="-38" r="4" fill="black"/>
+    <text x="-38" y="-60" font-size="10" font-family="serif" fill="black">57</text>
+    <text x="0" y="70" font-size="10" font-family="serif" font-style="italic" text-anchor="middle" fill="black">PROSTYLOS</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- AMPHI-PROSTYLOS – front + back columns            -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(165,430)">
+    <rect x="-40" y="-55" width="80" height="110" fill="none" stroke="#ccc" stroke-width="1"/>
+    <rect x="-28" y="-50" width="56" height="100" fill="none" stroke="black" stroke-width="5"/>
+    <line x1="-28" y1="-10" x2="28" y2="-10" stroke="black" stroke-width="4"/>
+    <line x1="-28" y1="10" x2="28" y2="10" stroke="black" stroke-width="4"/>
+    <line x1="-8" y1="-50" x2="8" y2="-50" stroke="white" stroke-width="6"/>
+    <line x1="-8" y1="50" x2="8" y2="50" stroke="white" stroke-width="6"/>
+    <!-- front 4 columns -->
+    <circle cx="-21" cy="-38" r="4" fill="black"/>
+    <circle cx="-7" cy="-38" r="4" fill="black"/>
+    <circle cx="7" cy="-38" r="4" fill="black"/>
+    <circle cx="21" cy="-38" r="4" fill="black"/>
+    <!-- back 4 columns -->
+    <circle cx="-21" cy="38" r="4" fill="black"/>
+    <circle cx="-7" cy="38" r="4" fill="black"/>
+    <circle cx="7" cy="38" r="4" fill="black"/>
+    <circle cx="21" cy="38" r="4" fill="black"/>
+    <text x="-38" y="-60" font-size="10" font-family="serif" fill="black">58</text>
+    <text x="0" y="70" font-size="9.5" font-family="serif" font-style="italic" text-anchor="middle" fill="black">AMPHI-</text>
+    <text x="0" y="81" font-size="9.5" font-family="serif" font-style="italic" text-anchor="middle" fill="black">PROSTYLOS</text>
+  </g>
+
+  <!-- DIVIDER -->
+  <line x1="295" y1="20" x2="295" y2="510" stroke="#ccc" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PSEUDO-PERIPTEROS – columns attached to walls      -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(395,145)">
+    <!-- outer boundary / enclosure -->
+    <rect x="-75" y="-125" width="150" height="250" fill="none" stroke="black" stroke-width="1.5"/>
+    <!-- cella (thick) -->
+    <rect x="-50" y="-100" width="100" height="200" fill="none" stroke="black" stroke-width="5.5"/>
+    <!-- inner partition -->
+    <line x1="-50" y1="30" x2="50" y2="30" stroke="black" stroke-width="4"/>
+    <!-- Half-columns along sides (attached = shown as dots ON the wall) -->
+    <!-- right side, 7 columns -->
+    <circle cx="50" cy="-75" r="4" fill="black"/>
+    <circle cx="50" cy="-45" r="4" fill="black"/>
+    <circle cx="50" cy="-15" r="4" fill="black"/>
+    <circle cx="50" cy="15" r="4" fill="black"/>
+    <circle cx="50" cy="45" r="4" fill="black"/>
+    <circle cx="50" cy="75" r="4" fill="black"/>
+    <!-- left side, 7 columns -->
+    <circle cx="-50" cy="-75" r="4" fill="black"/>
+    <circle cx="-50" cy="-45" r="4" fill="black"/>
+    <circle cx="-50" cy="-15" r="4" fill="black"/>
+    <circle cx="-50" cy="15" r="4" fill="black"/>
+    <circle cx="-50" cy="45" r="4" fill="black"/>
+    <circle cx="-50" cy="75" r="4" fill="black"/>
+    <!-- front: 4 free-standing -->
+    <circle cx="-30" cy="-100" r="4" fill="black"/>
+    <circle cx="-10" cy="-100" r="4" fill="black"/>
+    <circle cx="10" cy="-100" r="4" fill="black"/>
+    <circle cx="30" cy="-100" r="4" fill="black"/>
+    <!-- back: 4 free-standing -->
+    <circle cx="-30" cy="100" r="4" fill="black"/>
+    <circle cx="-10" cy="100" r="4" fill="black"/>
+    <circle cx="10" cy="100" r="4" fill="black"/>
+    <circle cx="30" cy="100" r="4" fill="black"/>
+    <text x="-73" y="-132" font-size="10" font-family="serif" fill="black">59</text>
+    <text x="0" y="143" font-size="9.5" font-family="serif" font-style="italic" text-anchor="middle" fill="black">PSEUDO-</text>
+    <text x="0" y="154" font-size="9.5" font-family="serif" font-style="italic" text-anchor="middle" fill="black">PERIPTEROS</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PSEUDO-DIPTEROS – single ring, wide pteroma        -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(600,145)">
+    <!-- outer enclosure -->
+    <rect x="-75" y="-125" width="150" height="250" fill="none" stroke="#ccc" stroke-width="1"/>
+    <!-- single column ring (further from cella than peripteros) -->
+    <!-- front 4 -->
+    <circle cx="-30" cy="-100" r="4" fill="black"/>
+    <circle cx="-10" cy="-100" r="4" fill="black"/>
+    <circle cx="10" cy="-100" r="4" fill="black"/>
+    <circle cx="30" cy="-100" r="4" fill="black"/>
+    <!-- back 4 -->
+    <circle cx="-30" cy="100" r="4" fill="black"/>
+    <circle cx="-10" cy="100" r="4" fill="black"/>
+    <circle cx="10" cy="100" r="4" fill="black"/>
+    <circle cx="30" cy="100" r="4" fill="black"/>
+    <!-- right side 7 -->
+    <circle cx="65" cy="-75" r="4" fill="black"/>
+    <circle cx="65" cy="-50" r="4" fill="black"/>
+    <circle cx="65" cy="-25" r="4" fill="black"/>
+    <circle cx="65" cy="0" r="4" fill="black"/>
+    <circle cx="65" cy="25" r="4" fill="black"/>
+    <circle cx="65" cy="50" r="4" fill="black"/>
+    <circle cx="65" cy="75" r="4" fill="black"/>
+    <!-- left side 7 -->
+    <circle cx="-65" cy="-75" r="4" fill="black"/>
+    <circle cx="-65" cy="-50" r="4" fill="black"/>
+    <circle cx="-65" cy="-25" r="4" fill="black"/>
+    <circle cx="-65" cy="0" r="4" fill="black"/>
+    <circle cx="-65" cy="25" r="4" fill="black"/>
+    <circle cx="-65" cy="50" r="4" fill="black"/>
+    <circle cx="-65" cy="75" r="4" fill="black"/>
+    <!-- cella (thick) – smaller relative to outer ring -->
+    <rect x="-30" y="-80" width="60" height="160" fill="none" stroke="black" stroke-width="5.5"/>
+    <!-- inner partition -->
+    <line x1="-30" y1="25" x2="30" y2="25" stroke="black" stroke-width="4"/>
+    <text x="-73" y="-132" font-size="10" font-family="serif" fill="black">60</text>
+    <text x="0" y="143" font-size="9.5" font-family="serif" font-style="italic" text-anchor="middle" fill="black">PSEUDO-</text>
+    <text x="0" y="154" font-size="9.5" font-family="serif" font-style="italic" text-anchor="middle" fill="black">DIPTEROS</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PERIPTEROS – full single colonnade ring            -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(395,385)">
+    <rect x="-75" y="-110" width="150" height="220" fill="none" stroke="#ccc" stroke-width="1"/>
+    <!-- single column ring, close to cella -->
+    <!-- front 6 -->
+    <circle cx="-42" cy="-82" r="4" fill="black"/>
+    <circle cx="-21" cy="-82" r="4" fill="black"/>
+    <circle cx="0" cy="-82" r="4" fill="black"/>
+    <circle cx="21" cy="-82" r="4" fill="black"/>
+    <circle cx="42" cy="-82" r="4" fill="black"/>
+    <!-- back 6 -->
+    <circle cx="-42" cy="82" r="4" fill="black"/>
+    <circle cx="-21" cy="82" r="4" fill="black"/>
+    <circle cx="0" cy="82" r="4" fill="black"/>
+    <circle cx="21" cy="82" r="4" fill="black"/>
+    <circle cx="42" cy="82" r="4" fill="black"/>
+    <!-- corners front -->
+    <circle cx="-58" cy="-82" r="4" fill="black"/>
+    <circle cx="58" cy="-82" r="4" fill="black"/>
+    <!-- corners back -->
+    <circle cx="-58" cy="82" r="4" fill="black"/>
+    <circle cx="58" cy="82" r="4" fill="black"/>
+    <!-- right side 9 -->
+    <circle cx="58" cy="-60" r="4" fill="black"/>
+    <circle cx="58" cy="-40" r="4" fill="black"/>
+    <circle cx="58" cy="-20" r="4" fill="black"/>
+    <circle cx="58" cy="0" r="4" fill="black"/>
+    <circle cx="58" cy="20" r="4" fill="black"/>
+    <circle cx="58" cy="40" r="4" fill="black"/>
+    <circle cx="58" cy="60" r="4" fill="black"/>
+    <!-- left side 9 -->
+    <circle cx="-58" cy="-60" r="4" fill="black"/>
+    <circle cx="-58" cy="-40" r="4" fill="black"/>
+    <circle cx="-58" cy="-20" r="4" fill="black"/>
+    <circle cx="-58" cy="0" r="4" fill="black"/>
+    <circle cx="-58" cy="20" r="4" fill="black"/>
+    <circle cx="-58" cy="40" r="4" fill="black"/>
+    <circle cx="-58" cy="60" r="4" fill="black"/>
+    <!-- cella (thick) -->
+    <rect x="-36" y="-65" width="72" height="130" fill="none" stroke="black" stroke-width="5.5"/>
+    <!-- inner partition (pronaos) -->
+    <line x1="-36" y1="-20" x2="36" y2="-20" stroke="black" stroke-width="4"/>
+    <text x="-73" y="-117" font-size="10" font-family="serif" fill="black">61</text>
+    <text x="0" y="128" font-size="10" font-family="serif" font-style="italic" text-anchor="middle" fill="black">PERIPTEROS</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- DIPTEROS – full double colonnade ring              -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <g transform="translate(600,385)">
+    <rect x="-75" y="-110" width="150" height="220" fill="none" stroke="#ccc" stroke-width="1"/>
+    <!-- OUTER column ring -->
+    <!-- front outer 6 -->
+    <circle cx="-42" cy="-100" r="3.5" fill="black"/>
+    <circle cx="-21" cy="-100" r="3.5" fill="black"/>
+    <circle cx="0" cy="-100" r="3.5" fill="black"/>
+    <circle cx="21" cy="-100" r="3.5" fill="black"/>
+    <circle cx="42" cy="-100" r="3.5" fill="black"/>
+    <!-- front outer corners -->
+    <circle cx="-63" cy="-100" r="3.5" fill="black"/>
+    <circle cx="63" cy="-100" r="3.5" fill="black"/>
+    <!-- back outer 6 -->
+    <circle cx="-42" cy="100" r="3.5" fill="black"/>
+    <circle cx="-21" cy="100" r="3.5" fill="black"/>
+    <circle cx="0" cy="100" r="3.5" fill="black"/>
+    <circle cx="21" cy="100" r="3.5" fill="black"/>
+    <circle cx="42" cy="100" r="3.5" fill="black"/>
+    <circle cx="-63" cy="100" r="3.5" fill="black"/>
+    <circle cx="63" cy="100" r="3.5" fill="black"/>
+    <!-- right outer side -->
+    <circle cx="63" cy="-76" r="3.5" fill="black"/>
+    <circle cx="63" cy="-52" r="3.5" fill="black"/>
+    <circle cx="63" cy="-28" r="3.5" fill="black"/>
+    <circle cx="63" cy="0" r="3.5" fill="black"/>
+    <circle cx="63" cy="28" r="3.5" fill="black"/>
+    <circle cx="63" cy="52" r="3.5" fill="black"/>
+    <circle cx="63" cy="76" r="3.5" fill="black"/>
+    <!-- left outer side -->
+    <circle cx="-63" cy="-76" r="3.5" fill="black"/>
+    <circle cx="-63" cy="-52" r="3.5" fill="black"/>
+    <circle cx="-63" cy="-28" r="3.5" fill="black"/>
+    <circle cx="-63" cy="0" r="3.5" fill="black"/>
+    <circle cx="-63" cy="28" r="3.5" fill="black"/>
+    <circle cx="-63" cy="52" r="3.5" fill="black"/>
+    <circle cx="-63" cy="76" r="3.5" fill="black"/>
+    <!-- INNER column ring -->
+    <!-- front inner 4 -->
+    <circle cx="-42" cy="-78" r="3.5" fill="black"/>
+    <circle cx="-21" cy="-78" r="3.5" fill="black"/>
+    <circle cx="21" cy="-78" r="3.5" fill="black"/>
+    <circle cx="42" cy="-78" r="3.5" fill="black"/>
+    <circle cx="-63" cy="-78" r="3.5" fill="black"/>
+    <circle cx="63" cy="-78" r="3.5" fill="black"/>
+    <!-- back inner -->
+    <circle cx="-42" cy="78" r="3.5" fill="black"/>
+    <circle cx="-21" cy="78" r="3.5" fill="black"/>
+    <circle cx="21" cy="78" r="3.5" fill="black"/>
+    <circle cx="42" cy="78" r="3.5" fill="black"/>
+    <circle cx="-63" cy="78" r="3.5" fill="black"/>
+    <circle cx="63" cy="78" r="3.5" fill="black"/>
+    <!-- right inner side -->
+    <circle cx="63" cy="-54" r="3.5" fill="black"/>
+    <circle cx="63" cy="-28" r="3.5" fill="black"/>
+    <circle cx="63" cy="0" r="3.5" fill="black"/>
+    <circle cx="63" cy="28" r="3.5" fill="black"/>
+    <circle cx="63" cy="54" r="3.5" fill="black"/>
+    <!-- left inner side -->
+    <circle cx="-63" cy="-54" r="3.5" fill="black"/>
+    <circle cx="-63" cy="-28" r="3.5" fill="black"/>
+    <circle cx="-63" cy="0" r="3.5" fill="black"/>
+    <circle cx="-63" cy="28" r="3.5" fill="black"/>
+    <circle cx="-63" cy="54" r="3.5" fill="black"/>
+    <!-- cella (thick) -->
+    <rect x="-36" y="-58" width="72" height="116" fill="none" stroke="black" stroke-width="5.5"/>
+    <!-- inner partition -->
+    <line x1="-36" y1="-18" x2="36" y2="-18" stroke="black" stroke-width="4"/>
+    <text x="-73" y="-117" font-size="10" font-family="serif" fill="black">62</text>
+    <text x="0" y="128" font-size="10" font-family="serif" font-style="italic" text-anchor="middle" fill="black">DIPTEROS</text>
+  </g>
+
+</svg>

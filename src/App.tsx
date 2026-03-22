@@ -2673,6 +2673,19 @@ function App() {
 
         {/* Tempelformen */}
         <h3 className="arch-subtitle">Griechische Tempelformen</h3>
+
+        {/* Grundriss-Diagramm */}
+        <div className="arch-schema-detail" style={{ margin: '0 0 1.5rem 0', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.78rem', color: 'var(--color-muted)', marginBottom: '0.5rem', fontStyle: 'italic' }}>
+            Grundrissschemata der wichtigsten Tempeltypen (Draufsicht: Punkte = Säulen, dicke Linien = Mauern)
+          </p>
+          <img
+            src="/sicily-trip/arch-tempeltypen.svg"
+            alt="Grundrissdiagramm griechischer Tempeltypen: Tholos, Antentempel, Prostylos, Peripteros, Dipteros u.a."
+            style={{ maxWidth: '100%', width: '660px', border: '1px solid #e0d5c8', borderRadius: '4px', padding: '0.5rem', background: 'white' }}
+          />
+        </div>
+
         <div className="arch-grid">
           {[
             { name: 'Antentempel', desc: 'Einfachste Form: Kultraum (Naos/Cella) + Vorraum (Pronaos) mit zwei Säulen zwischen den Mauerenden (Anten).', beispiel: '' },

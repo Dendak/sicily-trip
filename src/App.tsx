@@ -2516,19 +2516,6 @@ function App() {
           <p>8 Tage durch das kulturelle Herz Siziliens</p>
         </div>
 
-        <div className="route-overview">
-          <h3>Tagesübersicht</h3>
-          <div className="route-days">
-            {days.map(d => (
-              <div key={d.day} className="route-day-mini" onClick={() => { toggleDay(d.day); scrollTo(`day-${d.day}`) }}>
-                <span className="day-num-weekday">{d.weekday}</span>
-                <span className="day-num">Tag {d.day}</span>
-                <p>{d.stops.slice(0, 3).map(s => s.name).join(' \u2013 ')}{d.stops.length > 3 ? ' ...' : ''}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {days.map(d => {
           const isExpanded = expandedDays.includes(d.day)
           return (

@@ -2544,7 +2544,6 @@ function App() {
           >
             <div className="day-accordion-header" onClick={() => toggleDay(d.day)}>
               <span className="day-accordion-badge">{d.weekday.slice(0, 2)}<br/>{d.day}</span>
-              <div className="day-accordion-thumb" style={{ backgroundImage: `url(${d.image})` }} />
               <div className="day-accordion-left">
                 <div className="day-accordion-info">
                   <span className="day-accordion-weekday">{d.weekday}, {d.date}</span>

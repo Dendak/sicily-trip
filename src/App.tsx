@@ -1052,14 +1052,14 @@ const nachspeisen = [
 const texte = [
   {
     title: 'Il ladro di merendine – Montalbano e François',
-    source: 'Andrea Camilleri, Il ladro di merendine (1996)',
+    source: 'Andrea Camilleri (1925–2019), Il ladro di merendine (1996)',
     original: '«Gli confidò cose che mai aveva detto a nessuno, manco a Livia. Il pianto sconsolato di certe notti, con la testa sotto il cuscino perché suo padre non lo sentisse; la disperazione mattutina quando sapeva che non c\'era sua madre in cucina a preparargli la colazione o, qualche anno dopo, la merendina per la scuola. Ed è una mancanza che non viene mai più colmata, te la porti appresso fino in punto di morte.»',
     translation: '„Er vertraute ihm Dinge an, die er nie jemandem gesagt hatte, nicht einmal Livia. Das trostlose Weinen mancher Nächte, den Kopf unter dem Kissen, damit sein Vater es nicht hörte; die Verzweiflung morgens, wenn er wusste, dass die Mutter nicht in der Küche war, um ihm das Frühstück zu machen oder, ein paar Jahre später, die Merendine für die Schule. Und das ist ein Fehlen, das nie wieder ausgefüllt wird – du trägst es bis zum letzten Atemzug mit dir."',
     lang: 'Italienisch',
   },
   {
     title: 'Il commissario Montalbano – Catarella al telefono',
-    source: 'Andrea Camilleri, Montalbano-Reihe – typischer Dialog im Stil Camilleris',
+    source: 'Andrea Camilleri (1925–2019), Montalbano-Reihe – typischer Dialog im Stil Camilleris',
     original: `CATARELLA: Dottori! Dottori! C'è una pirsona che s'apprisenta con il nomi di... aspittassi... di Trantino, no, Tantino...
 MONTALBANO: Catarè, mandamelo.
 CATARELLA: Sissì, Dottori! Ma prima m'ha ditto che la facennia è d'urgentissima urgenza!
@@ -1077,21 +1077,21 @@ CATARELLA: Jawohl, Herr Doktor, Euer Gnaden ist bereits zufriedengestellt!`,
   },
   {
     title: 'Cicero über Syrakus',
-    source: 'Cicero, In Verrem II, 4.117',
+    source: 'Cicero (106–43 v. Chr.), In Verrem II, 4.117',
     original: 'Urbem Syracusas maximam esse Graecarum, pulcherrimam omnium saepe audistis. Est, iudices, ita ut dicitur. Nam et situ est cum munito tum ex omni aditu vel terra vel mari praeclaro ad aspectum.',
     translation: 'Ihr habt oft gehört, dass Syrakus die größte aller griechischen Städte sei, die schönste von allen. So ist es, ihr Richter, wie man sagt. Denn sie ist sowohl durch ihre Lage befestigt als auch von jedem Zugang zu Wasser und zu Land her von prächtigem Anblick.',
     lang: 'Lateinisch',
   },
   {
     title: 'Daidalos und König Kokalos',
-    source: 'Diodoros Sikeliotes, Bibliotheke historike IV, 79 (ca. 60 v. Chr.)',
+    source: 'Diodoros Sikeliotes (ca. 90–30 v. Chr.), Bibliotheke historike IV, 79',
     original: 'Minos, Herr der Meere, rüstete eine Flotte aus und landete an der sizilischen Küste, wo er von König Kokalos die Auslieferung des Daidalos forderte. Kokalos lud ihn als Gast ein – und ließ ihn in einem heißen Bad töten. So fand der mächtige kretische König auf sizilianischem Boden den Tod, und Daidalos blieb frei.',
     translation: '',
     lang: 'Deutsch (nach Diodoros Sikeliotes, griechisches Original)',
   },
   {
     title: 'Per questo mi chiamo Giovanni – La struttura di Cosa Nostra',
-    source: 'Luigi Garlando, Per questo mi chiamo Giovanni (Rizzoli, 2004), S. 38–41',
+    source: 'Luigi Garlando (*1969), Per questo mi chiamo Giovanni (Rizzoli, 2004), S. 38–41',
     original: `«Cosca. Ma è una parola che non si usa quasi più, adesso
 ha un altro significato: gruppo di mafiosi. Cosca o anche
 famiglia. Quando Giovanni tornò a lavorare a Palermo, la città
@@ -1138,14 +1138,14 @@ die die Soldaten oder Picciotti befehligen."`,
   },
   {
     title: 'Goethe über Monte Pellegrino',
-    source: 'Goethe, Italienische Reise (3. April 1787)',
+    source: 'Johann Wolfgang von Goethe (1749–1832), Italienische Reise (3. April 1787)',
     original: 'Der Monte Pellegrino, ein großes Vorgebirge am Meerbusen, [...] ist das schönste Vorgebirge der Welt.',
     translation: '',
     lang: 'Deutsch (Original)',
   },
   {
     title: 'Polyphem – Der Zyklop und Odysseus',
-    source: 'Homer, Odyssee IX, 366–367 (Altgriechisch)',
+    source: 'Homer (ca. 8. Jh. v. Chr.), Odyssee IX, 366–367',
     original: `„Οὖτίς μοι ὄνομά ἐστι· Οὖτιν δέ με κικλήσκουσι
 μήτηρ ἠδὲ πατὴρ ἠδ᾽ ἄλλοι πάντες ἑταῖροι."`,
     translation: '„Niemand ist mein Name; Niemand nennen mich Mutter und Vater und alle anderen Gefährten." – Mit diesem Trick entkommt Odysseus dem geblendeten Zyklopen Polyphem auf Sizilien. Die schwarzen Faraglioni-Felsen bei Aci Trezza (Catania) gelten als die Felsbrocken, die Polyphem nach dem fliehenden Schiff warf.',
@@ -1153,14 +1153,14 @@ die die Soldaten oder Picciotti befehligen."`,
   },
   {
     title: 'Skylla und Charybdis – Die Meerenge von Messina',
-    source: 'Homer, Odyssee XII, 73 (Altgriechisch)',
+    source: 'Homer (ca. 8. Jh. v. Chr.), Odyssee XII, 73',
     original: '„δύο σκόπελοι, ὁ μὲν οὐρανὸν εὐρὺν ἱκάνει / ὀξείῃ κορυφῇ..."',
     translation: '„Zwei Felsen ragen auf – der eine reicht mit spitzer Kuppe bis zum weiten Himmel..." – Die Meerenge von Messina zwischen Sizilien und dem Festland galt in der Antike als Sitz der beiden Ungeheuer: Charybdis, die das Meer dreimal täglich verschlingt, und Skylla mit ihren sechs Köpfen.',
     lang: 'Altgriechisch',
   },
   {
     title: 'Arethusa – Die Nymphe unter dem Meer',
-    source: 'Ovid, Metamorphosen V, 487–490 & 572–576 (Lateinisch)',
+    source: 'Ovid (43 v. Chr.–17 n. Chr.), Metamorphosen V, 487–490 & 572–576',
     original: `pars ego nympharum, quae sunt in Achaide, una fui,
 nec me studiosius altera saltus
 legit nec posuit studiosius altera casses.
@@ -1175,7 +1175,7 @@ sed tamen inferni pollens matrona tyranni.`,
   },
   {
     title: 'Persephone – Der Raub bei Enna',
-    source: 'Ovid, Metamorphosen V, 385–396 (Lateinisch)',
+    source: 'Ovid (43 v. Chr.–17 n. Chr.), Metamorphosen V, 385–396',
     original: `Haud procul Hennaeis lacus est a moenibus altae,
 nomine Pergus, aquae: non illo plura Caystros
 carmina cycnorum labentibus audit in undis.
@@ -1192,14 +1192,14 @@ usque adeo est properatus amor.`,
   },
   {
     title: 'Pindar über Ätna und Sizilien',
-    source: 'Pindar, Pythische Ode 1, 18–28',
+    source: 'Pindar (ca. 522–443 v. Chr.), Pythische Ode 1, 18–28',
     original: '\u1f10\u03bd \u03b4\u2019 \u0391\u1f34\u03c4\u03bd\u1fb3 \u03ba\u03b5\u1fd6\u03c4\u03b1\u03b9 \u03c7\u03b1\u03bc\u03b1\u03b9\u03c0\u03b5\u03c4\u1f72\u03c2 \u03c0\u03b1\u03bd\u03b4\u03ce\u03ba\u03b1\u03c2 \u03c3\u03c4\u1f7b\u03bb\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1, \u03bd\u03b9\u03c6\u03cc\u03b5\u03c3\u03c3\u03b1 \u0391\u1f34\u03c4\u03bd\u03b1, \u03c0\u03ac\u03bd\u03b5\u03c4\u03b5\u03c2 \u03c7\u03b9\u03cc\u03bd\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1\u03c2 \u03c4\u03b9\u03b8\u03ae\u03bd\u03b1.',
     translation: 'Auf dem Ätna aber liegt er, die Säule des Himmels, die alles aufnimmt, der schneebedeckte Ätna, der ganzjährige Nährvater des scharfen Schnees, der himmlischen.',
     lang: 'Griechisch',
   },
   {
     title: 'Così è (se vi pare) – Schlussszene',
-    source: 'Luigi Pirandello, Così è (se vi pare) (1917), III. Akt',
+    source: 'Luigi Pirandello (1867–1936), Così è (se vi pare) (1917), III. Akt',
     original: `IL PREFETTO: Siete la figlia della signora Frola?
 SIGNORA PONZA: E la seconda moglie del signor Ponza, sì.
 IL PREFETTO: No, no – per voi stessa, come siete voi?
@@ -1214,7 +1214,7 @@ LAUDISI: (lachend) Und so, meine Herrschaften, spricht die Wahrheit!`,
   },
   {
     title: 'Die Bürgschaft',
-    source: 'Friedrich Schiller, Die Bürgschaft (1798) – Ballade, spielt in Syrakus',
+    source: 'Friedrich Schiller (1759–1805), Die Bürgschaft (1798) – Ballade, spielt in Syrakus',
     original: `Zu Dionys dem Tyrannen, schlich
 Damon den Dolch im Gewande,
 Ihn schlugen die Häscher in Bande.
@@ -1379,14 +1379,14 @@ In eurem Bunde der Dritte."`,
   },
   {
     title: 'Vergil über Siziliens Küsten',
-    source: 'Vergil, Aeneis III, 692–696 (Lateinisch)',
+    source: 'Vergil (70–19 v. Chr.), Aeneis III, 692–696',
     original: 'Hinc altas cautes proiectaque saxa Pachyni radimus, et fatis numquam concessa moveri apparet Camerina procul campique Geloi, immanisque Gela fluvii cognomine dicta.',
     translation: 'Von hier streifen wir die hohen Klippen und vorspringenden Felsen von Pachynum, und aus der Ferne erscheint Camerina, die das Schicksal nie zu bewegen gestattete, und die Gefilde von Gela, und das gewaltige Gela, nach dem Fluss benannt.',
     lang: 'Lateinisch',
   },
   {
     title: 'Hephaistos am Ätna – Die Schmiede der Götter',
-    source: 'Vergil, Aeneis VIII, 415–422 (Lateinisch)',
+    source: 'Vergil (70–19 v. Chr.), Aeneis VIII, 415–422',
     original: `insula Sicanium iuxta latus Aeoliamque
 erigitur Liparen fumantibus ardua saxis,
 quam subter specus et Cyclopum exesa caminis
@@ -1399,7 +1399,7 @@ Volcani domus et Volcania nomine tellus.`,
   },
   {
     title: 'Die Schlacht bei Himera – Gelon besiegt die Karthager',
-    source: 'Herodot, Historien 7,165–167',
+    source: 'Herodot (ca. 484–425 v. Chr.), Historien 7,165–167',
     original: `Λέγεται δὲ καὶ ὅδε λόγος ὑπὸ τῶν Σικελιητέων,
 ὡς ἄρα Γέλων, καὶ εἰ ἔμελλε ὑπακούσεσθαι τοῖσι Ἕλλησι,
 ὅμως ἂν ἐβοήθεε, εἰ μή Τήρυλλος ὁ Κρινίππου
@@ -1421,7 +1421,7 @@ Am selben Tag aber geschah es, dass Gelon und Theron in Sizilien
   },
   {
     title: 'Gelon von Gela – Aufstieg zum Tyrannen von Syrakus',
-    source: 'Herodot, Historien 7,153–154',
+    source: 'Herodot (ca. 484–425 v. Chr.), Historien 7,153–154',
     original: `Γέλωνος δὲ τοῦ Δεινομένεος πέρι, τοῦ Συρηκουσίων τυράννου, ὧδε ἔχει·
 τῶν Γελώιων πρότερον ἄρχοντος Ἱπποκράτεος …
 Γέλων ἱππάρχης ὢν ἐδόκεε εἶναι τῶν ἄλλων θεραπόντων πολλῷ πρῶτος.
@@ -1440,7 +1440,7 @@ dann aber machte er auch die Syrakusaner … sich untertan.
   },
   {
     title: 'Cicero über Agrigent – Willkür des Verres',
-    source: 'Cicero, Verres 2,2,123–124',
+    source: 'Cicero (106–43 v. Chr.), Verres 2,2,123–124',
     original: `Agrigentini de senatu cooptando Scipionis leges antiquas habent,
 in quibus et illa eadem sancta sunt et hoc amplius:
 cum Agrigentinorum duo genera sint,
@@ -1467,7 +1467,7 @@ sondern brachte auch bei diesen zwei Gruppen von Bürgern völlige Verwirrung.
   },
   {
     title: 'Die Samier und Zankle – Gründung Messinas',
-    source: 'Herodot, Historien 6,22–24',
+    source: 'Herodot (ca. 484–425 v. Chr.), Historien 6,22–24',
     original: `Μίλητος μέν νυν οὕτω κεκένωτο ἀνδρῶν·
 Σαμίων δὲ οἱ χρήματα ἔχοντες …
 ἀπικόμενοι δὲ ἐς Ζάγκλην τῆς Σικελίης …

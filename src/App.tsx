@@ -649,7 +649,7 @@ const days: DayData[] = [
     hotel: 'Hotel Carmine, Marsala (N/F)',
     hotelData: { name: 'Hotel Carmine', mapsQuery: 'Hotel+Carmine+Marsala+Sicily', mapsEmbed: 'Hotel+Carmine,+Marsala,+TP,+Italy' },
     stops: [
-      { name: 'Salzburg – München', desc: 'Flug mit Lufthansa nach Palermo', flight: 'LH 1914' },
+      { name: 'Salzburg – München', desc: 'Flug mit Lufthansa nach Palermo', flight: 'LH 1914', flightTimes: '09:20 Abflug München · 11:20 Ankunft Palermo' },
       { name: 'Segesta', desc: 'Dorischer Tempel (ca. 420 v. Chr.) und Teatro Greco mit Blick auf den Golf von Castellammare', km: '55 km', caption: 'Dorischer Tempel von Segesta' },
       { name: 'Monte Érice', desc: 'Mittelalterliche Altstadt auf 750m Höhe, phönizisch-griechische Gründung, Burg der Venus', km: '45 km', caption: 'Mittelalterliche Gassen der Città Vecchia' },
       { name: 'Trapani', desc: 'Altstadt mit barocken Kirchen und normannischen Spuren', km: '15 km' },
@@ -750,7 +750,7 @@ const days: DayData[] = [
     hotel: '',
     stops: [
       { name: 'Palermo Altstadt', desc: 'Altstadtrundgang: Quattro Canti, Fontana Pretoria, Vucciria-Markt', image: '/sicily-trip/8-SA-Palermo-Altstadt.jpg' },
-      { name: 'Flughafen Palermo', desc: 'Transfer zum Flughafen, Rückflug über München nach Salzburg', km: '40 km', flight: 'LH 1915' },
+      { name: 'Flughafen Palermo', desc: 'Transfer zum Flughafen, Rückflug über München nach Salzburg', km: '40 km', flight: 'LH 1915', flightTimes: '11:55 Abflug Palermo · 13:55 Ankunft München' },
     ]
   },
 ]
@@ -1998,6 +1998,9 @@ function App() {
                           >
                             ✈ {s.flight}
                           </a>
+                        )}
+                        {(s as any).flightTimes && (
+                          <div className="stop-flight-times">{(s as any).flightTimes}</div>
                         )}
                         {hasSight && (
                           <div className="stop-card-hint">

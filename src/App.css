@@ -422,6 +422,26 @@
   gap: 1rem;
 }
 
+.stops-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.stop-item {
+  display: contents;
+}
+
+.stop-detail-inline {
+  grid-column: 1 / -1;
+  margin: 0.5rem 0;
+}
+
+.stop-card-active {
+  outline: 2px solid var(--color-gold);
+  outline-offset: -2px;
+}
+
 .stop-card {
   position: relative;
   border-radius: 12px;
@@ -541,7 +561,7 @@
 }
 
 @media (max-width: 600px) {
-  .stops-grid {
+  .stops-grid, .stops-list {
     grid-template-columns: 1fr;
   }
 }

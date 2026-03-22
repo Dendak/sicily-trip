@@ -2537,65 +2537,64 @@ function App() {
                     </div>
                   </div>
                   <div className="day-card-body">
-                    <div className="stops-grid">
+                    <div className="stops-list">
                       {d.stops.map((s, i) => {
                         const img = s.image || sightImages[s.name]
                         const hasSight = !!sightDetails[s.name]
+                        const sightKey = `${d.day}-${i}`
+                        const isExpanded = expandedSight === sightKey
                         return (
-                          <div
-                            key={i}
-                            className={`stop-card${img ? ' stop-card-has-img' : ''}${hasSight ? ' stop-card-clickable' : ''}`}
-                            onClick={() => {
-                              if (!hasSight) return
-                              const key = `${d.day}-${i}`
-                              const isOpening = expandedSight !== key
-                              setExpandedSight(isOpening ? key : null)
-                              if (isOpening) {
-                                setTimeout(() => {
-                                  const el = document.getElementById(`sight-detail-${key}`)
-                                  el?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
-                                }, 100)
-                              }
-                            }}
-                          >
-                            {img && (
-                              <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
-                            )}
-                            <div className="stop-card-content">
-                              <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
-                              <div className="stop-desc">{s.desc}</div>
-                              {s.flight && (
-                                <a
-                                  className="stop-flight"
-                                  href={`https://www.lufthansa.com/de/de/flugstatus?flightNumber=${s.flight.replace(' ', '')}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  onClick={e => e.stopPropagation()}
-                                >
-                                  ✈ {s.flight}
-                                </a>
+                          <div key={i} className="stop-item">
+                            <div
+                              className={`stop-card${img ? ' stop-card-has-img' : ''}${hasSight ? ' stop-card-clickable' : ''}${isExpanded ? ' stop-card-active' : ''}`}
+                              onClick={() => {
+                                if (!hasSight) return
+                                const isOpening = !isExpanded
+                                setExpandedSight(isOpening ? sightKey : null)
+                                if (isOpening) {
+                                  setTimeout(() => {
+                                    const el = document.getElementById(`sight-detail-${sightKey}`)
+                                    el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                                  }, 150)
+                                }
+                              }}
+                            >
+                              {img && (
+                                <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
                               )}
-                              {s.flightTimes && (
-                                <div className="stop-flight-times">{s.flightTimes}</div>
-                              )}
-                              {hasSight && (
-                                <div className="stop-card-hint">
-                                  <Info size={12} /> Details {expandedSight === `${d.day}-${i}` ? '▲' : '▼'}
-                                </div>
-                              )}
+                              <div className="stop-card-content">
+                                <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
+                                <div className="stop-desc">{s.desc}</div>
+                                {s.flight && (
+                                  <a
+                                    className="stop-flight"
+                                    href={`https://www.lufthansa.com/de/de/flugstatus?flightNumber=${s.flight.replace(' ', '')}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={e => e.stopPropagation()}
+                                  >
+                                    ✈ {s.flight}
+                                  </a>
+                                )}
+                                {s.flightTimes && (
+                                  <div className="stop-flight-times">{s.flightTimes}</div>
+                                )}
+                                {hasSight && (
+                                  <div className="stop-card-hint">
+                                    <Info size={12} /> Details {isExpanded ? '▲' : '▼'}
+                                  </div>
+                                )}
+                              </div>
                             </div>
+                            {isExpanded && sightDetails[s.name] && (
+                              <div id={`sight-detail-${sightKey}`} className="stop-detail-inline">
+                                <SightDetail name={s.name} />
+                              </div>
+                            )}
                           </div>
                         )
                       })}
                     </div>
-                    {/* Full-width sight details below grid */}
-                    {d.stops.map((s, i) => (
-                      expandedSight === `${d.day}-${i}` && sightDetails[s.name] ? (
-                        <div key={`detail-${i}`} id={`sight-detail-${d.day}-${i}`}>
-                          <SightDetail name={s.name} />
-                        </div>
-                      ) : null
-                    ))}
                     <HotelCard hotel={d.hotel} hotelData={d.hotelData} />
                   </div>
                 </motion.div>

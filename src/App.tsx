@@ -1842,6 +1842,34 @@ Platon besuchte Syrakus dreimal: 388, 367 und 361 v. Chr. Bei seinem ersten Besu
     note: 'Platons 7. Brief gilt als das einzige authentische Selbstzeugnis des Philosophen. Er beschreibt, wie ihn das üppige Tafelleben Syrakus\' abstieß – „zweimal täglich satt sein und nie allein schlafen" sei nicht der Weg zur Tugend. Der Brief ist auch ein Dokument des politischen Scheiterns: der Versuch, einen Tyrannen durch Philosophie zu zähmen, endete in Gefangenschaft.',
   },
   {
+    title: 'Pausanias – Alpheios und Arethusa',
+    source: 'Pausanias (ca. 115–180 n. Chr.), Periegesis V, 7, 1–3',
+    original: `Ἀλφειὸς δὲ ποταμῶν τῶν ἐν Πελοποννήσῳ μέγιστος ῥεῖ
+καὶ θέαν παρέχεται καλλίστην·
+λέγεται δὲ ἐς αὐτὸν λόγος,
+ὡς Ἀλφειὸς ἐρωτικῶς διατεθεὶς πρὸς Ἀρέθουσαν
+διώκοι τὴν Ἀρέθουσαν·
+ἣ δὲ οὐ θέλουσα γῆμαι
+πέρασα ἐς τὴν Ὀρτυγίαν τὴν ἀπαντικρὺ Συρακουσῶν
+κρήνη ἐνταῦθα ἐγένετο.
+Ἀλφειῷ δὲ ἔδωκεν ὁ θεὸς ἰέναι διὰ τῆς θαλάσσης,
+καὶ ἐς τὴν Ἀρέθουσαν ἀφικνεῖται συμμιγνύς.
+τούτῳ πεπίστευκε καὶ ὁ θεὸς ὁ ἐν Δελφοῖς·
+
+Ὀρτυγίη τις κεῖται ἐν ἠεροειδέϊ πόντῳ,
+Ἀλφειοῦ πηγαῖς Ἀρεθοίσης στόμασι πλησίον.`,
+    translation: `Kommt man nach Olympia, sieht man den Fluß Alpheios. Er führt viel Wasser, ein wundervoller Anblick. Es gibt die folgende Sage vom Alpheios: Er sei ein Jäger und in die Arethusa verliebt gewesen. Auch sie liebte die Jagd. Arethusa habe aber Alpheios nicht heiraten wollen und sei nach Sizilien auf die Insel Ortygia bei Syrakus geflohen. Dort sei sie in eine Quelle verwandelt worden. Aus Liebe soll dann auch Alpheios sich in einen Fluß verwandelt haben, der durch das Meer fließt und bei Ortygia sein Wasser mit dem der Quelle vermischt. Das sagt auch der Gott in Delphi:
+
+Ortygia liegt im dunkelflutenden Meere,
+wo der Strom Alpheios hervorquillt,
+und sich vereinigt mit dem Wasser
+der sprudelnden Quelle Arethusa.
+
+(Pausanias V, 7, 1–3)`,
+    lang: 'Griechisch',
+    note: 'Die Arethusa-Quelle auf der Halbinsel Ortygia in Syrakus ist noch heute zu sehen – ein kleiner Teich mit Papyrus und Enten direkt am Meer. Der Mythos erklärt, warum das Süßwasser der Quelle trotz Meeresnähe nicht salzig ist: Der Fluß Alpheios aus Olympia fließe unterirdisch durch das Meer, um sich mit seiner Geliebten zu vereinigen. Pausanias, der im 2. Jh. n. Chr. Griechenland bereiste und beschrieb, zitiert dazu das Delphische Orakel als Zeugen.',
+  },
+  {
     title: 'Empedokles – Ich bin ein unsterblicher Gott',
     source: 'Empedokles (ca. 490–430 v. Chr.), Fragment B112 (nach Diels-Kranz)',
     original: `ὦ φίλοι, οἳ μέγα ἄστυ κατὰ ξανθοῦ Ἀκράγαντος
@@ -1958,6 +1986,7 @@ const texteGruppen = [
       'Persephone – Der Raub bei Enna',
       'Polyphem – Der Zyklop und Odysseus',
       'Skylla und Charybdis – Die Meerenge von Messina',
+      'Pausanias – Alpheios und Arethusa',
       'Empedokles – Ich bin ein unsterblicher Gott',
       'Theokrit – Der verliebte Kyklop (Polyphem an Galateia)',
     ],

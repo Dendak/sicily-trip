@@ -2179,6 +2179,51 @@ function HotelCard({ hotel, hotelData }: { hotel: string; hotelData?: HotelData 
   )
 }
 
+// Swipeable photo carousel
+function PhotoCarousel({ photos }: { photos: { url: string; caption: string }[] }) {
+  const [idx, setIdx] = useState(0)
+  const touchStart = { current: 0 }
+
+  const prev = () => setIdx(i => (i - 1 + photos.length) % photos.length)
+  const next = () => setIdx(i => (i + 1) % photos.length)
+
+  if (photos.length === 1) {
+    return (
+      <figure className="sight-photo-single">
+        <img src={photos[0].url} alt={photos[0].caption} loading="lazy" />
+        <figcaption>{photos[0].caption}</figcaption>
+      </figure>
+    )
+  }
+
+  return (
+    <div className="photo-carousel">
+      <div
+        className="photo-carousel-viewport"
+        onTouchStart={e => { touchStart.current = e.touches[0].clientX }}
+        onTouchEnd={e => {
+          const diff = touchStart.current - e.changedTouches[0].clientX
+          if (diff > 50) next()
+          else if (diff < -50) prev()
+        }}
+      >
+        <img src={photos[idx].url} alt={photos[idx].caption} loading="lazy" />
+        <button className="photo-carousel-arrow photo-carousel-prev" onClick={prev} aria-label="Vorheriges Bild">‹</button>
+        <button className="photo-carousel-arrow photo-carousel-next" onClick={next} aria-label="Nächstes Bild">›</button>
+      </div>
+      <figcaption className="photo-carousel-caption">
+        {photos[idx].caption}
+        <span className="photo-carousel-counter">{idx + 1} / {photos.length}</span>
+      </figcaption>
+      <div className="photo-carousel-dots">
+        {photos.map((_, i) => (
+          <button key={i} className={`photo-carousel-dot${i === idx ? ' active' : ''}`} onClick={() => setIdx(i)} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 // Expandable sight detail component
 function SightDetail({ name }: { name: string }) {
   const info = sightDetails[name]
@@ -2202,14 +2247,7 @@ function SightDetail({ name }: { name: string }) {
         </div>
       )}
       {info.photos && info.photos.length > 0 && (
-        <div className="sight-photos">
-          {info.photos.map((p, i) => (
-            <figure key={i} className="sight-photo-item">
-              <img src={p.url} alt={p.caption} loading="lazy" className="sight-photo-img" />
-              <figcaption className="sight-photo-caption">{p.caption}</figcaption>
-            </figure>
-          ))}
-        </div>
+        <PhotoCarousel photos={info.photos} />
       )}
       {info.textBoxes && info.textBoxes.length > 0 && (
         <div className="sight-textboxes">
@@ -2488,7 +2526,8 @@ function App() {
           <div className="route-days">
             {days.map(d => (
               <div key={d.day} className="route-day-mini" onClick={() => { toggleDay(d.day); scrollTo(`day-${d.day}`) }}>
-                <span className="day-num">Tag {d.day} &middot; {d.weekday.slice(0, 2)}</span>
+                <span className="day-num-weekday">{d.weekday}</span>
+                <span className="day-num">Tag {d.day}</span>
                 <p>{d.stops.slice(0, 3).map(s => s.name).join(' \u2013 ')}{d.stops.length > 3 ? ' ...' : ''}</p>
               </div>
             ))}
@@ -2510,7 +2549,6 @@ function App() {
                 <div className="day-accordion-info">
                   <span className="day-accordion-weekday">{d.weekday}, {d.date}</span>
                   <span className="day-accordion-title">{d.title}</span>
-                  {d.hotel && <span className="day-accordion-hotel"><Hotel size={13} /> {d.hotel}</span>}
                 </div>
               </div>
               <div className="day-accordion-chevron">

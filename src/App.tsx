@@ -607,7 +607,7 @@ const sightImages: Record<string, string> = {
   'Alcantara-Schlucht': 'https://images.unsplash.com/photo-1704737035139-d8cc36aea123?w=800&q=80',
   'Taormina': images.taormina,
   'Tindari': '/sicily-trip/6-DO-Tindari.jpg',
-  'Cefalù': images.cefalu,
+  'Cefalù': '/sicily-trip/6-DO-Cefalu.jpg',
   'Solunto': 'https://images.unsplash.com/photo-1668212145518-b9a2a614bbd9?w=800&q=80',
   'Palermo Altstadt': images.palermo,
   'Monreale': images.monreale,
@@ -721,7 +721,7 @@ const days: DayData[] = [
       { name: 'Milazzo', desc: 'Ausgangspunkt für die Äolischen Inseln – Kastell, Altstadt, Hafen', km: '20 km' },
       { name: 'Lipari / Vulcano', desc: 'Äolische Inseln (UNESCO): Lipari mit Castello und Archäologischem Museum, Vulcano mit aktiven Fumarolen', km: '0km', option: 'Option 1' } as any,
       { name: 'Tindari', desc: 'Griechische Kolonie Tyndaris mit Ruinen, antikes Theater und Basilika della Madonna Nera', km: '40 km', option: 'Option 2' } as any,
-      { name: 'Cefalù', desc: 'Normannische Kathedrale San Salvatore (1131) mit byzantinischen Christus-Pantokrator-Mosaiken', km: '115 km' },
+      { name: 'Cefalù', desc: 'Normannische Kathedrale San Salvatore (1131) mit byzantinischen Christus-Pantokrator-Mosaiken', km: '110 km' },
       { name: 'Solunto', desc: 'Hellenistisch-römische Stadt mit Peristylhäusern und Agora auf dem Monte Catalfano', km: '55 km' },
       { name: 'Palermo', desc: 'Ankunft in der sizilianischen Hauptstadt', km: '20 km' },
     ]

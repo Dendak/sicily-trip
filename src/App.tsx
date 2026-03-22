@@ -2504,6 +2504,7 @@ function App() {
             className={`day-accordion${isExpanded ? ' day-accordion-open' : ''}`}
           >
             <div className="day-accordion-header" onClick={() => toggleDay(d.day)}>
+              <div className="day-accordion-thumb" style={{ backgroundImage: `url(${d.image})` }} />
               <div className="day-accordion-left">
                 <span className="day-accordion-badge">Tag {d.day}</span>
                 <div className="day-accordion-info">

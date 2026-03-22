@@ -2699,7 +2699,7 @@ function App() {
 
       {/* Speisen */}
       <section className="section" id="speisen">
-        <div className="section-header section-header-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=800&q=80)' }}>
+        <div className="section-header section-header-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1749767138348-2e5bf1cbcef2?w=800&q=80)' }}>
           <h2>Sizilianische Spezialitäten</h2>
           <div className="section-divider" />
           <p>Kulinarische Höhepunkte der Insel</p>
@@ -3038,7 +3038,7 @@ function App() {
 
       {/* Flora & Fauna */}
       <section className="section" id="natur">
-        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.natur ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1523365280197-f1783db9fe62?w=800&q=80)' }} onClick={() => toggleSection('natur')}>
+        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.natur ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1757065825809-be9beb2104d2?w=800&q=80)' }} onClick={() => toggleSection('natur')}>
           <h2>
             <span className="section-header-icon">🌿</span>
             <span className="section-header-title">Flora &amp; Fauna</span>
@@ -3296,7 +3296,7 @@ function App() {
 
       {/* Persönlichkeiten */}
       <section className="section" id="personen">
-        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.personen ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1553901753-215db344677a?w=800&q=80)' }} onClick={() => toggleSection('personen')}>
+        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.personen ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1759785305113-6354ab0c1b26?w=800&q=80)' }} onClick={() => toggleSection('personen')}>
           <h2>
             <span className="section-header-icon"><Users size={28} /></span>
             <span className="section-header-title">Berühmte Persönlichkeiten</span>

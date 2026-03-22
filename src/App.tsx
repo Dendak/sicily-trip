@@ -582,6 +582,7 @@ interface StopData {
   km?: string
   image?: string
   caption?: string
+  flight?: string
 }
 
 // Sight images from Wikimedia Commons and Unsplash
@@ -634,6 +635,7 @@ interface DayData {
   weekday: string
   title: string
   image: string
+  imagePosition?: string
   hotel: string
   hotelData?: HotelData
   stops: StopData[]
@@ -1986,15 +1988,15 @@ function App() {
                       <div className="stop-card-content">
                         <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
                         <div className="stop-desc">{s.desc}</div>
-                        {(s as any).flight && (
+                        {s.flight && (
                           <a
                             className="stop-flight"
-                            href={`https://www.lufthansa.com/de/de/flugstatus?flightNumber=${(s as any).flight.replace(' ', '')}`}
+                            href={`https://www.lufthansa.com/de/de/flugstatus?flightNumber=${s.flight.replace(' ', '')}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={e => e.stopPropagation()}
                           >
-                            ✈ {(s as any).flight}
+                            ✈ {s.flight}
                           </a>
                         )}
                         {hasSight && (

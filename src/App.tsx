@@ -2090,6 +2090,48 @@ function App() {
             </motion.div>
           ))}
         </div>
+
+        {/* Trinacria */}
+        <h3 className="region-section-title">Trinacria – Flagge und Wahrzeichen</h3>
+        <div className="trinacria-block">
+          <div className="trinacria-flag">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" className="trinacria-flag-svg">
+              {/* Diagonal split: red top-left, yellow bottom-right */}
+              <polygon points="0,0 300,0 0,200" fill="#CE2B37"/>
+              <polygon points="300,0 300,200 0,200" fill="#F5C400"/>
+              {/* Trinacria symbol centered */}
+              <g transform="translate(150,100)">
+                {/* Medusa head */}
+                <circle cx="0" cy="0" r="22" fill="#CE2B37" stroke="#F5C400" strokeWidth="2"/>
+                <circle cx="0" cy="0" r="16" fill="#8B0000"/>
+                {/* Snake details */}
+                <ellipse cx="0" cy="-8" rx="4" ry="5" fill="#F5C400"/>
+                <ellipse cx="-7" cy="-5" rx="3" ry="4" fill="#F5C400" transform="rotate(-30)"/>
+                <ellipse cx="7" cy="-5" rx="3" ry="4" fill="#F5C400" transform="rotate(30)"/>
+                {/* Three legs */}
+                <g fill="#F5C400">
+                  {/* Leg 1 – top */}
+                  <path d="M0,-22 L8,-50 L14,-80 L6,-82 L0,-55 L-6,-82 L-14,-80 L-8,-50 Z" transform="rotate(0)"/>
+                  {/* Leg 2 – lower right */}
+                  <path d="M0,-22 L8,-50 L14,-80 L6,-82 L0,-55 L-6,-82 L-14,-80 L-8,-50 Z" transform="rotate(120)"/>
+                  {/* Leg 3 – lower left */}
+                  <path d="M0,-22 L8,-50 L14,-80 L6,-82 L0,-55 L-6,-82 L-14,-80 L-8,-50 Z" transform="rotate(240)"/>
+                  {/* Wheat ears on legs */}
+                  <ellipse cx="0" cy="-72" rx="4" ry="7" transform="rotate(0)"/>
+                  <ellipse cx="0" cy="-72" rx="4" ry="7" transform="rotate(120)"/>
+                  <ellipse cx="0" cy="-72" rx="4" ry="7" transform="rotate(240)"/>
+                </g>
+              </g>
+            </svg>
+            <div className="trinacria-flag-caption">Flagge der Region Sizilien</div>
+          </div>
+          <div className="trinacria-text">
+            <p>Seit dem Jahr 2000 ist die Trinacria Siziliens offizielle Regionalflagge, doch geht die rot-gelbe Fahne bis mindestens auf die Zeit der Sizilianischen Vesper im 13. Jh. zurück. Ihre Grundfarben beziehen sich auf <strong>Palermo</strong> (Rot) und <strong>Corleone</strong> (Gelb), beides Hochburgen des Widerstands gegen die Franzosen.</p>
+            <p>Der Name <em>Trinacria</em> bzw. <em>Trinakria</em> (griech.: „Insel der drei Kaps") stand bereits in der Antike für Sizilien und bezieht sich auf die drei Landspitzen: <strong>Peloro</strong> (Messina), <strong>Pachino</strong> (Syrakus) und <strong>Lilibeo</strong> (Marsala).</p>
+            <p>Das zentrale Symbol ist eine <strong>Triskele</strong> – drei abgewinkelte Beine, die eine rotierende Bewegung andeuten – mit einem <strong>Medusenhaupt</strong> in der Mitte. Es ist auf der Insel seit griechischer Zeit überliefert. Unter den Römern wurde die Medusa zur freundlicheren Getreidegöttin <em>Ceres</em>, die Schlangen auf dem Kopf wichen <strong>Weizenähren</strong> – Symbol für Siziliens Bedeutung als Kornkammer Roms.</p>
+            <p>Heute zählt die Trinacria, häufig aus Keramik gestaltet, zu den beliebtesten Souvenirs der Insel.</p>
+          </div>
+        </div>
       </section>
 
       {/* Route Overview */}

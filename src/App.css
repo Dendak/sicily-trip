@@ -1941,6 +1941,56 @@
   color: #aaa;
 }
 
+.trinacria-block {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,169,110,0.2);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.trinacria-flag {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.trinacria-flag-svg {
+  width: 180px;
+  height: 120px;
+  border-radius: 6px;
+  border: 1px solid rgba(201,169,110,0.3);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  display: block;
+}
+
+.trinacria-flag-caption {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
+.trinacria-text {
+  flex: 1;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.trinacria-text p {
+  margin-bottom: 0.7rem;
+}
+
+.trinacria-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .trinacria-block { flex-direction: column; align-items: center; }
+}
+
 /* Facts grid */
 .region-fakten-grid {
   display: grid;

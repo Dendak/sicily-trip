@@ -1182,6 +1182,18 @@
   white-space: pre-wrap;
 }
 
+.text-note {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  background: rgba(201,169,110,0.08);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
 .text-label {
   font-family: var(--font-body);
   font-style: normal;

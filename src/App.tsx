@@ -1401,6 +1401,14 @@ usque adeo est properatus amor.`,
     lang: 'Lateinisch',
   },
   {
+    title: 'Die Perser – Der Schlachtruf bei Salamis',
+    source: 'Aischylos (ca. 525–456 v. Chr.), Die Perser (472 v. Chr.), V. 402–405',
+    original: 'ὦ παῖδες Ἑλλήνων ἴτε,\nἐλευθεροῦτε πατρίδ᾽, ἐλευθεροῦτε δὲ\nπαῖδας, γυναῖκας, θεῶν τε πατρῴων ἕδη,\nθήκας τε προγόνων· νῦν ὑπὲρ πάντων ἀγών.',
+    translation: '„Auf, Kinder Griechenlands! Befreit das Vaterland,\nbefreit die Kinder, Frauen, der Götter Throne,\ndie Gräber eurer Ahnen –\njetzt gilt es alles!"',
+    lang: 'Griechisch',
+    note: '„Die Perser" (472 v. Chr.) ist die älteste erhaltene griechische Tragödie und das einzige Stück, das ein zeitgenössisches historisches Ereignis behandelt: die Seeschlacht bei Salamis (480 v. Chr.), in der Griechenland die persische Flotte des Xerxes vernichtend schlug. Aischylos selbst hatte als Soldat an der Schlacht teilgenommen. Das Stück ist aus persischer Perspektive geschrieben – Xerxes und der Geist des Darius trauern um den Untergang – und gilt daher als bemerkenswertes Zeugnis für die Fähigkeit der Griechen, sich in den Feind hineinzuversetzen.',
+  },
+  {
     title: 'Pindar über Ätna und Sizilien',
     source: 'Pindar (ca. 522–443 v. Chr.), Pythische Ode 1, 18–28',
     original: '\u1f10\u03bd \u03b4\u2019 \u0391\u1f34\u03c4\u03bd\u1fb3 \u03ba\u03b5\u1fd6\u03c4\u03b1\u03b9 \u03c7\u03b1\u03bc\u03b1\u03b9\u03c0\u03b5\u03c4\u1f72\u03c2 \u03c0\u03b1\u03bd\u03b4\u03ce\u03ba\u03b1\u03c2 \u03c3\u03c4\u1f7b\u03bb\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1, \u03bd\u03b9\u03c6\u03cc\u03b5\u03c3\u03c3\u03b1 \u0391\u1f34\u03c4\u03bd\u03b1, \u03c0\u03ac\u03bd\u03b5\u03c4\u03b5\u03c2 \u03c7\u03b9\u03cc\u03bd\u03bf\u03c2 \u03bf\u1f50\u03c1\u03b1\u03bd\u03af\u03b1\u03c2 \u03c4\u03b9\u03b8\u03ae\u03bd\u03b1.',
@@ -1712,6 +1720,7 @@ const texteGruppen = [
   {
     label: 'Historisches',
     ids: [
+      'Die Perser – Der Schlachtruf bei Salamis',
       'Cicero über Syrakus',
       'Cicero über Agrigent – Willkür des Verres',
       'Die Schlacht bei Himera – Gelon besiegt die Karthager',
@@ -2383,6 +2392,9 @@ function App() {
                                       <div className="text-label">Deutsche Übersetzung</div>
                                       <div className="text-translation">{t.translation}</div>
                                     </div>
+                                  )}
+                                  {(t as any).note && (
+                                    <div className="text-note">{(t as any).note}</div>
                                   )}
                                 </div>
                               </motion.div>

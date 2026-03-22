@@ -2475,14 +2475,13 @@
   gap: 0.75rem;
   transition: background 0.2s;
   min-height: 56px;
-  overflow: hidden;
 }
 
 .day-accordion-thumb {
-  width: 70px;
-  min-width: 70px;
-  height: 70px;
-  border-radius: 8px 0 0 8px;
+  width: 55px;
+  min-width: 55px;
+  height: 55px;
+  border-radius: 8px;
   background-size: cover;
   background-position: center;
   flex-shrink: 0;
@@ -2509,16 +2508,31 @@
 }
 
 .day-accordion-badge {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--color-accent), var(--color-gold));
   color: white;
-  padding: 0.35rem 0.85rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  width: 40px;
+  min-height: 40px;
+  border-radius: 8px;
+  padding: 4px 0;
   font-weight: 700;
   white-space: nowrap;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.badge-wd {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.badge-num {
+  font-size: 0.95rem;
   min-width: 56px;
   letter-spacing: 0.3px;
 }

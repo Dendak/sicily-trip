@@ -2015,11 +2015,46 @@
   gap: 0.75rem;
 }
 
+.person-body-inner {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.person-body-img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 480px) {
+  .person-body-inner {
+    flex-direction: column;
+  }
+  .person-body-img {
+    width: 80px;
+    height: 100px;
+  }
+}
+
 .person-beschreibung {
   margin: 0;
   font-size: 0.87rem;
   color: var(--color-text-light);
   line-height: 1.55;
+}
+
+.person-sizilien {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: rgba(184, 134, 11, 0.08);
+  border-radius: 6px;
+  border-left: 3px solid var(--color-gold);
 }
 
 .person-herkunft {

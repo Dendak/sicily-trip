@@ -50,10 +50,10 @@ const personenBilder: Record<string, string> = {
   'Agathokles': 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Agathokles_Musei_Vaticani.jpg',
   'Antonello da Messina': 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Antonello_da_Messina_-_Portrait_of_a_Man_-_National_Gallery_London.jpg',
   'Archimedes': 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Domenico-Fetti_Archimedes_1620.jpg',
-  'Charondas': 'https://upload.wikimedia.org/wikipedia/commons/d/db/Illustration_of_the_death_of_Charondas_from_1787.jpg',
+  'Charondas': 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Katane_-_413-403_BC_-_silver_tetradrachm_-_head_of_Apollon_-_charioteer_driving_quadriga_and_Nike_-_M%C3%BCnchen_SMS.jpg',
   'Dionysios I.': 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Dionysius_I_of_Syracuse.jpg',
   'Empedokles': 'https://upload.wikimedia.org/wikipedia/commons/7/79/Empedokles.jpeg',
-  'Epicharmos': 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Pictorial_history_of_Epicarmo%2Cpoet_and_writer.jpg',
+  'Epicharmos': 'https://upload.wikimedia.org/wikipedia/commons/4/44/Dionysos_mask_Louvre_Myr347.jpg',
   'Friedrich II. von Aragon': 'https://upload.wikimedia.org/wikipedia/commons/2/27/Federico_III.jpg',
   'Friedrich II. von Hohenstaufen': 'https://upload.wikimedia.org/wikipedia/commons/d/db/Frederick_II_and_eagle.jpg',
   'Giovanni Falcone': 'https://upload.wikimedia.org/wikipedia/commons/3/36/Giovanni_Falcone%2C_1984.jpg',
@@ -74,6 +74,7 @@ const personenDaten = [
     kategorie: 'Märtyrerin & Heilige',
     herkunft: 'Palermo oder Catania',
     farbe: '#8B3A3A',
+    sizilien: 'Schutzpatronin von Catania – ihr Fest (5. Feb.) ist das wichtigste religiöse Ereignis der Stadt',
     beschreibung: 'Wegen ihrer Treue zum christlichen Glauben unter Kaiser Decius zum Tode verurteilt und hingerichtet. Der Legende nach wurden ihr die Brüste mit Zangen abgeschnitten. Noch zu Lebzeiten das „Idol" vieler Zeitgenossen – Schutzpatronin von Catania.',
   },
   {
@@ -82,6 +83,7 @@ const personenDaten = [
     kategorie: 'König von Sizilien',
     herkunft: 'Rhegion (heute Reggio)',
     farbe: '#8B1A1A',
+    sizilien: 'Erster König von Sizilien – Alleinherrscher von Syrakus, gründete den Sizilischen Städtebund',
     beschreibung: 'Erster „König von Sizilien". Alleinherrscher von Syrakus seit 316 v. Chr., gründete 313 v. Chr. den Sizilischen Städtebund. Griff 311/310 v. Chr. die Karthager sogar in Nordafrika an. Polybios nannte ihn und Dionysios I. „die größten Staatsmänner aller Zeiten".',
   },
   {
@@ -90,6 +92,7 @@ const personenDaten = [
     kategorie: 'Maler',
     herkunft: 'Messina',
     farbe: '#2C6E9E',
+    sizilien: 'Geboren in Messina – einziger sizilianischer Maler von europäischem Rang',
     beschreibung: 'Einziger sizilianischer Maler von europäischem Rang. Studierte in Neapel die altniederländische Malerei van Eycks und verband deren naturalistische Detailtreue mit dem italienischen Sinn für Perspektive. Wirkte in Venedig und beeinflusste die venezianische Malerei nachhaltig.',
   },
   {
@@ -98,6 +101,7 @@ const personenDaten = [
     kategorie: 'Mathematiker & Physiker',
     herkunft: 'Syrakus',
     farbe: '#2C6E9E',
+    sizilien: 'In Syrakus geboren und gestorben – Grab im Archäologischen Park (Tag 4)',
     beschreibung: 'Größter Mathematiker und Physiker der Antike. Entdeckte das Hebelgesetz und den hydrostatischen Auftrieb, erfand die archimedische Schraube zur Wasserförderung. Als Sohn des Hofastronomen Phaidias in Syrakus geboren, kehrte er nach seiner Studienzeit in Alexandria heim und fiel 212 v. Chr. bei der Verteidigung seiner Stadt gegen die Römer.',
   },
   {
@@ -106,6 +110,7 @@ const personenDaten = [
     kategorie: 'Gesetzgeber',
     herkunft: 'Katane (Catania)',
     farbe: '#2D6B4A',
+    sizilien: 'Gesetzgeber von Katane (Catania) – seine Gesetze galten in ganz Sizilien',
     beschreibung: 'Neben Drakon und Solon einer der drei bedeutendsten Gesetzgeber der griechischen Antike. Sein Ruhm stand dem ihrigen in nichts nach. Seine Gesetze galten in den chalkidischen Gründungen Siziliens und Süditaliens und erlangten besonders in Katane und Rhegion Gesetzeskraft.',
   },
   {
@@ -114,6 +119,7 @@ const personenDaten = [
     kategorie: 'Tyrann von Syrakus',
     herkunft: 'Syrakus',
     farbe: '#8B1A1A',
+    sizilien: 'Tyrann von Syrakus – erbaute das Castello Eurialo (Tag 4)',
     beschreibung: 'Ab 405 v. Chr. Alleinherrscher von Syrakus. In 38 Regierungsjahren unterwarf oder zerstörte er Städte, drängte die Karthager aus Westsizilien zurück und dehnte seinen Einfluss über ganz Süditalien aus. Verfasste selbst literarische Werke. Polybios nannte ihn „größten Staatsmann aller Zeiten".',
   },
   {
@@ -122,6 +128,7 @@ const personenDaten = [
     kategorie: 'Philosoph & Arzt',
     herkunft: 'Akragas (Agrigento)',
     farbe: '#7B6B52',
+    sizilien: 'Aus Akragas (Agrigento) – soll freiwillig in den Ätna gesprungen sein',
     beschreibung: 'Schöpfer der Lehre von den vier Elementen (Feuer, Wasser, Erde, Luft) und Religionsgründer. Befasste sich mit Astronomie, Kosmologie, Mathematik und Zoologie. Zu Lebzeiten wie ein Gott verehrt; seine Gestalt faszinierte Goethe, Hölderlin und Brecht. Soll freiwillig in den Ätna gesprungen sein.',
   },
   {
@@ -130,6 +137,7 @@ const personenDaten = [
     kategorie: 'Dichter & Komödienvater',
     herkunft: 'Syrakus',
     farbe: '#2D6B4A',
+    sizilien: 'Wirkte in Syrakus – Erfinder der Komödie am syrakusanischen Hof',
     beschreibung: 'Indem er die altdorische Volksposse zur Kunstform erhob, gilt der Syrakusaner Epicharmos als Erfinder der Komödie. Berühmt waren seine Parodien der Götter und Helden. Sein Sentenzenreichtum brachte ihm den Ruf eines Philosophen ein.',
   },
   {
@@ -138,6 +146,7 @@ const personenDaten = [
     kategorie: 'König von Sizilien',
     herkunft: 'Valencia',
     farbe: '#8B6914',
+    sizilien: 'König von Trinakria – vom sizilianischen Parlament gewählt nach der Sizilianischen Vesper',
     beschreibung: '1297 vom sizilianischen Parlament zum König gewählt. Kämpfte gegen Barcelona, die Anjou und das Papsttum. Schloss 1302 den Friedensvertrag von Caltabellotta, der festlegte, dass das Königreich nach seinem Tod an die Anjou fallen sollte – durfte sich fortan „König von Trinakria" nennen.',
   },
   {
@@ -146,6 +155,7 @@ const personenDaten = [
     kategorie: 'Kaiser & König',
     herkunft: 'Jesi (Marken)',
     farbe: '#8B6914',
+    sizilien: 'König von Sizilien – machte Palermo zum Zentrum arabisch-christlich-jüdischer Gelehrsamkeit',
     beschreibung: '„Stupor Mundi" – Staunen der Welt. König von Sizilien ab 1198, Deutscher König ab 1212, Kaiser des Heiligen Römischen Reiches ab 1220. Von Kind auf von arabischen, byzantinischen und hebräischen Gelehrten umgeben. Palermo war unter ihm Zentrum arabisch-christlich-jüdischer Gelehrsamkeit.',
   },
   {
@@ -154,6 +164,7 @@ const personenDaten = [
     kategorie: 'Richter & Anti-Mafia-Kämpfer',
     herkunft: 'Palermo',
     farbe: '#1A5276',
+    sizilien: 'Aufgewachsen in Palermos La Kalsa – 1992 auf der Autobahn bei Capaci ermordet',
     beschreibung: 'Italiens bekanntester Anti-Mafia-Richter. Aufgewachsen im Palermitaner Arbeiterviertel La Kalsa, studierte er Rechtswissenschaften und wurde Staatsanwalt. Als Leiter des „Pool Antimafia" führte er den historischen „Maxi-Prozesso" (1986–87) durch, bei dem 360 Bosse der Cosa Nostra verurteilt wurden. Am 23. Mai 1992 wurde er zusammen mit seiner Frau und drei Leibwächtern auf der Autobahn bei Capaci durch eine Autobombe ermordet.',
   },
   {
@@ -162,6 +173,7 @@ const personenDaten = [
     kategorie: 'Schriftsteller',
     herkunft: 'Catania',
     farbe: '#2E6B4F',
+    sizilien: 'Geboren in Catania – seine Werke schildern das sizilianische Volksleben',
     beschreibung: 'Begründer des italienischen Verismus. Als Zwanzigjähriger kämpfte er begeistert mit Garibaldis Truppen – bald enttäuscht über die Repressalien. Seine bekanntesten Werke sind „Mastro Don Gesualdo", „Die Malavoglia" und „Cavalleria Rusticana", die Pietro Mascagni 1890 vertonte.',
   },
   {
@@ -170,6 +182,7 @@ const personenDaten = [
     kategorie: 'Sophist & Rhetoriker',
     herkunft: 'Leontinoi (Lentini)',
     farbe: '#5B2D8A',
+    sizilien: 'Aus Leontinoi (Lentini, Prov. Siracusa) – reiste 427 v. Chr. als Gesandter Siziliens nach Athen',
     beschreibung: 'Hauptvertreter der griechischen Sophistik und Vater der rhetorischen Kunstprosa. Reiste 427 v. Chr. als Gesandter nach Athen, wo er als Redner gefeiert und unbezahlbar wurde. Soll mit 110 Jahren entschlossen Speise und Trank verweigert haben, um seinem Leben ein Ende zu setzen.',
   },
   {
@@ -178,6 +191,7 @@ const personenDaten = [
     kategorie: 'Märtyrerin & Heilige',
     herkunft: 'Syrakus',
     farbe: '#8B3A3A',
+    sizilien: 'In Syrakus geboren – Schutzpatronin der Stadt, Grab in der Kirche Santa Lucia',
     beschreibung: 'In Syrakus geboren, war die hl. Agatha ihr Vorbild. Von ihrem eigenen Verlobten angezeigt, erlitt sie den Märtyrertod während der letzten Christenverfolgung unter Diokletian. Schutzpatronin des Lichts und der Sehenden – ihr Festtag (13. Dezember) wird in Skandinavien besonders gefeiert.',
   },
   {
@@ -186,6 +200,7 @@ const personenDaten = [
     kategorie: 'Schriftsteller',
     herkunft: 'Agrigento',
     farbe: '#2E6B4F',
+    sizilien: 'Geboren in Agrigento – Nobelpreis 1934, Geburtshaus heute Museum',
     beschreibung: 'Nobelpreisträger für Literatur 1934. Studierte Philologie in Bonn und promovierte 1891. Ein sizilianischer Schriftsteller führte ihn in die römische Theaterwelt ein. Sein literarisches Werk umfasst Dramen, Novellen und Romane, die dem modernen Theater entscheidende Impulse gaben.',
   },
   {
@@ -194,6 +209,7 @@ const personenDaten = [
     kategorie: 'Richter & Anti-Mafia-Kämpfer',
     herkunft: 'Palermo',
     farbe: '#1A5276',
+    sizilien: 'Aus Palermo – 1992 in der Via d\'Amelio ermordet, Gedenkstätte vor Ort',
     beschreibung: 'Enger Freund und Weggefährte Giovanni Falcones im Kampf gegen die Cosa Nostra. Ebenfalls in La Kalsa aufgewachsen, widmete er sein Leben der Strafverfolgung der Mafia. Nach Falcones Ermordung setzte er seine Arbeit unbeirrt fort, obwohl er wusste, dass sein Tod beschlossene Sache war. Am 19. Juli 1992 wurde er vor dem Haus seiner Mutter in der Via d\'Amelio in Palermo durch eine Autobombe getötet – zusammen mit fünf seiner Leibwächter. Beide Attentate erschütterten Italien und leiteten eine neue Phase der Anti-Mafia-Gesetzgebung ein.',
   },
   {
@@ -202,6 +218,7 @@ const personenDaten = [
     kategorie: 'Normannenkönig',
     herkunft: 'Mileto (Kalabrien)',
     farbe: '#2D6B4A',
+    sizilien: 'Erster König von Sizilien – Krönungsmosaik in der Martorana, Palermo (Tag 7)',
     beschreibung: '1130 zum König von Sizilien gekrönt – als einziger fehlte ihm die Krone. Von Kind auf von arabischen, byzantinischen und hebräischen Gelehrten umgeben. Unter seiner Regierung entwickelte sich Sizilien nicht nur zum bedeutendsten Kulturzentrum, sondern erreichte auch seine größte politische Ausdehnung.',
   },
   {
@@ -210,12 +227,14 @@ const personenDaten = [
     kategorie: 'Heilige & Stadtpatronin',
     herkunft: 'Palermo',
     farbe: '#8B3A6B',
+    sizilien: 'Schutzpatronin Palermos – Heiligtum auf dem Monte Pellegrino (Tag 7)',
     beschreibung: 'Schutzpatronin Palermos aus normannischem Adelsgeschlecht, vermutlich Verwandte Rogers II. Zog sich als junge Frau als Einsiedlerin in eine Höhle auf dem Monte Pellegrino zurück. 1625 wurden ihre Gebeine entdeckt – kurz darauf endete die verheerende Pest in Palermo. Seitdem wird ihr jährlich am 15. Juli das große Festino di Santa Rosalia gefeiert, eines der spektakulärsten Straßenfeste Italiens.',
   },
   {
     name: 'Salvatore Quasimodo',
     lebensdaten: '1901–1968',
     kategorie: 'Dichter',
+    sizilien: 'Aus Modica (Prov. Ragusa) – Nobelpreis 1959, übersetzte griechische Klassiker',
     herkunft: 'Modica',
     farbe: '#2E6B4F',
     beschreibung: 'Nobelpreisträger für Literatur 1959. Sohn eines Bahnhofswärters aus Modica, studierte unter schwierigen Umständen Physik und Mathematik in Rom. 1930 veröffentlichte die Zeitschrift Solaria drei seiner Gedichte. Seine Übersetzungen der griechischen und römischen Klassiker gelten als Meisterwerke.',
@@ -3349,8 +3368,14 @@ function App() {
               <AnimatePresence>
                 {expandedPerson === i && (
                   <motion.div className="person-card-body" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}>
-                    <p className="person-beschreibung">{p.beschreibung}</p>
-                    <div className="person-herkunft"><MapPin size={13} /> {p.herkunft}</div>
+                    <div className="person-body-inner">
+                      {personenBilder[p.name] && <img src={personenBilder[p.name]} alt={p.name} className="person-body-img" loading="lazy" />}
+                      <div>
+                        <p className="person-beschreibung">{p.beschreibung}</p>
+                        {(p as any).sizilien && <div className="person-sizilien">🏝️ <strong>Sizilien-Bezug:</strong> {(p as any).sizilien}</div>}
+                        <div className="person-herkunft"><MapPin size={13} /> {p.herkunft}</div>
+                      </div>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>

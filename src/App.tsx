@@ -672,7 +672,7 @@ const days: DayData[] = [
     day: 3, date: '30. März', weekday: 'Montag',
     title: 'Agrigento – Gela – Piazza Armerina – Noto – Siracusa',
     image: '/sicily-trip/3-MO-Titel-PiazzaArmerina.jpg',
-    imagePosition: 'center 50%',
+    imagePosition: 'center 70%',
     hotel: 'Hotel I Santi Coronati, Siracusa (N/F)',
     hotelData: { name: 'I Santi Coronati', mapsQuery: 'Hotel+I+Santi+Coronati+Siracusa', mapsEmbed: 'I+Santi+Coronati,+Siracusa,+SR,+Italy' },
     stops: [

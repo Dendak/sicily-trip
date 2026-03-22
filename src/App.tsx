@@ -1286,6 +1286,31 @@ CATARELLA: Jawohl, Herr Doktor, Euer Gnaden ist bereits zufriedengestellt!`,
     lang: 'Italienisch (sizilianischer Dialekt)',
   },
   {
+    title: 'Cicero über Sizilien – Insel der Ceres und Persephone',
+    source: 'Cicero (106–43 v. Chr.), In Verrem II, 4, 106–108',
+    original: `Vetus est haec opinio, iudices, quae constat ex antiquissimis
+Graecorum litteris atque monumentis, insulam Siciliam esse
+a Cerere et Libera inventam atque in ea primum fruges repertas esse.
+Huius rei tamquam confirmandae causa, quod in ea terra primum
+exstitisse frumentum arbitrantur, ea frumenti maxima atque
+uberrima repetitur fertilitas.
+
+[…] Nam cum Liberam raptam a Plutone conqueruntur
+et quaerunt Cererem, in hac insula primum sistitur vestigium,
+hic primum luctus est auditus; hinc mater erravit in omnis terras.
+Enna autem, ubi ea quae dixi geruntur, est loco perexcelso atque edito,
+in quo est lacus non magnus, campi patentes, et montes qui eam undique
+cingunt ad caeli regionem pertinentes: quae loca propter divinitatem
+sacra habentur.`,
+    translation: `Es ist eine alte Überzeugung, ihr Richter, die durch die ältesten griechischen Schriften und Zeugnisse bestätigt wird: dass die Insel Sizilien von Ceres und Libera entdeckt worden sei und dass dort zuerst das Getreide gefunden wurde. Gleichsam zur Bestätigung dieser Überlieferung findet sich in jenem Land eine so gewaltige und reiche Getreidefruchtbarkeit, als wolle die Erde selbst anzeigen, dass sie der Ceres gehört.
+
+[…] Denn als Libera (Persephone) von Pluto geraubt wurde und Ceres sie suchend beklagte, da wurde zuerst auf dieser Insel ihre Spur entdeckt, hier wurde zuerst ihr Klagen gehört; von hier irrte die Mutter in alle Länder umher. Enna aber, wo sich dies alles ereignet haben soll, liegt an einem sehr hohen und erhabenen Ort, auf dem sich ein kleiner See befindet, weite Ebenen und Berge, die es ringsum umschließen und bis zum Himmel zu reichen scheinen: diese Orte gelten wegen ihrer Heiligkeit als gottgeweiht.
+
+(Cic. Verr. II, 4, 106–108; nach Theodor Nüßlein, Artemis-Ausgabe)`,
+    lang: 'Lateinisch',
+    note: 'Cicero verbindet in diesem Abschnitt seiner Anklage gegen Verres die Würde Siziliens mit dem Mythos von Demeter und Persephone (lat. Ceres und Libera). Indem er Verres vorwirft, Kultgegenstände aus Enna gestohlen zu haben, stellt er dessen Frevel als Sakrileg gegen die älteste und heiligste Überlieferung der Insel dar. Der See bei Enna ist der heutige Lago di Pergusa – in der Antike galt er als Eingang zur Unterwelt.',
+  },
+  {
     title: 'Cicero über Syrakus',
     source: 'Cicero (106–43 v. Chr.), In Verrem II, 4.117',
     original: 'Urbem Syracusas maximam esse Graecarum, pulcherrimam omnium saepe audistis. Est, iudices, ita ut dicitur. Nam et situ est cum munito tum ex omni aditu vel terra vel mari praeclaro ad aspectum.',
@@ -1795,6 +1820,7 @@ const texteGruppen = [
     ids: [
       'Die Perser – Der Traum der Atossa',
       'Die Perser – Der Schlachtruf bei Salamis',
+      'Cicero über Sizilien – Insel der Ceres und Persephone',
       'Cicero über Syrakus',
       'Cicero über Agrigent – Willkür des Verres',
       'Die Schlacht bei Himera – Gelon besiegt die Karthager',

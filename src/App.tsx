@@ -2646,7 +2646,7 @@ function App() {
 
       {/* Restaurants */}
       <section className="section" id="restaurants">
-        <div className={`section-header section-header-collapsible${collapsedSections.restaurants ? ' collapsed' : ''}`} onClick={() => toggleSection('restaurants')}>
+        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.restaurants ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80)' }} onClick={() => toggleSection('restaurants')}>
           <h2>
             <span className="section-header-icon"><UtensilsCrossed size={28} /></span>
             <span className="section-header-title">Restaurant- & Vinothek-Empfehlungen</span>
@@ -2827,7 +2827,7 @@ function App() {
       {/* Glossar */}
       {/* Architektur */}
       <section className="section" id="architektur">
-        <div className={`section-header section-header-collapsible${collapsedSections.architektur ? ' collapsed' : ''}`} onClick={() => toggleSection('architektur')}>
+        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.architektur ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1605896801461-267e172a3759?w=800&q=80)' }} onClick={() => toggleSection('architektur')}>
           <h2>
             <span className="section-header-icon"><Landmark size={28} /></span>
             <span className="section-header-title">Architektur auf Sizilien</span>
@@ -3056,7 +3056,7 @@ function App() {
 
       {/* Flora & Fauna */}
       <section className="section" id="natur">
-        <div className={`section-header section-header-collapsible${collapsedSections.natur ? ' collapsed' : ''}`} onClick={() => toggleSection('natur')}>
+        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.natur ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1523365280197-f1783db9fe62?w=800&q=80)' }} onClick={() => toggleSection('natur')}>
           <h2>
             <span className="section-header-icon">🌿</span>
             <span className="section-header-title">Flora &amp; Fauna</span>
@@ -3263,7 +3263,7 @@ function App() {
 
       {/* Zeittafel */}
       <section className="section" id="zeittafel">
-        <div className={`section-header section-header-collapsible${collapsedSections.zeittafel ? ' collapsed' : ''}`} onClick={() => toggleSection('zeittafel')}>
+        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.zeittafel ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1555992828-ca4dbe41d294?w=800&q=80)' }} onClick={() => toggleSection('zeittafel')}>
           <h2>
             <span className="section-header-icon"><Clock size={28} /></span>
             <span className="section-header-title">Zeittafel Sizilien</span>
@@ -3314,7 +3314,7 @@ function App() {
 
       {/* Persönlichkeiten */}
       <section className="section" id="personen">
-        <div className={`section-header section-header-collapsible${collapsedSections.personen ? ' collapsed' : ''}`} onClick={() => toggleSection('personen')}>
+        <div className={`section-header section-header-collapsible section-header-bg${collapsedSections.personen ? ' collapsed' : ''}`} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1553901753-215db344677a?w=800&q=80)' }} onClick={() => toggleSection('personen')}>
           <h2>
             <span className="section-header-icon"><Users size={28} /></span>
             <span className="section-header-title">Berühmte Persönlichkeiten</span>

@@ -2576,6 +2576,51 @@
 }
 
 /* ============ COLLAPSIBLE SECTION HEADERS ============ */
+.section-header-bg {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.section-header-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 0;
+}
+
+.section-header-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-header-bg h2,
+.section-header-bg .section-header-title,
+.section-header-bg .section-header-icon svg {
+  color: #fff !important;
+  stroke: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.section-header-bg .section-divider {
+  background: var(--color-gold);
+}
+
+.section-header-bg .section-subtitle {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.section-header-bg .section-toggle-hint {
+  color: rgba(255,255,255,0.8) !important;
+}
+
+.section-header-bg .section-chevron-area svg {
+  color: #fff !important;
+}
+
 .section-header-collapsible {
   cursor: pointer;
   user-select: none;

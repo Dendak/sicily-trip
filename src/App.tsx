@@ -593,7 +593,7 @@ const sightImages: Record<string, string> = {
   'Selinunte': '/sicily-trip/2-SO-Selinunte.jpg',
   'Scala dei Turchi': '/sicily-trip/2-SO-Scala-dei-Turchi.jpg',
   'Porto Empedocle': '/sicily-trip/2-SO-Porto-Empedocle.jpg',
-  'Agrigento': images.agrigento,
+  'Agrigento': '/sicily-trip/2-SO-Agrigento.jpg',
   'Gela': 'https://images.unsplash.com/photo-1727617855734-35b07c4fdfdb?w=800&q=80',
   'Piazza Armerina': 'https://images.unsplash.com/photo-1768910924686-2a2bda2d8ac4?w=800&q=80',
   'Akrai': 'https://images.unsplash.com/photo-1764520684170-afebcdd38506?w=800&q=80',

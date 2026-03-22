@@ -2540,11 +2540,9 @@
 }
 
 .day-accordion-title {
-  font-size: 0.8rem;
-  color: var(--color-text-light);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  line-height: 1.4;
 }
 
 .day-accordion-hotel {

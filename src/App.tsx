@@ -2545,7 +2545,18 @@ function App() {
                           <div
                             key={i}
                             className={`stop-card${img ? ' stop-card-has-img' : ''}${hasSight ? ' stop-card-clickable' : ''}`}
-                            onClick={() => hasSight && setExpandedSight(expandedSight === `${d.day}-${i}` ? null : `${d.day}-${i}`)}
+                            onClick={() => {
+                              if (!hasSight) return
+                              const key = `${d.day}-${i}`
+                              const isOpening = expandedSight !== key
+                              setExpandedSight(isOpening ? key : null)
+                              if (isOpening) {
+                                setTimeout(() => {
+                                  const el = document.getElementById(`sight-detail-${key}`)
+                                  el?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+                                }, 100)
+                              }
+                            }}
                           >
                             {img && (
                               <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
@@ -2580,7 +2591,9 @@ function App() {
                     {/* Full-width sight details below grid */}
                     {d.stops.map((s, i) => (
                       expandedSight === `${d.day}-${i}` && sightDetails[s.name] ? (
-                        <SightDetail key={`detail-${i}`} name={s.name} />
+                        <div key={`detail-${i}`} id={`sight-detail-${d.day}-${i}`}>
+                          <SightDetail name={s.name} />
+                        </div>
                       ) : null
                     ))}
                     <HotelCard hotel={d.hotel} hotelData={d.hotelData} />

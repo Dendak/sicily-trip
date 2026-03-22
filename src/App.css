@@ -593,6 +593,32 @@
   max-width: none;
 }
 
+@media (max-width: 768px) {
+  .sight-detail-panel {
+    padding: 1rem 1rem !important;
+  }
+  .sight-detail-text {
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+  }
+  .sight-detail-title {
+    font-size: 1.1rem !important;
+  }
+  .sight-detail {
+    padding: 1rem !important;
+  }
+  .sight-detail p {
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+  }
+  .sight-detail h4 {
+    font-size: 1.1rem !important;
+  }
+  .sight-plan-img {
+    max-width: 100% !important;
+  }
+}
+
 .sight-facts {
   display: flex;
   flex-wrap: wrap;

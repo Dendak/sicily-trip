@@ -733,7 +733,7 @@ const days: DayData[] = [
     hotel: 'Hotel Posta, Palermo (N/F)',
     hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [
-      { name: 'Palermo Altstadt', desc: 'Normannenpalast mit Cappella Palatina (goldene Mosaiken), Normannendom, Kreuzkuppelkirche La Martorana, archäologisches Museum', bgPosition: 'center 15%' } as any,
+      { name: 'Palermo Altstadt', desc: 'Normannenpalast mit Cappella Palatina (goldene Mosaiken), Normannendom, Kreuzkuppelkirche La Martorana, archäologisches Museum', bgPosition: 'center 10%', bgSize: '100%' } as any,
       { name: 'Monreale', desc: 'Normannische Kathedrale (1174) mit 6.340 m² byzantinischer Goldmosaiken und romanischem Kreuzgang', km: '15 km' },
       { name: `Monte Pellegrino`, desc: `Wallfahrtsort Santa Rosalia – von Goethe als „das schönste Vorgebirge der Welt" gepriesen`, km: `25 km` },
     ]
@@ -1932,7 +1932,7 @@ function App() {
                       onClick={() => hasSight && setExpandedSight(expandedSight === `${d.day}-${i}` ? null : `${d.day}-${i}`)}
                     >
                       {img && (
-                        <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center' }} />
+                        <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
                       )}
                       <div className="stop-card-content">
                         <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>

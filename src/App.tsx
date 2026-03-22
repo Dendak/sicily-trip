@@ -2206,6 +2206,7 @@ function App() {
               ['speisen', 'Speisen'],
               ['texte', 'Texte'],
               ['architektur', 'Architektur'],
+              ['natur', 'Flora & Fauna'],
               ['zeittafel', 'Zeittafel'],
               ['personen', 'Persönlichkeiten'],
               ['glossar', 'Glossar'],
@@ -2876,6 +2877,202 @@ function App() {
               <h4>{d.name}</h4>
               <div style={{ fontSize: '0.78rem', color: 'var(--color-gold)', marginBottom: '0.4rem' }}>{d.zeit}</div>
               <p>{d.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Flora & Fauna */}
+      <section className="section" id="natur">
+        <div className="section-header">
+          <h2>🌿 Flora &amp; Fauna</h2>
+          <div className="section-divider" />
+          <p>Die Natur Siziliens – zwischen Mittelmeer, Ätna und afrikanischem Klima</p>
+        </div>
+
+        {/* Flora */}
+        <h3 className="arch-subtitle">🌱 Markante Pflanzen Siziliens</h3>
+        <div className="arch-grid arch-grid-3">
+          {([
+            {
+              name: 'Ficodindia', lat: 'Opuntia ficus-indica',
+              badge: 'flora', ort: 'Überall auf Sizilien',
+              desc: 'Der Feigenkaktus ist das bekannteste Symbol der sizilianischen Landschaft. Seine leuchtend roten, gelben oder weißen Früchte prägen jeden Straßenrand und jede Steinmauer. Ursprünglich aus Mexiko, ist er seit dem 16. Jh. allgegenwärtig – und aus der sizilianischen Küche nicht wegzudenken.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Opuntia_ficus-indica1.jpg/400px-Opuntia_ficus-indica1.jpg',
+            },
+            {
+              name: 'Blutorange', lat: 'Citrus sinensis „Tarocco" / „Moro"',
+              badge: 'flora', ort: '📍 Ätna-Tiefebene (Tag 4/5)',
+              desc: 'Die berühmteste sizilianische Frucht wächst fast ausschließlich in der Ätna-Tiefebene. Der tiefe Rotton (Anthocyan) entsteht durch nächtliche Kältereize – ein einzigartiges Mikroklima am Fuß des Vulkans. Sorten: Tarocco (mild-süß), Moro (intensiv rot) und Sanguinello.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Blood_oranges.jpg/400px-Blood_oranges.jpg',
+              tipp: true,
+            },
+            {
+              name: 'Papyrus', lat: 'Cyperus papyrus',
+              badge: 'flora', ort: '📍 Fluss Ciane, Siracusa (Tag 3/4)',
+              desc: 'Am Fluss Ciane bei Siracusa wächst das nördlichste natürliche Papyrusvorkommen der Welt außerhalb Afrikas. Die bis zu 4 m hohen Stauden wurden schon in der Antike zur Papierherstellung genutzt. Eine Bootsfahrt auf dem Ciane lohnt sehr.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Cyperus_papyrus_kz1.jpg/400px-Cyperus_papyrus_kz1.jpg',
+              tipp: true,
+            },
+            {
+              name: 'Zwerpalme', lat: 'Chamaerops humilis',
+              badge: 'flora', ort: 'West- und Südküste',
+              desc: 'Die einzige indigene Palme Europas: Diese niedrige, buschige Palme wächst wild in sizilianischen Macchie-Landschaften, vor allem im Westen. Sie überlebt extremen Trockenstress und gilt als Symbol der Resistenz. Im Frühjahr trägt sie gelbe Blütenrispen.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chamaerops_humilis_2.jpg/400px-Chamaerops_humilis_2.jpg',
+            },
+            {
+              name: 'Pistazie aus Bronte', lat: 'Pistacia vera',
+              badge: 'flora', ort: '📍 Bronte / Ätna-Westhang (Tag 5)',
+              desc: 'Auf dem Lavaboden des Ätna-Westhangs gedeihen die berühmtesten Pistazien der Welt. Das vulkanische Gestein verleiht ihnen ein intensiv grünes Fleisch und ein nussig-süßes Aroma. Die Ernte erfolgt alle zwei Jahre im September. Bronte nennt sich stolz „Capitale del Pistacchio".',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Pistachio_Bronte_2.jpg/400px-Pistachio_Bronte_2.jpg',
+              tipp: true,
+            },
+            {
+              name: 'Kapernstrauch', lat: 'Capparis spinosa',
+              badge: 'flora', ort: 'Felsen & Mauern, Pantelleria',
+              desc: 'Der Kapernstrauch wächst aus den kleinsten Gesteinsspalten und ist eine botanische Meisterleistung der Trockenresistenz. Die getrockneten Blütenknospen (Kapern) sind eine unverzichtbare Zutat der sizilianischen Küche – ob in der Caponata, auf der Pizza oder in Pasta puttanesca.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Caper_bush.jpg/400px-Caper_bush.jpg',
+            },
+            {
+              name: 'Johannisbrotbaum', lat: 'Ceratonia siliqua',
+              badge: 'flora', ort: 'Süd- und Westküste',
+              desc: 'Der „Carrubo" kann über 500 Jahre alt werden und ist an der sizilianischen Südküste weit verbreitet. Seine schokoladenbraunen Hülsen (Karobe) galten in der Antike als Nahrung für Arme – und als Gewichte für Goldschmiede (daraus entstand der Begriff „Karat").',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ceratonia_siliqua_fruits.jpg/400px-Ceratonia_siliqua_fruits.jpg',
+            },
+            {
+              name: 'Mandel', lat: 'Prunus dulcis',
+              badge: 'flora', ort: 'Agrigento-Region (Tag 2/3)',
+              desc: 'Sizilien ist einer der größten Mandelerzeuger Europas. Spektakulär ist die Blüte im Februar und März – dann leuchten die Hänge um Agrigento und Selinunte in zartem Weiß und Rosa, noch bevor das Laub austreibt. Das Mandelblütenfest in Agrigento ist weltberühmt.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Almonds_Flickr.jpg/400px-Almonds_Flickr.jpg',
+              tipp: true,
+            },
+            {
+              name: 'Ätna-Birke', lat: 'Betula aetnensis',
+              badge: 'flora', ort: '📍 Ätna ab 1.400 m (Tag 5)',
+              desc: 'Diese endemische Birkenart wächst ausschließlich am Ätna oberhalb von 1.400 m – eine der seltensten Baum-Endemiten Europas. Auf der Auffahrt zum Ätna bildet sie lichte Wälder mit Lärchengebüsch. Im Herbst färbt sie sich goldgelb – ein surrealer Anblick neben schwarzem Lavafeld.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Betula_pendula_Roth_8.jpg/400px-Betula_pendula_Roth_8.jpg',
+              tipp: true,
+            },
+          ] as { name: string; lat: string; badge: string; ort: string; desc: string; img: string; tipp?: boolean }[]).map((p, i) => (
+            <motion.div key={i} className="arch-card arch-card-church" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="arch-card-church-img">
+                <img src={p.img} alt={p.name} loading="lazy" className="arch-card-natur-img" />
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap', marginBottom: '0.1rem' }}>
+                <span className="natur-badge natur-badge-flora">Pflanze</span>
+                {p.tipp && <span className="natur-badge natur-badge-tipp">🗺 Route-Tipp</span>}
+              </div>
+              <div className="natur-lat">{p.lat}</div>
+              <h4 style={{ margin: '0 0 0.3rem 0' }}>{p.name}</h4>
+              <p style={{ fontSize: '0.82rem', lineHeight: 1.55 }}>{p.desc}</p>
+              <div className="arch-beispiel" style={{ marginTop: '0.4rem' }}>📍 {p.ort}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Meerestiere */}
+        <h3 className="arch-subtitle" style={{ marginTop: '2rem' }}>🌊 Tiere – Meer</h3>
+        <div className="arch-grid arch-grid-3">
+          {([
+            {
+              name: 'Roter Thunfisch', lat: 'Thunnus thynnus',
+              ort: 'Tyrrhenisches Meer & Sizilienkanal',
+              desc: 'Der Bluefin-Thunfisch ist eng mit Siziliens Geschichte verwoben. Jahrhundertelang betrieben die Küstenbewohner die rituelle Mattanza – eine Treibjagd mit Netzen, bei der die Thunfische in ein Labyrinth aus Kammern gelenkt wurden. Heute ist die Mattanza verschwunden, der Thunfisch aber bleibt kulinarisches Herzstück.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Pacific_bluefin_tuna.jpg/400px-Pacific_bluefin_tuna.jpg',
+            },
+            {
+              name: 'Schwertfisch', lat: 'Xiphias gladius',
+              ort: '📍 Meerenge von Messina (Tag 6)',
+              desc: 'In der Meerenge von Messina kreuzen sich warme und kühle Meeresströmungen – ideale Bedingungen für den Schwertfisch. Fischer auf der Feluke, einem hohen Ausguckmast, erspähen die Tiere von weitem. Pesce spada alla messinese (mit Kapern, Oliven, Tomaten) ist ein Klassiker der Straßenküche.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Swordfish_breaching.jpg/400px-Swordfish_breaching.jpg',
+              tipp: true,
+            },
+            {
+              name: 'Unechte Karettschildkröte', lat: 'Caretta caretta',
+              ort: 'Südstrände (Vendicari, Linosa)',
+              desc: 'Siziliens Südstrände sind wichtige Nistplätze dieser bedrohten Meeresschildkröte. Die Weibchen kommen im Sommer (Juni–August) nachts an Land und legen bis zu 120 Eier. Das Naturreservat Vendicari (bei Noto) ist ein gesichertes Schutzgebiet – auf Ihrer Route am Tag 3!',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Caretta_caretta_01.jpg/400px-Caretta_caretta_01.jpg',
+              tipp: true,
+            },
+            {
+              name: 'Pottwal', lat: 'Physeter macrocephalus',
+              ort: 'Tyrrhenisches Meer / Ionisches Meer',
+              desc: 'Der Pottwal taucht regelmäßig in den tiefen Gewässern rund um Sizilien auf – vor allem im Tyrrhenischen Meer und der Straße von Messina. Die bis zu 18 m langen Tiere tauchen auf der Jagd nach Tintenfischen in Tiefen von über 1.000 m. Walbeobachtungstouren werden von Milazzo aus angeboten.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sperm-whale2.jpg/400px-Sperm-whale2.jpg',
+            },
+            {
+              name: 'Großer Tümmler', lat: 'Tursiops truncatus',
+              ort: 'Küstengewässer, v.a. Nordküste',
+              desc: 'Delfine sind in sizilianischen Gewässern häufig anzutreffen – oft begleiten sie Fähren oder spielen in der Bugwelle von Schiffen. Vor allem entlang der Nordküste (zwischen Cefalù und Palermo) sowie rund um die Äolischen Inseln sind Sichtungen von Bord aus keine Seltenheit.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tursiops_truncatus_01.jpg/400px-Tursiops_truncatus_01.jpg',
+              tipp: true,
+            },
+          ] as { name: string; lat: string; ort: string; desc: string; img: string; tipp?: boolean }[]).map((t, i) => (
+            <motion.div key={i} className="arch-card arch-card-church" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="arch-card-church-img">
+                <img src={t.img} alt={t.name} loading="lazy" className="arch-card-natur-img" />
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap', marginBottom: '0.1rem' }}>
+                <span className="natur-badge natur-badge-fauna">Meerestier</span>
+                {t.tipp && <span className="natur-badge natur-badge-tipp">🗺 Route-Tipp</span>}
+              </div>
+              <div className="natur-lat">{t.lat}</div>
+              <h4 style={{ margin: '0 0 0.3rem 0' }}>{t.name}</h4>
+              <p style={{ fontSize: '0.82rem', lineHeight: 1.55 }}>{t.desc}</p>
+              <div className="arch-beispiel" style={{ marginTop: '0.4rem' }}>📍 {t.ort}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Vögel & Landtiere */}
+        <h3 className="arch-subtitle" style={{ marginTop: '2rem' }}>🦅 Tiere – Vögel &amp; Land</h3>
+        <div className="arch-grid arch-grid-3">
+          {([
+            {
+              name: 'Eleonorenfalke', lat: 'Falco eleonorae',
+              ort: 'Küstenfelsen, Marettimo, Ustica',
+              desc: 'Einer der elegantesten Zugvögel Europas: Der Eleonorenfalke brütet ausschließlich auf Inseln und Küstenfelsen des Mittelmeers – und synchronisiert seine Brut mit dem Herbstzug der Singvögel, um seine Jungen mit frischer Beute zu versorgen. Im Winter zieht er nach Madagaskar. Benannt nach Eleonore d'Arborea, der sardinischen Fürstin.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Falco_eleonorae_-Majorca%2C_Spain-8.jpg/400px-Falco_eleonorae_-Majorca%2C_Spain-8.jpg',
+            },
+            {
+              name: 'Rosaflamingo', lat: 'Phoenicopterus roseus',
+              ort: '📍 Naturreservat Vendicari (Tag 3)',
+              desc: 'Das Naturreservat Vendicari an der Südostküste Siziliens – direkt auf Ihrer Route zwischen Noto und Siracusa – ist ein bedeutender Rastplatz für Flamingos und Zugvögel. Bis zu 200 Flamingos überwintern hier in den flachen Lagunen. Der kurze Umweg lohnt sich sehr.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Greater_flamingo_Phoenicopterus_roseus_in_Camargue.jpg/400px-Greater_flamingo_Phoenicopterus_roseus_in_Camargue.jpg',
+              tipp: true,
+            },
+            {
+              name: 'Sizilianische Mauereidechse', lat: 'Podarcis waglerianus',
+              ort: 'Steinmauern & Ruinen überall',
+              desc: 'Diese endemische Eidechse ist an jedem antiken Steinmauerwerk zu finden – in Selinunte, Agrigento oder Syrakus huschen sie flink über die Tempelruinen. Das Männchen hat einen charakteristisch blauen Fleck hinter den Vorderbeinen. Die Art ist nur auf Sizilien und einigen vorgelagerten Inseln heimisch.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Podarcis_sicula_male.jpg/400px-Podarcis_sicula_male.jpg',
+            },
+            {
+              name: 'Stachelschwein', lat: 'Hystrix cristata',
+              ort: 'Landesinnere, nachtaktiv',
+              desc: 'Das Stachelschwein ist das größte Nagetier Siziliens und streng nachtaktiv. Mit etwas Glück findet man morgens seine langen Stacheln (bis 35 cm) am Wegesrand. Es ist überraschend laut – beim Schütteln seiner Stacheln erzeugt es ein weithin hörbares Rasseln als Warnsignal.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Hystrix_cristata_qtl1.jpg/400px-Hystrix_cristata_qtl1.jpg',
+            },
+            {
+              name: 'Sizilien als Vogelzug-Drehscheibe', lat: 'Via migratoria del Mediterraneo',
+              ort: 'Gesamte Insel, März–April optimal',
+              desc: 'Sizilien liegt auf einem der wichtigsten Vogelzugrouten Europas. Im Frühjahr (März/April – genau Ihre Reisezeit!) rasten Millionen von Zugvögeln auf der Insel, bevor sie das Mittelmeer überqueren: Weihen, Bussarde, Milane, Störche und unzählige Singvögel. Naturreservate wie Vendicari, Lo Zingaro und Lago di Pergusa sind Hotspots.',
+              img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ciconia_ciconia_-Archena%2C_Murcia%2C_Spain-8.jpg/400px-Ciconia_ciconia_-Archena%2C_Murcia%2C_Spain-8.jpg',
+              tipp: true,
+            },
+          ] as { name: string; lat: string; ort: string; desc: string; img: string; tipp?: boolean }[]).map((v, i) => (
+            <motion.div key={i} className="arch-card arch-card-church" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="arch-card-church-img">
+                <img src={v.img} alt={v.name} loading="lazy" className="arch-card-natur-img" />
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap', marginBottom: '0.1rem' }}>
+                <span className="natur-badge natur-badge-fauna">Tier</span>
+                {v.tipp && <span className="natur-badge natur-badge-tipp">🗺 Route-Tipp</span>}
+              </div>
+              <div className="natur-lat">{v.lat}</div>
+              <h4 style={{ margin: '0 0 0.3rem 0' }}>{v.name}</h4>
+              <p style={{ fontSize: '0.82rem', lineHeight: 1.55 }}>{v.desc}</p>
+              <div className="arch-beispiel" style={{ marginTop: '0.4rem' }}>📍 {v.ort}</div>
             </motion.div>
           ))}
         </div>

@@ -2180,40 +2180,47 @@
 }
 
 .region-provinz-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(201, 169, 110, 0.2);
-  border-radius: 12px;
-  padding: 1.2rem 1rem 1rem;
-  transition: border-color 0.2s, transform 0.2s;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .region-provinz-card:hover {
-  border-color: var(--color-gold);
   transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.region-provinz-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 0.8rem;
 }
 
 .region-provinz-kuerzel {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--color-gold);
   line-height: 1;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .region-provinz-name {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 0.6rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
 .region-provinz-details {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  font-size: 0.8rem;
-  color: #aaa;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.8);
 }
 
 .trinacria-block {

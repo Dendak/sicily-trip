@@ -229,15 +229,15 @@ const regionFakten = [
 ]
 
 const regionProvinzen = [
-  { kuerzel: 'PA', name: 'Palermo',      flaeche: 4992, einwohner: 1195000, hauptstadt: 'Palermo',      hs_ew: 630000 },
-  { kuerzel: 'CT', name: 'Catania',      flaeche: 3552, einwohner: 1100000, hauptstadt: 'Catania',      hs_ew: 310000 },
-  { kuerzel: 'ME', name: 'Messina',      flaeche: 3247, einwohner:  615000, hauptstadt: 'Messina',      hs_ew: 225000 },
-  { kuerzel: 'AG', name: 'Agrigento',    flaeche: 3042, einwohner:  443000, hauptstadt: 'Agrigento',    hs_ew:  59000 },
-  { kuerzel: 'TP', name: 'Trapani',      flaeche: 2461, einwohner:  432000, hauptstadt: 'Trapani',      hs_ew:  67000 },
-  { kuerzel: 'EN', name: 'Enna',         flaeche: 2562, einwohner:  157000, hauptstadt: 'Enna',         hs_ew:  26000 },
-  { kuerzel: 'SR', name: 'Siracusa',     flaeche: 2180, einwohner:  396000, hauptstadt: 'Siracusa',     hs_ew: 120000 },
-  { kuerzel: 'CL', name: 'Caltanissetta',flaeche: 2128, einwohner:  263000, hauptstadt: 'Caltanissetta',hs_ew:  59000 },
-  { kuerzel: 'RG', name: 'Ragusa',       flaeche: 1614, einwohner:  318000, hauptstadt: 'Ragusa',       hs_ew:  73000 },
+  { kuerzel: 'PA', name: 'Palermo',      flaeche: 4992, einwohner: 1195000, hauptstadt: 'Palermo',      hs_ew: 630000, bg: '/sicily-trip/8-SA-Palermo-Altstadt.jpg' },
+  { kuerzel: 'CT', name: 'Catania',      flaeche: 3552, einwohner: 1100000, hauptstadt: 'Catania',      hs_ew: 310000, bg: '/sicily-trip/4-DI-Catania.jpg' },
+  { kuerzel: 'ME', name: 'Messina',      flaeche: 3247, einwohner:  615000, hauptstadt: 'Messina',      hs_ew: 225000, bg: '/sicily-trip/6-DO-Messina.jpg' },
+  { kuerzel: 'AG', name: 'Agrigento',    flaeche: 3042, einwohner:  443000, hauptstadt: 'Agrigento',    hs_ew:  59000, bg: '/sicily-trip/2-SO-Agrigento.jpg' },
+  { kuerzel: 'TP', name: 'Trapani',      flaeche: 2461, einwohner:  432000, hauptstadt: 'Trapani',      hs_ew:  67000, bg: '/sicily-trip/detail-Trapani-Stadtplan.jpg' },
+  { kuerzel: 'EN', name: 'Enna',         flaeche: 2562, einwohner:  157000, hauptstadt: 'Enna',         hs_ew:  26000, bg: '/sicily-trip/3-MO-Piazza-Armerina.jpg' },
+  { kuerzel: 'SR', name: 'Siracusa',     flaeche: 2180, einwohner:  396000, hauptstadt: 'Siracusa',     hs_ew: 120000, bg: '/sicily-trip/4-DI-Siracusa-Arethusa.jpg' },
+  { kuerzel: 'CL', name: 'Caltanissetta',flaeche: 2128, einwohner:  263000, hauptstadt: 'Caltanissetta',hs_ew:  59000, bg: '/sicily-trip/detail-Sizilien-Antike.jpg' },
+  { kuerzel: 'RG', name: 'Ragusa',       flaeche: 1614, einwohner:  318000, hauptstadt: 'Ragusa',       hs_ew:  73000, bg: '/sicily-trip/3-MO-Noto.jpg' },
 ]
 
 // Emoji icons removed – using background images instead
@@ -2461,13 +2461,14 @@ function App() {
         <h3 className="region-section-title">Die 9 Provinzen</h3>
         <div className="region-provinzen-grid">
           {regionProvinzen.map((p, i) => (
-            <motion.div key={i} className="region-provinz-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <div className="region-provinz-kuerzel">{p.kuerzel}</div>
-              <div className="region-provinz-name">{p.name}</div>
-              <div className="region-provinz-details">
-                <span>🏙️ {p.hauptstadt}</span>
-                <span>📐 {p.flaeche.toLocaleString('de-DE')} km²</span>
-                <span>👥 {(p.einwohner / 1000).toFixed(0)}.000 Einw.</span>
+            <motion.div key={i} className="region-provinz-card" style={{ backgroundImage: `url(${p.bg})` }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+              <div className="region-provinz-overlay">
+                <div className="region-provinz-kuerzel">{p.kuerzel}</div>
+                <div className="region-provinz-name">{p.name}</div>
+                <div className="region-provinz-details">
+                  <span>{p.flaeche.toLocaleString('de-DE')} km²</span>
+                  <span>{(p.einwohner / 1000).toFixed(0)}.000 Einw.</span>
+                </div>
               </div>
             </motion.div>
           ))}

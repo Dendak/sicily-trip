@@ -615,7 +615,7 @@ const sightImages: Record<string, string> = {
   'Archäologischer Park': 'https://images.unsplash.com/photo-1670694106275-20601b741a63?w=800&q=80',
   'Grab des Archimedes': 'https://images.unsplash.com/photo-1725255922252-4b4ab90c9477?w=800&q=80',
   'Milazzo / Tindari': 'https://images.unsplash.com/photo-1710092880781-3cbee5b05d85?w=800&q=80',
-  'Siracusa': images.siracusa,
+  'Siracusa': '/sicily-trip/3-MO-Siracusa-Duomo.jpg',
 }
 
 interface HotelData {

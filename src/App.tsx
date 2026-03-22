@@ -404,7 +404,7 @@ const OrdnungCard = ({ o }: { o: OrdnungData }) => {
 }
 
 // Detailed sight information database
-const sightDetails: Record<string, { summary: string; detail: string; wikipedia?: string; planUrl?: string; facts?: string[]; photos?: {url: string; caption: string}[] }> = {
+const sightDetails: Record<string, { summary: string; detail: string; wikipedia?: string; planUrl?: string; facts?: string[]; photos?: {url: string; caption: string}[]; textBoxes?: {title: string; content: string}[] }> = {
   'Segesta': {
     summary: 'Bedeutende Stadt der Elymer im Nordwesten Siziliens mit einem der besterhaltenen dorischen Tempel Europas.',
     detail: 'Segesta wurde im 7. Jh. v. Chr. von den Elymern gegründet, die sich auf trojanische Vorfahren beriefen. Der dorische Tempel (ca. 420 v. Chr.) misst 26 × 61 Meter mit 36 Säulen aus Travertin. Die Säulen wurden nie kanneliert und die Cella fehlt – der Tempel wurde vermutlich nie vollendet. Thukydides berichtet (VI, 6), dass die Segestaner 415 v. Chr. Athen um Hilfe gegen das mächtige Selinunt baten und dabei ihren Reichtum demonstrierten – was zur verhängnisvollen Sizilienexpedition Athens führte, die Thukydides als „die größte Katastrophe der griechischen Geschichte" bezeichnete. Der Historiker Diodor (XI, 21) überliefert, dass die Elymer sich auf die Trojaner als Vorfahren beriefen: Aeneas soll hier auf seiner Flucht aus Troja gelandet sein. Das Theater (3. Jh. v. Chr.) wurde unter Hieron II. in den Monte Barbaro gehauen. Mit 63 m Durchmesser bietet es 4.000 Zuschauern Platz und einen spektakulären Blick auf den Golf von Castellammare.',
@@ -415,6 +415,9 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
       { url: '/sicily-trip/1-SA-Segesta.jpg', caption: 'Dorischer Tempel von Segesta' },
       { url: '/sicily-trip/detail-Segesta-2.jpg', caption: 'Tempel im Abendlicht' },
       { url: '/sicily-trip/detail-Segesta-3.jpg', caption: 'Teatro Greco, Monte Barbaro' },
+      { url: '/sicily-trip/detail-Segesta-4.jpg', caption: 'Tempel – Detailansicht' },
+      { url: '/sicily-trip/detail-Segesta-Goethe.jpg', caption: 'Tempel – Goethe-Perspektive' },
+      { url: '/sicily-trip/detail-Segesta-Theater-Rekonstruktion.jpg', caption: 'Theater – antike Rekonstruktion' },
     ]
   },
   'Monte Érice': {
@@ -431,7 +434,14 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: 'Hafenstadt an der Westspitze Siziliens mit barockem Stadtkern und lebhafter Altstadt.',
     detail: `Trapani (griech. Drepanon, „Sichel") verdankt seinen Namen der sichelförmigen Landzunge. Die Stadt war ein wichtiger punischer Hafen und Schauplatz der Seeschlacht von Drepana (249 v. Chr.) im Ersten Punischen Krieg, bei der Konsul Publius Claudius Pulcher die heiligen Hühner ins Meer werfen ließ, als sie nicht fressen wollten – mit den Worten „Dann sollen sie eben trinken!" (Valerius Maximus I, 4, 3). Er verlor die Schlacht und fast 100 Schiffe. Die Altstadt besticht durch barocke Kirchen, den Fischmarkt und die arabisch beeinflusste Architektur. Unter den Arabern (827–1072) war Trapani ein bedeutendes Handelszentrum. Berühmt sind die Prozessionen der Misteri am Karfreitag – 20 lebensgroße Figurengruppen aus dem 17./18. Jh., die 24 Stunden durch die Stadt getragen werden.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Trapani',
-    facts: ['Gegründet: 8. Jh. v. Chr.', 'Seeschlacht 249 v. Chr.', 'Heilige-Hühner-Episode', 'Misteri (Karfreitag)', 'Tor zu den Ägadischen Inseln']
+    facts: ['Gegründet: 8. Jh. v. Chr.', 'Seeschlacht 249 v. Chr.', 'Heilige-Hühner-Episode', 'Misteri (Karfreitag)', 'Tor zu den Ägadischen Inseln'],
+    photos: [
+      { url: '/sicily-trip/detail-Trapani-Stadtplan.jpg', caption: 'Stadtplan Trapani' },
+      { url: '/sicily-trip/detail-Trapani-Postamt.jpg', caption: 'Historisches Postamt Trapani' },
+    ],
+    textBoxes: [
+      { title: 'Die Salinen der Provinz Trapani', content: 'Der Ursprung der Salinen von Trapani geht möglicherweise bis auf die Phönizier zurück, schriftlich belegt ist ihre Existenz durch Plinius den Älteren im 1. Jh. n. Chr. Der hohe Salzgehalt des Meerwassers, die geringen Niederschläge, hohen Temperaturen und häufigen Winde ermöglichen die Produktion von Salz während sechs Monaten im Jahr. Noch in den 30er-Jahren produzierten die damals 53 Salinen von Trapani 200.000 Tonnen Salz pro Jahr. Heute arbeiten wieder insgesamt fast 30 Salinen entlang der Via del Sale, produzieren auf 800 Hektar Fläche pro Jahr rund 100.000 Tonnen Salz. Die alten Salinen-Gebäude wurden restauriert, darunter insgesamt fünf Windmühlen.' },
+    ]
   },
   'Marsala': {
     summary: 'Berühmt für den gleichnamigen Wein und das im Museum ausgestellte punische Kriegsschiff.',
@@ -440,6 +450,9 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     facts: ['Antik: Lilybaeum', 'Punisches Schiff (3. Jh. v. Chr.)', 'Honor Frost (1971)', 'Garibaldi 1860', 'Marsala-Wein ab 1773'],
     photos: [
       { url: '/sicily-trip/detail-Marsala-1.jpg', caption: 'Marsala – Salinen und Altstadt' },
+    ],
+    textBoxes: [
+      { title: 'La Mattanza – Schlacht um den Thun', content: 'Seit etlichen Jahren ist die Mattanza (die letzte fand 2007 statt) Geschichte – aber nicht immer war es so. Die traditionelle Jagd nach den großen Fischen, die mit Langleinen Tage und neun Jahrhunderte lang betrieben werden, findet Ende April bis Anfang Mai statt. Im Durchschnitt der letzten zwei Jahrzehnte wurden etwa tausend Thunfische pro Jahr gefangen. Drei Schiffe sichern die Westseite, während der Rais (arab. Anführer) mit der Mehrheit der Männer, in der Mitte des Getümmels von einem Schiff, rückwärts, nach dem Anweisungen des Rais dem Netz folgte. Die Mattanza ist gänzlich verboten.' },
     ]
   },
   'Cave di Cusa': {
@@ -457,6 +470,11 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     photos: [
       { url: '/sicily-trip/2-SO-Selinunte.jpg', caption: 'Tempel E (Hera-Tempel)' },
       { url: '/sicily-trip/detail-Selinunte-1.jpg', caption: 'Tempel im archäologischen Park' },
+      { url: '/sicily-trip/detail-Selinunte-TempelE.jpg', caption: 'Tempel E – Nahaufnahme' },
+      { url: '/sicily-trip/detail-Selinunte-Rekonstruktion.jpg', caption: 'Rekonstruktion der Tempelanlage' },
+      { url: '/sicily-trip/detail-Selinunte-TempelRekonstruktion.jpg', caption: 'Tempel – antike Rekonstruktionszeichnung' },
+      { url: '/sicily-trip/detail-Selinunte-Demeter.jpg', caption: 'Demeterheiligtum' },
+      { url: '/sicily-trip/detail-Selinunte-Karte.jpg', caption: 'Karte des archäologischen Parks' },
     ]
   },
   'Scala dei Turchi': {
@@ -474,20 +492,32 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     photos: [
       { url: '/sicily-trip/2-SO-Agrigento.jpg', caption: 'Concordia-Tempel im Tal der Tempel' },
       { url: '/sicily-trip/detail-Agrigento-1.jpg', caption: 'Concordia-Tempel bei Nacht' },
+      { url: '/sicily-trip/detail-Agrigento-Ekklesiasterion.jpg', caption: 'Ekklesiasterion – antike Volksversammlung' },
+      { url: '/sicily-trip/detail-Agrigento-Karte.jpg', caption: 'Karte des Archäologischen Parks' },
+    ],
+    textBoxes: [
+      { title: 'Göttlicher Empedokles', content: 'Der um 490 v. Chr. in Akragas geborene Empedokles war ein echtes Multitalent: Philosoph, demokratischer Politiker, Arzt und Dichter. Von ihm stammt die These, die Welt bestehe aus den vier Grundelementen Feuer, Wasser, Luft und Erde. Durch die Urkräfte Liebe und Hass auf ewig in Bewegung gehalten, vermischten sich diese Elemente beständig. Er forderte die Abschaffung der Sklaverei und der Tieropfer. Bei der Bevölkerung war er hauptsächlich seiner praktischen Ideen wegen beliebt: Die kollabierende Kanalisation von Selinunt brachte er durch Umleitung zweier Bäche in Schwung, und seine Heimatstadt befreite er vom Gestank der Sümpfe, indem er als Luftschneise eine künstliche Schlucht in die Hügel von Akragas schlagen ließ. „Nicht mehr als Mensch, als unsterblicher Gott wandl ich unter euch" – so rief er in einem seiner Lieder.' },
     ]
   },
   'Gela': {
     summary: 'Bedeutende griechische Kolonie – Geburtsort des Tyrannen Gelon und Sterbeort des Aischylos.',
     detail: 'Gela wurde 688 v. Chr. von Kolonisten aus Rhodos und Kreta gegründet. Hier wuchs Gelon auf, der 485 v. Chr. Syrakus eroberte und es zur mächtigsten Stadt der griechischen Welt machte. 480 v. Chr. schlug er die Karthager bei Himera – am selben Tag, so die Überlieferung, als die Griechen bei Salamis die Perser besiegten. Aischylos, der Vater der griechischen Tragödie, starb hier 456 v. Chr. – laut Plinius (X, 7) soll ein Adler eine Schildkröte auf seinen kahlen Kopf fallen gelassen haben, die er für einen Felsen hielt. Der Dichter selbst soll als Grabinschrift nur seine Teilnahme an der Schlacht von Marathon erwähnt haben, nicht seine Dramen. Das Museum zeigt bemalte Terrakotta-Sarkophage und die berühmten Münzen mit dem Flussgott Gelas auf einem Stier.',
     wikipedia: 'https://en.wikipedia.org/wiki/Gela',
-    facts: ['Gegründet: 688 v. Chr.', 'Tyrann Gelon', 'Aischylos † 456 v. Chr.', 'Schlacht bei Himera 480', 'Berühmte Münzprägung']
+    facts: ['Gegründet: 688 v. Chr.', 'Tyrann Gelon', 'Aischylos † 456 v. Chr.', 'Schlacht bei Himera 480', 'Berühmte Münzprägung'],
+    textBoxes: [
+      { title: 'Die tödliche Schildkröte', content: '„Das Ende des Dichters Aischylos war zwar kein freiwilliges, dennoch ist es wegen seiner Besonderheit bemerkenswert. Er machte einen Spaziergang außerhalb der sizilischen Stadt, in der er sich aufhielt, und setzte sich an einer sonnigen Stelle nieder. Da flog über ihm ein Adler mit einer Schildkröte in den Klauen, wurde durch den Glanz seines Kopfes getäuscht – er war nämlich von Haaren entblößt – und warf auf diesen, als wäre er ein Stein, das Tier hinab, damit es zerschmettere. Dieser Wurf tötete den Erfinder und Meister des höheren Trauerspiels." — Valerius Maximus. Geschehen 456 v. Chr. zu Gela. Von Aischylos stammt z.B. das Drama „Die Perser".' },
+    ]
   },
   'Piazza Armerina': {
     summary: 'Die Villa Romana del Casale mit 3.500 m² spätantiken Mosaiken – UNESCO-Weltkulturerbe.',
     detail: `Die Villa Romana del Casale (3.–4. Jh. n. Chr.) gehörte vermutlich einem Angehörigen der senatorischen Aristokratie, möglicherweise Lucius Aradius Valerius Proculus, der 340 n. Chr. Konsul war – oder sogar Kaiser Maximian (Mitregent Diokletians). Die 3.500 m² Bodenmosaiken sind die umfangreichsten der gesamten Antike, geschaffen von nordafrikanischen Werkstätten. Die „Bikini-Mädchen" zeigen junge Frauen beim Diskuswurf, Laufen und Ballspiel – das früheste Zeugnis weiblicher Sportbekleidung. Die Große Jagdszene (66 m Korridor) zeigt den Fang exotischer Tiere für die Arenen Roms: Löwen, Tiger, Nashörner, Elefanten. Die Mosaiken der kleinen Jagd zeigen eine Opferszene an die Göttin Diana. Nach einer Überschwemmung im 12. Jh. wurde die Villa verschüttet und erst 1929 durch den Archäologen Paolo Orsi wiederentdeckt.`,
     wikipedia: 'https://en.wikipedia.org/wiki/Villa_Romana_del_Casale',
     planUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Villa-del-Casale-plan-color-bjs-1.jpg',
-    facts: [`3.–4. Jh. n. Chr.`, `3.500 m² Mosaiken`, `UNESCO seit 1997`, `„Bikini-Mädchen"`, `Große Jagdszene: 66 m`, `Wiederentdeckt 1929`]
+    facts: [`3.–4. Jh. n. Chr.`, `3.500 m² Mosaiken`, `UNESCO seit 1997`, `„Bikini-Mädchen"`, `Große Jagdszene: 66 m`, `Wiederentdeckt 1929`],
+    photos: [
+      { url: '/sicily-trip/3-MO-Piazza-Armerina.jpg', caption: 'Bikini-Mädchen-Mosaik' },
+      { url: '/sicily-trip/detail-PiazzaArmerina-Plan.jpg', caption: 'Grundriss der Villa Romana del Casale' },
+    ]
   },
   'Akrai': {
     summary: 'Syrakusanische Kolonie mit griechischem Theater und Aphroditetempel in den Ibleischen Bergen.',
@@ -499,7 +529,11 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: `Die „Hauptstadt des sizilianischen Barocks" – UNESCO-Weltkulturerbe nach dem Erdbeben von 1693.`,
     detail: 'Noto wurde nach dem verheerenden Erdbeben von 1693 (ca. 60.000 Tote in Ostsizilien) komplett neu aufgebaut – und zwar an einem neuen Standort, 10 km vom zerstörten Noto Antica entfernt. Die Barockarchitektur aus dem lokalen goldgelben Kalkstein, der im Abendlicht warm leuchtet, macht die Stadt einzigartig. Höhepunkte sind die Cattedrale di San Nicolò (deren Kuppel 1996 einstürzte und 2007 restauriert wurde), der Palazzo Ducezio (Rathaus), die Chiesa di San Domenico und der Palazzo Nicolaci mit seinen fantastischen Balkonen mit Pferden, Löwen und Meerjungfrauen. Seit 2002 UNESCO-Weltkulturerbe.',
     wikipedia: 'https://en.wikipedia.org/wiki/Noto',
-    facts: ['Neubau nach Erdbeben 1693', 'UNESCO seit 2002', 'Goldgelber Kalkstein', 'Palazzo Nicolaci: Fantastische Balkone']
+    facts: ['Neubau nach Erdbeben 1693', 'UNESCO seit 2002', 'Goldgelber Kalkstein', 'Palazzo Nicolaci: Fantastische Balkone'],
+    photos: [
+      { url: '/sicily-trip/3-MO-Noto.jpg', caption: 'Cattedrale di San Nicolò' },
+      { url: '/sicily-trip/detail-Noto-Stadtplan.jpg', caption: 'Stadtplan von Noto' },
+    ]
   },
   'Villa Romana del Tellaro': {
     summary: 'Spätrömische Landvilla mit bedeutenden polychromen Bodenmosaiken aus dem 4. Jh. n. Chr.',
@@ -517,7 +551,15 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
       { url: '/sicily-trip/detail-Syrakus-Dom-1.jpg', caption: 'Innenraum des Doms' },
       { url: '/sicily-trip/detail-Syrakus-Dom-2.jpg', caption: 'Dorische Säulen im Dom' },
       { url: '/sicily-trip/detail-Syrakus-Dom-3.jpg', caption: 'Seitenkapelle' },
+      { url: '/sicily-trip/detail-Syrakus-Dom-4.jpg', caption: 'Dom – weitere Innenansicht' },
       { url: '/sicily-trip/detail-Syrakus-Apollotempel.jpg', caption: 'Apollontempel auf Ortigia' },
+      { url: '/sicily-trip/detail-Syrakus-Apollontempel-Grundriss.jpg', caption: 'Grundriss des Apollontempels' },
+      { url: '/sicily-trip/detail-Syrakus-Olympieion-Grundriss.jpg', caption: 'Grundriss des Olympieion' },
+      { url: '/sicily-trip/detail-Syrakus-Stadtplan.jpg', caption: 'Stadtplan von Syrakus' },
+    ],
+    textBoxes: [
+      { title: 'Papyrus – das älteste Papier der Welt', content: '„Papier" kommt von Papyrus. Schon im dritten Jahrtausend vor Christus wurden die Stauden von den alten Ägyptern zur Herstellung von Schreibmaterial verwendet. In Europa wachsen die zur Familie der Riedgräser gehörenden Pflanzen nur auf Sizilien, an der Fonte Aretusa in Syrakus. Die oft geäußerte Annahme, Hieron II. habe die ersten Stauden von Pharao Ptolemäos II. erhalten, ist eher zweifelhaft. Dennoch sind die in Siracusa an Souvenirständen erhältlichen Papyri praktisch durchgängig mit völlig unpassenden ägyptischen Motiven bedruckt.' },
+      { title: 'Ein Frauenraub und die Folgen', content: 'Schon lange war Hades, Gott der Unterwelt, in Liebe entbrannt – die angebetete Persephone, schöne Tochter der Demeter, wollte jedoch von ihm nichts wissen. Der Göttervater Zeus lockte die Blumen pflückende Persephone mit einer besonders schönen Narzisse von ihren Freundinnen weg – da griff Hades zu und verschleppte Persephone in die Unterwelt. Die Nymphe Kyane, die ihre Herrin verteidigte, wurde von ihm in eine Quelle (Fonte Ciane bei Siracusa) verwandelt. Als Demeter vom Schicksal ihrer Tochter erfuhr, weinte sie bittere Tränen. Schließlich musste Zeus eingreifen: Acht Monate lang darf Persephone auf der Erde bleiben – vier Monate muss sie in der Unterwelt verbringen: der Winter war „erfunden".' },
     ]
   },
   'Archäologischer Park': {
@@ -530,6 +572,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
       { url: '/sicily-trip/detail-Syrakus-Ohr.jpg', caption: 'Eingang zum „Ohr des Dionysios"' },
       { url: '/sicily-trip/detail-Syrakus-Steinbrueche.jpg', caption: 'Latomie – antike Steinbrüche' },
       { url: '/sicily-trip/detail-Syrakus-Theater-Skene.jpg', caption: 'Skene des griechischen Theaters' },
+      { url: '/sicily-trip/detail-Syrakus-Arch-Park-Karte.jpg', caption: 'Karte des Archäologischen Parks' },
     ]
   },
   'Castello Eurialo': {
@@ -537,7 +580,10 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     detail: `Das Castello Eurialo wurde unter Dionysios I. ab 402 v. Chr. als Schlüsselfestung errichtet. Es war das komplexeste griechische Festungswerk der Antike: fünf Turmpaare, drei tiefe Trockengräben und ein unterirdisches Tunnelsystem. Bei der römischen Belagerung 214–212 v. Chr. setzte der Mathematiker Archimedes hier seine legendären Kriegsmaschinen ein: Katapulte, die Felsbrocken schleuderten, „Krallen des Archimedes" (Kräne, die Schiffe aus dem Wasser hoben) und angeblich Brennspiegel. Der römische General Marcellus soll gesagt haben: „Er übertrifft ja die hundertarmigen Riesen der Fabel!" (Plutarch, Marcellus 17). Archimedes wurde 212 v. Chr. bei der Eroberung von einem Soldaten getötet, trotz Marcellus' Befehl, ihn zu verschonen – seine letzten Worte: „Störe meine Kreise nicht!" (Noli turbare circulos meos).`,
     wikipedia: 'https://en.wikipedia.org/wiki/Euryalus_Fortress',
     planUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1f/Mappa_del_Castello_Eurialo_sull%27Epipoli.jpg',
-    facts: ['Ab 402 v. Chr. erbaut', `Archimedes' Kriegsmaschinen`, '„Störe meine Kreise nicht!"', 'Unterirdisches Tunnelsystem']
+    facts: ['Ab 402 v. Chr. erbaut', `Archimedes' Kriegsmaschinen`, '„Störe meine Kreise nicht!"', 'Unterirdisches Tunnelsystem'],
+    photos: [
+      { url: '/sicily-trip/detail-FortEuryalos-Plan.jpg', caption: 'Grundriss des Castello Eurialo' },
+    ]
   },
   'Catania': {
     summary: 'Barockstadt am Fuße des Ätna – aus Lavagestein nach dem Erdbeben 1693 neu erbaut.',
@@ -546,6 +592,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     facts: ['Gegründet: 729 v. Chr.', '7× zerstört', 'UNESCO seit 2002', 'Bellini (1801–1835)', 'Vaccarinis Barock'],
     photos: [
       { url: '/sicily-trip/detail-Catania-Elefant.jpg', caption: 'Elefantenbrunnen auf der Piazza del Duomo' },
+      { url: '/sicily-trip/detail-Catania-Stadtplan.jpg', caption: 'Stadtplan von Catania' },
     ]
   },
   'Ätna': {
@@ -577,6 +624,7 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
       { url: '/sicily-trip/5-MI-Taormina.jpg', caption: 'Teatro Greco mit Ätna-Panorama' },
       { url: '/sicily-trip/detail-Taormina-1.jpg', caption: 'Griechisches Theater von Taormina' },
       { url: '/sicily-trip/detail-Taormina-2.jpg', caption: 'Bühnenbereich des Theaters' },
+      { url: '/sicily-trip/detail-Taormina-Stadtplan.jpg', caption: 'Stadtplan von Taormina' },
     ]
   },
   'Milazzo / Tindari': {
@@ -588,6 +636,12 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
       { url: '/sicily-trip/6-DO-Tindari.jpg', caption: 'Tindari – Theater und Küste' },
       { url: '/sicily-trip/detail-Tindari-1.jpg', caption: 'Griechisches Theater von Tindari' },
       { url: '/sicily-trip/detail-Tindari-2.jpg', caption: 'Blick über die Äolischen Inseln' },
+      { url: '/sicily-trip/detail-Lipari-Karte.jpg', caption: 'Karte der Insel Lipari' },
+      { url: '/sicily-trip/detail-Vulcano-Karte.jpg', caption: 'Karte der Insel Vulcano' },
+    ],
+    textBoxes: [
+      { title: '„Schwarz bin ich, aber schön"', content: 'Mit der Madonna Nera von Tindari ist natürlich eine Legende verknüpft. Das Schiff, das sie wahrscheinlich vor dem Bilderstreit in Byzanz in Sicherheit gebracht hatte, strandete an der hiesigen Küste und konnte erst flottgemacht werden, nachdem die Muttergottes von Bord gebracht war – die Madonna hatte ihr Plätzchen gewählt und wollte offenbar in Tyndaris bleiben. Bald kamen die ersten Pilger. Die Madonna konnte kühl: „Schwarz bin ich, aber schön". Und sie zeigte sich versöhnlich. Als bald darauf das Kind der mürrischen Mutter vom Felsen fiel, erhoben sich weiche Sandstrände aus dem Meer und fingen es unverletzt auf – das erste einer Kette von Wundern, die, wie jeder Wallfahrer fraglos bestätigen wird, bis heute nicht abreißt.' },
+      { title: 'Vom Nachteil der Neugier', content: 'Dem sterblichen Äolus (griech. Aiolos) war von Göttervater Zeus die Herrschaft über die Winde verliehen worden. Zufrieden lebte er mit Frau Kyane und den jeweils sechs Töchtern und Söhnen. Der auf Äolia gestrandete Odysseus erfuhr freundliche Hilfe. Ein milder West blies sein Schiff zuverlässig vor die Küste der Heimat Ithaka – im Gepäck als kleine Gabe ein Sack voller Winde. Doch ach, als Odysseus schlief, öffneten die neugierigen Genossen das Geschenk des Äolus. Die entfesselten Winde trieben das Schiff zurück nach Äolia – der König, wütend über soviel Dummheit, wollte diesmal allerdings von den Griechen nichts mehr wissen. Die Odyssee nahm ihren Lauf.' },
     ]
   },
   'Cefalù': {
@@ -612,7 +666,19 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
     summary: 'Normannenpalast mit Cappella Palatina, La Martorana und das archäologische Museum.',
     detail: `Palermo (phön. Ziz, „Blume"; griech. Panormos, „Allhafen") vereint 3.000 Jahre Kulturgeschichte. Der Normannenpalast steht über arabischen Fundamenten und beherbergt die Cappella Palatina (1140), die Friedrich II. (1194–1250), der „Stupor Mundi" (Staunen der Welt), als Taufkirche diente. Die Muqarnas-Decke (Stalaktitengewölbe) ist das größte fatimidische Holzkunstwerk außerhalb der islamischen Welt. Friedrich II. wuchs hier auf, sprach sechs Sprachen und gründete die erste staatliche Universität Europas (Neapel, 1224). La Martorana (1143) wurde vom Admiral Georg von Antiochien gestiftet – ein griechisch-orthodoxer Christ im Dienste des normannischen Königs, der die größte Flotte des Mittelmeerraums befehligte. Im Salinas-Museum finden sich die Metopen von Selinunt – einzigartige Zeugnisse der griechischen Großplastik (u.a. Europa auf dem Stier, Perseus und Medusa).`,
     wikipedia: 'https://en.wikipedia.org/wiki/Palazzo_dei_Normanni',
-    facts: ['Cappella Palatina: 1140', 'Friedrich II. „Stupor Mundi"', 'Muqarnas-Decke', 'Georg von Antiochien', 'UNESCO seit 2015']
+    facts: ['Cappella Palatina: 1140', 'Friedrich II. „Stupor Mundi"', 'Muqarnas-Decke', 'Georg von Antiochien', 'UNESCO seit 2015'],
+    photos: [
+      { url: '/sicily-trip/7-FR-Palermo-Altstadt.jpg', caption: 'Palermo – Gesichter in La Martorana' },
+      { url: '/sicily-trip/detail-Palermo-Martorana.jpg', caption: 'La Martorana – Mosaikdetail' },
+      { url: '/sicily-trip/detail-Palermo-Pretoria.jpg', caption: 'Fontana Pretoria' },
+      { url: '/sicily-trip/detail-Palermo-Museum.jpg', caption: 'Archäologisches Museum Salinas' },
+      { url: '/sicily-trip/detail-Palermo-Karte.jpg', caption: 'Karte der Altstadt Palermo' },
+    ],
+    textBoxes: [
+      { title: 'Mafia', content: 'Den aus zahllosen Filmen bekannten Mafia-Paten „alter Schule", den von allen geachteten „uomo di rispetto", gibt es vielleicht noch in Landstädten Westsiziliens, in Palermo jedenfalls nicht mehr. Die Mafia hat sich den Erfordernissen der modernen Zeit angepasst. Nicht mehr die traditionelle Schutzgelderpressung, das Inkasso von Wasserrechten oder die Überwachung der Prostitution bringen heute das große Geld, sondern Drogenverarbeitung und -handel, Waffengeschäfte und die Kontrolle ganzer Industriezweige. Wenn auch die alte Garde verschwunden ist, funktioniert das bewährte System immer noch ganz gut. Die Stimmung jedoch ist längst umgeschlagen.' },
+      { title: '„Schutzgeld ade"', content: 'Addio Pizzo, „Schutzgeld ade", nennt sich eine Initiative in Palermo, die Geschäftsleute ermutigt, sich den Zahlungen an die Mafia zu verweigern. Ausgangspunkt war eine Gruppe junger Leute, die eine Kneipe eröffnen wollte. Das Addiopizzo-Komitee entwickelte eine neue Idee: Ladenbesitzer und Kunden gemeinsam gegen die Mafia. Hunderte Unternehmer haben sich zusammengeschlossen und öffentlich erklärt, künftig kein Schutzgeld mehr zu zahlen, tausende Unterstützer fördern die Aktion, indem sie bevorzugt bei diesen Geschäftsinhabern einkaufen. www.addiopizzo.org' },
+      { title: 'Papst Franziskus über die Mafia', content: '„Diejenigen, die in ihrem Leben die Straße des Bösen einschlagen, wie die Mafiosi, sind nicht in Gemeinschaft mit Gott. Sie sind exkommuniziert." — Papst Franziskus' },
+    ]
   },
   'Monreale': {
     summary: 'Normannische Kathedrale mit 6.340 m² byzantinischer Goldmosaiken und romanischem Kreuzgang.',
@@ -624,6 +690,8 @@ const sightDetails: Record<string, { summary: string; detail: string; wikipedia?
       { url: '/sicily-trip/7-FR-Monreale.jpg', caption: 'Kathedrale von Monreale' },
       { url: '/sicily-trip/detail-Monreale-2.jpg', caption: 'Byzantinische Goldmosaiken' },
       { url: '/sicily-trip/detail-Monreale-3.jpg', caption: 'Romanischer Kreuzgang' },
+      { url: '/sicily-trip/detail-Monreale-Mosaiken1.jpg', caption: 'Mosaiken – Altes Testament' },
+      { url: '/sicily-trip/detail-Monreale-Mosaiken2.jpg', caption: 'Mosaiken – Detailansicht' },
     ]
   },
   'Monte Pellegrino': {
@@ -1760,6 +1828,16 @@ function SightDetail({ name }: { name: string }) {
               <img src={p.url} alt={p.caption} loading="lazy" className="sight-photo-img" />
               <figcaption className="sight-photo-caption">{p.caption}</figcaption>
             </figure>
+          ))}
+        </div>
+      )}
+      {info.textBoxes && info.textBoxes.length > 0 && (
+        <div className="sight-textboxes">
+          {info.textBoxes.map((t, i) => (
+            <div key={i} className="sight-textbox">
+              <h5 className="sight-textbox-title">{t.title}</h5>
+              <p className="sight-textbox-content">{t.content}</p>
+            </div>
           ))}
         </div>
       )}

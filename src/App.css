@@ -644,6 +644,33 @@
   line-height: 1.3;
 }
 
+.sight-textboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.sight-textbox {
+  background: rgba(139, 90, 43, 0.06);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 8px 8px 0;
+  padding: 0.8rem 1rem;
+}
+
+.sight-textbox-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0 0 0.4rem 0;
+}
+
+.sight-textbox-content {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .sight-plan {
   margin-bottom: 1rem;
 }

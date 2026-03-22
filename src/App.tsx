@@ -733,7 +733,7 @@ const days: DayData[] = [
     hotel: 'Hotel Posta, Palermo (N/F)',
     hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [
-      { name: 'Palermo Altstadt', desc: 'Normannenpalast mit Cappella Palatina (goldene Mosaiken), Normannendom, Kreuzkuppelkirche La Martorana, archäologisches Museum', bgPosition: 'center 30%' } as any,
+      { name: 'Palermo Altstadt', desc: 'Normannenpalast mit Cappella Palatina (goldene Mosaiken), Normannendom, Kreuzkuppelkirche La Martorana, archäologisches Museum', bgPosition: 'center 55%' } as any,
       { name: 'Monreale', desc: 'Normannische Kathedrale (1174) mit 6.340 m² byzantinischer Goldmosaiken und romanischem Kreuzgang', km: '15 km' },
       { name: `Monte Pellegrino`, desc: `Wallfahrtsort Santa Rosalia – von Goethe als „das schönste Vorgebirge der Welt" gepriesen`, km: `25 km` },
     ]

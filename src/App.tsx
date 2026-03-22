@@ -2374,7 +2374,7 @@ function App() {
 
       {/* Region Sizilien */}
       <section className="section" id="region">
-        <div className="section-header">
+        <div className="section-header section-header-bg" style={{ backgroundImage: 'url(/sicily-trip/detail-Sizilienkarte.jpg)' }}>
           <h2><Globe size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Die Region Sizilien</h2>
           <div className="section-divider" />
           <p>Größte Insel des Mittelmeers – Zahlen, Daten &amp; Fakten 2024/2025</p>
@@ -2510,7 +2510,7 @@ function App() {
 
       {/* Route Overview */}
       <section className="section" id="route">
-        <div className="section-header">
+        <div className="section-header section-header-bg" style={{ backgroundImage: 'url(/sicily-trip/1-SA-Titel-Segesta.jpg)' }}>
           <h2><Navigation size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Reiseroute</h2>
           <div className="section-divider" />
           <p>8 Tage durch das kulturelle Herz Siziliens</p>
@@ -2699,7 +2699,7 @@ function App() {
 
       {/* Speisen */}
       <section className="section" id="speisen">
-        <div className="section-header">
+        <div className="section-header section-header-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=800&q=80)' }}>
           <h2>Sizilianische Spezialitäten</h2>
           <div className="section-divider" />
           <p>Kulinarische Höhepunkte der Insel</p>
@@ -2723,7 +2723,7 @@ function App() {
 
       {/* Texte zu Sizilien */}
       <section className="section" id="texte">
-        <div className="section-header">
+        <div className="section-header section-header-bg" style={{ backgroundImage: 'url(/sicily-trip/text-Papyrus.jpg)' }}>
           <h2><BookOpen size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Texte zu Sizilien</h2>
           <div className="section-divider" />
           <p>Lateinische, griechische und deutsche Quellen zu Sizilien</p>
@@ -3339,7 +3339,7 @@ function App() {
       </section>
 
       <section className="section" id="glossar">
-        <div className="section-header">
+        <div className="section-header section-header-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80)' }}>
           <h2><Languages size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Italienisches Glossar</h2>
           <div className="section-divider" />
           <p>Die wichtigsten Wörter und Redewendungen für unterwegs</p>

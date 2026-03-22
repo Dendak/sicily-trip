@@ -2466,6 +2466,24 @@ function App() {
           ))}
         </div>
 
+        {/* Dorischer Eckkonflikt */}
+        <div className="arch-eckkonflikt">
+          <div className="arch-eckkonflikt-img-wrap">
+            <img src="/sicily-trip/detail-Segesta-Theater-Rekonstruktion.jpg" alt="Dorischer Eckkonflikt – Schema" loading="lazy" className="arch-eckkonflikt-img" />
+          </div>
+          <div className="arch-eckkonflikt-text">
+            <h3 className="arch-eckkonflikt-title">Dorischer Eckkonflikt</h3>
+            <p>Im Steinbau dorischer Ordnung wird damit das Problem bezeichnet, eine gleichmäßige, um die Ecke biegende Abfolge von Triglyphen und Metopen im Gebälk über der Säulenstellung zu bewirken. In der kanonischen dorischen Baustruktur lagert jede zweite Triglyphe mittig über einer Säule. Dies wird an der Ecke unrealisierbar, wo die Tiefe des auf den Kapitellen lagernden Architravs (a) die Breite einer Triglyphe übersteigt – entweder liegt der Architrav nicht mehr zentriert auf der Deckplatte des Eckkapitells auf, oder die Mitte der Ecktriglyphe rückt aus der Säulenachse nach außen.</p>
+            <p>Der Eckkonflikt war in der Antike ein bekanntes, diskutiertes und am Ende ungelöstes Architekturproblem, das nach einer Aussage des Architekten Vitruv letztlich den Verzicht auf die dorische Bauordnung begründet haben soll. Die Art der Behandlung des Eckkonfliktes gibt Aufschluss über die chronologische und formgeschichtliche Einordnung eines Tempels. Als „Lösung" wurde im späten 6. Jh. vor allem die Verengung (Kontraktion) des Eckjoches entwickelt – auf Sizilien im Verlauf des 5. Jh. v. Chr. mit vielfältigen Kombinationen von Manipulationen der Friesmaße und der Säulenstellung.</p>
+            <div className="arch-eckkonflikt-fachbegriffe">
+              <span><strong>Normaljoch</strong> – Standardabstand zwischen zwei Säulen</span>
+              <span><strong>Eckjoch</strong> – verkleinertes Joch an der Tempelecke</span>
+              <span><strong>Triglyphe</strong> – senkrecht gerilltes Frieselement</span>
+              <span><strong>Metope</strong> – glatte oder reliefierte Platte zwischen zwei Triglyphen</span>
+            </div>
+          </div>
+        </div>
+
         {/* Kirchentypen */}
         <h3 className="arch-subtitle">Kirchentypen auf Sizilien</h3>
         <div className="arch-grid arch-grid-3">

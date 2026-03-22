@@ -225,6 +225,17 @@
   transition: transform 0.5s;
 }
 
+.day-card-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  transition: transform 0.5s;
+}
+
+.day-card:hover .day-card-hero-bg {
+  transform: scale(1.05);
+}
+
 .day-card:hover .day-card-hero img {
   transform: scale(1.05);
 }

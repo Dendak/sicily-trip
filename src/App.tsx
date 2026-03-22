@@ -650,6 +650,7 @@ interface StopData {
   image?: string
   caption?: string
   flight?: string
+  flightTimes?: string
 }
 
 // Sight images from Wikimedia Commons and Unsplash
@@ -703,6 +704,7 @@ interface DayData {
   title: string
   image: string
   imagePosition?: string
+  imageSize?: string
   hotel: string
   hotelData?: HotelData
   stops: StopData[]
@@ -2039,8 +2041,8 @@ function App() {
             variants={fadeIn}
           >
             <div className="day-card-hero">
-              {(d as any).imageSize
-                ? <div className="day-card-hero-bg" style={{ backgroundImage: `url(${d.image})`, backgroundSize: (d as any).imageSize, backgroundPosition: (d as any).imagePosition || 'center top' }} />
+              {d.imageSize
+                ? <div className="day-card-hero-bg" style={{ backgroundImage: `url(${d.image})`, backgroundSize: d.imageSize, backgroundPosition: (d as any).imagePosition || 'center top' }} />
                 : <img src={d.image} alt={d.title} loading="lazy" style={{ objectPosition: (d as any).imagePosition || 'center' }} />
               }
               <div className="day-card-overlay">
@@ -2076,8 +2078,8 @@ function App() {
                             ✈ {s.flight}
                           </a>
                         )}
-                        {(s as any).flightTimes && (
-                          <div className="stop-flight-times">{(s as any).flightTimes}</div>
+                        {s.flightTimes && (
+                          <div className="stop-flight-times">{s.flightTimes}</div>
                         )}
                         {hasSight && (
                           <div className="stop-card-hint">

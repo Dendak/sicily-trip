@@ -2095,34 +2095,11 @@ function App() {
         <h3 className="region-section-title">Trinacria – Flagge und Wahrzeichen</h3>
         <div className="trinacria-block">
           <div className="trinacria-flag">
-            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" className="trinacria-flag-svg">
-              {/* Diagonal split: red top-left, yellow bottom-right */}
-              <polygon points="0,0 300,0 0,200" fill="#CE2B37"/>
-              <polygon points="300,0 300,200 0,200" fill="#F5C400"/>
-              {/* Trinacria symbol centered */}
-              <g transform="translate(150,100)">
-                {/* Medusa head */}
-                <circle cx="0" cy="0" r="22" fill="#CE2B37" stroke="#F5C400" strokeWidth="2"/>
-                <circle cx="0" cy="0" r="16" fill="#8B0000"/>
-                {/* Snake details */}
-                <ellipse cx="0" cy="-8" rx="4" ry="5" fill="#F5C400"/>
-                <ellipse cx="-7" cy="-5" rx="3" ry="4" fill="#F5C400" transform="rotate(-30)"/>
-                <ellipse cx="7" cy="-5" rx="3" ry="4" fill="#F5C400" transform="rotate(30)"/>
-                {/* Three legs */}
-                <g fill="#F5C400">
-                  {/* Leg 1 – top */}
-                  <path d="M0,-22 L8,-50 L14,-80 L6,-82 L0,-55 L-6,-82 L-14,-80 L-8,-50 Z" transform="rotate(0)"/>
-                  {/* Leg 2 – lower right */}
-                  <path d="M0,-22 L8,-50 L14,-80 L6,-82 L0,-55 L-6,-82 L-14,-80 L-8,-50 Z" transform="rotate(120)"/>
-                  {/* Leg 3 – lower left */}
-                  <path d="M0,-22 L8,-50 L14,-80 L6,-82 L0,-55 L-6,-82 L-14,-80 L-8,-50 Z" transform="rotate(240)"/>
-                  {/* Wheat ears on legs */}
-                  <ellipse cx="0" cy="-72" rx="4" ry="7" transform="rotate(0)"/>
-                  <ellipse cx="0" cy="-72" rx="4" ry="7" transform="rotate(120)"/>
-                  <ellipse cx="0" cy="-72" rx="4" ry="7" transform="rotate(240)"/>
-                </g>
-              </g>
-            </svg>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flag_of_Sicily.svg/800px-Flag_of_Sicily.svg.png"
+              alt="Flagge Siziliens mit Trinacria"
+              className="trinacria-flag-img"
+            />
             <div className="trinacria-flag-caption">Flagge der Region Sizilien</div>
           </div>
           <div className="trinacria-text">

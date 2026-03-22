@@ -1411,6 +1411,53 @@ usque adeo est properatus amor.`,
     lang: 'Lateinisch',
   },
   {
+    title: 'Die Perser – Der Traum der Atossa',
+    source: 'Aischylos (ca. 525–456 v. Chr.), Die Perser (472 v. Chr.), V. 176–199',
+    original: `ἔδοξά μοι νυκτὸς ἐν ἀμβροσίᾳ
+δύο γυναῖκε, καλλίπεπλε μέν,
+ἡ μὲν Περσίδα στολὴν ἔχουσ᾽,
+ἡ δ᾽ αὖτε Δωρίδ᾽, εἰσελθεῖν ποτε,
+μεγέθει τε τῶν νῦν ἐκπρεπεστάτα,
+κάλλει τ᾽ ἀμώμω, καὶ κασιγνήτα γένος
+ταὐτοῦ πατρός· οἰκεῖν δ᾽, ὡς ἔλαχον,
+τὴν μὲν Ἑλλάδ᾽ αἶαν, τὴν δὲ βάρβαρον χθόν᾽.
+τούτω στάσιν πρὸς ἀλλήλα σφε θέσθαι,
+ὡς ἐδόκει μοι· μαθὼν δ᾽ υἱός
+ἐμὸς κατεῖχε κἀκόσμει,
+ζυγῷ τ᾽ ἔπεισεν ἅρμ᾽ ὑπαίξαι·
+καὶ ταύτην μὲν ἐν ἱμᾶσιν
+αὐχέν᾽ εἶχ᾽ ὑπήκοον·
+στόμαργος δ᾽ ἡ ᾽τέρα καὶ χερσὶν ἐντὸς
+ἅρματος κεροτυποῦσα
+καὶ σπαραγμοῖσι δεσμῶν ἡνίας ἔσπα,
+κἄξω δίφρου φέρεται κρατοῦσ᾽ ἄτερ ζυγοῦ·
+ξύρρηξε δ᾽ αὐχένα.
+πίπτει δ᾽ υἱὸς ἐμός,
+καὶ πατὴρ παρίσταται Δαρεῖος οἰκτίρων αὐτόν.`,
+    translation: `Es schien mir in der göttlichen Nacht, als träten zwei Frauen ein –
+herrlich gewandet: die eine in persischem Gewand,
+die andere in dorischer Tracht,
+von Gestalt über alle Heutigen hervorragend,
+von fehlerloser Schönheit, Schwestern von gleichem Vater.
+Als Los hatte die eine das griechische Land erhalten,
+die andere das Land der Barbaren.
+
+Zwischen diesen beiden entstand, wie mir schien, ein Streit.
+Mein Sohn erkannte es, versuchte sie zu bändigen und zu zähmen,
+spannte sie unter das Joch seines Wagens.
+Die eine – im Gewand geschmückt – beugte gehorsam den Hals.
+Doch die andere stampfte und schlug
+mit den Händen im Innern des Wagens um sich,
+zerriss mit Gewalt die Zügel
+und jagte ohne Joch davon, das Gebiss sprengend.
+Sie warf meinen Sohn ab – er stürzte zu Boden.
+Sein Vater Darios trat hinzu und beklagte ihn.
+
+(Übersetzt nach Oskar Werner / Tusculum-Ausgabe)`,
+    lang: 'Griechisch',
+    note: 'Atossa, Mutter des Xerxes und Witwe des Darios, berichtet dem Chor von ihrem Traum – kurz vor der Nachricht der Niederlage bei Salamis. Die beiden Frauen verkörpern Persien (gehorsam) und Griechenland (unbändig). Das Bild des zerbrochenen Joches ist das prophetische Zentrum des Stückes: Xerxes hat versucht, Griechenland zu unterwerfen – und ist selbst zu Fall gekommen. Der dann erscheinende Geist des weisen Vaters Darios macht den Frevel des Sohnes vollends sichtbar.',
+  },
+  {
     title: 'Die Perser – Der Schlachtruf bei Salamis',
     source: 'Aischylos (ca. 525–456 v. Chr.), Die Perser (472 v. Chr.), V. 402–405',
     original: 'ὦ παῖδες Ἑλλήνων ἴτε,\nἐλευθεροῦτε πατρίδ᾽, ἐλευθεροῦτε δὲ\nπαῖδας, γυναῖκας, θεῶν τε πατρῴων ἕδη,\nθήκας τε προγόνων· νῦν ὑπὲρ πάντων ἀγών.',
@@ -1746,6 +1793,7 @@ const texteGruppen = [
   {
     label: 'Historisches',
     ids: [
+      'Die Perser – Der Traum der Atossa',
       'Die Perser – Der Schlachtruf bei Salamis',
       'Cicero über Syrakus',
       'Cicero über Agrigent – Willkür des Verres',

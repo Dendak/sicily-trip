@@ -704,8 +704,8 @@ const days: DayData[] = [
     stops: [
       { name: 'Ätna', desc: 'Auffahrt bis 1900m Höhe auf Europas höchsten aktiven Vulkan (3357m), ev. Umrundung', km: '55 km' },
       { name: 'Ätna-Rundfahrt', desc: 'Panoramafahrt um den Vulkan – Lavafelder, Kastanienwälder und spektakuläre Ausblicke', km: '75 km' },
-      { name: 'Alcantara-Schlucht', desc: 'Spektakuläre Basaltschlucht mit bizarren Lavagesteinsformationen', km: '100 km' },
-      { name: 'Taormina', desc: 'Teatro Greco (3. Jh. v. Chr.) mit Ätna-Panorama, malerische Altstadt, Corso Umberto', km: '25 km' },
+      { name: 'Alcantara-Schlucht', desc: 'Spektakuläre Basaltschlucht mit bizarren Lavagesteinsformationen', km: '10 km' },
+      { name: 'Taormina', desc: 'Teatro Greco (3. Jh. v. Chr.) mit Ätna-Panorama, malerische Altstadt, Corso Umberto', km: '30 km' },
     ]
   },
   {

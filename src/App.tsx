@@ -581,14 +581,15 @@ interface StopData {
   desc: string
   km?: string
   image?: string
+  caption?: string
 }
 
 // Sight images from Wikimedia Commons and Unsplash
 const sightImages: Record<string, string> = {
-  'Segesta': 'https://images.unsplash.com/photo-1677967062355-b951f29c66e8?w=800&q=80',
-  'Monte Érice': 'https://images.unsplash.com/photo-1531050661635-3999fed2312e?w=800&q=80',
+  'Segesta': '/sicily-trip/1-SA-Segesta.jpg',
+  'Monte Érice': '/sicily-trip/1-SA-Erice.jpg',
   'Trapani': 'https://images.unsplash.com/photo-1749832147262-76b40c0fc005?w=800&q=80',
-  'Marsala': 'https://images.unsplash.com/photo-1513258419489-57f9e66da32b?w=800&q=80',
+  'Marsala': '/sicily-trip/1-SA-Marsala.jpg',
   'Cave di Cusa': '/sicily-trip/2-SO-Cave-di-Cusa.png',
   'Selinunte': '/sicily-trip/2-SO-Selinunte.jpg',
   'Scala dei Turchi': '/sicily-trip/2-SO-Scala-dei-Turchi.jpg',
@@ -601,11 +602,11 @@ const sightImages: Record<string, string> = {
   'Villa Romana del Tellaro': 'https://images.unsplash.com/photo-1760384339539-22071b2978b3?w=800&q=80',
   'Syrakus': images.siracusa,
   'Castello Eurialo': 'https://images.unsplash.com/photo-1767032330785-033405e26229?w=800&q=80',
-  'Catania': images.catania,
+  'Catania': '/sicily-trip/4-DI-Catania.jpg',
   'Ätna': '/sicily-trip/5-MI-Etna-Krater.jpg',
   'Ätna-Rundfahrt': '/sicily-trip/5-MI-Etna2.jpg',
-  'Alcantara-Schlucht': 'https://images.unsplash.com/photo-1704737035139-d8cc36aea123?w=800&q=80',
-  'Taormina': images.taormina,
+  'Alcantara-Schlucht': '/sicily-trip/5-MI-Alcantara.jpg',
+  'Taormina': '/sicily-trip/5-MI-Taormina.jpg',
   'Tindari': '/sicily-trip/6-DO-Tindari.jpg',
   'Cefalù': '/sicily-trip/6-DO-Cefalu.jpg',
   'Solunto': '/sicily-trip/6-DO-Solunto.jpg',
@@ -613,8 +614,8 @@ const sightImages: Record<string, string> = {
   'Monreale': '/sicily-trip/7-FR-Monreale.jpg',
   'Monte Pellegrino': '/sicily-trip/7-FR-MontePellegrino.jpg',
   'Syrakus: Ortigia': '/sicily-trip/4-DI-Siracusa-Arethusa.jpg',
-  'Archäologischer Park': 'https://images.unsplash.com/photo-1670694106275-20601b741a63?w=800&q=80',
-  'Grab des Archimedes': 'https://images.unsplash.com/photo-1725255922252-4b4ab90c9477?w=800&q=80',
+  'Archäologischer Park': '/sicily-trip/4-DI-Archpark.jpg',
+  'Grab des Archimedes': '/sicily-trip/4-DI-Archimedes.jpg',
   'Messina': '/sicily-trip/6-DO-Messina.jpg',
   'Milazzo': '/sicily-trip/6-DO-Milazzo.jpg',
   'Lipari / Vulcano': '/sicily-trip/6-DO-Lipari-Vulcano.jpg',
@@ -647,10 +648,10 @@ const days: DayData[] = [
     hotelData: { name: 'Hotel Carmine', mapsQuery: 'Hotel+Carmine+Marsala+Sicily', mapsEmbed: 'Hotel+Carmine,+Marsala,+TP,+Italy' },
     stops: [
       { name: 'Salzburg – München', desc: 'Flug mit Lufthansa nach Palermo' },
-      { name: 'Segesta', desc: 'Dorischer Tempel (ca. 420 v. Chr.) und Teatro Greco mit Blick auf den Golf von Castellammare', km: '55 km' },
-      { name: 'Monte Érice', desc: 'Mittelalterliche Altstadt auf 750m Höhe, phönizisch-griechische Gründung, Burg der Venus', km: '45 km' },
+      { name: 'Segesta', desc: 'Dorischer Tempel (ca. 420 v. Chr.) und Teatro Greco mit Blick auf den Golf von Castellammare', km: '55 km', caption: 'Dorischer Tempel von Segesta' },
+      { name: 'Monte Érice', desc: 'Mittelalterliche Altstadt auf 750m Höhe, phönizisch-griechische Gründung, Burg der Venus', km: '45 km', caption: 'Mittelalterliche Gassen der Città Vecchia' },
       { name: 'Trapani', desc: 'Altstadt mit barocken Kirchen und normannischen Spuren', km: '15 km' },
-      { name: 'Marsala', desc: 'Entlang der Salzstraße; Altstadt, archäologisches Museum mit punischem Langschiff', km: '30 km' },
+      { name: 'Marsala', desc: 'Entlang der Salzstraße; Altstadt, archäologisches Museum mit punischem Langschiff', km: '30 km', caption: 'Marsala – Salinen und Altstadt' },
     ]
   },
   {
@@ -690,11 +691,11 @@ const days: DayData[] = [
     hotelData: { name: 'Hotel Ariston', mapsQuery: 'Hotel+Ariston+Taormina+Sicily', mapsEmbed: 'Hotel+Ariston,+Taormina,+ME,+Italy' },
     stops: [
       { name: 'Syrakus: Ortigia', desc: 'Altstadt mit Dom (im antiken Athena-Tempel), Arethusa-Quelle, Halbinsel Ortigia' },
-      { name: `Archäologischer Park`, desc: `„Ohr des Dionysios", griechisches Theater, römisches Amphitheater, Altar Hierons II.` },
-      { name: 'Grab des Archimedes', desc: 'Nekropole Grotticelli und archäologisches Museum Paolo Orsi' },
+      { name: `Archäologischer Park`, desc: `„Ohr des Dionysios", griechisches Theater, römisches Amphitheater, Altar Hierons II.`, caption: 'Ohr des Dionysios – Latomie del Paradiso' },
+      { name: 'Grab des Archimedes', desc: 'Nekropole Grotticelli und archäologisches Museum Paolo Orsi', caption: 'Nekropole Grotticelli – Grabkammer' },
       { name: 'Castello Eurialo', desc: 'Griechisches Festungswerk des Dionysios I. – bedeutendstes antikes Kastell Siziliens', km: '10 km' },
-      { name: 'Catania', desc: `Dom Sant'Agata, Elefantenbrunnen, Teatro Romano im Stadtzentrum`, km: '60 km' },
-      { name: 'Taormina', desc: 'Ankunft im legendären Küstenort', km: '50 km' },
+      { name: 'Catania', desc: `Dom Sant'Agata, Elefantenbrunnen, Teatro Romano im Stadtzentrum`, km: '60 km', caption: 'Elefantenbrunnen – Wahrzeichen Catanias' },
+      { name: 'Taormina', desc: 'Ankunft im legendären Küstenort', km: '50 km', caption: 'Teatro Greco mit Blick auf den Ätna' },
     ]
   },
   {
@@ -706,8 +707,8 @@ const days: DayData[] = [
     stops: [
       { name: 'Ätna', desc: 'Auffahrt bis 1900m Höhe auf Europas höchsten aktiven Vulkan (3357m), ev. Umrundung', km: '55 km' },
       { name: 'Ätna-Rundfahrt', desc: 'Panoramafahrt um den Vulkan – Lavafelder, Kastanienwälder und spektakuläre Ausblicke', km: '75 km' },
-      { name: 'Alcantara-Schlucht', desc: 'Spektakuläre Basaltschlucht mit bizarren Lavagesteinsformationen', km: '10 km' },
-      { name: 'Taormina', desc: 'Teatro Greco (3. Jh. v. Chr.) mit Ätna-Panorama, malerische Altstadt, Corso Umberto', km: '30 km' },
+      { name: 'Alcantara-Schlucht', desc: 'Spektakuläre Basaltschlucht mit bizarren Lavagesteinsformationen', km: '10 km', caption: 'Basaltlava-Formationen der Alcantara-Schlucht' },
+      { name: 'Taormina', desc: 'Teatro Greco (3. Jh. v. Chr.) mit Ätna-Panorama, malerische Altstadt, Corso Umberto', km: '30 km', caption: 'Teatro Greco – das schönste Theater Siziliens' },
     ]
   },
   {
@@ -1977,6 +1978,7 @@ function App() {
                         <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
                       )}
                       <div className="stop-card-content">
+                        {s.caption && <div className="stop-caption">{s.caption}</div>}
                         <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
                         <div className="stop-desc">{s.desc}</div>
                         {hasSight && (

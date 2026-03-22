@@ -616,7 +616,7 @@ const sightImages: Record<string, string> = {
   'Archäologischer Park': 'https://images.unsplash.com/photo-1670694106275-20601b741a63?w=800&q=80',
   'Grab des Archimedes': 'https://images.unsplash.com/photo-1725255922252-4b4ab90c9477?w=800&q=80',
   'Messina': '/sicily-trip/6-DO-Messina.jpg',
-  'Milazzo / Tindari': 'https://images.unsplash.com/photo-1710092880781-3cbee5b05d85?w=800&q=80',
+  'Milazzo': '/sicily-trip/6-DO-Milazzo.jpg',
   'Siracusa': '/sicily-trip/3-MO-Siracusa-Duomo.jpg',
 }
 
@@ -717,7 +717,7 @@ const days: DayData[] = [
     hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [
       { name: 'Messina', desc: 'Fährhafen und Tor zur Insel – Meerenge von Messina, Dom mit astronomischer Uhr', km: '50 km' },
-      { name: 'Milazzo / Tindari', desc: 'Option: Äolische Inseln ODER Tindari mit Teatro Greco, Basilika, Casa Romana, Wallfahrtskirche', km: '5 km' },
+      { name: 'Milazzo', desc: 'Option: Äolische Inseln ODER Tindari mit Teatro Greco, Basilika, Casa Romana, Wallfahrtskirche', km: '20 km' },
       { name: 'Cefalù', desc: 'Normannische Kathedrale San Salvatore (1131) mit byzantinischen Christus-Pantokrator-Mosaiken', km: '115 km' },
       { name: 'Solunto', desc: 'Hellenistisch-römische Stadt mit Peristylhäusern und Agora auf dem Monte Catalfano', km: '55 km' },
       { name: 'Palermo', desc: 'Ankunft in der sizilianischen Hauptstadt', km: '20 km' },

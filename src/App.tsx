@@ -582,6 +582,7 @@ interface StopData {
   km?: string
   image?: string
   caption?: string
+  flight?: string
 }
 
 // Sight images from Wikimedia Commons and Unsplash
@@ -634,6 +635,7 @@ interface DayData {
   weekday: string
   title: string
   image: string
+  imagePosition?: string
   hotel: string
   hotelData?: HotelData
   stops: StopData[]
@@ -1959,7 +1961,7 @@ function App() {
             variants={fadeIn}
           >
             <div className="day-card-hero">
-              <img src={d.image} alt={d.title} loading="lazy" style={{ objectPosition: (d as any).imagePosition || 'center' }} />
+              <img src={d.image} alt={d.title} loading="lazy" style={{ objectPosition: d.imagePosition || 'center' }} />
               <div className="day-card-overlay">
                 <span className="day-badge">Tag {d.day} – {d.weekday}</span>
                 <h3>{d.date}</h3>
@@ -1982,15 +1984,15 @@ function App() {
                       <div className="stop-card-content">
                         <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
                         <div className="stop-desc">{s.desc}</div>
-                        {(s as any).flight && (
+                        {s.flight && (
                           <a
                             className="stop-flight"
-                            href={`https://www.lufthansa.com/de/de/flugstatus?flightNumber=${(s as any).flight.replace(' ', '')}`}
+                            href={`https://www.lufthansa.com/de/de/flugstatus?flightNumber=${s.flight.replace(' ', '')}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={e => e.stopPropagation()}
                           >
-                            ✈ {(s as any).flight}
+                            ✈ {s.flight}
                           </a>
                         )}
                         {hasSight && (

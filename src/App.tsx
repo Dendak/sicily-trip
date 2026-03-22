@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MapPin, Hotel, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users, Globe, Map, FileText } from 'lucide-react'
+import { MapPin, Hotel, ChevronDown, ChevronUp, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users, Globe, Map, FileText } from 'lucide-react'
 import './App.css'
 
 // Verified working Unsplash image URLs
@@ -2242,7 +2242,6 @@ function SightDetail({ name }: { name: string }) {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [currentDay, setCurrentDay] = useState<number | null>(null)
   const [expandedSight, setExpandedSight] = useState<string | null>(null)
   const [expandedPerson, setExpandedPerson] = useState<number | null>(null)
   const [expandedText, setExpandedText] = useState<string | null>(null)
@@ -2250,31 +2249,24 @@ function App() {
   const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
   const [glossarRichtung, setGlossarRichtung] = useState<'it-de' | 'de-it'>('it-de')
   const [glossarOpenCats, setGlossarOpenCats] = useState<string[]>([])
+  const [expandedDays, setExpandedDays] = useState<number[]>([])
+  const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({
+    architektur: true,
+    natur: true,
+    zeittafel: true,
+    restaurants: true,
+  })
+  const [expandedEpochen, setExpandedEpochen] = useState<number[]>([])
 
-  // Track which day card is in view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Find the most visible entry that is intersecting
-        const visible = entries.filter(e => e.isIntersecting)
-        if (visible.length > 0) {
-          // Pick the one with highest intersection ratio
-          const best = visible.reduce((a, b) => a.intersectionRatio > b.intersectionRatio ? a : b)
-          const dayNum = parseInt(best.target.id.replace('day-', ''))
-          if (!isNaN(dayNum)) setCurrentDay(dayNum)
-        }
-      },
-      { threshold: [0, 0.1, 0.2, 0.3, 0.5], rootMargin: '-120px 0px -30% 0px' }
-    )
-    // Delay to ensure elements are rendered
-    const timer = setTimeout(() => {
-      for (let i = 1; i <= 8; i++) {
-        const el = document.getElementById(`day-${i}`)
-        if (el) observer.observe(el)
-      }
-    }, 500)
-    return () => { clearTimeout(timer); observer.disconnect() }
-  }, [])
+  const toggleDay = (dayNum: number) => {
+    setExpandedDays(prev => prev.includes(dayNum) ? prev.filter(d => d !== dayNum) : [...prev, dayNum])
+  }
+  const toggleSection = (key: string) => {
+    setCollapsedSections(prev => ({ ...prev, [key]: !prev[key] }))
+  }
+  const toggleEpoche = (idx: number) => {
+    setExpandedEpochen(prev => prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx])
+  }
 
   const scrollTo = (id: string) => {
     setMenuOpen(false)
@@ -2282,14 +2274,6 @@ function App() {
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const navigateDay = (direction: 'prev' | 'next') => {
-    if (currentDay === null) return
-    const newDay = direction === 'prev' ? currentDay - 1 : currentDay + 1
-    if (newDay >= 1 && newDay <= 8) {
-      setCurrentDay(newDay)
-      scrollTo(`day-${newDay}`)
-    }
-  }
 
   return (
     <div className="app">
@@ -2486,7 +2470,7 @@ function App() {
           <h3>Tagesübersicht</h3>
           <div className="route-days">
             {days.map(d => (
-              <div key={d.day} className="route-day-mini" onClick={() => { setCurrentDay(d.day); scrollTo(`day-${d.day}`) }}>
+              <div key={d.day} className="route-day-mini" onClick={() => { toggleDay(d.day); scrollTo(`day-${d.day}`) }}>
                 <span className="day-num">Tag {d.day}</span>
                 <h4>{d.weekday}, {d.date}</h4>
                 <p>{d.stops.slice(0, 3).map(s => s.name).join(' – ')}{d.stops.length > 3 ? ' ...' : ''}</p>
@@ -2495,115 +2479,114 @@ function App() {
           </div>
         </div>
 
-        {/* Sticky day navigation strip */}
-        <div className="day-strip">
-          {days.map(d => (
-            <button
-              key={d.day}
-              className={`day-strip-btn ${currentDay === d.day ? 'active' : ''}`}
-              onClick={() => { setCurrentDay(d.day); scrollTo(`day-${d.day}`) }}
-            >
-              {d.day} {d.weekday.slice(0, 2)}
-            </button>
-          ))}
-        </div>
-
-        {days.map(d => (
-          <motion.div
+        {days.map(d => {
+          const isExpanded = expandedDays.includes(d.day)
+          return (
+          <div
             key={d.day}
             id={`day-${d.day}`}
-            className="day-card"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={fadeIn}
+            className={`day-accordion${isExpanded ? ' day-accordion-open' : ''}`}
           >
-            <div className="day-card-hero">
-              {d.imageSize
-                ? <div className="day-card-hero-bg" style={{ backgroundImage: `url(${d.image})`, backgroundSize: d.imageSize, backgroundPosition: (d as any).imagePosition || 'center top' }} />
-                : <img src={d.image} alt={d.title} loading="lazy" style={{ objectPosition: (d as any).imagePosition || 'center' }} />
-              }
-              <div className="day-card-overlay">
-                <span className="day-badge">Tag {d.day} – {d.weekday}</span>
-                <h3>{d.date}</h3>
+            <div className="day-accordion-header" onClick={() => toggleDay(d.day)}>
+              <div className="day-accordion-left">
+                <span className="day-accordion-badge">Tag {d.day}</span>
+                <div className="day-accordion-info">
+                  <span className="day-accordion-weekday">{d.weekday}, {d.date}</span>
+                  <span className="day-accordion-title">{d.title}</span>
+                  <span className="day-accordion-hotel"><Hotel size={13} /> {d.hotel}</span>
+                </div>
+              </div>
+              <div className="day-accordion-chevron">
+                {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
               </div>
             </div>
-            <div className="day-card-body">
-              <div className="stops-grid">
-                {d.stops.map((s, i) => {
-                  const img = s.image || sightImages[s.name]
-                  const hasSight = !!sightDetails[s.name]
-                  return (
-                    <div
-                      key={i}
-                      className={`stop-card${img ? ' stop-card-has-img' : ''}${hasSight ? ' stop-card-clickable' : ''}`}
-                      onClick={() => hasSight && setExpandedSight(expandedSight === `${d.day}-${i}` ? null : `${d.day}-${i}`)}
-                    >
-                      {img && (
-                        <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
-                      )}
-                      <div className="stop-card-content">
-                        <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
-                        <div className="stop-desc">{s.desc}</div>
-                        {s.flight && (
-                          <a
-                            className="stop-flight"
-                            href={`https://www.lufthansa.com/de/de/flugstatus?flightNumber=${s.flight.replace(' ', '')}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={e => e.stopPropagation()}
-                          >
-                            ✈ {s.flight}
-                          </a>
-                        )}
-                        {s.flightTimes && (
-                          <div className="stop-flight-times">{s.flightTimes}</div>
-                        )}
-                        {hasSight && (
-                          <div className="stop-card-hint">
-                            <Info size={12} /> Details {expandedSight === `${d.day}-${i}` ? '▲' : '▼'}
-                          </div>
-                        )}
-                      </div>
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.div
+                  className="day-accordion-body"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <div className="day-card-hero">
+                    {d.imageSize
+                      ? <div className="day-card-hero-bg" style={{ backgroundImage: `url(${d.image})`, backgroundSize: d.imageSize, backgroundPosition: (d as any).imagePosition || 'center top' }} />
+                      : <img src={d.image} alt={d.title} loading="lazy" style={{ objectPosition: (d as any).imagePosition || 'center' }} />
+                    }
+                    <div className="day-card-overlay">
+                      <span className="day-badge">Tag {d.day} – {d.weekday}</span>
+                      <h3>{d.date}</h3>
                     </div>
-                  )
-                })}
-              </div>
-              {/* Full-width sight details below grid */}
-              {d.stops.map((s, i) => (
-                expandedSight === `${d.day}-${i}` && sightDetails[s.name] ? (
-                  <SightDetail key={`detail-${i}`} name={s.name} />
-                ) : null
-              ))}
-              <HotelCard hotel={d.hotel} hotelData={d.hotelData} />
-
-              {/* Day navigation */}
-              <div className="day-nav">
-                {d.day > 1 && (
-                  <button className="day-nav-btn" onClick={() => { setCurrentDay(d.day - 1); navigateDay('prev') }}>
-                    <ChevronLeft size={18} /> Tag {d.day - 1}
-                  </button>
-                )}
-                <div style={{ flex: 1 }} />
-                {d.day < 8 && (
-                  <button className="day-nav-btn" onClick={() => { setCurrentDay(d.day + 1); scrollTo(`day-${d.day + 1}`) }}>
-                    Tag {d.day + 1} <ChevronRight size={18} />
-                  </button>
-                )}
-              </div>
-            </div>
-          </motion.div>
-        ))}
+                  </div>
+                  <div className="day-card-body">
+                    <div className="stops-grid">
+                      {d.stops.map((s, i) => {
+                        const img = s.image || sightImages[s.name]
+                        const hasSight = !!sightDetails[s.name]
+                        return (
+                          <div
+                            key={i}
+                            className={`stop-card${img ? ' stop-card-has-img' : ''}${hasSight ? ' stop-card-clickable' : ''}`}
+                            onClick={() => hasSight && setExpandedSight(expandedSight === `${d.day}-${i}` ? null : `${d.day}-${i}`)}
+                          >
+                            {img && (
+                              <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
+                            )}
+                            <div className="stop-card-content">
+                              <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
+                              <div className="stop-desc">{s.desc}</div>
+                              {s.flight && (
+                                <a
+                                  className="stop-flight"
+                                  href={`https://www.lufthansa.com/de/de/flugstatus?flightNumber=${s.flight.replace(' ', '')}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={e => e.stopPropagation()}
+                                >
+                                  ✈ {s.flight}
+                                </a>
+                              )}
+                              {s.flightTimes && (
+                                <div className="stop-flight-times">{s.flightTimes}</div>
+                              )}
+                              {hasSight && (
+                                <div className="stop-card-hint">
+                                  <Info size={12} /> Details {expandedSight === `${d.day}-${i}` ? '▲' : '▼'}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        )
+                      })}
+                    </div>
+                    {/* Full-width sight details below grid */}
+                    {d.stops.map((s, i) => (
+                      expandedSight === `${d.day}-${i}` && sightDetails[s.name] ? (
+                        <SightDetail key={`detail-${i}`} name={s.name} />
+                      ) : null
+                    ))}
+                    <HotelCard hotel={d.hotel} hotelData={d.hotelData} />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          )
+        })}
       </section>
 
       {/* Restaurants */}
       <section className="section" id="restaurants">
-        <div className="section-header">
-          <h2><UtensilsCrossed size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Restaurant- & Vinothek-Empfehlungen</h2>
+        <div className="section-header section-header-collapsible" onClick={() => toggleSection('restaurants')}>
+          <h2><UtensilsCrossed size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Restaurant- & Vinothek-Empfehlungen {collapsedSections.restaurants ? <ChevronDown size={22} style={{ verticalAlign: 'middle' }} /> : <ChevronUp size={22} style={{ verticalAlign: 'middle' }} />}</h2>
           <div className="section-divider" />
           <p>Echte sizilianische Osterien, Trattorien und Slow-Food-Lokale – von Reiseforen und Guides empfohlen</p>
         </div>
 
+        <AnimatePresence>
+        {!collapsedSections.restaurants && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
         <div className="restaurant-filter">
           {['Alle', ...Array.from(new Set(restaurants.map(r => r.location)))].map(loc => (
             <button
@@ -2654,6 +2637,8 @@ function App() {
             </motion.div>
           ))}
         </div>
+        </motion.div>)}
+        </AnimatePresence>
       </section>
 
       {/* Speisen */}
@@ -2768,12 +2753,14 @@ function App() {
       {/* Glossar */}
       {/* Architektur */}
       <section className="section" id="architektur">
-        <div className="section-header">
-          <h2><Landmark size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Architektur auf Sizilien</h2>
+        <div className="section-header section-header-collapsible" onClick={() => toggleSection('architektur')}>
+          <h2><Landmark size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Architektur auf Sizilien {collapsedSections.architektur ? <ChevronDown size={22} style={{ verticalAlign: 'middle' }} /> : <ChevronUp size={22} style={{ verticalAlign: 'middle' }} />}</h2>
           <div className="section-divider" />
           <p>Tempelformen, Säulenordnungen und Kirchentypen – von der Antike bis zur Normannenzeit</p>
         </div>
 
+        <AnimatePresence>
+        {!collapsedSections.architektur && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
         {/* Tempelformen */}
         <h3 className="arch-subtitle">Griechische Tempelformen</h3>
 
@@ -2982,16 +2969,20 @@ function App() {
             </motion.div>
           ))}
         </div>
+        </motion.div>)}
+        </AnimatePresence>
       </section>
 
       {/* Flora & Fauna */}
       <section className="section" id="natur">
-        <div className="section-header">
-          <h2>🌿 Flora &amp; Fauna</h2>
+        <div className="section-header section-header-collapsible" onClick={() => toggleSection('natur')}>
+          <h2>🌿 Flora &amp; Fauna {collapsedSections.natur ? <ChevronDown size={22} style={{ verticalAlign: 'middle' }} /> : <ChevronUp size={22} style={{ verticalAlign: 'middle' }} />}</h2>
           <div className="section-divider" />
           <p>Die Natur Siziliens – zwischen Mittelmeer, Ätna und afrikanischem Klima</p>
         </div>
 
+        <AnimatePresence>
+        {!collapsedSections.natur && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
         {/* Flora */}
         <h3 className="arch-subtitle">🌱 Markante Pflanzen Siziliens</h3>
         <div className="arch-grid arch-grid-3">
@@ -3178,36 +3169,52 @@ function App() {
             </motion.div>
           ))}
         </div>
+        </motion.div>)}
+        </AnimatePresence>
       </section>
 
       {/* Zeittafel */}
       <section className="section" id="zeittafel">
-        <div className="section-header">
-          <h2><Clock size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Zeittafel Sizilien</h2>
+        <div className="section-header section-header-collapsible" onClick={() => toggleSection('zeittafel')}>
+          <h2><Clock size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Zeittafel Sizilien {collapsedSections.zeittafel ? <ChevronDown size={22} style={{ verticalAlign: 'middle' }} /> : <ChevronUp size={22} style={{ verticalAlign: 'middle' }} />}</h2>
           <div className="section-divider" />
           <p>Von der Vorgeschichte bis zur Gegenwart – drei Jahrtausende Geschichte</p>
         </div>
+        <AnimatePresence>
+        {!collapsedSections.zeittafel && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
         <div className="timeline">
-          {zeittafelDaten.map((epoche, ei) => (
+          {zeittafelDaten.map((epoche, ei) => {
+            const epocheOpen = expandedEpochen.includes(ei)
+            return (
             <div key={ei} className="timeline-epoche">
-              <div className="timeline-epoche-header" style={{ borderLeftColor: epoche.farbe }}>
-                <h3 style={{ color: epoche.farbe }}>{epoche.epoche}</h3>
-                <span className="timeline-epoche-zeitraum">{epoche.zeitraum}</span>
+              <div className="timeline-epoche-header timeline-epoche-clickable" style={{ borderLeftColor: epoche.farbe }} onClick={() => toggleEpoche(ei)}>
+                <div>
+                  <h3 style={{ color: epoche.farbe }}>{epoche.epoche}</h3>
+                  <span className="timeline-epoche-zeitraum">{epoche.zeitraum}</span>
+                </div>
+                {epocheOpen ? <ChevronUp size={18} style={{ color: epoche.farbe }} /> : <ChevronDown size={18} style={{ color: epoche.farbe }} />}
               </div>
-              <div className="timeline-ereignisse">
-                {epoche.ereignisse.map((e, i) => (
-                  <motion.div key={i} className="timeline-item" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-                    <div className="timeline-dot" style={{ background: epoche.farbe }} />
-                    <div className="timeline-content">
-                      <span className="timeline-datum" style={{ color: epoche.farbe }}>{e.datum}</span>
-                      <p className="timeline-text">{e.text}</p>
-                    </div>
+              <AnimatePresence>
+                {epocheOpen && (
+                  <motion.div className="timeline-ereignisse" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
+                    {epoche.ereignisse.map((e, i) => (
+                      <div key={i} className="timeline-item">
+                        <div className="timeline-dot" style={{ background: epoche.farbe }} />
+                        <div className="timeline-content">
+                          <span className="timeline-datum" style={{ color: epoche.farbe }}>{e.datum}</span>
+                          <p className="timeline-text">{e.text}</p>
+                        </div>
+                      </div>
+                    ))}
                   </motion.div>
-                ))}
-              </div>
+                )}
+              </AnimatePresence>
             </div>
-          ))}
+            )
+          })}
         </div>
+        </motion.div>)}
+        </AnimatePresence>
       </section>
 
       {/* Persönlichkeiten */}

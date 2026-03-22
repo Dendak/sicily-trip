@@ -2255,6 +2255,7 @@ function App() {
     natur: true,
     zeittafel: true,
     restaurants: true,
+    personen: true,
   })
   const [expandedEpochen, setExpandedEpochen] = useState<number[]>([])
 
@@ -2271,7 +2272,10 @@ function App() {
   const scrollTo = (id: string) => {
     setMenuOpen(false)
     const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 72
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    }
   }
 
 
@@ -2291,10 +2295,23 @@ function App() {
               ['restaurants', 'Restaurants'],
               ['speisen', 'Speisen'],
               ['texte', 'Texte'],
-              ['architektur', 'Architektur'],
-              ['natur', 'Flora & Fauna'],
-              ['zeittafel', 'Zeittafel'],
-              ['personen', 'Persönlichkeiten'],
+            ].map(([id, label]) => (
+              <li key={id}><a href={`#${id}`} onClick={(e) => { e.preventDefault(); scrollTo(id) }}>{label}</a></li>
+            ))}
+            <li className="nav-dropdown">
+              <button className="nav-dropdown-trigger">Wissen <ChevronDown size={14} /></button>
+              <div className="nav-dropdown-menu">
+                {[
+                  ['architektur', 'Architektur'],
+                  ['natur', 'Flora & Fauna'],
+                  ['zeittafel', 'Zeittafel'],
+                  ['personen', 'Persönlichkeiten'],
+                ].map(([id, label]) => (
+                  <a key={id} href={`#${id}`} onClick={(e) => { e.preventDefault(); scrollTo(id) }}>{label}</a>
+                ))}
+              </div>
+            </li>
+            {[
               ['glossar', 'Glossar'],
               ['karten', 'Karten & Pläne'],
             ].map(([id, label]) => (
@@ -2471,9 +2488,8 @@ function App() {
           <div className="route-days">
             {days.map(d => (
               <div key={d.day} className="route-day-mini" onClick={() => { toggleDay(d.day); scrollTo(`day-${d.day}`) }}>
-                <span className="day-num">Tag {d.day}</span>
-                <h4>{d.weekday}, {d.date}</h4>
-                <p>{d.stops.slice(0, 3).map(s => s.name).join(' – ')}{d.stops.length > 3 ? ' ...' : ''}</p>
+                <span className="day-num">Tag {d.day} &middot; {d.weekday.slice(0, 2)}</span>
+                <p>{d.stops.slice(0, 3).map(s => s.name).join(' \u2013 ')}{d.stops.length > 3 ? ' ...' : ''}</p>
               </div>
             ))}
           </div>
@@ -2579,10 +2595,17 @@ function App() {
 
       {/* Restaurants */}
       <section className="section" id="restaurants">
-        <div className="section-header section-header-collapsible" onClick={() => toggleSection('restaurants')}>
-          <h2><UtensilsCrossed size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Restaurant- & Vinothek-Empfehlungen {collapsedSections.restaurants ? <ChevronDown size={22} style={{ verticalAlign: 'middle' }} /> : <ChevronUp size={22} style={{ verticalAlign: 'middle' }} />}</h2>
+        <div className={`section-header section-header-collapsible${collapsedSections.restaurants ? ' collapsed' : ''}`} onClick={() => toggleSection('restaurants')}>
+          <h2>
+            <span className="section-header-icon"><UtensilsCrossed size={28} /></span>
+            <span className="section-header-title">Restaurant- & Vinothek-Empfehlungen</span>
+            <span className="section-chevron-area">
+              <span className="section-toggle-hint">{collapsedSections.restaurants ? 'Aufklappen' : 'Einklappen'}</span>
+              {collapsedSections.restaurants ? <ChevronDown size={26} /> : <ChevronUp size={26} />}
+            </span>
+          </h2>
           <div className="section-divider" />
-          <p>Echte sizilianische Osterien, Trattorien und Slow-Food-Lokale – von Reiseforen und Guides empfohlen</p>
+          <p>Echte sizilianische Osterien, Trattorien und Slow-Food-Lokale</p>
         </div>
 
         <AnimatePresence>
@@ -2753,10 +2776,17 @@ function App() {
       {/* Glossar */}
       {/* Architektur */}
       <section className="section" id="architektur">
-        <div className="section-header section-header-collapsible" onClick={() => toggleSection('architektur')}>
-          <h2><Landmark size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Architektur auf Sizilien {collapsedSections.architektur ? <ChevronDown size={22} style={{ verticalAlign: 'middle' }} /> : <ChevronUp size={22} style={{ verticalAlign: 'middle' }} />}</h2>
+        <div className={`section-header section-header-collapsible${collapsedSections.architektur ? ' collapsed' : ''}`} onClick={() => toggleSection('architektur')}>
+          <h2>
+            <span className="section-header-icon"><Landmark size={28} /></span>
+            <span className="section-header-title">Architektur auf Sizilien</span>
+            <span className="section-chevron-area">
+              <span className="section-toggle-hint">{collapsedSections.architektur ? 'Aufklappen' : 'Einklappen'}</span>
+              {collapsedSections.architektur ? <ChevronDown size={26} /> : <ChevronUp size={26} />}
+            </span>
+          </h2>
           <div className="section-divider" />
-          <p>Tempelformen, Säulenordnungen und Kirchentypen – von der Antike bis zur Normannenzeit</p>
+          <p>Tempelformen, Säulenordnungen und Kirchentypen</p>
         </div>
 
         <AnimatePresence>
@@ -2975,10 +3005,17 @@ function App() {
 
       {/* Flora & Fauna */}
       <section className="section" id="natur">
-        <div className="section-header section-header-collapsible" onClick={() => toggleSection('natur')}>
-          <h2>🌿 Flora &amp; Fauna {collapsedSections.natur ? <ChevronDown size={22} style={{ verticalAlign: 'middle' }} /> : <ChevronUp size={22} style={{ verticalAlign: 'middle' }} />}</h2>
+        <div className={`section-header section-header-collapsible${collapsedSections.natur ? ' collapsed' : ''}`} onClick={() => toggleSection('natur')}>
+          <h2>
+            <span className="section-header-icon">🌿</span>
+            <span className="section-header-title">Flora &amp; Fauna</span>
+            <span className="section-chevron-area">
+              <span className="section-toggle-hint">{collapsedSections.natur ? 'Aufklappen' : 'Einklappen'}</span>
+              {collapsedSections.natur ? <ChevronDown size={26} /> : <ChevronUp size={26} />}
+            </span>
+          </h2>
           <div className="section-divider" />
-          <p>Die Natur Siziliens – zwischen Mittelmeer, Ätna und afrikanischem Klima</p>
+          <p>Die Natur Siziliens</p>
         </div>
 
         <AnimatePresence>
@@ -3175,10 +3212,17 @@ function App() {
 
       {/* Zeittafel */}
       <section className="section" id="zeittafel">
-        <div className="section-header section-header-collapsible" onClick={() => toggleSection('zeittafel')}>
-          <h2><Clock size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Zeittafel Sizilien {collapsedSections.zeittafel ? <ChevronDown size={22} style={{ verticalAlign: 'middle' }} /> : <ChevronUp size={22} style={{ verticalAlign: 'middle' }} />}</h2>
+        <div className={`section-header section-header-collapsible${collapsedSections.zeittafel ? ' collapsed' : ''}`} onClick={() => toggleSection('zeittafel')}>
+          <h2>
+            <span className="section-header-icon"><Clock size={28} /></span>
+            <span className="section-header-title">Zeittafel Sizilien</span>
+            <span className="section-chevron-area">
+              <span className="section-toggle-hint">{collapsedSections.zeittafel ? 'Aufklappen' : 'Einklappen'}</span>
+              {collapsedSections.zeittafel ? <ChevronDown size={26} /> : <ChevronUp size={26} />}
+            </span>
+          </h2>
           <div className="section-divider" />
-          <p>Von der Vorgeschichte bis zur Gegenwart – drei Jahrtausende Geschichte</p>
+          <p>Drei Jahrtausende Geschichte</p>
         </div>
         <AnimatePresence>
         {!collapsedSections.zeittafel && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
@@ -3219,11 +3263,20 @@ function App() {
 
       {/* Persönlichkeiten */}
       <section className="section" id="personen">
-        <div className="section-header">
-          <h2><Users size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Berühmte Persönlichkeiten</h2>
+        <div className={`section-header section-header-collapsible${collapsedSections.personen ? ' collapsed' : ''}`} onClick={() => toggleSection('personen')}>
+          <h2>
+            <span className="section-header-icon"><Users size={28} /></span>
+            <span className="section-header-title">Berühmte Persönlichkeiten</span>
+            <span className="section-chevron-area">
+              <span className="section-toggle-hint">{collapsedSections.personen ? 'Aufklappen' : 'Einklappen'}</span>
+              {collapsedSections.personen ? <ChevronDown size={26} /> : <ChevronUp size={26} />}
+            </span>
+          </h2>
           <div className="section-divider" />
-          <p>Herausragende Menschen, die Siziliens Geschichte und Kultur geprägt haben</p>
+          <p>Herausragende Menschen Siziliens</p>
         </div>
+        <AnimatePresence>
+        {!collapsedSections.personen && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
         <div className="personen-grid">
           {personenDaten.map((p, i) => (
             <motion.div key={i} className={`person-card${expandedPerson === i ? ' person-card-open' : ''}`} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
@@ -3248,6 +3301,8 @@ function App() {
             </motion.div>
           ))}
         </div>
+        </motion.div>)}
+        </AnimatePresence>
       </section>
 
       <section className="section" id="glossar">
@@ -3331,8 +3386,7 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>Sizilien Kulturreise 2026</p>
-        <p style={{ marginTop: '0.5rem', fontSize: '0.8rem' }}>28. März – 4. April 2026</p>
+        <p>Sizilien Kulturreise &middot; 28. März &ndash; 4. April 2026</p>
       </footer>
     </div>
   )

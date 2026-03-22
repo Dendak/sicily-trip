@@ -813,6 +813,42 @@
 }
 
 /* ============ GLOSSARY ============ */
+.glossary-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.glossary-category {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+.glossary-cat-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.2rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.glossary-cat-header:hover {
+  background: var(--color-accent);
+}
+
+.glossary-cat-arrow {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
 .glossary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

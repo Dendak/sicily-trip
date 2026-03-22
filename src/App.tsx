@@ -926,115 +926,156 @@ const restaurants: Restaurant[] = [
   },
 ]
 
-const glossary = [
-  { it: 'buongiorno', de: 'Guten Tag / Guten Morgen' },
-  { it: 'buonasera', de: 'Guten Abend' },
-  { it: 'grazie', de: 'Danke' },
-  { it: 'per favore / per piacere', de: 'Bitte' },
-  { it: 'scusi', de: 'Entschuldigung' },
-  { it: 'Quanto costa?', de: 'Wie viel kostet das?' },
-  { it: 'Il conto, per favore', de: 'Die Rechnung, bitte' },
-  { it: 'Dov\'è ...?', de: 'Wo ist ...?' },
-  { it: 'sì / no', de: 'ja / nein' },
-  { it: 'acqua (naturale/frizzante)', de: 'Wasser (still/sprudelnd)' },
-  { it: 'vino rosso / bianco', de: 'Rotwein / Weißwein' },
-  { it: 'primo piatto', de: 'Erster Gang (Pasta, Risotto)' },
-  { it: 'secondo piatto', de: 'Zweiter Gang (Fleisch, Fisch)' },
-  { it: 'contorno', de: 'Beilage' },
-  { it: 'dolce', de: 'Nachspeise / Süßigkeit' },
-  { it: 'la chiesa', de: 'Kirche' },
-  { it: 'il duomo / la cattedrale', de: 'Dom / Kathedrale' },
-  { it: 'il museo', de: 'Museum' },
-  { it: 'il teatro', de: 'Theater' },
-  { it: 'la piazza', de: 'Platz' },
-  { it: 'l\'ingresso', de: 'Eingang / Eintritt' },
-  { it: 'chiuso / aperto', de: 'geschlossen / offen' },
-  { it: 'la stazione', de: 'Bahnhof' },
-  { it: 'a destra / a sinistra', de: 'rechts / links' },
-  // Begrüßung & Abschied
-  { it: 'ciao / salve', de: 'Hallo / Grüß Gott' },
-  { it: 'arrivederci', de: 'Auf Wiedersehen' },
-  { it: 'buona notte', de: 'Gute Nacht' },
-  { it: 'Come dice?', de: 'Wie bitte?' },
-  // Unterwegs
-  { it: 'diritto', de: 'geradeaus' },
-  { it: 'senso unico', de: 'Einbahnstraße' },
-  { it: 'entrata', de: 'Eingang / Einfahrt' },
-  { it: 'informazione', de: 'Auskunft / Information' },
-  { it: 'posta', de: 'Postamt' },
-  { it: 'aeroporto', de: 'Flughafen' },
-  { it: 'pianta della città', de: 'Stadtplan' },
-  { it: 'tutte le direzioni', de: 'alle Richtungen' },
-  { it: 'spiaggia', de: 'Strand' },
-  { it: 'ponte', de: 'Brücke' },
-  // Zeit
-  { it: 'ora / giorno', de: 'Stunde / Tag' },
-  { it: 'settimana', de: 'Woche' },
-  { it: 'mese', de: 'Monat' },
-  { it: 'anno', de: 'Jahr' },
-  { it: 'oggi / ieri', de: 'heute / gestern' },
-  { it: 'domani', de: 'Morgen (= tomorrow)' },
-  { it: 'di mattina / di sera', de: 'morgens / abends' },
-  { it: 'a mezzogiorno', de: 'mittags' },
-  { it: 'presto / tardi', de: 'früh / spät' },
-  // Wochentage
-  { it: 'lunedì', de: 'Montag' },
-  { it: 'martedì', de: 'Dienstag' },
-  { it: 'mercoledì', de: 'Mittwoch' },
-  { it: 'giovedì', de: 'Donnerstag' },
-  { it: 'venerdì', de: 'Freitag' },
-  { it: 'sabato', de: 'Samstag' },
-  { it: 'domenica', de: 'Sonntag' },
-  // Übernachten
-  { it: 'albergo / pensione', de: 'Hotel / Pension' },
-  { it: 'camera singola', de: 'Einzelzimmer' },
-  { it: 'camera doppia', de: 'Doppelzimmer' },
-  { it: 'con/senza bagno', de: 'mit/ohne Bad' },
-  { it: 'bagno / gabinetto', de: 'Bad / Toilette' },
-  { it: 'doccia', de: 'Dusche' },
-  { it: 'con prima colazione', de: 'mit Frühstück' },
-  { it: 'mezza pensione', de: 'Halbpension' },
-  { it: 'bagagli', de: 'Gepäck' },
-  // Einkaufen
-  { it: 'negozio', de: 'Geschäft / Laden' },
-  { it: 'mercato', de: 'Markt' },
-  { it: 'carta di credito', de: 'Kreditkarte' },
-  { it: 'soldi', de: 'Geld' },
-  { it: 'bancomat', de: 'Geldautomat' },
-  { it: 'panificio', de: 'Bäckerei' },
-  { it: 'alimentari', de: 'Lebensmittelgeschäft' },
-  { it: 'caro/-a', de: 'teuer' },
-  { it: 'a buon mercato', de: 'günstig / billig' },
-  { it: 'taglia', de: 'Größe (Kleidung)' },
-  // Notfall
-  { it: 'Aiuto!', de: 'Hilfe!' },
-  { it: 'guasto', de: 'Panne / Defekt' },
-  { it: 'incidente', de: 'Unfall' },
-  { it: 'dolori', de: 'Schmerzen' },
-  { it: 'ospedale', de: 'Krankenhaus' },
-  { it: 'farmacia', de: 'Apotheke' },
-  { it: 'medico / dentista', de: 'Arzt / Zahnarzt' },
-  { it: 'polizia', de: 'Polizei' },
-  // Wichtige Sätze
-  { it: 'Non capisco.', de: 'Ich verstehe nicht.' },
-  { it: 'Non parlo italiano.', de: 'Ich spreche kein Italienisch.' },
-  { it: 'Parla tedesco / inglese?', de: 'Sprechen Sie Deutsch / Englisch?' },
-  { it: 'Come si chiama?', de: 'Wie heißen Sie?' },
-  { it: 'Come sta?', de: 'Wie geht es Ihnen?' },
-  { it: 'Che ora è?', de: 'Wie viel Uhr ist es?' },
-  { it: 'Come faccio ad arrivare a ...?', de: 'Wie komme ich nach ...?' },
-  { it: 'Ha una camera libera?', de: 'Haben Sie ein Zimmer frei?' },
-  { it: 'Ho bisogno di un medico.', de: 'Ich brauche einen Arzt.' },
-  { it: 'Mi fa male qui.', de: 'Hier tut es weh.' },
-  // Zahlen
-  { it: 'uno / due / tre', de: '1 / 2 / 3' },
-  { it: 'quattro / cinque / sei', de: '4 / 5 / 6' },
-  { it: 'sette / otto / nove', de: '7 / 8 / 9' },
-  { it: 'dieci / undici / dodici', de: '10 / 11 / 12' },
-  { it: 'venti / trenta / quaranta', de: '20 / 30 / 40' },
-  { it: 'cinquanta / sessanta / settanta', de: '50 / 60 / 70' },
-  { it: 'ottanta / novanta / cento', de: '80 / 90 / 100' },
-  { it: 'mille', de: '1000' },
+const glossaryByCategory = [
+  {
+    category: 'Begrüßung & Abschied',
+    entries: [
+      { it: 'buongiorno', de: 'Guten Tag / Guten Morgen' },
+      { it: 'buonasera', de: 'Guten Abend' },
+      { it: 'buona notte', de: 'Gute Nacht' },
+      { it: 'ciao / salve', de: 'Hallo / Grüß Gott' },
+      { it: 'arrivederci', de: 'Auf Wiedersehen' },
+      { it: 'sì / no', de: 'ja / nein' },
+      { it: 'grazie', de: 'Danke' },
+      { it: 'per favore / per piacere', de: 'Bitte' },
+      { it: 'scusi', de: 'Entschuldigung' },
+      { it: 'come dice?', de: 'Wie bitte?' },
+    ]
+  },
+  {
+    category: 'Im Restaurant',
+    entries: [
+      { it: 'acqua (naturale/frizzante)', de: 'Wasser (still/sprudelnd)' },
+      { it: 'vino rosso / bianco', de: 'Rotwein / Weißwein' },
+      { it: 'primo piatto', de: 'Erster Gang (Pasta, Risotto)' },
+      { it: 'secondo piatto', de: 'Zweiter Gang (Fleisch, Fisch)' },
+      { it: 'contorno', de: 'Beilage' },
+      { it: 'dolce', de: 'Nachspeise / Süßigkeit' },
+      { it: 'il conto, per favore', de: 'Die Rechnung, bitte' },
+      { it: 'quanto costa?', de: 'Wie viel kostet das?' },
+    ]
+  },
+  {
+    category: 'Sehenswürdigkeiten',
+    entries: [
+      { it: 'la chiesa', de: 'Kirche' },
+      { it: 'il duomo / la cattedrale', de: 'Dom / Kathedrale' },
+      { it: 'il museo', de: 'Museum' },
+      { it: 'il teatro', de: 'Theater' },
+      { it: 'la piazza', de: 'Platz' },
+      { it: "l'ingresso", de: 'Eingang / Eintritt' },
+      { it: 'chiuso / aperto', de: 'geschlossen / offen' },
+    ]
+  },
+  {
+    category: 'Unterwegs',
+    entries: [
+      { it: "dov'è ...?", de: 'Wo ist ...?' },
+      { it: 'a destra / a sinistra', de: 'rechts / links' },
+      { it: 'diritto', de: 'geradeaus' },
+      { it: 'senso unico', de: 'Einbahnstraße' },
+      { it: 'tutte le direzioni', de: 'alle Richtungen' },
+      { it: 'pianta della città', de: 'Stadtplan' },
+      { it: 'la stazione', de: 'Bahnhof' },
+      { it: 'aeroporto', de: 'Flughafen' },
+      { it: 'spiaggia', de: 'Strand' },
+      { it: 'ponte', de: 'Brücke' },
+      { it: 'entrata', de: 'Eingang / Einfahrt' },
+      { it: 'informazione', de: 'Auskunft / Information' },
+      { it: 'posta', de: 'Postamt' },
+    ]
+  },
+  {
+    category: 'Einkaufen & Bezahlen',
+    entries: [
+      { it: 'negozio', de: 'Geschäft / Laden' },
+      { it: 'mercato', de: 'Markt' },
+      { it: 'soldi', de: 'Geld' },
+      { it: 'carta di credito', de: 'Kreditkarte' },
+      { it: 'bancomat', de: 'Geldautomat' },
+      { it: 'panificio', de: 'Bäckerei' },
+      { it: 'alimentari', de: 'Lebensmittelgeschäft' },
+      { it: 'caro/-a', de: 'teuer' },
+      { it: 'a buon mercato', de: 'günstig / billig' },
+      { it: 'taglia', de: 'Größe (Kleidung)' },
+    ]
+  },
+  {
+    category: 'Zahlen',
+    entries: [
+      { it: 'uno / due / tre', de: '1 / 2 / 3' },
+      { it: 'quattro / cinque / sei', de: '4 / 5 / 6' },
+      { it: 'sette / otto / nove', de: '7 / 8 / 9' },
+      { it: 'dieci / undici / dodici', de: '10 / 11 / 12' },
+      { it: 'venti / trenta / quaranta', de: '20 / 30 / 40' },
+      { it: 'cinquanta / sessanta / settanta', de: '50 / 60 / 70' },
+      { it: 'ottanta / novanta / cento', de: '80 / 90 / 100' },
+      { it: 'mille', de: '1000' },
+    ]
+  },
+  {
+    category: 'Zeit & Wochentage',
+    entries: [
+      { it: 'ora / giorno', de: 'Stunde / Tag' },
+      { it: 'settimana', de: 'Woche' },
+      { it: 'mese', de: 'Monat' },
+      { it: 'anno', de: 'Jahr' },
+      { it: 'oggi / ieri', de: 'heute / gestern' },
+      { it: 'domani', de: 'morgen' },
+      { it: 'di mattina / di sera', de: 'morgens / abends' },
+      { it: 'a mezzogiorno', de: 'mittags' },
+      { it: 'presto / tardi', de: 'früh / spät' },
+      { it: 'lunedì', de: 'Montag' },
+      { it: 'martedì', de: 'Dienstag' },
+      { it: 'mercoledì', de: 'Mittwoch' },
+      { it: 'giovedì', de: 'Donnerstag' },
+      { it: 'venerdì', de: 'Freitag' },
+      { it: 'sabato', de: 'Samstag' },
+      { it: 'domenica', de: 'Sonntag' },
+    ]
+  },
+  {
+    category: 'Übernachten',
+    entries: [
+      { it: 'albergo / pensione', de: 'Hotel / Pension' },
+      { it: 'camera singola', de: 'Einzelzimmer' },
+      { it: 'camera doppia', de: 'Doppelzimmer' },
+      { it: 'con/senza bagno', de: 'mit/ohne Bad' },
+      { it: 'bagno / gabinetto', de: 'Bad / Toilette' },
+      { it: 'doccia', de: 'Dusche' },
+      { it: 'con prima colazione', de: 'mit Frühstück' },
+      { it: 'mezza pensione', de: 'Halbpension' },
+      { it: 'bagagli', de: 'Gepäck' },
+    ]
+  },
+  {
+    category: 'Wichtige Redewendungen',
+    entries: [
+      { it: 'non capisco.', de: 'Ich verstehe nicht.' },
+      { it: 'non parlo italiano.', de: 'Ich spreche kein Italienisch.' },
+      { it: 'parla tedesco / inglese?', de: 'Sprechen Sie Deutsch / Englisch?' },
+      { it: 'come si chiama?', de: 'Wie heißen Sie?' },
+      { it: 'come sta?', de: 'Wie geht es Ihnen?' },
+      { it: 'che ora è?', de: 'Wie viel Uhr ist es?' },
+      { it: 'come faccio ad arrivare a ...?', de: 'Wie komme ich nach ...?' },
+      { it: 'ha una camera libera?', de: 'Haben Sie ein Zimmer frei?' },
+      { it: 'ho bisogno di un medico.', de: 'Ich brauche einen Arzt.' },
+      { it: 'mi fa male qui.', de: 'Hier tut es weh.' },
+    ]
+  },
+  {
+    category: 'Notfall & Gesundheit',
+    entries: [
+      { it: 'aiuto!', de: 'Hilfe!' },
+      { it: 'guasto', de: 'Panne / Defekt' },
+      { it: 'incidente', de: 'Unfall' },
+      { it: 'dolori', de: 'Schmerzen' },
+      { it: 'ospedale', de: 'Krankenhaus' },
+      { it: 'farmacia', de: 'Apotheke' },
+      { it: 'medico / dentista', de: 'Arzt / Zahnarzt' },
+      { it: 'polizia', de: 'Polizei' },
+    ]
+  },
 ]
 
 const vorspeisen = [
@@ -1666,6 +1707,7 @@ function App() {
   const [expandedGruppen, setExpandedGruppen] = useState<string[]>([])
   const [restaurantFilter, setRestaurantFilter] = useState<string>('Alle')
   const [glossarRichtung, setGlossarRichtung] = useState<'it-de' | 'de-it'>('it-de')
+  const [glossarOpenCats, setGlossarOpenCats] = useState<string[]>(glossaryByCategory.map(c => c.category))
 
   // Track which day card is in view
   useEffect(() => {
@@ -2344,21 +2386,40 @@ function App() {
           >🇩🇪 Deutsch → Italienisch</button>
         </div>
 
-        <div className="glossary-grid">
-          {[...glossary].sort((a, b) =>
-            glossarRichtung === 'it-de'
-              ? a.it.localeCompare(b.it, 'it')
-              : a.de.localeCompare(b.de, 'de')
-          ).map((g, i) => (
-            <div key={i} className="glossary-item">
-              <span className="glossary-italian">
-                {glossarRichtung === 'it-de' ? g.it : g.de}
-              </span>
-              <span className="glossary-german">
-                {glossarRichtung === 'it-de' ? g.de : g.it}
-              </span>
-            </div>
-          ))}
+        <div className="glossary-categories">
+          {glossaryByCategory.map(cat => {
+            const isOpen = glossarOpenCats.includes(cat.category)
+            const toggle = () => setGlossarOpenCats(prev =>
+              isOpen ? prev.filter(c => c !== cat.category) : [...prev, cat.category]
+            )
+            const sorted = [...cat.entries].sort((a, b) =>
+              glossarRichtung === 'it-de'
+                ? a.it.localeCompare(b.it, 'it')
+                : a.de.localeCompare(b.de, 'de')
+            )
+            return (
+              <div key={cat.category} className="glossary-category">
+                <button className="glossary-cat-header" onClick={toggle}>
+                  <span>{cat.category}</span>
+                  <span className="glossary-cat-arrow">{isOpen ? '▲' : '▼'}</span>
+                </button>
+                {isOpen && (
+                  <div className="glossary-grid">
+                    {sorted.map((g, i) => (
+                      <div key={i} className="glossary-item">
+                        <span className="glossary-italian">
+                          {glossarRichtung === 'it-de' ? g.it : g.de}
+                        </span>
+                        <span className="glossary-german">
+                          {glossarRichtung === 'it-de' ? g.de : g.it}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </div>
       </section>
 

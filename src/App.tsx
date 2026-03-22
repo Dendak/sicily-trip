@@ -1980,7 +1980,6 @@ function App() {
                         <div className="stop-card-bg" style={{ backgroundImage: `url(${img})`, backgroundPosition: (s as any).bgPosition || 'center', backgroundSize: (s as any).bgSize || 'cover' }} />
                       )}
                       <div className="stop-card-content">
-                        {s.caption && <div className="stop-caption">{s.caption}</div>}
                         <div className="stop-name">{s.name} {s.km && <span className="stop-km">({s.km})</span>}{(s as any).option && <span className="stop-option"> [{(s as any).option}]</span>}</div>
                         <div className="stop-desc">{s.desc}</div>
                         {(s as any).flight && (

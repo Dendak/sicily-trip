@@ -2546,7 +2546,6 @@ function App() {
               <span className="day-accordion-badge">{d.weekday.slice(0, 2)}<br/>{d.day}</span>
               <div className="day-accordion-left">
                 <div className="day-accordion-info">
-                  <span className="day-accordion-weekday">{d.weekday}, {d.date}</span>
                   <span className="day-accordion-title">{d.title}</span>
                 </div>
               </div>

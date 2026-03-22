@@ -608,7 +608,7 @@ const sightImages: Record<string, string> = {
   'Taormina': images.taormina,
   'Tindari': '/sicily-trip/6-DO-Tindari.jpg',
   'Cefalù': '/sicily-trip/6-DO-Cefalu.jpg',
-  'Solunto': 'https://images.unsplash.com/photo-1668212145518-b9a2a614bbd9?w=800&q=80',
+  'Solunto': '/sicily-trip/6-DO-Solunto.jpg',
   'Palermo Altstadt': images.palermo,
   'Monreale': images.monreale,
   'Monte Pellegrino': 'https://images.unsplash.com/photo-1516986078574-f2f732941c4a?w=800&q=80',

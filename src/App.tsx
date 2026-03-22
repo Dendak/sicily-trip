@@ -603,7 +603,7 @@ const sightImages: Record<string, string> = {
   'Castello Eurialo': 'https://images.unsplash.com/photo-1767032330785-033405e26229?w=800&q=80',
   'Catania': images.catania,
   'Ätna': '/sicily-trip/5-MI-Etna-Krater.jpg',
-  'Ätna-Rundfahrt': '/sicily-trip/5-MI-Titel-Etna.jpg',
+  'Ätna-Rundfahrt': '/sicily-trip/5-MI-Etna2.jpg',
   'Alcantara-Schlucht': 'https://images.unsplash.com/photo-1704737035139-d8cc36aea123?w=800&q=80',
   'Taormina': images.taormina,
   'Tindari': 'https://images.unsplash.com/photo-1710092880781-3cbee5b05d85?w=800&q=80',

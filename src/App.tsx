@@ -720,7 +720,7 @@ const days: DayData[] = [
   {
     day: 7, date: '3. April', weekday: 'Freitag',
     title: 'Palermo – Monreale – Monte Pellegrino',
-    image: '/sicily-trip/7-FR-Titel-Palermo.jpg',
+    image: '/sicily-trip/7-FR-Gesichter-Martorana.jpg',
     hotel: 'Hotel Posta, Palermo (N/F)',
     hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [

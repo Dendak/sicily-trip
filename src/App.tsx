@@ -609,7 +609,7 @@ const sightImages: Record<string, string> = {
   'Tindari': '/sicily-trip/6-DO-Tindari.jpg',
   'Cefalù': '/sicily-trip/6-DO-Cefalu.jpg',
   'Solunto': '/sicily-trip/6-DO-Solunto.jpg',
-  'Palermo Altstadt': images.palermo,
+  'Palermo Altstadt': '/sicily-trip/7-FR-Palermo-Altstadt.jpg',
   'Monreale': images.monreale,
   'Monte Pellegrino': 'https://images.unsplash.com/photo-1516986078574-f2f732941c4a?w=800&q=80',
   'Syrakus: Ortigia': '/sicily-trip/4-DI-Siracusa-Arethusa.jpg',

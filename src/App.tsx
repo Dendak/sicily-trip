@@ -603,6 +603,7 @@ const sightImages: Record<string, string> = {
   'Castello Eurialo': 'https://images.unsplash.com/photo-1767032330785-033405e26229?w=800&q=80',
   'Catania': images.catania,
   'Ätna': '/sicily-trip/5-MI-Etna-Krater.jpg',
+  'Ätna-Rundfahrt': '/sicily-trip/5-MI-Titel-Etna.jpg',
   'Alcantara-Schlucht': 'https://images.unsplash.com/photo-1704737035139-d8cc36aea123?w=800&q=80',
   'Taormina': images.taormina,
   'Tindari': 'https://images.unsplash.com/photo-1710092880781-3cbee5b05d85?w=800&q=80',
@@ -702,6 +703,7 @@ const days: DayData[] = [
     hotelData: { name: 'Hotel Ariston', mapsQuery: 'Hotel+Ariston+Taormina+Sicily', mapsEmbed: 'Hotel+Ariston,+Taormina,+ME,+Italy' },
     stops: [
       { name: 'Ätna', desc: 'Auffahrt bis 1900m Höhe auf Europas höchsten aktiven Vulkan (3357m), ev. Umrundung', km: '55 km' },
+      { name: 'Ätna-Rundfahrt', desc: 'Panoramafahrt um den Vulkan – Lavafelder, Kastanienwälder und spektakuläre Ausblicke', km: '75 km' },
       { name: 'Alcantara-Schlucht', desc: 'Spektakuläre Basaltschlucht mit bizarren Lavagesteinsformationen', km: '100 km' },
       { name: 'Taormina', desc: 'Teatro Greco (3. Jh. v. Chr.) mit Ätna-Panorama, malerische Altstadt, Corso Umberto', km: '25 km' },
     ]

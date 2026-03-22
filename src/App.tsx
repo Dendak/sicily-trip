@@ -592,6 +592,7 @@ const sightImages: Record<string, string> = {
   'Cave di Cusa': '/sicily-trip/2-SO-Cave-di-Cusa.png',
   'Selinunte': '/sicily-trip/2-SO-Selinunte.jpg',
   'Scala dei Turchi': '/sicily-trip/2-SO-Scala-dei-Turchi.jpg',
+  'Porto Empedocle': '/sicily-trip/2-SO-Porto-Empedocle.jpg',
   'Agrigento': images.agrigento,
   'Gela': 'https://images.unsplash.com/photo-1727617855734-35b07c4fdfdb?w=800&q=80',
   'Piazza Armerina': 'https://images.unsplash.com/photo-1768910924686-2a2bda2d8ac4?w=800&q=80',
@@ -659,6 +660,7 @@ const days: DayData[] = [
       { name: 'Cave di Cusa', desc: 'Antiker Steinbruch für die Tempel von Selinunt – faszinierende Säulentrommeln in situ', km: '40 km' },
       { name: 'Selinunte', desc: 'Griechischer Tempelbezirk und Akropolis, eine der größten antiken Städte Siziliens', km: '15 km' },
       { name: 'Scala dei Turchi', desc: 'Spektakuläres weißes Kalkstein-Naturmonument an der Küste', km: '85 km' },
+      { name: 'Porto Empedocle', desc: 'Heimatstadt Camilleris und Schauplatz von Commissario Montalbano – Statue des berühmten Ermittlers am Hafen', km: '5 km' },
       { name: 'Agrigento', desc: 'Tal der Tempel: Demetertempel, Zeusheiligtum (Olympieion), archäologisches Museum, Altstadt', km: '15 km' },
     ]
   },

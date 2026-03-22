@@ -617,6 +617,7 @@ const sightImages: Record<string, string> = {
   'Grab des Archimedes': 'https://images.unsplash.com/photo-1725255922252-4b4ab90c9477?w=800&q=80',
   'Messina': '/sicily-trip/6-DO-Messina.jpg',
   'Milazzo': '/sicily-trip/6-DO-Milazzo.jpg',
+  'Lipari / Vulcano': '/sicily-trip/6-DO-Lipari-Vulcano.jpg',
   'Siracusa': '/sicily-trip/3-MO-Siracusa-Duomo.jpg',
 }
 
@@ -717,7 +718,8 @@ const days: DayData[] = [
     hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [
       { name: 'Messina', desc: 'Fährhafen und Tor zur Insel – Meerenge von Messina, Dom mit astronomischer Uhr', km: '50 km' },
-      { name: 'Milazzo', desc: 'Option: Äolische Inseln ODER Tindari mit Teatro Greco, Basilika, Casa Romana, Wallfahrtskirche', km: '20 km' },
+      { name: 'Milazzo', desc: 'Ausgangspunkt für die Äolischen Inseln – Kastell, Altstadt, Hafen', km: '20 km' },
+      { name: 'Lipari / Vulcano', desc: 'Äolische Inseln (UNESCO): Lipari mit Castello und Archäologischem Museum, Vulcano mit aktiven Fumarolen', km: '0 km' },
       { name: 'Cefalù', desc: 'Normannische Kathedrale San Salvatore (1131) mit byzantinischen Christus-Pantokrator-Mosaiken', km: '115 km' },
       { name: 'Solunto', desc: 'Hellenistisch-römische Stadt mit Peristylhäusern und Agora auf dem Monte Catalfano', km: '55 km' },
       { name: 'Palermo', desc: 'Ankunft in der sizilianischen Hauptstadt', km: '20 km' },

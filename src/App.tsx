@@ -2766,16 +2766,16 @@ function App() {
           ))}
         </div>
 
-        {/* Tempel-Aufbau Diagramm + Foto */}
+        {/* Tempel-Aufbau Diagramme */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '1.5rem', margin: '1rem 0', alignItems: 'start' }}>
           <div className="arch-schema-detail" style={{ margin: 0 }}>
-            <p style={{ fontSize: '0.85rem', color: 'var(--color-text-light)', marginBottom: '0.6rem' }}>Schema: Säulenbasis</p>
+            <p style={{ fontSize: '0.85rem', color: 'var(--color-text-light)', marginBottom: '0.6rem' }}>Schema: Säulenbasis (Fundament – Krepis – Stylobat)</p>
             <img src="/sicily-trip/arch-saeulenbasis.svg" alt="Dorische Säulenbasis: Fundament, Krepis, Euthynterie, Stylobat" style={{ width: '100%', maxWidth: '320px', borderRadius: '8px', border: '1px solid var(--color-border)', background: '#fff', padding: '0.5rem' }} />
           </div>
           <div className="arch-schema-detail" style={{ margin: 0 }}>
-            <p style={{ fontSize: '0.85rem', color: 'var(--color-text-light)', marginBottom: '0.6rem' }}>Klicken zum Vergrößern – Poseidon-Tempel Paestum (5. Jh. v. Chr.)</p>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Doric_order_-_Temple_of_Poseidon_-_Paestum_-_Italy.JPG" target="_blank" rel="noopener noreferrer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Doric_order_-_Temple_of_Poseidon_-_Paestum_-_Italy.JPG" alt="Dorischer Tempel – Poseidon-Tempel Paestum" loading="lazy" className="arch-schema-img" />
+            <p style={{ fontSize: '0.85rem', color: 'var(--color-text-light)', marginBottom: '0.6rem' }}>Klicken zum Vergrößern – Beschriftetes Schema: Kapitell, Gebälk und Giebel (Wikimedia Commons)</p>
+            <a href="https://upload.wikimedia.org/wikipedia/commons/a/ae/Doric-order-labeled.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Doric-order-labeled.jpg" alt="Dorische Ordnung – vollständig beschriftet: Triglyphen, Metopen, Architrav, Kapitell, Echinus, Abakus" loading="lazy" className="arch-schema-img" />
             </a>
           </div>
         </div>

@@ -652,7 +652,7 @@ const days: DayData[] = [
   {
     day: 2, date: '29. März', weekday: 'Sonntag',
     title: 'Marsala – Selinunte – Agrigento',
-    image: images.agrigento,
+    image: '/sicily-trip/2-SO-Titel-Selinunte.jpg',
     hotel: 'Hotel Oneira Rooms, Agrigento (N/F)',
     hotelData: { name: 'Oneira Rooms', mapsQuery: 'Oneira+Rooms+Agrigento+Sicily', mapsEmbed: 'Oneira+Rooms,+Agrigento,+AG,+Italy' },
     stops: [
@@ -665,7 +665,7 @@ const days: DayData[] = [
   {
     day: 3, date: '30. März', weekday: 'Montag',
     title: 'Agrigento – Gela – Piazza Armerina – Noto – Siracusa',
-    image: images.noto,
+    image: '/sicily-trip/3-MO-Titel-PiazzaArmerina.jpg',
     hotel: 'Hotel I Santi Coronati, Siracusa (N/F)',
     hotelData: { name: 'I Santi Coronati', mapsQuery: 'Hotel+I+Santi+Coronati+Siracusa', mapsEmbed: 'I+Santi+Coronati,+Siracusa,+SR,+Italy' },
     stops: [
@@ -680,7 +680,7 @@ const days: DayData[] = [
   {
     day: 4, date: '31. März', weekday: 'Dienstag',
     title: 'Siracusa – Catania – Taormina',
-    image: images.siracusa,
+    image: '/sicily-trip/4-DI-Titel-Siracusa.jpg',
     hotel: 'Hotel Ariston, Taormina (N/F)',
     hotelData: { name: 'Hotel Ariston', mapsQuery: 'Hotel+Ariston+Taormina+Sicily', mapsEmbed: 'Hotel+Ariston,+Taormina,+ME,+Italy' },
     stops: [
@@ -695,7 +695,7 @@ const days: DayData[] = [
   {
     day: 5, date: '1. April', weekday: 'Mittwoch',
     title: 'Taormina – Ätna – Alcantara-Schlucht',
-    image: images.etna,
+    image: '/sicily-trip/5-MI-Titel-Etna.jpg',
     hotel: 'Hotel Ariston, Taormina (N/F)',
     hotelData: { name: 'Hotel Ariston', mapsQuery: 'Hotel+Ariston+Taormina+Sicily', mapsEmbed: 'Hotel+Ariston,+Taormina,+ME,+Italy' },
     stops: [
@@ -707,7 +707,7 @@ const days: DayData[] = [
   {
     day: 6, date: '2. April', weekday: 'Donnerstag',
     title: 'Taormina – Cefalù – Palermo',
-    image: images.cefalu,
+    image: '/sicily-trip/6-DO-Titel-Isole.jpg',
     hotel: 'Hotel Posta, Palermo (N/F)',
     hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [
@@ -720,7 +720,7 @@ const days: DayData[] = [
   {
     day: 7, date: '3. April', weekday: 'Freitag',
     title: 'Palermo – Monreale – Monte Pellegrino',
-    image: images.monreale,
+    image: '/sicily-trip/7-FR-Titel-Palermo.jpg',
     hotel: 'Hotel Posta, Palermo (N/F)',
     hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
     stops: [
@@ -732,7 +732,7 @@ const days: DayData[] = [
   {
     day: 8, date: '4. April', weekday: 'Samstag',
     title: 'Palermo – Rückflug',
-    image: images.palermo,
+    image: '/sicily-trip/8-SA-Titel-Palermo2.jpg',
     hotel: '',
     stops: [
       { name: 'Palermo Altstadt', desc: 'Altstadtrundgang: Quattro Canti, Fontana Pretoria, Vucciria-Markt' },

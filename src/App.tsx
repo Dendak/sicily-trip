@@ -719,7 +719,7 @@ const days: DayData[] = [
     stops: [
       { name: 'Messina', desc: 'Fährhafen und Tor zur Insel – Meerenge von Messina, Dom mit astronomischer Uhr', km: '50 km' },
       { name: 'Milazzo', desc: 'Ausgangspunkt für die Äolischen Inseln – Kastell, Altstadt, Hafen', km: '20 km' },
-      { name: 'Lipari / Vulcano', desc: 'Äolische Inseln (UNESCO): Lipari mit Castello und Archäologischem Museum, Vulcano mit aktiven Fumarolen', km: '0 km' },
+      { name: 'Lipari / Vulcano', desc: 'Äolische Inseln (UNESCO): Lipari mit Castello und Archäologischem Museum, Vulcano mit aktiven Fumarolen', km: '[Option]' },
       { name: 'Cefalù', desc: 'Normannische Kathedrale San Salvatore (1131) mit byzantinischen Christus-Pantokrator-Mosaiken', km: '115 km' },
       { name: 'Solunto', desc: 'Hellenistisch-römische Stadt mit Peristylhäusern und Agora auf dem Monte Catalfano', km: '55 km' },
       { name: 'Palermo', desc: 'Ankunft in der sizilianischen Hauptstadt', km: '20 km' },

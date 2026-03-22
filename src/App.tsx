@@ -638,7 +638,7 @@ const days: DayData[] = [
   {
     day: 1, date: '28. März', weekday: 'Samstag',
     title: 'Salzburg – Palermo – Segesta – Trapani – Marsala',
-    image: images.segesta,
+    image: '/sicily-trip/1-SA-Titel-Segesta.jpg',
     hotel: 'Hotel Carmine, Marsala (N/F)',
     hotelData: { name: 'Hotel Carmine', mapsQuery: 'Hotel+Carmine+Marsala+Sicily', mapsEmbed: 'Hotel+Carmine,+Marsala,+TP,+Italy' },
     stops: [

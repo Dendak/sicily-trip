@@ -611,7 +611,7 @@ const sightImages: Record<string, string> = {
   'Palermo Altstadt': images.palermo,
   'Monreale': images.monreale,
   'Monte Pellegrino': 'https://images.unsplash.com/photo-1516986078574-f2f732941c4a?w=800&q=80',
-  'Syrakus: Ortigia': 'https://images.unsplash.com/photo-1593290904368-e993b56accc9?w=800&q=80',
+  'Syrakus: Ortigia': '/sicily-trip/4-DI-Siracusa-Arethusa.jpg',
   'Archäologischer Park': 'https://images.unsplash.com/photo-1670694106275-20601b741a63?w=800&q=80',
   'Grab des Archimedes': 'https://images.unsplash.com/photo-1725255922252-4b4ab90c9477?w=800&q=80',
   'Milazzo / Tindari': 'https://images.unsplash.com/photo-1710092880781-3cbee5b05d85?w=800&q=80',

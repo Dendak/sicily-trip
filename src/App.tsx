@@ -589,7 +589,7 @@ const sightImages: Record<string, string> = {
   'Monte Érice': 'https://images.unsplash.com/photo-1531050661635-3999fed2312e?w=800&q=80',
   'Trapani': 'https://images.unsplash.com/photo-1749832147262-76b40c0fc005?w=800&q=80',
   'Marsala': 'https://images.unsplash.com/photo-1513258419489-57f9e66da32b?w=800&q=80',
-  'Cave di Cusa': 'https://images.unsplash.com/photo-1585756908524-d7935e897056?w=800&q=80',
+  'Cave di Cusa': '/sicily-trip/2-SO-Cave-di-Cusa.png',
   'Selinunte': 'https://images.unsplash.com/photo-1581364899794-1e21c0179a4e?w=800&q=80',
   'Scala dei Turchi': images.scalaDeiTurchi,
   'Agrigento': images.agrigento,

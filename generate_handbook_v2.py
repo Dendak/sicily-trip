@@ -278,7 +278,7 @@ class ImageWithBorder(Flowable):
             return
         # Border
         self.canv.setStrokeColor(MEDIUM_GRAY)
-        self.canv.setLineWidth(0.5)
+        self.canv.setLineWidth(0.3)
         cap_h = 12 if self.caption else 0
         self.canv.rect(0, cap_h, self.iw + 2, self.ih + 2, fill=0)
         # Image
@@ -380,34 +380,39 @@ def page_footer_blank(canvas_obj, doc):
 
 
 # ── Helper to create image+caption blocks ──────────────────────────────
-MIN_SINGLE_IMAGE_W = 160 * mm  # 454pt - minimum width for a standalone image
+MIN_SINGLE_IMAGE_W = CONTENT_W * 0.6  # Minimum width for a standalone image
 
 def img_block(path, caption=None, max_w=None, max_h=None):
     """Return list of flowables for an image with border and caption, or empty list.
-    Enforces minimum width for standalone images to avoid tiny images on empty pages."""
+    Enforces minimum width (CONTENT_W * 0.6) and max height (250mm) for standalone images."""
     if path is None or not Path(path).exists():
         return []
     mw = max_w or CONTENT_W
     # Enforce minimum width for standalone images
     if mw < MIN_SINGLE_IMAGE_W:
-        mw = min(CONTENT_W, MIN_SINGLE_IMAGE_W)
-    mh = max_h or (200 * mm)
+        mw = CONTENT_W  # Single images should be full width
+    mh = max_h or (250 * mm)
+    # Cap max height to 250mm to leave room for caption
+    if mh > 250 * mm:
+        mh = 250 * mm
     ib = ImageWithBorder(str(path), max_w=mw, max_h=mh, caption=caption)
     if ib.iw <= 0:
         return []
-    return [ib, Spacer(1, 3)]
+    return [Spacer(1, 4), ib, Spacer(1, 2)]
 
 
 def img_pair(path1, cap1, path2, cap2, each_w=None):
     """Two images side by side in a table."""
-    ew = each_w or (CONTENT_W / 2 - 5)
+    gap = 6
+    ew = each_w or ((CONTENT_W - gap) / 2)
     items1 = img_block(path1, cap1, max_w=ew, max_h=120 * mm)
     items2 = img_block(path2, cap2, max_w=ew, max_h=120 * mm)
     if not items1 and not items2:
         return []
     c1 = items1 if items1 else [Spacer(1, 1)]
     c2 = items2 if items2 else [Spacer(1, 1)]
-    t = Table([[c1, c2]], colWidths=[CONTENT_W / 2, CONTENT_W / 2])
+    cw = (CONTENT_W - gap) / 2
+    t = Table([[c1, c2]], colWidths=[cw + gap/2, cw + gap/2])
     t.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
         ('LEFTPADDING', (0, 0), (-1, -1), 0),
@@ -415,7 +420,7 @@ def img_pair(path1, cap1, path2, cap2, each_w=None):
         ('TOPPADDING', (0, 0), (-1, -1), 0),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
     ]))
-    return [t, Spacer(1, 4)]
+    return [Spacer(1, 4), t, Spacer(1, 2)]
 
 
 def img_triple(paths_caps, each_w=None):
@@ -436,7 +441,7 @@ def img_triple(paths_caps, each_w=None):
         ('TOPPADDING', (0, 0), (-1, -1), 0),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
     ]))
-    return [t, Spacer(1, 4)]
+    return [Spacer(1, 4), t, Spacer(1, 2)]
 
 
 # ── Table helpers ──────────────────────────────────────────────────────
@@ -966,12 +971,7 @@ def build_handbook():
     story.append(title1("Tempeltypen"))
     story.append(sp(4))
 
-    tempel_img = find_image(PUBLIC / "architektur-bilder" / "tempel_schema_hauptbild.png")
-    if tempel_img:
-        # Invert if dark
-        tempel_img = invert_dark_image(tempel_img)
-        story.extend(img_block(tempel_img, "Grundformen griechischer Tempel", max_w=CONTENT_W, max_h=160 * mm))
-    story.append(sp(4))
+    # tempel_schema_hauptbild.png is dark → skip it entirely
 
     temple_types = [
         ("<b>Antentempel (Templum in antis):</b> Einfachste Form. Zwei Seitenwände (Anten) ragen vor, "
@@ -989,9 +989,9 @@ def build_handbook():
         story.append(Paragraph(tt, S['BodySmall']))
         story.append(sp(1))
 
+    # seite_01.png is LIGHT → include it
     seite01 = find_image(PUBLIC / "architektur-bilder" / "seite_01.png")
     if seite01:
-        seite01 = invert_dark_image(seite01)
         story.append(sp(3))
         story.extend(img_block(seite01, "Architektonische Details", max_w=CONTENT_W, max_h=120 * mm))
 
@@ -1003,14 +1003,11 @@ def build_handbook():
     story.append(title1("Die drei Säulenordnungen"))
     story.append(sp(4))
 
-    col_imgs = [
-        (PUBLIC / "architektur-bilder" / "saeule_dorisch_schema.png", "Dorisch"),
-        (PUBLIC / "architektur-bilder" / "saeule_jonisch_schema.png", "Ionisch"),
-        (PUBLIC / "architektur-bilder" / "saeule_korinthisch_schema.png", "Korinthisch"),
-    ]
-    # Invert dark images for readability
-    col_imgs_processed = [(invert_dark_image(str(p)), c) for p, c in col_imgs]
-    story.extend(img_triple(col_imgs_processed, each_w=50 * mm))
+    # Use single clear Wikipedia image instead of dark individual column images
+    saeul_wiki = find_image(PUBLIC / "Schema_Saeulenordnungen.jpg")
+    if saeul_wiki:
+        story.extend(img_block(saeul_wiki, "Die drei Säulenordnungen: Dorisch, Ionisch, Korinthisch",
+                               max_w=CONTENT_W, max_h=180 * mm))
     story.append(sp(4))
 
     col_desc = [
@@ -1066,10 +1063,9 @@ def build_handbook():
     )
     story.append(body(vessel_text2))
 
-    # Additional architecture images if space
+    # seite_02.png is LIGHT → include without inversion
     s02 = find_image(PUBLIC / "architektur-bilder" / "seite_02.png")
     if s02:
-        s02 = invert_dark_image(s02)
         story.append(sp(4))
         story.extend(img_block(s02, "Architektonische Gliederung", max_w=CONTENT_W, max_h=110 * mm))
 
@@ -1087,6 +1083,14 @@ def build_handbook():
 
     def site_text(text):
         return Paragraph(text, S['BodyText9'])
+
+    def site_section(name, text, first_image_flowables=None):
+        """Create a KeepTogether block with heading + text + optional first image.
+        This ensures heading and text (and first image if small) stay on the same page."""
+        elements = [site_header(name), site_text(text), sp(2)]
+        if first_image_flowables:
+            elements.extend(first_image_flowables)
+        return KeepTogether(elements)
 
     # ── DAY 1 (pages 15-18): Segesta, Érice, Trapani, Marsala ──────────
     story.append(day_header(1, "Samstag, 28. März – Segesta · Érice · Trapani · Marsala"))
@@ -1121,7 +1125,7 @@ def build_handbook():
 
     seg_theater = find_image(PUBLIC / "detail-Segesta-Theater-Rekonstruktion.jpg")
     if seg_theater:
-        story.extend(img_block(seg_theater, "Segesta – Theaterrekonstruktion", max_w=130 * mm, max_h=90 * mm))
+        story.extend(img_block(seg_theater, "Segesta – Theaterrekonstruktion", max_w=CONTENT_W, max_h=90 * mm))
 
     story.append(sp(4))
     story.append(site_header("Monte Érice"))
@@ -1158,19 +1162,17 @@ def build_handbook():
                           str(trap_imgs[1][0]), trap_imgs[1][1]))
 
     story.append(sp(4))
-    story.append(site_header("Marsala"))
-    story.append(site_text(
+    marsala_img = find_image(PUBLIC / "detail-Marsala-1.jpg")
+    marsala_imgs = img_block(marsala_img, "Marsala – Altstadt", max_w=CONTENT_W, max_h=80 * mm) if marsala_img else []
+    story.append(site_section("Marsala",
         "Marsala (arab. Marsa Allah = Hafen Gottes) ist berühmt für seinen gleichnamigen "
         "Dessertwein, den der englische Kaufmann John Woodhouse 1773 «entdeckte». "
         "In der Altstadt: barocke Kathedrale (Madre Chiesa), archäologisches Museum mit dem "
         "«Schiff von Marsala» – einem punischen Kriegsschiff aus dem 3. Jh. v. Chr. "
         "Am 11. Mai 1860 landete Giuseppe Garibaldi mit seinen «Tausend» hier und begann "
-        "die Einigung Italiens."
+        "die Einigung Italiens.",
+        marsala_imgs
     ))
-    story.append(sp(2))
-    marsala_img = find_image(PUBLIC / "detail-Marsala-1.jpg")
-    if marsala_img:
-        story.extend(img_block(marsala_img, "Marsala – Altstadt", max_w=120 * mm, max_h=80 * mm))
 
     story.append(pb())
 
@@ -1178,18 +1180,16 @@ def build_handbook():
     story.append(day_header(2, "Sonntag, 29. März – Cave di Cusa · Selinunte · Agrigento"))
     story.append(sp(6))
 
-    story.append(site_header("Cave di Cusa"))
-    story.append(site_text(
+    cdc = find_image(PUBLIC / "2-SO-Cave-di-Cusa.png")
+    cdc_imgs = img_block(cdc, "Cave di Cusa – Antiker Steinbruch", max_w=CONTENT_W, max_h=85 * mm) if cdc else []
+    story.append(site_section("Cave di Cusa",
         "Die antiken Steinbrüche von Cave di Cusa liegen 13 km nordwestlich von Selinunt. "
         "Hier wurden die gewaltigen Säulentrommeln für die Tempel von Selinunt gebrochen. "
         "Als Selinunt 409 v. Chr. von den Karthagern zerstört wurde, blieb die Arbeit "
         "abrupt stehen – man sieht noch heute halbfertige Säulentrommeln in verschiedenen "
-        "Stadien der Bearbeitung. Ein einzigartiges Zeugnis antiker Steinmetzkunst."
+        "Stadien der Bearbeitung. Ein einzigartiges Zeugnis antiker Steinmetzkunst.",
+        cdc_imgs
     ))
-    story.append(sp(2))
-    cdc = find_image(PUBLIC / "2-SO-Cave-di-Cusa.png")
-    if cdc:
-        story.extend(img_block(cdc, "Cave di Cusa – Antiker Steinbruch", max_w=130 * mm, max_h=85 * mm))
 
     story.append(sp(4))
     story.append(site_header("Selinunte"))
@@ -1227,27 +1227,25 @@ def build_handbook():
                           str(sel_imgs3[1][0]), sel_imgs3[1][1]))
 
     story.append(sp(4))
-    story.append(site_header("Scala dei Turchi"))
-    story.append(site_text(
+    sdt = find_image(PUBLIC / "2-SO-Scala-dei-Turchi.jpg")
+    sdt_imgs = img_block(sdt, "Scala dei Turchi", max_w=CONTENT_W, max_h=80 * mm) if sdt else []
+    story.append(site_section("Scala dei Turchi",
         "Die «Treppe der Türken» ist eine spektakuläre Felsformation aus weißem Mergel "
         "(Kalkmergel) an der Küste bei Realmonte. Die terrassenförmig geschichteten Felsen "
         "leuchten bei Sonnenuntergang golden. Der Name erinnert an arabische Piraten, "
-        "die hier anlandeten. Eines der meistfotografierten Naturmonumente Siziliens."
+        "die hier anlandeten. Eines der meistfotografierten Naturmonumente Siziliens.",
+        sdt_imgs
     ))
-    sdt = find_image(PUBLIC / "2-SO-Scala-dei-Turchi.jpg")
-    if sdt:
-        story.extend(img_block(sdt, "Scala dei Turchi", max_w=120 * mm, max_h=80 * mm))
 
     story.append(sp(3))
-    story.append(site_header("Porto Empedocle"))
-    story.append(site_text(
+    pe = find_image(PUBLIC / "2-SO-Porto-Empedocle.jpg")
+    pe_imgs = img_block(pe, "Porto Empedocle – Montalbano-Statue", max_w=CONTENT_W, max_h=70 * mm) if pe else []
+    story.append(site_section("Porto Empedocle",
         "Die Hafenstadt, benannt nach dem Philosophen Empedokles, ist Geburtsort des "
         "Schriftstellers Andrea Camilleri, Schöpfer des Commissario Montalbano. "
-        "An der Mole steht eine Statue Montalbanos."
+        "An der Mole steht eine Statue Montalbanos.",
+        pe_imgs
     ))
-    pe = find_image(PUBLIC / "2-SO-Porto-Empedocle.jpg")
-    if pe:
-        story.extend(img_block(pe, "Porto Empedocle – Montalbano-Statue", max_w=100 * mm, max_h=70 * mm))
 
     story.append(sp(4))
     story.append(site_header("Agrigento"))
@@ -1271,11 +1269,11 @@ def build_handbook():
     if agr_img1 and agr_karte:
         story.extend(img_pair(agr_img1, "Agrigento – Concordia-Tempel", agr_karte, "Agrigento – Lageplan"))
     elif agr_img1:
-        story.extend(img_block(agr_img1, "Agrigento – Concordia-Tempel", max_w=140 * mm))
+        story.extend(img_block(agr_img1, "Agrigento – Concordia-Tempel", max_w=CONTENT_W))
 
     agr_ekkl = find_image(PUBLIC / "detail-Agrigento-Ekklesiasterion.jpg")
     if agr_ekkl:
-        story.extend(img_block(agr_ekkl, "Agrigento – Ekklesiasterion", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(agr_ekkl, "Agrigento – Ekklesiasterion", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(pb())
 
@@ -1283,17 +1281,16 @@ def build_handbook():
     story.append(day_header(3, "Montag, 30. März – Gela · Piazza Armerina · Akrai · Noto"))
     story.append(sp(6))
 
-    story.append(site_header("Gela"))
-    story.append(site_text(
+    gela_img = find_image(PUBLIC / "3-MO-Gela.jpg")
+    gela_imgs = img_block(gela_img, "Gela – Archäologisches Museum", max_w=CONTENT_W, max_h=80 * mm) if gela_img else []
+    story.append(site_section("Gela",
         "Gela wurde 689 v. Chr. von Rhodiern und Kretern gegründet und war eine der "
         "mächtigsten griechischen Kolonien. Von hier aus wurde Akragas (Agrigento) gegründet. "
         "Aischylos starb hier 456 v. Chr. (der Legende nach durch eine Schildkröte). "
         "Das <b>archäologische Museum</b> bewahrt herausragende Vasen und Terrakotten der "
-        "Gela-Werkstätten sowie Münzen und Befestigungsreste."
+        "Gela-Werkstätten sowie Münzen und Befestigungsreste.",
+        gela_imgs
     ))
-    gela_img = find_image(PUBLIC / "3-MO-Gela.jpg")
-    if gela_img:
-        story.extend(img_block(gela_img, "Gela – Archäologisches Museum", max_w=120 * mm, max_h=80 * mm))
 
     story.append(sp(4))
     story.append(site_header("Piazza Armerina – Villa Romana del Casale"))
@@ -1312,31 +1309,29 @@ def build_handbook():
     if pa_img and pa_plan:
         story.extend(img_pair(pa_img, "Piazza Armerina – Mosaik", pa_plan, "Villa Romana – Grundriss"))
     elif pa_img:
-        story.extend(img_block(pa_img, "Piazza Armerina – Mosaik", max_w=130 * mm))
+        story.extend(img_block(pa_img, "Piazza Armerina – Mosaik", max_w=CONTENT_W))
 
     story.append(sp(4))
-    story.append(site_header("Akrai (Palazzolo Acreide)"))
-    story.append(site_text(
+    ak_img = find_image(PUBLIC / "3-MO-Akrai.jpg")
+    ak_imgs = img_block(ak_img, "Akrai – Griechisches Theater", max_w=CONTENT_W, max_h=80 * mm) if ak_img else []
+    story.append(site_section("Akrai (Palazzolo Acreide)",
         "Akrai wurde 664 v. Chr. als Kolonie von Syrakus gegründet und diente als "
         "Vorposten im Landesinneren. Das gut erhaltene <b>griechische Theater</b> "
         "(3. Jh. v. Chr.) fasste 600 Zuschauer. Daneben: Bouleuterion (Ratsgebäude), "
         "Steinbrüche (Latomien) und die «Santoni» – zwölf in den Fels gehauene Reliefs "
-        "der Göttin Kybele aus hellenistischer Zeit."
+        "der Göttin Kybele aus hellenistischer Zeit.",
+        ak_imgs
     ))
-    ak_img = find_image(PUBLIC / "3-MO-Akrai.jpg")
-    if ak_img:
-        story.extend(img_block(ak_img, "Akrai – Griechisches Theater", max_w=120 * mm, max_h=80 * mm))
 
     story.append(sp(4))
-    story.append(site_header("Villa Romana del Tellaro"))
-    story.append(site_text(
+    tellaro = find_image(PUBLIC / "3-MO-Tellaro.jpg")
+    tellaro_imgs = img_block(tellaro, "Villa Romana del Tellaro – Mosaik", max_w=CONTENT_W, max_h=75 * mm) if tellaro else []
+    story.append(site_section("Villa Romana del Tellaro",
         "Nahe Noto gelegene spätantike Villa (4. Jh. n. Chr.) mit bedeutenden "
         "Bodenmosaiken – darunter Jagdszenen und eine Darstellung des Loskaufs von Hektors "
-        "Leichnam. Kleiner als Piazza Armerina, aber qualitativ ebenbürtig."
+        "Leichnam. Kleiner als Piazza Armerina, aber qualitativ ebenbürtig.",
+        tellaro_imgs
     ))
-    tellaro = find_image(PUBLIC / "3-MO-Tellaro.jpg")
-    if tellaro:
-        story.extend(img_block(tellaro, "Villa Romana del Tellaro – Mosaik", max_w=110 * mm, max_h=75 * mm))
 
     story.append(sp(4))
     story.append(site_header("Noto"))
@@ -1360,7 +1355,7 @@ def build_handbook():
     story.append(sp(3))
     sir_duomo = find_image(PUBLIC / "3-MO-Siracusa-Duomo.jpg")
     if sir_duomo:
-        story.extend(img_block(sir_duomo, "Ankunft in Siracusa – Dom", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(sir_duomo, "Ankunft in Siracusa – Dom", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(pb())
 
@@ -1408,7 +1403,7 @@ def build_handbook():
 
     syr_arethusa = find_image(PUBLIC / "4-DI-Siracusa-Arethusa.jpg")
     if syr_arethusa:
-        story.extend(img_block(syr_arethusa, "Arethusa-Quelle auf Ortigia", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(syr_arethusa, "Arethusa-Quelle auf Ortigia", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(4))
     story.append(site_header("Archäologischer Park (Neapolis)"))
@@ -1439,7 +1434,7 @@ def build_handbook():
 
     syr_olymp = find_image(PUBLIC / "detail-Syrakus-Olympieion-Grundriss.jpg")
     if syr_olymp:
-        story.extend(img_block(syr_olymp, "Olympieion – Grundriss", max_w=110 * mm, max_h=75 * mm))
+        story.extend(img_block(syr_olymp, "Olympieion – Grundriss", max_w=CONTENT_W, max_h=90 * mm))
 
     story.append(sp(4))
     story.append(site_header("Archimedes"))
@@ -1462,17 +1457,16 @@ def build_handbook():
                           str(arch_imgs[1][0]), arch_imgs[1][1]))
 
     story.append(sp(4))
-    story.append(site_header("Castello Eurialo"))
-    story.append(site_text(
+    eurialo = find_image(PUBLIC / "detail-FortEuryalos-Plan.jpg")
+    eurialo_imgs = img_block(eurialo, "Castello Eurialo – Festungsplan", max_w=CONTENT_W, max_h=85 * mm) if eurialo else []
+    story.append(site_section("Castello Eurialo",
         "Das <b>Kastell Euryalos</b> (griech. «Breiter Nagel») liegt 7 km nordwestlich von "
         "Syrakus auf dem Epipolai-Plateau. Unter Dionysios I. (um 400 v. Chr.) als Teil der "
         "gewaltigen Stadtbefestigung (27 km Länge!) errichtet, gilt es als die "
         "am besten erhaltene griechische Festung. Fünf Gräben, unterirdische Gänge und "
-        "mehrere Verteidigungstürme sind noch erkennbar."
+        "mehrere Verteidigungstürme sind noch erkennbar.",
+        eurialo_imgs
     ))
-    eurialo = find_image(PUBLIC / "detail-FortEuryalos-Plan.jpg")
-    if eurialo:
-        story.extend(img_block(eurialo, "Castello Eurialo – Festungsplan", max_w=130 * mm, max_h=85 * mm))
 
     story.append(sp(4))
     story.append(site_header("Catania"))
@@ -1522,7 +1516,7 @@ def build_handbook():
 
     etna_detail = find_image(PUBLIC / "detail-Etna-1.jpg")
     if etna_detail:
-        story.extend(img_block(etna_detail, "Ätna – Vulkanlandschaft", max_w=130 * mm, max_h=85 * mm))
+        story.extend(img_block(etna_detail, "Ätna – Vulkanlandschaft", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(4))
     story.append(site_header("Alcantara-Schlucht"))
@@ -1534,12 +1528,10 @@ def build_handbook():
         "entstanden durch langsame Abkühlung der Lava. Im Sommer kann man durch das "
         "(kalte!) Wasser waten. Ein Aufzug führt hinunter zum Flussbett."
     ))
-    alc_imgs = [
-        (PUBLIC / "detail-Alcantara.jpg", "Alcantara – Basaltsäulen"),
-        (PUBLIC / "5-MI-Alcantara.jpg", "Alcantara-Schlucht"),
-    ]
-    story.extend(img_pair(str(alc_imgs[0][0]), alc_imgs[0][1],
-                          str(alc_imgs[1][0]), alc_imgs[1][1]))
+    # Only one Alcantara image (detail-Alcantara.jpg and 5-MI-Alcantara.jpg are the same photo)
+    alc_img = find_image(PUBLIC / "detail-Alcantara.jpg")
+    if alc_img:
+        story.extend(img_block(alc_img, "Alcantara-Schlucht – Basaltsäulen", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(4))
     story.append(site_header("Taormina"))
@@ -1565,7 +1557,7 @@ def build_handbook():
 
     tao_plan = find_image(PUBLIC / "detail-Taormina-Stadtplan.jpg")
     if tao_plan:
-        story.extend(img_block(tao_plan, "Taormina – Stadtplan", max_w=130 * mm, max_h=90 * mm))
+        story.extend(img_block(tao_plan, "Taormina – Stadtplan", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(pb())
 
@@ -1573,17 +1565,16 @@ def build_handbook():
     story.append(day_header(6, "Donnerstag, 2. April – Milazzo · Äolische Inseln · Tindari · Cefalù · Solunto"))
     story.append(sp(6))
 
-    story.append(site_header("Messina"))
-    story.append(site_text(
+    mess = find_image(PUBLIC / "6-DO-Messina.jpg")
+    mess_imgs = img_block(mess, "Messina – Hafen", max_w=CONTENT_W, max_h=75 * mm) if mess else []
+    story.append(site_section("Messina",
         "Messina (griech. Zankle, dann Messana) an der Meerenge kontrolliert seit der Antike "
         "die Passage zwischen Sizilien und dem Festland. Die Stadt wurde 1908 durch ein "
         "verheerendes Erdbeben (80.000 Tote) fast vollständig zerstört und im Jugendstil "
         "wieder aufgebaut. Sehenswert: der Dom mit der astronomischen Uhr (größte der Welt, "
-        "Glockenspiel mittags) und die Kirche SS. Annunziata dei Catalani (12. Jh.)."
+        "Glockenspiel mittags) und die Kirche SS. Annunziata dei Catalani (12. Jh.).",
+        mess_imgs
     ))
-    mess = find_image(PUBLIC / "6-DO-Messina.jpg")
-    if mess:
-        story.extend(img_block(mess, "Messina – Hafen", max_w=120 * mm, max_h=75 * mm))
 
     story.append(sp(4))
     story.append(site_header("Milazzo und Äolische Inseln"))
@@ -1631,7 +1622,7 @@ def build_handbook():
 
     tin3 = find_image(PUBLIC / "6-DO-Tindari.jpg")
     if tin3:
-        story.extend(img_block(tin3, "Tindari – Wallfahrtskirche und Lagune", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(tin3, "Tindari – Wallfahrtskirche und Lagune", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(4))
     story.append(site_header("Cefalù"))
@@ -1655,20 +1646,19 @@ def build_handbook():
 
     cef_stadt = find_image(PUBLIC / "detail-Cefalu-Stadt.jpg")
     if cef_stadt:
-        story.extend(img_block(cef_stadt, "Cefalù – Altstadt und Felsen", max_w=130 * mm, max_h=85 * mm))
+        story.extend(img_block(cef_stadt, "Cefalù – Altstadt und Felsen", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(4))
-    story.append(site_header("Solunto"))
-    story.append(site_text(
+    sol = find_image(PUBLIC / "6-DO-Solunto.jpg")
+    sol_imgs = img_block(sol, "Solunto – Ausgrabungen", max_w=CONTENT_W, max_h=100 * mm) if sol else []
+    story.append(site_section("Solunto",
         "Solunto (Soluntum) auf dem Monte Catalfano bei Bagheria war eine der drei "
         "phönizischen Städte Siziliens. Die Ruinen der hellenistisch-römischen Stadt "
         "(3.–1. Jh. v. Chr.) zeigen ein regelmäßiges Straßenraster, Peristylhäuser "
         "mit Mosaikböden und Zisternen sowie ein kleines Theater. Beeindruckend ist die "
-        "Lage mit Panoramablick über den Golf von Palermo."
+        "Lage mit Panoramablick über den Golf von Palermo.",
+        sol_imgs
     ))
-    sol = find_image(PUBLIC / "6-DO-Solunto.jpg")
-    if sol:
-        story.extend(img_block(sol, "Solunto – Ausgrabungen", max_w=120 * mm, max_h=80 * mm))
 
     story.append(pb())
 
@@ -1706,7 +1696,7 @@ def build_handbook():
 
     pal_dom = find_image(PUBLIC / "detail-Palermo-Dom-Grundriss.jpg")
     if pal_dom:
-        story.extend(img_block(pal_dom, "Palermo – Dom-Grundriss", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(pal_dom, "Palermo – Dom-Grundriss", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(4))
     story.append(site_header("La Martorana"))
@@ -1730,7 +1720,7 @@ def build_handbook():
 
     mart_gesichter = find_image(PUBLIC / "7-FR-Gesichter-Martorana.jpg")
     if mart_gesichter:
-        story.extend(img_block(mart_gesichter, "La Martorana – Mosaikdetails", max_w=130 * mm, max_h=85 * mm))
+        story.extend(img_block(mart_gesichter, "La Martorana – Mosaikdetails", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(4))
     story.append(site_header("Monreale"))
@@ -1763,18 +1753,17 @@ def build_handbook():
                           str(mon_mos_imgs[1][0]), mon_mos_imgs[1][1]))
 
     story.append(sp(4))
-    story.append(site_header("Monte Pellegrino"))
-    story.append(site_text(
+    monte_img = find_image(PUBLIC / "7-FR-MontePellegrino.jpg")
+    monte_imgs = img_block(monte_img, "Monte Pellegrino", max_w=CONTENT_W, max_h=100 * mm) if monte_img else []
+    story.append(site_section("Monte Pellegrino",
         "Der Monte Pellegrino (606 m) erhebt sich als markanter Felsklotz über Palermo. "
         "Goethe nannte ihn «das schönste Vorgebirge der Welt». Auf halber Höhe liegt die "
         "<b>Santuario di Santa Rosalia</b> – eine Grottenkirche in der Höhle, in der 1624 "
         "die Gebeine der Stadtheiligen gefunden wurden. Die Reliquien sollen Palermo von "
         "der Pest befreit haben. Vom Gipfel: Panorama über die gesamte Conca d'Oro "
-        "(das «Goldene Becken» – die Ebene von Palermo) und die Küste."
+        "(das «Goldene Becken» – die Ebene von Palermo) und die Küste.",
+        monte_imgs
     ))
-    monte_img = find_image(PUBLIC / "7-FR-MontePellegrino.jpg")
-    if monte_img:
-        story.extend(img_block(monte_img, "Monte Pellegrino", max_w=130 * mm, max_h=85 * mm))
 
     story.append(pb())
 
@@ -1799,7 +1788,7 @@ def build_handbook():
 
     pal_alt = find_image(PUBLIC / "8-SA-Palermo-Altstadt.jpg")
     if pal_alt:
-        story.extend(img_block(pal_alt, "Palermo – Altstadtgasse", max_w=130 * mm, max_h=90 * mm))
+        story.extend(img_block(pal_alt, "Palermo – Altstadtgasse", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(6))
     story.append(HLine(CONTENT_W, GOLD, 1))
@@ -1835,7 +1824,7 @@ def build_handbook():
     if s03 and s04:
         story.extend(img_pair(s03, "Architektonische Details", s04, "Weitere Details"))
     elif s03:
-        story.extend(img_block(s03, "Architektonische Details", max_w=140 * mm))
+        story.extend(img_block(s03, "Architektonische Details", max_w=CONTENT_W))
 
     story.append(pb())
 
@@ -1843,24 +1832,10 @@ def build_handbook():
     story.append(title1("Antikes Theater und Kirchentypen"))
     story.append(sp(4))
 
-    theater_rom = find_image(PUBLIC / "architektur-bilder" / "theater_roemisch_schema.png")
-    theater_gr = find_image(PUBLIC / "architektur-bilder" / "theater_roemisch_grundriss.png")
-    if theater_rom and theater_gr:
-        story.extend(img_pair(theater_rom, "Antikes Theater – Schema",
-                              theater_gr, "Theater – Grundriss"))
-    elif theater_rom:
-        story.extend(img_block(theater_rom, "Antikes Theater", max_w=140 * mm))
+    # theater_roemisch_schema.png, theater_roemisch_grundriss.png are DARK → skip entirely
+    # kirchentypen_schema.png, kirchentypen_grundriss.png are DARK → skip entirely
 
-    story.append(sp(4))
-    kirchen_schema = find_image(PUBLIC / "architektur-bilder" / "kirchentypen_schema.png")
-    kirchen_gr = find_image(PUBLIC / "architektur-bilder" / "kirchentypen_grundriss.png")
-    if kirchen_schema and kirchen_gr:
-        story.extend(img_pair(kirchen_schema, "Kirchentypen – Schema",
-                              kirchen_gr, "Kirchengrundrisse"))
-    elif kirchen_schema:
-        story.extend(img_block(kirchen_schema, "Kirchentypen", max_w=140 * mm))
 
-    story.append(sp(4))
     story.append(body(
         "Das <b>griechische Theater</b> nutzte natürliche Hanglage: Die Cavea (Zuschauerraum) "
         "wurde in den Berghang geschnitten, die Orchestra (Tanzplatz des Chors) lag im Zentrum, "
@@ -1896,7 +1871,7 @@ def build_handbook():
     ))
     persephone = find_image(PUBLIC / "text-Persephone.jpg")
     if persephone:
-        story.extend(img_block(persephone, "Persephone-Mythos", max_w=130 * mm, max_h=85 * mm))
+        story.extend(img_block(persephone, "Persephone-Mythos", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(3))
     story.append(title3("Odysseus und die Kyklopen"))
@@ -1911,7 +1886,7 @@ def build_handbook():
     ))
     aiolos = find_image(PUBLIC / "text-Aiolos.jpg")
     if aiolos:
-        story.extend(img_block(aiolos, "Aiolos – Gott der Winde", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(aiolos, "Aiolos – Gott der Winde", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(3))
     story.append(title3("Empedokles und der Ätna"))
@@ -1924,7 +1899,7 @@ def build_handbook():
     ))
     empedokles = find_image(PUBLIC / "text-Empedokles.jpg")
     if empedokles:
-        story.extend(img_block(empedokles, "Empedokles-Legende", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(empedokles, "Empedokles-Legende", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(3))
     story.append(title3("Die Trinakria – Symbol Siziliens"))
@@ -1938,7 +1913,7 @@ def build_handbook():
     ))
     trinacria = find_image(PUBLIC / "text-Trinacria.jpg")
     if trinacria:
-        story.extend(img_block(trinacria, "Die Trinakria – Symbol Siziliens", max_w=100 * mm, max_h=70 * mm))
+        story.extend(img_block(trinacria, "Die Trinakria – Symbol Siziliens", max_w=CONTENT_W, max_h=90 * mm))
 
     story.append(pb())
 
@@ -1956,7 +1931,7 @@ def build_handbook():
     ))
     aischylos = find_image(PUBLIC / "text-Aischylos.jpg")
     if aischylos:
-        story.extend(img_block(aischylos, "Der Tod des Aischylos", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(aischylos, "Der Tod des Aischylos", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(3))
     story.append(title3("Die Salinen von Trapani"))
@@ -1969,7 +1944,7 @@ def build_handbook():
     ))
     salinen = find_image(PUBLIC / "text-Salinen.jpg")
     if salinen:
-        story.extend(img_block(salinen, "Die Salinen von Trapani", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(salinen, "Die Salinen von Trapani", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(3))
     story.append(title3("Der Thunfischfang – Mattanza"))
@@ -1983,7 +1958,7 @@ def build_handbook():
     ))
     thunfisch = find_image(PUBLIC / "text-Thunfisch.jpg")
     if thunfisch:
-        story.extend(img_block(thunfisch, "Traditioneller Thunfischfang", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(thunfisch, "Traditioneller Thunfischfang", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(3))
     story.append(title3("Falcone und Borsellino – Kampf gegen die Mafia"))
@@ -1998,7 +1973,7 @@ def build_handbook():
     ))
     falcone = find_image(PUBLIC / "text-Falcone.jpg")
     if falcone:
-        story.extend(img_block(falcone, "Gedenken an Falcone", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(falcone, "Gedenken an Falcone", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(3))
     story.append(title3("Papyrus am Fluss Ciane"))
@@ -2012,7 +1987,7 @@ def build_handbook():
     ))
     papyrus = find_image(PUBLIC / "text-Papyrus.jpg")
     if papyrus:
-        story.extend(img_block(papyrus, "Papyrus am Fluss Ciane", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(papyrus, "Papyrus am Fluss Ciane", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(pb())
 
@@ -2047,7 +2022,7 @@ def build_handbook():
         story.extend(img_pair(mafia_fr, "Papst Franziskus gegen die Mafia",
                               mafia_sg, "Addiopizzo-Bewegung"))
     elif mafia_fr:
-        story.extend(img_block(mafia_fr, "Antimafia-Bewegung", max_w=120 * mm, max_h=80 * mm))
+        story.extend(img_block(mafia_fr, "Antimafia-Bewegung", max_w=CONTENT_W, max_h=100 * mm))
 
     story.append(sp(3))
     story.append(body(
@@ -2073,7 +2048,7 @@ def build_handbook():
     ))
     madonna = find_image(PUBLIC / "text-Tindari-Madonna.jpg")
     if madonna:
-        story.extend(img_block(madonna, "Die Schwarze Madonna von Tindari", max_w=110 * mm, max_h=75 * mm))
+        story.extend(img_block(madonna, "Die Schwarze Madonna von Tindari", max_w=CONTENT_W, max_h=90 * mm))
 
     story.append(sp(3))
     story.append(title3("Bimsstein auf Lipari"))
@@ -2088,7 +2063,7 @@ def build_handbook():
     ))
     bimsstein = find_image(PUBLIC / "text-Lipari-Bimsstein.jpg")
     if bimsstein:
-        story.extend(img_block(bimsstein, "Bimsstein auf Lipari", max_w=110 * mm, max_h=75 * mm))
+        story.extend(img_block(bimsstein, "Bimsstein auf Lipari", max_w=CONTENT_W, max_h=90 * mm))
 
     story.append(pb())
 

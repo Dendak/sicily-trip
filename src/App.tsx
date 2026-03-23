@@ -849,8 +849,8 @@ const days: DayData[] = [
     day: 2, date: '29. März', weekday: 'Sonntag',
     title: 'Marsala – Selinunte – Agrigento',
     image: '/sicily-trip/2-SO-Titel-Selinunte.jpg',
-    hotel: 'Hotel Oneira Rooms, Agrigento (N/F)',
-    hotelData: { name: 'Oneira Rooms', mapsQuery: 'Oneira+Rooms+Agrigento+Sicily', mapsEmbed: 'Oneira+Rooms,+Agrigento,+AG,+Italy' },
+    hotel: 'Colleverde Park Hotel, Agrigento (N/F)',
+    hotelData: { name: 'Colleverde Park Hotel', mapsQuery: 'Colleverde+Park+Hotel+Agrigento+Sicily', mapsEmbed: 'Colleverde+Park+Hotel,+Agrigento,+AG,+Italy' },
     stops: [
       { name: 'Cave di Cusa', desc: 'Antiker Steinbruch für die Tempel von Selinunt – faszinierende Säulentrommeln in situ', km: '40 km' },
       { name: 'Selinunte', desc: 'Griechischer Tempelbezirk und Akropolis, eine der größten antiken Städte Siziliens', km: '15 km' },

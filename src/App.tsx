@@ -908,8 +908,8 @@ const days: DayData[] = [
     day: 6, date: '2. April', weekday: 'Donnerstag',
     title: 'Taormina – Cefalù – Palermo',
     image: '/sicily-trip/6-DO-Titel-Isole.jpg',
-    hotel: 'Hotel Posta, Palermo (N/F)',
-    hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
+    hotel: 'Grand Hotel Piazza Borsa, Palermo (N/F)',
+    hotelData: { name: 'Grand Hotel Piazza Borsa', mapsQuery: 'Grand+Hotel+Piazza+Borsa+Palermo', mapsEmbed: 'Grand+Hotel+Piazza+Borsa,+Palermo,+PA,+Italy' },
     stops: [
       { name: 'Messina', desc: 'Fährhafen und Tor zur Insel – Meerenge von Messina, Dom mit astronomischer Uhr', km: '50 km' },
       { name: 'Milazzo', desc: 'Ausgangspunkt für die Äolischen Inseln – Kastell, Altstadt, Hafen', km: '20 km' },
@@ -924,8 +924,8 @@ const days: DayData[] = [
     day: 7, date: '3. April', weekday: 'Freitag',
     title: 'Palermo – Monreale – Monte Pellegrino',
     image: '/sicily-trip/7-FR-Gesichter-Martorana.jpg',
-    hotel: 'Hotel Posta, Palermo (N/F)',
-    hotelData: { name: 'Hotel Posta', mapsQuery: 'Hotel+Posta+Palermo+Sicily', mapsEmbed: 'Hotel+Posta,+Palermo,+PA,+Italy' },
+    hotel: 'Grand Hotel Piazza Borsa, Palermo (N/F)',
+    hotelData: { name: 'Grand Hotel Piazza Borsa', mapsQuery: 'Grand+Hotel+Piazza+Borsa+Palermo', mapsEmbed: 'Grand+Hotel+Piazza+Borsa,+Palermo,+PA,+Italy' },
     stops: [
       { name: 'Palermo Altstadt', desc: 'Normannenpalast mit Cappella Palatina (goldene Mosaiken), Normannendom, Kreuzkuppelkirche La Martorana, archäologisches Museum', bgPosition: 'center 10%', bgSize: '100%' } as any,
       { name: 'Monreale', desc: 'Normannische Kathedrale (1174) mit 6.340 m² byzantinischer Goldmosaiken und romanischem Kreuzgang', km: '15 km' },

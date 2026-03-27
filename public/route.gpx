@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="https://mapy.com/">
+	<rte>
+		<name>Route von Palermo nach Flughafen Palermo-Punta Raisi (PMO)</name>
+		<rtept lat="38.111227" lon="13.352443">
+			<ele>48.043766</ele>
+		</rtept>
+		<rtept lat="37.938649" lon="12.838504">
+			<ele>346.081329</ele>
+		</rtept>
+		<rtept lat="38.017396" lon="12.516022">
+			<ele>10.603601</ele>
+		</rtept>
+		<rtept lat="37.797922" lon="12.434209">
+			<ele>13.636036</ele>
+		</rtept>
+		<rtept lat="37.588426" lon="12.824651">
+			<ele>37.712276</ele>
+		</rtept>
+		<rtept lat="37.312299" lon="13.574650">
+			<ele>276.590454</ele>
+		</rtept>
+		<rtept lat="37.066436" lon="14.250244">
+			<ele>45.904671</ele>
+		</rtept>
+		<rtept lat="37.385946" lon="14.367174">
+			<ele>684.885193</ele>
+		</rtept>
+		<rtept lat="36.890886" lon="15.070645">
+			<ele>117.960838</ele>
+		</rtept>
+		<rtept lat="37.064614" lon="15.290720">
+			<ele>0.857705</ele>
+		</rtept>
+		<rtept lat="37.460446" lon="15.049617">
+			<ele>11.769804</ele>
+		</rtept>
+		<rtept lat="37.851222" lon="15.283019">
+			<ele>217.433075</ele>
+		</rtept>
+		<rtept lat="37.751025" lon="14.994032">
+			<ele>3249.642578</ele>
+		</rtept>
+		<rtept lat="37.821356" lon="15.251174">
+			<ele>28.424622</ele>
+		</rtept>
+		<rtept lat="37.879603" lon="15.174145">
+			<ele>171.227097</ele>
+		</rtept>
+		<rtept lat="37.851222" lon="15.283019">
+			<ele>217.433075</ele>
+		</rtept>
+		<rtept lat="38.034957" lon="14.024456">
+			<ele>84.861259</ele>
+		</rtept>
+		<rtept lat="38.111227" lon="13.352443">
+			<ele>48.043766</ele>
+		</rtept>
+		<rtept lat="38.082632" lon="13.291993">
+			<ele>305.891724</ele>
+		</rtept>
+		<rtept lat="38.166110" lon="13.353803">
+			<ele>589.156616</ele>
+		</rtept>
+		<rtept lat="38.176517" lon="13.091643">
+			<ele>10.412392</ele>
+		</rtept>
+	</rte>
+</gpx>
+

@@ -2395,6 +2395,71 @@
 }
 
 /* Karten & Pläne */
+/* Route Map */
+.route-map-container {
+  margin: 2rem 0;
+}
+
+.route-map-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  border: 1px solid var(--color-border);
+  background: #fff;
+}
+
+.route-elevation {
+  padding: 1rem 1rem 0.5rem;
+  background: #fff;
+}
+
+.route-elevation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.route-elevation-title {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.route-elevation-info {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.route-day-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.5rem 0 0.75rem;
+  justify-content: center;
+}
+
+.route-day-chip {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+}
+
+.leaflet-container {
+  font-family: inherit !important;
+}
+
+@media (max-width: 768px) {
+  .route-map-wrapper .leaflet-container {
+    height: 280px !important;
+  }
+}
+
 .karten-grid {
   display: flex;
   flex-direction: column;

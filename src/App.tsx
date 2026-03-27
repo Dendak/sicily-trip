@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MapPin, Hotel, ChevronDown, ChevronUp, Menu, X, UtensilsCrossed, BookOpen, Languages, Landmark, Navigation, ExternalLink, Info, Clock, Users, Globe, Map, FileText } from 'lucide-react'
+import { lazy, Suspense } from 'react'
 import './App.css'
+
+const RouteMap = lazy(() => import('./RouteMap'))
 
 // Verified working Unsplash image URLs
 const images = {
@@ -3438,6 +3441,17 @@ function App() {
               </div>
             )
           })}
+        </div>
+      </section>
+
+      {/* Interaktive Route */}
+      <section className="section" id="route-karte">
+        <div className="container">
+          <h2><Navigation size={28} style={{ verticalAlign: 'middle', marginRight: 8 }} />Interaktive Reiseroute</h2>
+          <p className="section-subtitle">Route mit Höhenprofil – Fahre mit der Maus über das Diagramm</p>
+          <Suspense fallback={<div style={{ textAlign: 'center', padding: '3rem', color: '#999' }}>Karte wird geladen…</div>}>
+            <RouteMap />
+          </Suspense>
         </div>
       </section>
 

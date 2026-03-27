@@ -34,6 +34,19 @@ const dayColors: Record<number, string> = {
   5: '#7B6B52', 6: '#1A5276', 7: '#8B6914', 8: '#5B2D8A',
 }
 
+// Day boundaries: approximate index ranges in routePath for each day
+// Based on matching waypoint positions to route indices
+const daySegments: { day: number; start: number; end: number }[] = [
+  { day: 1, start: 0, end: 30 },     // Palermo → Segesta → Érice → Trapani → Marsala
+  { day: 2, start: 30, end: 60 },    // Marsala → Selinunte → Agrigento
+  { day: 3, start: 60, end: 127 },   // Agrigento → Gela → Piazza Armerina → Noto → Siracusa
+  { day: 4, start: 127, end: 155 },  // Siracusa → Catania → Taormina
+  { day: 5, start: 155, end: 218 },  // Taormina → Ätna → Alcantara → Taormina
+  { day: 6, start: 218, end: 265 },  // Taormina → Messina → Cefalù → Palermo
+  { day: 7, start: 265, end: 298 },  // Palermo → Monreale → Monte Pellegrino
+  { day: 8, start: 298, end: 304 },  // Palermo → Flughafen
+]
+
 function haversine(lat1: number, lon1: number, lat2: number, lon2: number) {
   const R = 6371
   const dLat = (lat2 - lat1) * Math.PI / 180
@@ -55,14 +68,19 @@ export default function RouteMap() {
     let totalDist = 0
     return routePath.map(([lat, lon, ele], i) => {
       if (i > 0) totalDist += haversine(routePath[i - 1][0], routePath[i - 1][1], lat, lon)
-      // Find closest waypoint
+      // Find closest waypoint and day
       let closest = ''
       let minDist = Infinity
+      let day = 1
       for (const wp of waypoints) {
         const d = haversine(lat, lon, wp.lat, wp.lon)
-        if (d < minDist) { minDist = d; closest = wp.label }
+        if (d < minDist) { minDist = d; closest = wp.label; day = wp.day }
       }
-      return { km: Math.round(totalDist), ele, label: minDist < 5 ? closest : '', idx: i }
+      // Determine day from segment boundaries
+      for (const seg of daySegments) {
+        if (i >= seg.start && i <= seg.end) { day = seg.day; break }
+      }
+      return { km: Math.round(totalDist), ele, label: minDist < 5 ? closest : '', idx: i, day }
     })
   }, [])
 
@@ -87,12 +105,15 @@ export default function RouteMap() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {activePoint && <MapUpdater center={[activePoint[0], activePoint[1]]} />}
-          <Polyline
-            positions={routePath.map(([lat, lon]) => [lat, lon] as [number, number])}
-            color="#B8860B"
-            weight={3}
-            opacity={0.8}
-          />
+          {daySegments.map(seg => (
+            <Polyline
+              key={seg.day}
+              positions={routePath.slice(seg.start, seg.end + 1).map(([lat, lon]) => [lat, lon] as [number, number])}
+              color={dayColors[seg.day]}
+              weight={4}
+              opacity={0.85}
+            />
+          ))}
           {activePoint && (
             <CircleMarker
               center={[activePoint[0], activePoint[1]]}

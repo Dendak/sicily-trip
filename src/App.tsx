@@ -2080,6 +2080,279 @@ In der Nähe liegt der Ätna, der höchste Berg Siziliens, dessen Gipfel kahl is
     lang: 'Griechisch',
     note: 'Strabon verfasste im augusteischen Zeitalter die erste große Geographie der antiken Welt. Sein Bericht über Sizilien (Geographika VI, 2) ist ein einzigartiges Dokument: Er beschreibt nicht nur Landschaft und Städte, sondern auch Geschichte, Kultur und Wirtschaft. Als gebildeter Grieche schreibt er über eine Insel, die schon lange römisch ist – und bewahrt damit Erinnerungen an eine verschwundene griechische Welt.',
   },
+  // ── Fussl-Texte: Sicilia – Insula Clarissima (Salzburg 2001) ──────────────
+  {
+    title: 'Plinius – Laudes Italiae',
+    source: 'Gaius Plinius Secundus (23/24–79 n. Chr.), Naturalis historia 37, 201f.',
+    original: `Ergo in toto orbe, quacumque caeli convexitas vergit,
+pulcherrima omnium est iis rebus, quae merito principatum
+naturae optinent, Italia, rectrix parensque mundi altera,
+viris feminis, ducibus militibus, servitiis, artium
+praestantia, ingeniorum claritatibus, iam situ ac salubritate
+caeli atque temperie, accessu cunctarum gentium
+facili, portuosis litoribus, benigno ventorum adflatu.
+Quidquid est quo carere vita non debeat, nusquam est
+praestantius: fruges, vinum, oleum, vellera, lina, vestes, iuvenci.`,
+    translation: `Auf dem ganzen Erdkreis, wo immer sich des Himmels Rundung wölbt, ist eines das Schönste unter allen Dingen, die da rechtens den ersten Platz in der Natur innehaben: Italia, die Herrscherin und zweite Mutter der Welt, durch ihre Männer und Frauen, Feldherren und Soldaten, die Dienerschaft, die Vorzüge der Künste, die Besonderheiten der Talente, auch durch die Lage, das gesunde, ausgewogene Klima, den leichten Zugang aller Stämme, die hafenreichen Küsten, den milden Hauch der Winde. Was immer da ist, das dem Leben nicht fehlen darf – nirgends ist es so vorzüglich wie hier: Früchte, Wein, Öl, Felle, Leinen, Kleider, Rinder.
+
+(Plin. nat. 37,201f.; nach K. Brodersen)`,
+    lang: 'Lateinisch',
+    note: 'Der ältere Plinius verfasste seine Naturalis historia (37 Bücher) als Enzyklopädie des gesamten antiken Wissens. Das Lob Italiens steht am Ende seines Werkes als Hymnus auf die Mitte der bewohnten Welt. Sizilien galt den Römern als Kornkammer – gleichsam als Teil Italiens, bevor es zur ersten Provinz Roms wurde (241 v. Chr.).',
+  },
+  {
+    title: 'Lukrez – Laudes Siciliae',
+    source: 'Titus Lucretius Carus (ca. 97–55 v. Chr.), De rerum natura 1, 714–733',
+    original: `et qui quattuor ex rebus posse omnia rentur
+ex igni terra atque anima procrescere et imbri.
+quorum Acragantinus cum primis Empedocles est,
+insula quem triquetris terrarum gessit in oris,
+quam fluitans circum magnis anfractibus aequor
+Ionium glaucis aspergit virus ab undis,
+angustoque fretu rapidum mare dividit undis
+Italiae terrarum oras a finibus eius.
+hic est vasta Charybdis et hic Aetnaea minantur
+murmura flammarum rursum se colligere iras.
+nil tamen hoc habuisse viro praeclarius in se
+nec sanctum magis et mirum carumque videtur.
+carmina quin etiam divini pectoris eius
+vociferantur et exponunt praeclara reperta,
+ut vix humana videatur stirpe creatus.`,
+    translation: `(Nimm dazu,) die glauben, aus vier Dingen, dem Feuer, der Erde und dem Lufthauch und dem Regen, könne alles hervorwachsen. An ihrer Spitze steht Empedokles aus Akragas, den die Insel an den Küsten ihres dreieckigen Landes getragen, die Insel, die das Ionische Meer in großen Buchten rings umfließt und aus seinen grünen Wogen mit salzigem Schaum anspritzt, wenn das in schmaler Enge reißende Meer durch seine Wogen die Küsten der Länder Äoliens von seinen Gebieten abtrennt. Da ist die greuliche Charybdis, da droht das Grollen des Ätna. Nichts jedoch so scheint mir, hat sie Berühmteres noch Heiligeres, nichts Wunderbareres und Kostbareres besessen als diesen Mann. Die Gedichte fürwahr aus seiner göttlichen Brust erheben ihre Stimme und verkünden seine berühmten Entdeckungen, so daß er kaum aus menschlichem Stamme geboren zu sein scheint.
+
+(Lukr. 1,714–733; nach K. Büchner)`,
+    lang: 'Lateinisch',
+    note: `Lukrez' Lob Siziliens gilt dem Philosophen Empedokles aus Akragas (Agrigento, ca. 490–430 v. Chr.), den er als größten Denker der Insel feiert. Die geographische Beschreibung Siziliens – Dreieck, Charybdis, Ätna – ist eines der eindrucksvollsten Landschaftsbilder der lateinischen Literatur. Der Satz „insula quem triquetris terrarum gessit in oris" (die Insel, die ihn an den Küsten ihres dreieckigen Landes getragen) wird bis heute als Lobgesang auf Sizilien zitiert.`,
+  },
+  {
+    title: 'Pomponius Mela – Sizilien als griechisches Delta',
+    source: 'Pomponius Mela (1. Jh. n. Chr.), De chorographia 2, 115–120',
+    original: `[115] Sicilia, aliquando ut ferunt continens et agro Bruttio annexa,
+post freto maris Siculi abscissa est. id angustum et anceps alterno
+cursu modo in Tuscum modo in Ionium pelagus perfluit, atrox saevum et
+Scyllae Charybdisque saevis nominibus inclutum. Scylla saxum est,
+Charybdis mare, utrumque noxium appulsis.
+ipsa ingens et tribus promturiis in diversa procurrens Graecae litterae imaginem
+quae Delta dicitur efficit.
+[117] ab eo ad Pachynum ora quae extenditur Ionium mare attingens
+haec fert illustria: Messanam, Tauromenium, Catinam, Megarida, Syracusas
+et in his mirabilem Arethusam.`,
+    translation: `[115] Sizilien soll einst Festland und mit dem Gebiet von Bruttium verbunden gewesen sein, dann aber durch einen Arm des Sizilischen Meeres abgetrennt worden sein. Diese Meerenge strömt in wechselnder Richtung bald ins Tyrrhenische, bald ins Ionische Meer. Sie ist rau und voller Schrecken sowie durch die grausigen Namen Skylla und Charybdis allbekannt. Skylla ist ein Fels, Charybdis ein Meeresteil, beide bringen den ankommenden Seefahrern Verderben. Die Insel selbst ist groß und bildet mit ihren drei in verschiedene Richtungen ragenden Kaps das Bild des griechischen Buchstabens, den man Delta nennt.
+[117] Von hier bis zum Kap Pachynos zieht die Küste am Ionischen Meer hin und trägt folgende berühmte Stätten: Messana [Messina], Tauromenium [Taormina], Katina [Catania], Megaris, Syrakus und darin die wunderbare Arethusa.
+
+(Pomp. Mela 2,115–120; nach K. Brodersen)`,
+    lang: 'Lateinisch',
+    note: 'Pomponius Mela verfasste im 1. Jh. n. Chr. die erste lateinische Geographie (De chorographia). Sein Bericht über Sizilien ist knapp aber präzise: Die dreieckige Form der Insel (Trinakria) erklärt sich durch den griechischen Buchstaben Delta – ein Bild, das seither in der Reiseliteratur immer wiederkehrt.',
+  },
+  {
+    title: 'Plinius – Ante omnes claritate Sicilia',
+    source: 'Gaius Plinius Secundus (23/24–79 n. Chr.), Naturalis historia 3, 86–94',
+    original: `Verum ante omnes claritate Sicilia, Sicania a Thucydide dicta,
+Trinacria pluribus aut Trinacia a triangula specie; circuitu patens,
+ut auctor est Agrippa, DCXVIII p.; quondam Bruttio agro cohaerens,
+mox interfuso mari avulsa, XV in longitudinem freto.
+Ipsius triquetrae, ut diximus, promunturium Pelorum vocatur
+adversus Scyllam vergens in Italiam,
+Pachynum in Graeciam, Lilybaeum in Africam.
+[88] A Peloro mare Ionium ora spectante oppidum Messana civium R.,
+qui Mamertini vocantur, colonia Tauromenium ...
+mons Aetna, nocturnis mirus incendiis.
+crater eius patet ambitu stadia viginti.`,
+    translation: `Alle anderen aber übertrifft an Berühmtheit Sizilien, von Thukydides Sikania, von mehreren Trinakria oder Trinakia nach ihrer dreieckigen Gestalt genannt; ihr Umfang beträgt, wie Agrippa angibt, 618 Meilen; die Insel hing einst mit dem Gebiet von Bruttium zusammen, wurde aber durch das dazwischenströmende Meer davon losgerissen. Die drei Kaps des Dreiecks heißen Peloron (nach Italien), Pachynon (nach Griechenland) und Lilybaion (nach Afrika).
+[88] Von Peloro an, wo die Küste zum Ionischen Meer hin schaut, liegen die Stadt Messana, die Kolonie Tauromenion, der Berg Aetna – merkwürdig durch seine nächtlichen Feuerausbrüche. Sein Krater breitet sich 20 Stadien im Umfang aus.
+
+(Plin. nat. 3,86–94; nach K. Brodersen)`,
+    lang: 'Lateinisch',
+    note: '"Ante omnes claritate Sicilia" – dieser Satz des Plinius fasst das antike Bild Siziliens zusammen: die berühmteste Insel der Welt. Plinius listet alle Städte mit ihrem Status. Sizilien war seit 241 v. Chr. die erste römische Provinz und galt als Kornkammer Roms.',
+  },
+  {
+    title: 'Homer – Aiolos, der König der Winde',
+    source: 'Homer (8./7. Jh. v. Chr.), Odyssee 10, 1–76',
+    original: `Αἰολίην δ᾽ ἐς νῆσον ἀφικόμεθ᾽· ἔνθα δ᾽ ἔναιεν
+Αἴολος Ἱπποτάδης, φίλος ἀθανάτοισι θεοῖσιν,
+πλωτῇ ἐνὶ νήσῳ· πᾶσαν δέ τε μιν πέρι τεῖχος
+χάλκεον ἄρρηκτον, λισσὴ δ᾽ ἀναδέδρομε πέτρη.
+τοῦ δὲ δυώδεκα παῖδες ἐνὶ μεγάροισι γένοντο,
+ἓξ μὲν θυγατέρες, ἓξ δ᾽ υἱέες ἡβώοντες.`,
+    translation: `Und wir gelangten zur Aiolos-Insel. Dort wohnte Aiolos, Hippotes-Sohn, ein Freund den unsterblichen Göttern, auf einer schwimmenden Insel. Ganz um sie herum ist eine Mauer, eine eherne, unzerbrechliche, und springt glatt der Fels auf. Ihm waren auch zwölf Kinder in den Hallen geboren worden: sechs Töchter und sechs Söhne in Jugendreife.
+Und wir gelangten zu ihrer Stadt und den schönen Häusern, und während eines ganzen Mondes tat er mir Liebes an und fragte mich aus nach all und jedem: nach Ilion und den Schiffen der Argeier und der Heimkehr der Achaier. Er gab mir einen Schlauch von einem neunjährigen Rind, darin band er die Pfade der heulenden Winde hinein; denn ihn hatte zum Verwalter über die Winde Kronion gemacht. Mir aber ließ er den Hauch des Westwinds wehen, damit er die Schiffe und uns selber trage.
+Neun Tage fuhren wir in einem fort die Nächte hindurch. Am zehnten zeigte sich das väterliche Land. Da kam ein süßer Schlaf über mich, den Ermatteten. Die Gefährten aber öffneten den Schlauch, und alle Winde fuhren heraus – ein Wirbel trug sie auf das Meer hinaus, weinend, hinweg von dem väterlichen Lande.
+
+(Homer, Odyssee 10,1–76; nach Wolfgang Schadewaldt)`,
+    lang: 'Griechisch',
+    note: `Die Liparischen Inseln (Äolische Inseln, nordwestlich Siziliens) wurden in der Antike mit dem Windgott Äolus in Verbindung gebracht – daher ihr Name. Strongyle (Stromboli), die feuerspeiende, und Lipara als Hauptinsel prägten die Vorstellung von Äolus' Reich. Auf unserer Reise fahren wir an Tag 6 an diesen Inseln vorbei.`,
+  },
+  {
+    title: 'Vergil – Vulcanus, der Waffenschmied',
+    source: 'Publius Vergilius Maro (70–19 v. Chr.), Aeneis 8, 370–453 (Auswahl)',
+    original: `At Venus haud animo nequiquam exterrita mater
+Laurentumque minis et duro mota tumultu
+Volcanum adloquitur, thalamoque haec coniugis aureo
+incipit et dictis diuinum aspirat amorem.
+...
+insula Sicanium iuxta latus Aeoliamque
+erigitur Liparen fumantibus ardua saxis,
+quam subter specus et Cyclopum exesa caminis
+antra Aetnaea tonant, ualidoque incudibus ictus
+auditi referunt gemitus, striduntque cauernis
+stricturae Chalybum et fornacibus ignis anhelat,
+Volcani domus et Volcania nomine tellus.`,
+    translation: `Venus jedoch – und nicht ohn Ursache – mütterlich bangend, durch der Laurenter Lärm erschreckt und grimmigen Aufruhr, lag dem Vulcanus an auf goldener Sponde, dem Gatten, da sie begann und haucht im Reden göttlichen Liebreiz: „Als nach geworfenem Los argolische Könige Trojas Pergamum brachen, der längst das feindliche Feuer verhängt war, hab ich um Beistand nicht, hab nicht um Waffen gebeten, nie deiner Kraft und Kunst mißbraucht, wollt nimmer vergeblich für das verlorene Volk dich, teuerster Gatte, bemühen."
+...
+Zwischen Sicanias Strand und Liparas Äeolerlände springt aus den Wassern ein Holm steilauf mit rauchenden Gipfeln, der unter Erden, vom Brand cyclopischer Feuer zerschartet, Donner des Aetna rollt von Schlag an Schlägen auf hartem Amboß – War des Vulcanus Haus: Vulcania nennt sich das Eiland. Dort hinunter begab sich vom Sitz der Himmel des Feuers mächtiger Gott, da schon im räumigen Berg die Cyclopen, Brontes und Sterops gewerkt und mit nacktem Leibe Pyracmon.
+
+(Verg. Aen. 8,370–453 Auswahl; nach R.A. Schröder)`,
+    lang: 'Lateinisch',
+    note: 'Vergils Aeneis (29–19 v. Chr.) ist das Nationalepos Roms. Die Schmiede des Vulcanus auf Lipari – oder im Ätna (Vergil verbindet beide) – ist eines der eindrucksvollsten Bilder des Epos. Die Kyklopen Brontes (Donner), Steropes (Blitz) und Pyracmon (Feuer-Amboss) hämmern Blitze für Jupiter. Das Vulkanbild prägte das gesamte antike und mittelalterliche Bild Siziliens als Feuerinsel.',
+  },
+  {
+    title: "Valerius Maximus – Aischylos' ungewöhnlicher Tod",
+    source: 'Valerius Maximus (1. Jh. n. Chr.), Facta et Dicta Memorabilia 9, 12 (ext. 2)',
+    original: `Humanae autem vitae condicionem praecipue primus et ultimus dies continet,
+quia plurimum interest quibus auspiciis inchoetur et quo fine claudatur,
+ideoque lucem felicem iudicamus, cui et accipere lucem prospere et
+reddere placide contigit.
+(Ext. 2) Aeschyli vero poetae novitatem casus referendus.
+In Sicilia moenia urbis, in qua morabatur, egressus aprico in loco resedit.
+Super quem aquila testudinem ferens – erat enim capillis –
+perinde atque lapidi eam inlixit, ut fractae carne vesceretur,
+eoque ictu absumptus est.`,
+    translation: `Das Schicksal des menschlichen Lebens bestimmt sich vor allem nach dem ersten und letzten Tag, weil äußerst wichtig ist, unter welchen Auspizien es beginnt und welches Ende es nimmt. Daher nennen wir jenen Tag glücklich, dem es gelang, sowohl das Licht günstig zu empfangen als auch es ruhig zurückzugeben.
+(Ausw. 2) Auch von Aischylos ist der außergewöhnliche Tod des Dichters zu berichten: In Sizilien verließ er freiwillig die Mauern der Stadt, in der er sich aufhielt, und saß an einem sonnigen Platz. Ein Adler, der mit einer Schildkröte in den Klauen über ihn hinwegflog, ließ sich täuschen – er war nämlich kahl – und ließ die Schildkröte auf seinen Kopf fallen, um ihr Fleisch herauszuholen. Durch diesen Schlag wurde er getötet.
+
+(Val. Max. 9,12 ext. 2; nach W. Speyer)`,
+    lang: 'Lateinisch',
+    note: 'Der griechische Tragödiendichter Aischylos (525–456 v. Chr.) starb der Überlieferung nach in Gela auf Sizilien – erschlagen von einer Schildkröte, die ein Adler auf seinen kahlen Schädel fallen ließ. Der Adler soll seinen Kopf für einen Felsen gehalten haben. Diese Geschichte wurde in der Antike als Kuriosum erzählt und ist eines der bekanntesten Beispiele absurder Todesfälle der antiken Literatur. Aischylos hatte selbst mehrfach in Sizilien Stücke aufgeführt.',
+  },
+  {
+    title: 'Diodorus Siculus – Enna und der Raub der Kore',
+    source: 'Diodoros Siculus (1. Jh. v. Chr.), Bibliotheke historike 5, 3, 2',
+    original: `Οἱ δὲ Σικελιῶται τοὺς οἰκοῦντες τὴν νῆσον
+παρειλήφασι παρὰ τῶν ἐπιγόνων ἐκ τῆς ἀρχαιότητος
+ὅτι τῆς Δήμητρος καὶ Κόρης ἱερά ἐστιν ἡ νῆσος·
+τὴν δὲ τῆς Κόρης ἁρπαγὴν γεγενῆσθαι κατὰ τοὺς λειμῶνας
+τοὺς πλησίον τῆς Ἔννης. τὸν δὲ τόπον εἶναι πλησίον τῆς πόλεως,
+ἴοις τε καὶ τοῖς ἄλλοις ἄνθεσι κεκοσμημένον.`,
+    translation: `Die Sikelioten, welche die Insel bewohnen, haben von ihren Vorfahren überliefert erhalten, indem von der Urzeit an die Sage von Geschlecht auf Geschlecht überging, daß die Insel der Demeter und der Kore heilig sei. Einige Poeten aber berichten die Sage, daß Zeus bei der Vermählung des Pluton und der Persephone diese Insel der Braut zum Hochzeitsgeschenk gegeben habe.
+Daß der Raub der Kore wirklich auf dieser Insel stattgefunden, davon, sagen sie, sei der deutlichste Beweis der Umstand, daß die Göttinnen sich eben hier aufhielten, weil sie die Insel vor allem liebten. Es soll aber der Raub der Kore auf den Wiesen bei Enna geschehen sein. Der Ort ist nahe bei der Stadt, mit Veilchen und anderen Blumen bunt geziert. Wegen des starken Wohlgeruchs der Blumen sollen die Jagdhunde hier nicht spüren können, da ihr Geruchssinn zu sehr in Anspruch genommen ist.
+
+(Diod. Sic. 5,3,2; 1. Jh. v. Chr.)`,
+    lang: 'Griechisch',
+    note: 'Diodoros Siculus (1. Jh. v. Chr.) stammte selbst aus Agyrium auf Sizilien – er ist der bedeutendste einheimische Geschichtsschreiber der Insel. Sein Werk „Bibliotheke historike" (Historische Bibliothek, 40 Bücher) ist die wichtigste Quelle zur Geschichte Siziliens. Der Bericht über Enna und den Raub der Persephone klingt wie eine Erinnerung an lokale Kultorte, die bis heute existieren (Lago di Pergusa).',
+  },
+  {
+    title: 'Ovid – Raptus Proserpinae et Cyane',
+    source: 'Publius Ovidius Naso (43 v. Chr.–17 n. Chr.), Metamorphosen 5, 385–437 (Auswahl)',
+    original: `Haud procul Hennaeis lacus est a moenibus altae,
+nomine Pergus, aquae; non illo plura Caystros
+carmina cygnorum labentibus edit in undis.
+silva coronat aquas cingens latus omne suisque
+frondibus ut velo Phoebeos submovet ictus.
+perpetuum ver est, quo dum Proserpina luco
+ludit et aut violas aut candida lilia carpit,
+dumque puellari studio calathosque sinumque
+inplet et aequales certat superare legendo,
+paene simul visa est dilectaque raptaque Diti:
+usque adeo est properatus amor.`,
+    translation: `Nicht weit von Ennas Mauern liegt ein tiefer See, Pergus mit Namen; kein Kaystros schickt mehr Schwangesänge in seine gleitenden Wellen. Ein Wald krönt rings das Wasser, beschattend alle Seiten, und seine Zweige schirmen wie ein Schleier die Sonnenstrahlen ab. Ewiger Frühling herrscht dort: während Proserpina in dem Hain spielt und Veilchen oder weiße Lilien pflückt, und mit mädchenhaftem Eifer Körbe und ihren Schoß füllt und mit den Gespielinnen wetteifert, mehr zu sammeln, wurde sie von Pluto beinahe gleichzeitig gesehen, geliebt und entführt: so eilig war die Liebe.
+In der Mitte zwischen Cyane und der pisanischen Arethusa liegt eine kleine Bucht. Dort wohnte Cyane, die berühmteste unter den sizilischen Nymphen. Aus dem Strudel tauchte sie bis zur Mitte auf und erkannte die Göttin. „Nicht weiter sollst du gehen!" sprach sie, „du kannst nicht Cereris Schwiegersohn gegen ihren Willen sein: die Göttin hätte gebeten werden sollen, nicht geraubt werden."
+
+(Ov. met. 5,385–437 Auswahl; nach M. von Albrecht)`,
+    lang: 'Lateinisch',
+    note: 'Ovids Metamorphosen (ca. 8 n. Chr.) sind die meistgelesene Quelle für die griechisch-römische Götterwelt. Der Raub der Proserpina durch Pluto wird bei Enna lokalisiert – beim See Pergusa (Lago di Pergusa, der noch heute existiert). Cyane, die Nymphe, die vergeblich protestiert und vor Gram zur Quelle wird, wird zum Sinnbild des Mitgefühls. Der sizilische Kult der Demeter/Ceres war einer der bedeutendsten der Antike.',
+  },
+  {
+    title: 'Cicero – Aedis Minervae in insula',
+    source: 'Marcus Tullius Cicero (106–43 v. Chr.), In Verrem II 4, 122f.',
+    original: `Aedis Minervae est in Insula, de qua ante dixi;
+quam Marcellus non attigit, quam plenam atque ornatam reliquit;
+quae ab isto sic spoliata atque direpta est
+non ut ab hoste aliquo, qui tamen in bello religionem et consuetudinis
+iura retineret, sed ut a barbaris praedonibus vexata esse videatur.
+Viginti et septem praeterea tabulas pulcherrime pictas
+ex eadem aede sustulit, in quibus erant imagines Siciliae regum ac tyrannorum,
+quae non solum pictorum artificio delectabant,
+sed etiam commemoratione hominum et cognitione formarum.`,
+    translation: `Auf der erwähnten Insel steht ein Tempel der Minerva. Marcellus hat ihn nicht angerührt, hat ihn in seinem vollen Schmuck belassen. Der wurde von Verres derart beraubt und ausgeplündert, daß es aussah, als ob ihn nicht ein Feind, der ja doch im Kriege den Gottesdienst und die überkommenen Rechtsgrundsätze beachten würde, sondern barbarische Räuber heimgesucht hätten. Er hat außerdem noch siebenundzwanzig herrliche Gemälde aus demselben Tempel weggenommen, darunter die Bildnisse der sizilischen Könige und Tyrannen, die nicht nur wegen der Meisterschaft der Künstler Freude bereiteten, sondern auch, weil sie an die Personen erinnerten und deren Aussehen erkennen ließen.
+
+(Cic. Verr. II 4,122f.; nach Manfred Fuhrmann)`,
+    lang: 'Lateinisch',
+    note: 'Der Athena-Tempel auf Ortygia (Syrakus), den Cicero hier beschreibt, wurde später zur Kathedrale von Syrakus umgebaut – die dorischen Säulen sind noch heute in die Kirchenwände eingebaut und sichtbar. Cicero trat 70 v. Chr. als Anwalt der sizilischen Städte gegen den Statthalter Verres auf, der Sizilien systematisch ausgeraubt hatte. Die Verres-Reden sind ein einzigartiges Dokument römischer Rechtspraxis und sizilianischer Kunstgeschichte.',
+  },
+  {
+    title: 'Seneca – Imago Syracusarum',
+    source: 'Lucius Annaeus Seneca (4 v. Chr.–65 n. Chr.), Ad Marciam de consolatione (dial. 6), 17f.',
+    original: `Si quis Syracusas petenti diceret: "Omnia incommoda,
+omnes voluptates futurae peregrinationis tuae ante cognosce,
+deinde ita naviga." Haec sunt, quae mirari possis:
+videbis primum ipsam insulam ab Italia angusto interscissam freto,
+quam continenti quondam cohaesisse constat.
+Deinde videbis (licebit enim tibi avidissimum maris verticem perstringere)
+stratam illam fabulosam Charybdin.
+Videbis celebratissimum carminibus fontem Arethusam,
+nitidissimi ac perlucidi ad imum stagni, gelidissimas aquas profundentem.
+Videbis portum quietissimum omnium.`,
+    translation: `Wenn jemand zu einem, der nach Syrakus will, sagte: „Alle Beschwerlichkeiten, alle Freuden deiner geplanten Reise vernimm zuvor; dann erst segle los! Das ist's, was du bestaunen kannst: Du wirst zuerst eine Insel sehen, die von Italien nur durch eine schmale Meerenge getrennt und von der bekannt ist, daß sie einst mit dem Festland zusammenhing.
+Danach wirst Du – denn Du erhältst Gelegenheit, kurz in den unersättlichsten Strudel des Meeres zu schauen – jene sagenhafte Charybdis sehen. Du wirst den in Liedern hochgepriesenen Quell der Arethusa sehen, die des wunderschönen, bis auf den Grund klaren Teichs eiskaltes Wasser spendet. Du wirst den sichersten Hafen von all denen sehen, die entweder die Natur zum Schutz der Flotten angelegt oder Menschenhand verbessert hat."
+
+(Sen. Marc. 17f.; nach M. Rosenbach)`,
+    lang: 'Lateinisch',
+    note: 'Seneca schreibt diesen Text in seiner Trostschrift an Marcia – die Beschreibung Siziliens dient als Gleichnis für die Ungewissheit des Lebens. Der Abschnitt ist eines der schönsten antiken Zeugnisse für das Bild von Syrakus: Charybdis, die Quelle Arethusa, der sichere Hafen, die Steinbrüche (Latomien). Seneca war Erzieher Neros und endete auf seinen Befehl durch erzwungenen Selbstmord 65 n. Chr.',
+  },
+  // ── Zeitgenössische Texte (Mittelalter & Neuzeit) ─────────────────────────
+  {
+    title: 'Petrarca – Scylla et Charybdis',
+    source: 'Francesco Petrarca (1304–1374), Itinerarium ad sepulcrum Domini nostri 41–45',
+    original: `(41) [...] Hinc utinam tu secundis ventis et cursu tam facili proveharis,
+ut ego ad Italiae finem facili provehor stylo!
+(42) Laeva itaque perpetuo tractu Calabrum litus extenditur.
+Dextera autem longe Trinacria et Vulcanus ac Liparis minoresque insulae,
+et ipsae fumum flammamque fundentes ventosaeque adeo,
+ut Aeoli ventorum regis hic regiam fuisse ... utrumque enim lectum est.
+(43) Unde cum ad extremum Italiae angulum perveneris, eum scilicet,
+qui ad occasum vergit, hinc Rhegium Calabriae metropolim,
+hinc Siciliae Messanam parvo admodum oculorum flexu et fere simul aspicies.
+In medio Pharus est, qui Messanensis dicitur,
+in quo sunt infamia illa portenta, multum formidanda navigantibus,
+Scylla et Charybdis.`,
+    translation: `(41) Wenn du mit günstigen Winden und in schneller Fahrt nur so leicht hierhin gelangtest, wie ich mit dem Stift das Ende Italiens erreiche! (42) Links erstreckt sich in endloser Ausdehnung die Kalabrische Küste. Rechts aber folgen auf langer Strecke Sizilien, Vulcano und Lipari sowie kleinere Inseln. Auch sie speien Rauch und Flammen und sind so windig, dass hier – sei es sagenhaft oder historisch, beides nämlich kann man lesen – die Residenz des Äolus, des Königs der Winde gewesen sei. (43) Wenn du von dort an die äußerste Spitze Italiens weiterfährst, auf jene, die nach Westen zeigt, wirst du beinahe gleichzeitig auf der einen Seite Reggio di Calabria, auf der anderen Seite das sizilische Messina erblicken. In der Mitte liegt der Pharus von Messina, in dem sich jene berüchtigten Ungeheuer befinden, sehr gefürchtet von den Seefahrern: Skylla und Charybdis.
+
+(Petrarca, Itinerarium 41–45; nach J. Reufsteck, Reclam 1999)`,
+    lang: 'Lateinisch',
+    note: 'Francesco Petrarca (1304–1374), der erste Humanist, schrieb dieses Reisehandbuch für einen Freund, der eine Pilgerfahrt ins Heilige Land plante – ohne selbst mitgehen zu können. Das Itinerarium ist eine literarische Reise: Petrarca beschreibt in lebhaften Bildern die Küsten Italiens und Siziliens, Skylla und Charybdis, den Ätna. Es ist ein Meisterwerk der mittelalterlichen Reiseliteratur und ein frühes Zeugnis des humanistischen Interesses an der Antike.',
+  },
+  {
+    title: 'Gregorovius – Eryx (Erice)',
+    source: 'Ferdinand Gregorovius (1821–1891), Siciliana, 1886',
+    original: '',
+    translation: `Von dem Bahnhofe Trapanis führten uns Wagen ohne Verzug in wenig mehr als zwei Stunden nach dem Eryx hinauf. Der Eryx lehnt sich an keinen Höhenzug an, er steigt allein und inselartig auf, in der schönsten Pyramidenform. Ich halte ihn geradezu für das Ideal eines Berges, für das Meisterwerk der Natur in der Bergbildung. Dort mußte eine hehre Göttin, die schönste des Himmels, ihren Sitz nehmen. Nicht nur die im Zickzack sich an den Felswänden fortwindende Straße, sondern der Eryx selbst erinnerte mich lebhaft an den Monte Gargano, das östliche Kap Apuliens. Auf beiden Berggipfeln liegt hoch über dem Meere eine seltsame Stadt mit einem himmlischen Heiligtum von weitverbreitetem Ruf.
+Der Eryx war die westliche Station Europas für den von dort fortwandernden Dienst der Aphrodite. Hier stand ihr Tempel, gleich berühmt wie der zu Paphos und Kythera. Nachdem die Karthager die elymeische Stadt Eryx auf der Ostseite des Berges zerstört und ihre Bewohner nach Drepanum verpflanzt hatten, verehrten sie die phönizische Venus oder Astarte in einem Prachttempel auf dem Berge droben, und ihr Kultus wurde dann auch von den Römern fortgesetzt. Die Schiffer von Afrika, von Spanien, Gallien, Italien, Griechenland, alle huldigten ihr, legten Opfer in dem Tempel nieder und feierten Bacchanale mit den Hierodulen. Tausend üppige Tempeldienerinnen machten hier ihrer Gebieterin Ehre.
+
+(Ferdinand Gregorovius, Siciliana, 1886)`,
+    lang: 'Deutsch',
+    note: 'Ferdinand Gregorovius (1821–1891) war ein bedeutender deutscher Historiker und Reiseschriftsteller, berühmt vor allem für seine „Geschichte der Stadt Rom im Mittelalter" (8 Bände). Seine Sizilien-Reisen der 1850er und 1880er Jahre hinterließen literarische Beschreibungen von unvergänglichem Wert. Erice (antik: Eryx) liegt auf einem 751 m hohen Berg über Trapani – auf unserer Route an Tag 1 sichtbar.',
+  },
+  {
+    title: 'Gregorovius – Selinus (Selinunte)',
+    source: 'Ferdinand Gregorovius (1821–1891), Siciliana, 1853',
+    original: '',
+    translation: `Man reitet von Castel Vetrano durch ein wohlbebautes Flachland, sechs Meilen weit nach dem Meer hinunter. Schon in dieser Entfernung sieht die ungeheure Tempelmasse des Selinos sehr groß aus dem fernen Meeresufer, und wie ein Minarett erhob. Ich sah die höchste Tempelreihe einzeln hervorragen. Die Wüstheit ist unbeschreiblich malerisch, um so mehr, als aus den Trümmern überall Gestalt und Form von ungeheurer Dimension und Profil hervortreten.
+Der Anblick dieser Tempeltrümmer am Meer, in grenzenloser Öde, ist zum ersten Mal, wenn man sich den Begriff klassischer Ruinen vorstellt, aus der Ferne wie aus der Nähe betrachtet, ein gemischtes Gefühl von schauerlustiger Lust. Die Wüstheit, der ganze Strand ist zu beiden Seiten nur trockene Moore, mengend mit dem schönen, blauen Blumen und einem fremdartigem Pal aus der Maremmluft. Schon im Altertum erzeugte die niedrige Lage Bevölkerungskrankheiten, deretwegen Selinunt unter seiner niedrigen Lage zu steuern war, pestartige Krankheiten, welcher die Bevölkerung unter dem Ansturm der Karthager erlag. Zu Selinunt stellt sich nur eine einzige Epoche dar; keine Spur von Leben.
+
+(Ferdinand Gregorovius, Siciliana, 1853)`,
+    lang: 'Deutsch',
+    note: 'Selinunte (griechisch Selinous, gegründet ca. 628 v. Chr.) war eine der größten griechischen Städte Siziliens. 409 v. Chr. wurde sie von den Karthagern zerstört. Gregorovius besuchte die Ausgrabungen in einer Zeit, als die Archäologie gerade begann, die riesigen Tempel freizulegen. Die Beschreibung verbindet romantischen Schauder mit archäologischer Beobachtung.',
+  },
+  {
+    title: 'Gregorovius – Tempel der Concordia (Agrigento)',
+    source: 'Ferdinand Gregorovius (1821–1891), Siciliana, 1853',
+    original: '',
+    translation: `Auch er liegt auf einem Hügel in malerischer Umgebung von dürrem, rotbraunem Gestein, von Trümmern und üppigem Wuchs der Kaktusbäume. Bis auf das Dach, welches fehlt, ist er vollständig, mit beiden Fronten und allen Säulen ... Es blieb also der Tempel durch die Karthager unzerstört und widerstand siegreich allen Unbilden der Zeit. Seine wohlerhaltene Herrlichkeit lockte im Mittelalter das Christentum, ihn zur Kirche zu benutzen, und so wurde sein Verfall glücklich abgewendet. Die Zelle schuf man im 15. Jahrhundert zu einer Kapelle um, welche dem heiligen Gregorio delle Rape, Bischof von Girgenti, geweiht wurde. Damals brach man in die Seitenwände derselben die zwölf Bogen ein, die man noch heute sieht.
+Es ist überhaupt der vollständigste und herrlichste Tempel Siziliens. Die majestätischen braunen Säulen, basenlos, mäßig verjüngt, die weitausladenden Kapitelle, die schönen Verhältnisse des Gebälks, welches den Schmuck seiner Triglyphen ganz bewahrt hat, bringen den reinsten Wohllaut hervor. Und wohl zeigt der dorische Bau, die schönste architektonische Form des Altertums überhaupt, nicht minder anschaulich, als es Plastik und Poesie vermögen, welche klare Kraft und Harmonie in der Seele des griechischen Volkes lebte.
+
+(Ferdinand Gregorovius, Siciliana, 1853)`,
+    lang: 'Deutsch',
+    note: `Der Concordia-Tempel im Tal der Tempel von Agrigento (5. Jh. v. Chr.) ist einer der besterhaltenen dorischen Tempel der Welt. Er überlebte die Jahrhunderte, weil er im 6. Jh. n. Chr. zur christlichen Kirche umgebaut wurde – die eingebrochenen Bögen in den Seitenwänden sind noch heute zu sehen. Gregorovius' Beschreibung ist ein Meisterwerk ästhetischer Betrachtung: Er sieht im dorischen Tempel das Abbild der griechischen Seele.`,
+  },
 ]
 
 const texteGruppen = [
@@ -2096,6 +2369,10 @@ const texteGruppen = [
       'Pausanias – Demeter und der Raub der Persephone bei Enna',
       'Empedokles – Ich bin ein unsterblicher Gott',
       'Theokrit – Der verliebte Kyklop (Polyphem an Galateia)',
+      'Homer – Aiolos, der König der Winde',
+      'Vergil – Vulcanus, der Waffenschmied',
+      'Ovid – Raptus Proserpinae et Cyane',
+      'Diodorus Siculus – Enna und der Raub der Kore',
     ],
   },
   {
@@ -2111,18 +2388,29 @@ const texteGruppen = [
       'Gelon von Gela – Aufstieg zum Tyrannen von Syrakus',
       'Pausanias – Exaenetos aus Agrigento und die 300 Viergespanne',
       'Pausanias – Gelon und die Weihgaben nach Himera',
+      'Pausanias – Das athenische Ehrengrab für die Gefallenen in Sizilien',
       'Pindar über Ätna und Sizilien',
       'Vergil über Siziliens Küsten',
       'Thukydides – Die Athener in den Latomien',
-      'Pausanias – Das athenische Ehrengrab für die Gefallenen in Sizilien',
       'Platon – Erfahrungen in Syrakus (7. Brief)',
       'Lukrez – Der Ätna und seine Feuer',
+      'Lukrez – Laudes Siciliae',
       'Strabon – Geographische Beschreibung Siziliens',
+      'Plinius – Laudes Italiae',
+      'Plinius – Ante omnes claritate Sicilia',
+      'Pomponius Mela – Sizilien als griechisches Delta',
+      "Valerius Maximus – Aischylos' ungewöhnlicher Tod",
+      'Cicero – Aedis Minervae in insula',
+      'Seneca – Imago Syracusarum',
     ],
   },
   {
     label: 'Zeitgenössisches',
     ids: [
+      'Petrarca – Scylla et Charybdis',
+      'Gregorovius – Eryx (Erice)',
+      'Gregorovius – Selinus (Selinunte)',
+      'Gregorovius – Tempel der Concordia (Agrigento)',
       'Il ladro di merendine – Montalbano e François',
       'Il commissario Montalbano – Catarella al telefono',
       'Per questo mi chiamo Giovanni – La struttura di Cosa Nostra',

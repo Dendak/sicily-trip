@@ -79,7 +79,9 @@
       "Bash(curl -sL -o /dev/null -w \"%{url_effective}\\\\n%{http_code}\\\\n\" \"https://commons.wikimedia.org/wiki/Special:FilePath/Stoccafisso_alla_ghiotta.jpg\")",
       "Bash(curl -sL -o /dev/null -w \"%{url_effective}\\\\n%{http_code}\\\\n\" \"https://commons.wikimedia.org/wiki/Special:FilePath/Stoccafisso.jpg\")",
       "Bash(curl -sL -o /dev/null -w \"%{url_effective}\\\\n%{http_code}\\\\n\" \"https://commons.wikimedia.org/wiki/Special:FilePath/Stoccafisso_alla_messinese.jpg\")",
-      "Bash(curl -sL -o /dev/null -w \"%{url_effective}\\\\n%{http_code}\\\\n\" \"https://commons.wikimedia.org/wiki/Special:FilePath/Baccala_alla_ghiotta.jpg\")"
+      "Bash(curl -sL -o /dev/null -w \"%{url_effective}\\\\n%{http_code}\\\\n\" \"https://commons.wikimedia.org/wiki/Special:FilePath/Baccala_alla_ghiotta.jpg\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\diep\\\\AppData\\\\Local\\\\Temp\\\\read_kalk_extern.ps1\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\diep\\\\AppData\\\\Local\\\\Temp\\\\read_kalk_extern2.ps1\")"
     ]
   }
 }
